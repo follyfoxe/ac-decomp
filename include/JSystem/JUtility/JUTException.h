@@ -124,7 +124,7 @@ struct JUTException : public JKRThread {
 
     static JUTConsole* sConsole;
     static void* sConsoleBuffer;
-    static size_t sConsoleBufferSize;
+    static u32 sConsoleBufferSize;
     static JUTException* sErrorManager;
     static OSMessageQueue sMessageQueue;
     static void* sMessageBuffer[1];

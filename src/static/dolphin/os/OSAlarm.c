@@ -171,12 +171,13 @@ static void DecrementerExceptionCallback(register __OSException exception, regis
 
 /* clang-format off */
 static asm void DecrementerExceptionHandler(register u8 type, register OSContext* ctx){
+#ifdef ENABLE_ASM
 	nofralloc
 	stw r0, ctx->gpr[0]
 	stw r1, ctx->gpr[1]
 	stw r2, ctx->gpr[2]
 	stmw r6, ctx->gpr[6]
-	
+
 	mfspr r0, 0x391
 	stw r0, ctx->gqr[1]
 	mfspr r0, 0x392
@@ -191,8 +192,9 @@ static asm void DecrementerExceptionHandler(register u8 type, register OSContext
 	stw r0, ctx->gqr[6]
 	mfspr r0, 0x397
 	stw r0, ctx->gqr[7]
-	
+
 	stwu r1, -8(r1)
 	b DecrementerExceptionCallback
+#endif
 }
 /* clang-format on */

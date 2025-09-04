@@ -5,15 +5,7 @@
 #define __declspec(...)
 #define __cntlzw
 #define asm
-
-// Find: extern (\w+) (\w+)\[];\nstatic \1 \2\[]
-// Replace: extern $1 $2[];\n$1 $2[]
-
-// Find: Scene_Word_u (\w+)\[] = \{([^}]*)(};)
-// Replace: LAZY_ARR_BEGIN(Scene_Word_u, $1)$2LAZY_ARR_END
-
-// Find: Gfx (\w+)\[] = \{([^}]*)(};)
-// Replace: GFX_ARR_BEGIN($1)$2GFX_ARR_END
+#define nofralloc
 
 #define CONCAT1(a, b) a##b
 #define CONCAT2(a, b) CONCAT1(a, b)
@@ -32,3 +24,15 @@
 #define GFX_ARR_END LAZY_ARR_END
 
 #endif
+
+// Find: (asm \w+ \w+\([^\)]*\)\{)\s(?!#)([^}]*)(})
+// Replace: $1\n#ifdef ENABLE_ASM\n$2\#endif\n$3
+
+// Find: extern (\w+) (\w+)\[];\nstatic \1 \2\[]
+// Replace: extern $1 $2[];\n$1 $2[]
+
+// Find: Scene_Word_u (\w+)\[] = \{([^}]*)(};)
+// Replace: LAZY_ARR_BEGIN(Scene_Word_u, $1)$2LAZY_ARR_END
+
+// Find: Gfx (\w+)\[] = \{([^}]*)(};)
+// Replace: GFX_ARR_BEGIN($1)$2GFX_ARR_END

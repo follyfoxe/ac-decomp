@@ -200,12 +200,8 @@ u32 JKRMemArchive::fetchResource_subroutine(u8* src, u32 srcLength, u8* dst, u32
 
             JKRDecompress(src, dst, expandSize, 0);
             return expandSize;
-
-        default: {
-            JPANIC(709, ":::??? bad sequence\n");
-            return 0;
-        }
     }
 
-    return alignedSrc;
+    JPANIC(709, ":::??? bad sequence\n");
+    return 0;
 }

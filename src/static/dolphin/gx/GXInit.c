@@ -21,9 +21,11 @@ GXBool __GXinBegin;
 
 asm BOOL IsWriteGatherBufferEmpty(void)
 {
+#ifdef ENABLE_ASM
     sync
     mfspr r3, WPAR
     andi. r3, r3, 1
+#endif
 }
 
 static void EnableWriteGatherPipe(void)

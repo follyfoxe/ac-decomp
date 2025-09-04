@@ -178,7 +178,8 @@ int WriteUARTN(void *buf, u32 len) {
                 xLen = len < 4 ? (long)len : 4;
                 
                 EXIImm(Chan, buf, xLen, 1, 0);
-                (char*)buf += xLen;
+                buf = (char*)buf + xLen;
+                //(char*)buf += xLen;
                 len -= xLen;
                 qLen -= xLen;
                 EXISync(Chan);

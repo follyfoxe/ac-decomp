@@ -1,8 +1,24 @@
 #ifndef MALLOC_H
 #define MALLOC_H
 
-#include <stdlib.h>
 #include "types.h"
-#undef errno
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+    extern void* malloc(size_t size);
+    extern void free(void* ptr);
+
+    extern void MallocInit(void* base, u32 len);
+    extern void MallocCleanup();
+    extern int  MallocIsInitalized();
+    extern void GetFreeArena(u32* max_size, u32* free_size, u32* alloc_size);
+    extern int CheckArena(); /* @unused */
+    extern void DisplayArena();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

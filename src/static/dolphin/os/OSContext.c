@@ -183,6 +183,7 @@ _return:
 }
 
 asm void OSSetCurrentContext(register OSContext* context){
+#ifdef ENABLE_ASM
     // clang-format off
   nofralloc
 
@@ -216,6 +217,7 @@ _disableFPU:
   isync
   blr
     // clang-format on
+#endif
 }
 
 OSContext* OSGetCurrentContext(void) {

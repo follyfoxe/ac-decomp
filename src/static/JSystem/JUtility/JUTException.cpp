@@ -1,11 +1,11 @@
-#include "MSL_C/MSL_Common/float.h"
+//#include "MSL_C/MSL_Common/float.h"
 
 #include <dolphin/base/PPCArch.h>
 #include <dolphin/gx.h>
 #include <dolphin/os.h>
 
-#include "MSL_C/printf.h"
-#include "libc/string.h"
+//#include "MSL_C/printf.h"
+//#include "libc/string.h"
 
 #include "JSystem/JUtility/JUTException.h"
 #include "JSystem/JUtility/JUTDirectPrint.h"
@@ -623,7 +623,8 @@ void JUTException::createFB() {
     mFrameMemory = (JUTExternalFB*)object;
 }
 // clang-format off
-asm u32 JUTException::getFpscr() { // TODO: figure out if this is possible with asm
+asm u32 JUTException::getFpscr() { // TODO: figure out if this is possible with as
+#ifdef ENABLE_ASM
     fralloc
     mfmsr r5
     ori r5, r5, 0x2000
@@ -634,6 +635,7 @@ asm u32 JUTException::getFpscr() { // TODO: figure out if this is possible with 
     lwz r3, 12(r1)
     frfree
     blr
+#endif
 }
 // clang-format on
 

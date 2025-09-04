@@ -10,7 +10,7 @@ void bcopy(void* __src, void* __dst, size_t __n) {
     memmove(__dst, __src, __n);
 }
 
-int bcmp(void* __s1, void* __s2, size_t __n) {
+int bcmp(void* __s1, void* __s2, u32 __n) {
     return memcmp(__s1, __s2, __n);
 }
 

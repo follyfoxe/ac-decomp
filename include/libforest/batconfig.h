@@ -4,6 +4,7 @@
 #include "types.h"
 #include "dolphin/os/OSMemory.h"
 #include "dolphin/os/OSInterrupt.h"
+#include "pc/macros.h"
 
 
 #ifdef __cplusplus

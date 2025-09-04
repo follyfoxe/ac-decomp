@@ -13,6 +13,7 @@ static void __fini_cpp(void);
 
 /* clang-format off */
 __declspec(section ".init") asm void __init_hardware(void) {
+#ifdef ENABLE_ASM
     nofralloc
     mfmsr r0
     ori r0, r0, 0x2000
@@ -22,6 +23,7 @@ __declspec(section ".init") asm void __init_hardware(void) {
     bl __OSCacheInit
     mtlr r31
     blr
+#endif
 }
 
 __declspec(section ".init") asm void __flush_cache(void* address, u32 size) {
@@ -44,8 +46,10 @@ loop:
 /* clang-format on */
 
 asm void __init_user(void) {
+#ifdef ENABLE_ASM
 	fralloc
     bl __init_cpp
+#endif
 }
 
 static void __init_cpp(void) {

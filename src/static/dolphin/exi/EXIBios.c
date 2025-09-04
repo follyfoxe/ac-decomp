@@ -163,7 +163,8 @@ int EXIImmEx(long chan, void * buf, long len, unsigned long mode) {
         if (EXISync(chan) == 0) {
             return 0;
         }
-        ((u8*)buf) += xLen;
+        //((u8*)buf) += xLen;
+        buf = (u8*)buf + xLen;
         len -= xLen;
     }
     return 1;

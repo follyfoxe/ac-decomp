@@ -2,7 +2,7 @@
 #include "dolphin/os/OSInterrupt.h"
 #include "dolphin/os/OSRtc.h"
 
-#include "MSL_C/printf.h"
+//#include "MSL_C/printf.h"
 
 static BOOL __OSReport_disable;
 static OSThread* __OSReport_MonopolyThread;

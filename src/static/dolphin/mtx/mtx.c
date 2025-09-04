@@ -263,7 +263,7 @@ _end:
 #endif // clang-format on
 }
 
-static inline void __PSMTXRotAxisRadInternal(register GC_Mtx m,
+inline void __PSMTXRotAxisRadInternal(register GC_Mtx m,
                                              const register Vec* axis,
                                              register f32 sT, register f32 cT)
 {

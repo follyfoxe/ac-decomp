@@ -4,7 +4,7 @@
 #include "types.h"
 
 #ifdef __cplusplus
-namespace std {
+namespace stdmsl {
 
 /* TODO: these should be properly implemented */
 

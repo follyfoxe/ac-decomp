@@ -1,4 +1,4 @@
-#include <libc/string.h>
+//#include <libc/string.h>
 
 #include <dolphin/gx.h>
 #include <dolphin/os.h>

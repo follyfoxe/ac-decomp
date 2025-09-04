@@ -1,6 +1,7 @@
 #include "libforest/batconfig.h"
 
 asm void Config24MB(){
+#ifdef ENABLE_ASM
 nofralloc
 /* 8005ADAC 7C6000A6 */ mfmsr       r3
 /* 8005ADB0 54630734 */ rlwinm      r3, r3, 0, 0x1c, 0x1a
@@ -28,9 +29,11 @@ nofralloc
 /* 8005AE08 60630010 */ ori         r3, r3, 0x10
 /* 8005AE0C 7C600124 */ mtmsr       r3
 /* 8005AE10 4C00012C */ isync       
-/* 8005AE14 4E800020 */ blr         
+/* 8005AE14 4E800020 */ blr
+#endif
 }
 asm void Config48MB(){
+#ifdef ENABLE_ASM
 nofralloc
 /* 8005AE18 7C6000A6 */ mfmsr       r3
 /* 8005AE1C 54630734 */ rlwinm      r3, r3, 0, 0x1c, 0x1a
@@ -59,6 +62,7 @@ nofralloc
 /* 8005AE78 7C600124 */ mtmsr       r3
 /* 8005AE7C 4C00012C */ isync       
 /* 8005AE80 4E800020 */ blr
+#endif
 }
 void ReconfigBATs(){
     BOOL rest = OSDisableInterrupts();

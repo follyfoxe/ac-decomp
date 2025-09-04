@@ -1,4 +1,4 @@
-#include <libc/string.h>
+#include <string.h>
 #include <dolphin/vi.h>
 #include "_mem.h"
 #include "JSystem/J2D/J2DGrafContext.h"

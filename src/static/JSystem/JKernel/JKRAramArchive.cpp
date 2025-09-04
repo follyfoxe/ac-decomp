@@ -287,8 +287,7 @@ u32 JKRAramArchive::fetchResource_subroutine(u32 srcAram, u32 size, JKRHeap* hea
             JKRAramToMainRam(srcAram, buffer, alignedSize, EXPAND_SWITCH_DECOMPRESS, expandSize, heap, -1, &resSize);
             *pBuf = buffer;
             return resSize;
-        default:
-            JPANIC(605, ":::??? bad sequence\n");
-            return 0;
     }
+    JPANIC(605, ":::??? bad sequence\n");
+    return 0;
 }

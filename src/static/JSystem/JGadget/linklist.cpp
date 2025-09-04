@@ -45,7 +45,7 @@ void TNodeLinkList::splice(TNodeLinkList::iterator it, TNodeLinkList& rSrc, TNod
     }
   }
   else {
-    dist = std::distance(itBegin, itEnd);
+    dist = stdmsl::distance(itBegin, itEnd);
 
     if (dist == 0) {
       return;

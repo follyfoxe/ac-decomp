@@ -2,7 +2,7 @@
 #include "dolphin/db.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "dolphin/os/__ppc_eabi_init.h"
-#include <libc/stdlib.h>
+#include <stdlib.h>
 
 __declspec(section ".init") void __init_registers(void);
 __declspec(section ".init") void __init_data(void);
@@ -17,6 +17,7 @@ __declspec(section ".init") void __check_pad3(void) {
 
 /* clang-format off */
 __declspec(section ".init") asm void __start(void){
+#ifdef ENABLE_ASM
     nofralloc
 
     bl __init_registers
@@ -109,9 +110,11 @@ user:
     mr r4, r15
     bl main // can't find the dol main, because there's one main in dol and then one in rel
     b exit
+#endif
 }
 
 __declspec(section ".init") asm void __init_registers(void){
+#ifdef ENABLE_ASM
     nofralloc
     lis r1, _stack_addr@h
     ori r1, r1, _stack_addr@l
@@ -120,6 +123,7 @@ __declspec(section ".init") asm void __init_registers(void){
     lis r13, _SDA_BASE_@h
     ori r13, r13, _SDA_BASE_@l
     blr
+#endif
 }
 /* clang-format on */
 

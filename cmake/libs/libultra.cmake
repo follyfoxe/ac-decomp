@@ -1,0 +1,38 @@
+# auto-generated file
+add_library(libultra STATIC
+		"src/static/libultra/contquery.c"
+		"src/static/libultra/contreaddata.c"
+		"src/static/libultra/controller.c"
+		"src/static/libultra/contsetch.c"
+		"src/static/libultra/gu/coss.c"
+		"src/static/libultra/createmesgqueue.c"
+		"src/static/libultra/createthread.c"
+		"src/static/libultra/destroythread.c"
+		"src/static/libultra/getthreadid.c"
+		"src/static/libultra/gettime.c"
+		"src/static/libultra/initialize.c"
+		"src/static/libultra/gu/lookat.c"
+		"src/static/libultra/gu/lookathil.c"
+		"src/static/libultra/gu/mtxutil.c"
+		"src/static/libultra/gu/normalize.c"
+		"src/static/libultra/gu/ortho.c"
+		"src/static/libultra/gu/perspective.c"
+		"src/static/libultra/recvmesg.c"
+		"src/static/libultra/gu/rotate.c"
+		"src/static/libultra/gu/scale.c"
+		"src/static/libultra/sendmesg.c"
+		"src/static/libultra/setthreadpri.c"
+		"src/static/libultra/settimer.c"
+		"src/static/libultra/shutdown.c"
+		"src/static/libultra/gu/sins.c"
+		"src/static/libultra/startthread.c"
+		"src/static/libultra/stoptimer.c"
+		"src/static/libultra/timerintr.c"
+		"src/static/libultra/gu/translate.c"
+		"src/static/libultra/ultra.c"
+		"src/static/libultra/xldtob.c"
+		"src/static/libultra/xlitob.c"
+		"src/static/libultra/xprintf.c")
+target_include_directories(libultra PRIVATE ${INCLUDE})
+target_compile_definitions(libultra PRIVATE ${DEFINES})
+target_compile_options(libultra PRIVATE ${OPTIONS})

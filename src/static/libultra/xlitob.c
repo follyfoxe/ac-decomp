@@ -1,4 +1,4 @@
-#include "compiler/gcc/stdlib.h" /* lldiv & lldiv_t */
+#include <stdlib.h> /* lldiv & lldiv_t */
 #include "_mem.h" /* memcpy */
 #include "libultra/xprintf.h"
 

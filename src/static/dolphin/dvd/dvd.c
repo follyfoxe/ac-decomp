@@ -37,7 +37,7 @@ void (* LastState)(struct DVDCommandBlock *);
 
 static void stateReadingFST();
 static void cbForStateReadingFST(unsigned long intType);
-static void stateError();
+static void stateError(u32 intType);
 static void stateGettingError();
 static unsigned long CategorizeError(unsigned long error);
 static void cbForStateGettingError(unsigned long intType);

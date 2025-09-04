@@ -28,7 +28,7 @@ static void cbForReadSync();
 static void cbForSeekAsync(long result, struct DVDCommandBlock * block);
 static void cbForSeekSync();
 static void cbForPrepareStreamAsync(s32 result, DVDCommandBlock* block);
-static void cbForPrepareStreamSync();
+static void cbForPrepareStreamSync(u32 intType);
 
 void __DVDFSInit() {
     BootInfo = (void*)OSPhysicalToCached(0);
@@ -629,7 +629,7 @@ s32 DVDPrepareStream(DVDFileInfo* fileInfo, u32 length, u32 offset) {
     return retVal;
 }
 
-static void cbForPrepareStreamSync(s32 result, DVDCommandBlock* block) {
+static void cbForPrepareStreamSync(u32 intType) {
     OSWakeupThread(&__DVDThreadQueue);
 }
 
