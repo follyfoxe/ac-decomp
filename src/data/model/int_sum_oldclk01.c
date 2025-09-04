@@ -54,7 +54,7 @@ Vtx int_sum_oldclk01_v[] = {
 #include "assets/int_sum_oldclk01_v.inc"
 };
 
-Gfx int_sum_oldclk01_long_model[] = {
+GFX_ARR_BEGIN(int_sum_oldclk01_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -66,9 +66,9 @@ Gfx int_sum_oldclk01_long_model[] = {
     gsSPVertex(int_sum_oldclk01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oldclk01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_oldclk01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -116,9 +116,9 @@ Gfx int_sum_oldclk01_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oldclk01_env_model[] = {
+GFX_ARR_BEGIN(int_sum_oldclk01_env_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 115),
@@ -131,9 +131,9 @@ Gfx int_sum_oldclk01_env_model[] = {
     gsSPVertex(&int_sum_oldclk01_v[66], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oldclk01_short_model[] = {
+GFX_ARR_BEGIN(int_sum_oldclk01_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -145,9 +145,9 @@ Gfx int_sum_oldclk01_short_model[] = {
     gsSPVertex(&int_sum_oldclk01_v[4], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oldclk01_frko_model[] = {
+GFX_ARR_BEGIN(int_sum_oldclk01_frko_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -159,7 +159,7 @@ Gfx int_sum_oldclk01_frko_model[] = {
     gsSPVertex(&int_sum_oldclk01_v[7], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_oldclk01_tbl[] = { 0, 0, 0, 1, 0, 0, 0, 0 };
 

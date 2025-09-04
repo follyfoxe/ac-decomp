@@ -13,7 +13,7 @@ Vtx ef_museum5_awa1_v[] = {
 #include "assets/ef_museum5_awa1_v.inc"
 };
 
-Gfx ef_museum5_awa1_model[] = {
+GFX_ARR_BEGIN(ef_museum5_awa1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -26,4 +26,4 @@ Gfx ef_museum5_awa1_model[] = {
     gsSPVertex(ef_museum5_awa1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

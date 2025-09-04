@@ -4,7 +4,7 @@ extern Door_data_c KAMAKURA_door_data[];
 extern Actor_data KAMAKURA_player_data[];
 extern s16 KAMAKURA_ctrl_actor_data[];
 
-extern Scene_Word_u kamakura_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, kamakura_info)
     mSc_DATA_SOUND(0, 0),                               // Sound data
     mSc_DATA_DOOR_DATA(1, KAMAKURA_door_data),          // Door data
     mSc_DATA_PLAYER(KAMAKURA_player_data),              // Player Data
@@ -13,7 +13,7 @@ extern Scene_Word_u kamakura_info[] = {
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_DUMMY, 1, 0xA000, mSc_ROOM_TYPE_MISC_ROOM,
                      FIELD_DRAW_TYPE_INDOORS), // Field construct params
     mSc_DATA_END(),                            // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data KAMAKURA_player_data[] = {
     {

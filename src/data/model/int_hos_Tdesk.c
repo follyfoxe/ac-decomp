@@ -30,7 +30,7 @@ Vtx int_hos_Tdesk_v[] = {
 #include "assets/int_hos_Tdesk_v.inc"
 };
 
-Gfx int_hos_Tdesk_base_model[] = {
+GFX_ARR_BEGIN(int_hos_Tdesk_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -65,4 +65,4 @@ Gfx int_hos_Tdesk_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

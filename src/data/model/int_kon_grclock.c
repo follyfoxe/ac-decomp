@@ -34,7 +34,7 @@ Vtx int_kon_grclock_v[] = {
 #include "assets/int_kon_grclock_v.inc"
 };
 
-Gfx int_kon_grclock_long_model[] = {
+GFX_ARR_BEGIN(int_kon_grclock_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -46,9 +46,9 @@ Gfx int_kon_grclock_long_model[] = {
     gsSPVertex(int_kon_grclock_v, 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_grclock_off_model[] = {
+GFX_ARR_BEGIN(int_kon_grclock_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -62,9 +62,9 @@ Gfx int_kon_grclock_off_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 1, 0, 3, 4, 1),
     gsSPNTriangles_5b(5, 4, 3, 5, 6, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_grclock_base_model[] = {
+GFX_ARR_BEGIN(int_kon_grclock_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -90,9 +90,9 @@ Gfx int_kon_grclock_base_model[] = {
     gsSPNTrianglesInit_5b(5, 21, 22, 23, 24, 22, 21, 24, 25, 22),
     gsSPNTriangles_5b(26, 25, 24, 26, 27, 25, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_grclock_short_model[] = {
+GFX_ARR_BEGIN(int_kon_grclock_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -104,7 +104,7 @@ Gfx int_kon_grclock_short_model[] = {
     gsSPVertex(&int_kon_grclock_v[3], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_kon_grclock_tbl[] = { 0, 0, 0, 0, 0, 0 };
 

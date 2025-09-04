@@ -17,7 +17,7 @@ Vtx obj_museum4_water_v[] = {
 #include "assets/obj_museum4_water_v.inc"
 };
 
-Gfx obj_museum4_water_modelT[] = {
+GFX_ARR_BEGIN(obj_museum4_water_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 1, 0, TEXEL0, TEXEL1, COMBINED, 0, SHADE, TEXEL0,
@@ -49,4 +49,4 @@ Gfx obj_museum4_water_modelT[] = {
     gsSPVertex(obj_museum4_water_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

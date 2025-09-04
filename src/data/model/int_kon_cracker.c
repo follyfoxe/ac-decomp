@@ -38,7 +38,7 @@ Vtx int_kon_cracker_v[] = {
 #include "assets/int_kon_cracker_v.inc"
 };
 
-Gfx int_kon_cracker_ito2_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ito2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -51,9 +51,9 @@ Gfx int_kon_cracker_ito2_model[] = {
     gsSPVertex(&int_kon_cracker_v[9], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ball2_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ball2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -67,9 +67,9 @@ Gfx int_kon_cracker_ball2_model[] = {
     gsSPNTriangles_5b(1, 0, 6, 6, 3, 1, 7, 1, 3, 6, 0, 4),
     gsSPNTriangles_5b(8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ue_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -81,9 +81,9 @@ Gfx int_kon_cracker_ue_model[] = {
     gsSPVertex(&int_kon_cracker_v[56], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ito3_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ito3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -96,9 +96,9 @@ Gfx int_kon_cracker_ito3_model[] = {
     gsSPVertex(&int_kon_cracker_v[33], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_hasira_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_hasira_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -121,9 +121,9 @@ Gfx int_kon_cracker_hasira_model[] = {
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 124, 124),
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ball3_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ball3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -137,9 +137,9 @@ Gfx int_kon_cracker_ball3_model[] = {
     gsSPNTriangles_5b(3, 6, 5, 5, 2, 3, 1, 6, 3, 6, 1, 7),
     gsSPNTriangles_5b(2, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ito1_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ito1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -152,9 +152,9 @@ Gfx int_kon_cracker_ito1_model[] = {
     gsSPVertex(&int_kon_cracker_v[12], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_cracker_ball1_model[] = {
+GFX_ARR_BEGIN(int_kon_cracker_ball1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -168,7 +168,7 @@ Gfx int_kon_cracker_ball1_model[] = {
     gsSPNTriangles_5b(1, 0, 6, 6, 3, 1, 7, 1, 3, 6, 0, 4),
     gsSPNTriangles_5b(8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_kon_cracker_tbl[] = { 0, 0, 0, 1, 0, 0, 0, 0, 1, 0 };
 

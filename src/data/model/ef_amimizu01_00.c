@@ -13,7 +13,7 @@ Vtx ef_amimizu01_00_v[] = {
 #include "assets/ef_amimizu01_00_v.inc"
 };
 
-Gfx ef_amimizu01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_amimizu01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(ENVIRONMENT, PRIMITIVE, TEXEL0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0,
                        0, COMBINED),
@@ -26,4 +26,4 @@ Gfx ef_amimizu01_00_modelT[] = {
     gsSPNTriangles_5b(9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(21, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

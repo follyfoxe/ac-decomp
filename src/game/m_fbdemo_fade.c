@@ -4,7 +4,7 @@
 #include "libultra/libultra.h"
 #include "m_common_data.h"
 
-Gfx fbdemo_fade_gfx_init[] = {
+GFX_ARR_BEGIN(fbdemo_fade_gfx_init)
     gsDPPipeSync(),
     gsSPClearGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BOTH | G_FOG |
                           G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
@@ -15,7 +15,7 @@ Gfx fbdemo_fade_gfx_init[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_CLD_SURF | G_RM_CLD_SURF2),
     gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PRIMITIVE),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 fbdemo_fade* fbdemo_fade_init(fbdemo_fade* this) {
   bzero(this, sizeof(fbdemo_fade));

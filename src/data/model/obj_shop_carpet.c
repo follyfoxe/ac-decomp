@@ -17,7 +17,7 @@ Vtx obj_shop_carpet_v[] = {
 #include "assets/obj_shop_carpet_v.inc"
 };
 
-Gfx obj_carpetT_mat_model[] = {
+GFX_ARR_BEGIN(obj_carpetT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -27,9 +27,9 @@ Gfx obj_carpetT_mat_model[] = {
     gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_carpetT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_carpetT_gfx_model)
     gsSPVertex(obj_shop_carpet_v, 32, 0),
     gsSPNTrianglesInit_5b(35, 0, 1, 2, 0, 2, 3, 4, 2, 1),
     gsSPNTriangles_5b(4, 1, 5, 5, 6, 7, 7, 8, 4, 4, 5, 7),
@@ -46,4 +46,4 @@ Gfx obj_carpetT_gfx_model[] = {
     gsSPNTriangles_5b(11, 12, 10, 10, 5, 11, 1, 13, 5, 11, 5, 13),
     gsSPNTriangles_5b(13, 14, 11, 11, 14, 12, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

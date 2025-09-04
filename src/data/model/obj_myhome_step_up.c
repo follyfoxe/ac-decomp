@@ -17,7 +17,7 @@ Vtx obj_myhome_step_up_v[] = {
 #include "assets/obj_myhome_step_up_v.inc"
 };
 
-Gfx obj_myhome_step_up_model[] = {
+GFX_ARR_BEGIN(obj_myhome_step_up_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -32,4 +32,4 @@ Gfx obj_myhome_step_up_model[] = {
     gsSPNTriangles_5b(12, 11, 10, 14, 15, 16, 14, 16, 17, 18, 19, 15),
     gsSPNTriangles_5b(18, 15, 14, 5, 4, 19, 5, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

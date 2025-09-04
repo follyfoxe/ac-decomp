@@ -18,7 +18,7 @@ Vtx int_nog_xtree_v[] = {
 #include "assets/int_nog_xtree_v.inc"
 };
 
-Gfx int_nog_xtreeT_model[] = {
+GFX_ARR_BEGIN(int_nog_xtreeT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,4 +48,4 @@ Gfx int_nog_xtreeT_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 12, 14, 13),
     gsSPNTriangles_5b(14, 15, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

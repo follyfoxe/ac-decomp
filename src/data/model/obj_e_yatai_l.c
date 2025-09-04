@@ -37,11 +37,11 @@ Vtx obj_e_yatai_l_v[] = {
 #include "assets/obj_e_yatai_l_v.inc"
 };
 
-Gfx obj_e_yatai_l_modelT[] = {
+GFX_ARR_BEGIN(obj_e_yatai_l_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_yatai_l_model[] = {
+GFX_ARR_BEGIN(obj_e_yatai_l_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -117,17 +117,17 @@ Gfx obj_e_yatai_l_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_yatai_r_v[] = {
 #include "assets/obj_e_yatai_r_v.inc"
 };
 
-Gfx obj_e_yatai_r_modelT[] = {
+GFX_ARR_BEGIN(obj_e_yatai_r_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_yatai_r_model[] = {
+GFX_ARR_BEGIN(obj_e_yatai_r_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -203,4 +203,4 @@ Gfx obj_e_yatai_r_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

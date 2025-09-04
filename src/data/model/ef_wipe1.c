@@ -14,7 +14,7 @@ Vtx ef_wipe1_v[] = {
 #include "assets/ef_wipe1_v.inc"
 };
 
-Gfx ef_wipe1_modelT[] = {
+GFX_ARR_BEGIN(ef_wipe1_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 0, 0, 0, 255),
@@ -45,4 +45,4 @@ Gfx ef_wipe1_modelT[] = {
     gsSPVertex(&ef_wipe1_v[64], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

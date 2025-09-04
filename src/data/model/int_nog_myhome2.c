@@ -22,7 +22,7 @@ Vtx int_nog_myhome2_v[] = {
 #include "assets/int_nog_myhome2_v.inc"
 };
 
-Gfx int_nog_myhome2_on_model[] = {
+GFX_ARR_BEGIN(int_nog_myhome2_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -39,9 +39,9 @@ Gfx int_nog_myhome2_on_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPNTrianglesInit_5b(2, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_myhome2_off_model[] = {
+GFX_ARR_BEGIN(int_nog_myhome2_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,9 +54,9 @@ Gfx int_nog_myhome2_off_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 0, 3, 4),
     gsSPNTriangles_5b(0, 4, 5, 6, 2, 1, 6, 7, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_myhome2_onT_model[] = {
+GFX_ARR_BEGIN(int_nog_myhome2_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -72,4 +72,4 @@ Gfx int_nog_myhome2_onT_model[] = {
     gsSPNTriangles_5b(8, 15, 14, 16, 17, 18, 16, 19, 17, 17, 20, 18),
     gsSPNTriangles_5b(17, 21, 20, 21, 22, 20, 22, 23, 20, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

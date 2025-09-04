@@ -46,7 +46,7 @@ Vtx int_sum_x_clk_v[] = {
 #include "assets/int_sum_x_clk_v.inc"
 };
 
-Gfx int_sum_x_clk_long_model[] = {
+GFX_ARR_BEGIN(int_sum_x_clk_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -58,9 +58,9 @@ Gfx int_sum_x_clk_long_model[] = {
     gsSPVertex(int_sum_x_clk_v, 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_clk_evw_model[] = {
+GFX_ARR_BEGIN(int_sum_x_clk_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -73,9 +73,9 @@ Gfx int_sum_x_clk_evw_model[] = {
     gsSPVertex(&int_sum_x_clk_v[54], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_clk_base_model[] = {
+GFX_ARR_BEGIN(int_sum_x_clk_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -104,9 +104,9 @@ Gfx int_sum_x_clk_base_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 5, 8, 6, 9, 10, 11, 9, 12, 10),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_clk_huriko_model[] = {
+GFX_ARR_BEGIN(int_sum_x_clk_huriko_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -118,9 +118,9 @@ Gfx int_sum_x_clk_huriko_model[] = {
     gsSPVertex(&int_sum_x_clk_v[58], 5, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_clk_short_model[] = {
+GFX_ARR_BEGIN(int_sum_x_clk_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -132,7 +132,7 @@ Gfx int_sum_x_clk_short_model[] = {
     gsSPVertex(&int_sum_x_clk_v[63], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_x_clk_tbl[] = { 0, 0, 0, 0, 0, 1, 0, 0 };
 

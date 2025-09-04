@@ -33,7 +33,7 @@ Vtx obj_s_myhome1_v[] = {
 #include "assets/obj_s_myhome1_v.inc"
 };
 
-Gfx obj_s_myhome1_window_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -44,9 +44,9 @@ Gfx obj_s_myhome1_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_light_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -58,9 +58,9 @@ Gfx obj_s_myhome1_light_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_REPEAT, 0, 0),
@@ -74,9 +74,9 @@ Gfx obj_s_myhome1_t3_model[] = {
     gsSPVertex(&obj_s_myhome1_v[70], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome1_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -86,9 +86,9 @@ Gfx obj_s_myhome1_t2_model[] = {
     gsSPNTriangles_5b(0, 2, 5, 5, 6, 4, 5, 7, 6, 7, 8, 6),
     gsSPNTriangles_5b(7, 9, 8, 9, 10, 8, 10, 11, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -101,9 +101,9 @@ Gfx obj_s_myhome1_t1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(3, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_fuda_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -115,9 +115,9 @@ Gfx obj_s_myhome1_fuda_model[] = {
     gsSPVertex(&obj_s_myhome1_v[116], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_mark_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -132,9 +132,9 @@ Gfx obj_s_myhome1_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_door_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -146,9 +146,9 @@ Gfx obj_s_myhome1_door_model[] = {
     gsSPVertex(obj_s_myhome1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -162,9 +162,9 @@ Gfx obj_s_myhome1_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome1_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome1_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -177,7 +177,7 @@ Gfx obj_s_myhome1_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_myhome1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -248,7 +248,7 @@ Vtx obj_s_myhome2_v[] = {
 #include "assets/obj_s_myhome2_v.inc"
 };
 
-Gfx obj_s_myhome2_window_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -259,9 +259,9 @@ Gfx obj_s_myhome2_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_light_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -273,9 +273,9 @@ Gfx obj_s_myhome2_light_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 11, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome2_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -289,9 +289,9 @@ Gfx obj_s_myhome2_t3_model[] = {
     gsSPVertex(&obj_s_myhome2_v[58], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome2_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -301,9 +301,9 @@ Gfx obj_s_myhome2_t2_model[] = {
     gsSPNTriangles_5b(5, 0, 2, 4, 6, 5, 6, 7, 5, 6, 8, 7),
     gsSPNTriangles_5b(6, 9, 8, 3, 10, 1, 10, 11, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -318,9 +318,9 @@ Gfx obj_s_myhome2_t1_model[] = {
     gsSPNTriangles_5b(10, 12, 13, 14, 15, 16, 14, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(18, 20, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_fuda_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -332,9 +332,9 @@ Gfx obj_s_myhome2_fuda_model[] = {
     gsSPVertex(&obj_s_myhome2_v[132], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_mark_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -349,9 +349,9 @@ Gfx obj_s_myhome2_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_door_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -363,9 +363,9 @@ Gfx obj_s_myhome2_door_model[] = {
     gsSPVertex(obj_s_myhome2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -379,9 +379,9 @@ Gfx obj_s_myhome2_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome2_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome2_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -394,7 +394,7 @@ Gfx obj_s_myhome2_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_myhome2_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -467,7 +467,7 @@ Vtx obj_s_myhome3_v[] = {
 #include "assets/obj_s_myhome3_v.inc"
 };
 
-Gfx obj_s_myhome3_window_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -478,9 +478,9 @@ Gfx obj_s_myhome3_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_light_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -493,9 +493,9 @@ Gfx obj_s_myhome3_light_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome3_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -509,9 +509,9 @@ Gfx obj_s_myhome3_t3_model[] = {
     gsSPVertex(&obj_s_myhome3_v[82], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome3_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -525,9 +525,9 @@ Gfx obj_s_myhome3_t2_model[] = {
     gsSPNTriangles_5b(1, 21, 20, 21, 22, 20, 22, 23, 20, 24, 25, 26),
     gsSPNTriangles_5b(24, 27, 25, 25, 28, 26, 24, 29, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -541,9 +541,9 @@ Gfx obj_s_myhome3_t1_model[] = {
     gsSPNTriangles_5b(7, 9, 8, 9, 10, 8, 6, 11, 7, 7, 12, 9),
     gsSPNTriangles_5b(7, 13, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_fuda_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -555,9 +555,9 @@ Gfx obj_s_myhome3_fuda_model[] = {
     gsSPVertex(&obj_s_myhome3_v[148], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_mark_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -572,9 +572,9 @@ Gfx obj_s_myhome3_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_door_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -586,9 +586,9 @@ Gfx obj_s_myhome3_door_model[] = {
     gsSPVertex(obj_s_myhome3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -602,9 +602,9 @@ Gfx obj_s_myhome3_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome3_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome3_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -617,7 +617,7 @@ Gfx obj_s_myhome3_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_myhome3_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -690,7 +690,7 @@ Vtx obj_w_myhome1_v[] = {
 #include "assets/obj_w_myhome1_v.inc"
 };
 
-Gfx obj_w_myhome1_window_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -701,9 +701,9 @@ Gfx obj_w_myhome1_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_light_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -715,9 +715,9 @@ Gfx obj_w_myhome1_light_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_REPEAT, 0, 0),
@@ -731,9 +731,9 @@ Gfx obj_w_myhome1_t3_model[] = {
     gsSPVertex(&obj_w_myhome1_v[70], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome1_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -743,9 +743,9 @@ Gfx obj_w_myhome1_t2_model[] = {
     gsSPNTriangles_5b(0, 2, 5, 5, 6, 4, 5, 7, 6, 7, 8, 6),
     gsSPNTriangles_5b(7, 9, 8, 9, 10, 8, 10, 11, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -758,9 +758,9 @@ Gfx obj_w_myhome1_t1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(3, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_fuda_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -772,9 +772,9 @@ Gfx obj_w_myhome1_fuda_model[] = {
     gsSPVertex(&obj_w_myhome1_v[116], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_mark_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -789,9 +789,9 @@ Gfx obj_w_myhome1_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_door_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -803,9 +803,9 @@ Gfx obj_w_myhome1_door_model[] = {
     gsSPVertex(obj_w_myhome1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -819,9 +819,9 @@ Gfx obj_w_myhome1_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome1_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome1_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -834,7 +834,7 @@ Gfx obj_w_myhome1_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_myhome1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -906,7 +906,7 @@ Vtx obj_w_myhome2_v[] = {
 #include "assets/obj_w_myhome2_v.inc"
 };
 
-Gfx obj_w_myhome2_window_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -917,9 +917,9 @@ Gfx obj_w_myhome2_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_light_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -931,9 +931,9 @@ Gfx obj_w_myhome2_light_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 11, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome2_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -947,9 +947,9 @@ Gfx obj_w_myhome2_t3_model[] = {
     gsSPVertex(&obj_w_myhome2_v[58], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome2_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -959,9 +959,9 @@ Gfx obj_w_myhome2_t2_model[] = {
     gsSPNTriangles_5b(5, 0, 2, 4, 6, 5, 6, 7, 5, 6, 8, 7),
     gsSPNTriangles_5b(6, 9, 8, 3, 10, 1, 10, 11, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -976,9 +976,9 @@ Gfx obj_w_myhome2_t1_model[] = {
     gsSPNTriangles_5b(10, 12, 9, 13, 14, 15, 13, 15, 10, 9, 8, 16),
     gsSPNTriangles_5b(9, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_fuda_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -990,9 +990,9 @@ Gfx obj_w_myhome2_fuda_model[] = {
     gsSPVertex(&obj_w_myhome2_v[128], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_mark_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1007,9 +1007,9 @@ Gfx obj_w_myhome2_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_door_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1021,9 +1021,9 @@ Gfx obj_w_myhome2_door_model[] = {
     gsSPVertex(obj_w_myhome2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1037,9 +1037,9 @@ Gfx obj_w_myhome2_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome2_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome2_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1052,7 +1052,7 @@ Gfx obj_w_myhome2_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_myhome2_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -1124,7 +1124,7 @@ Vtx obj_w_myhome3_v[] = {
 #include "assets/obj_w_myhome3_v.inc"
 };
 
-Gfx obj_w_myhome3_window_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1135,9 +1135,9 @@ Gfx obj_w_myhome3_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_light_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1150,9 +1150,9 @@ Gfx obj_w_myhome3_light_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome3_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -1166,9 +1166,9 @@ Gfx obj_w_myhome3_t3_model[] = {
     gsSPVertex(&obj_w_myhome3_v[82], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome3_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -1181,9 +1181,9 @@ Gfx obj_w_myhome3_t2_model[] = {
     gsSPNTriangles_5b(1, 21, 20, 21, 22, 20, 22, 23, 20, 24, 25, 26),
     gsSPNTriangles_5b(24, 27, 25, 25, 28, 26, 24, 29, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1197,9 +1197,9 @@ Gfx obj_w_myhome3_t1_model[] = {
     gsSPNTriangles_5b(7, 9, 8, 9, 10, 8, 6, 11, 7, 7, 12, 9),
     gsSPNTriangles_5b(7, 13, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_fuda_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1211,9 +1211,9 @@ Gfx obj_w_myhome3_fuda_model[] = {
     gsSPVertex(&obj_w_myhome3_v[148], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_mark_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1228,9 +1228,9 @@ Gfx obj_w_myhome3_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_door_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1242,9 +1242,9 @@ Gfx obj_w_myhome3_door_model[] = {
     gsSPVertex(obj_w_myhome3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1258,9 +1258,9 @@ Gfx obj_w_myhome3_kazamiB_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 4, 6, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome3_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome3_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1273,7 +1273,7 @@ Gfx obj_w_myhome3_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_myhome3_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -1346,7 +1346,7 @@ Vtx obj_s_myhome4_v[] = {
 #include "assets/obj_s_myhome4_v.inc"
 };
 
-Gfx obj_s_myhome4_window_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1357,9 +1357,9 @@ Gfx obj_s_myhome4_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome4_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_REPEAT, 0, 0),
@@ -1373,9 +1373,9 @@ Gfx obj_s_myhome4_t3_model[] = {
     gsSPVertex(&obj_s_myhome4_v[74], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_myhome4_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -1385,9 +1385,9 @@ Gfx obj_s_myhome4_t2_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 6, 9, 7, 10, 6, 11),
     gsSPNTriangles_5b(6, 8, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1412,9 +1412,9 @@ Gfx obj_s_myhome4_t1_model[] = {
     gsSPVertex(&obj_s_myhome4_v[194], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_light_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1427,9 +1427,9 @@ Gfx obj_s_myhome4_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 15, 17, 18, 19, 20, 21, 19, 21, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_fuda_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1442,9 +1442,9 @@ Gfx obj_s_myhome4_fuda_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_mark_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1459,9 +1459,9 @@ Gfx obj_s_myhome4_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_door_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1473,9 +1473,9 @@ Gfx obj_s_myhome4_door_model[] = {
     gsSPVertex(obj_s_myhome4_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1489,9 +1489,9 @@ Gfx obj_s_myhome4_kazamiB_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_myhome4_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_s_myhome4_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1504,7 +1504,7 @@ Gfx obj_s_myhome4_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_myhome4_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },
@@ -1577,7 +1577,7 @@ Vtx obj_w_myhome4_v[] = {
 #include "assets/obj_w_myhome4_v.inc"
 };
 
-Gfx obj_w_myhome4_window_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1588,9 +1588,9 @@ Gfx obj_w_myhome4_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome4_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_REPEAT, 0, 0),
@@ -1604,9 +1604,9 @@ Gfx obj_w_myhome4_t3_model[] = {
     gsSPVertex(&obj_w_myhome4_v[74], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_myhome4_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -1616,9 +1616,9 @@ Gfx obj_w_myhome4_t2_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 6, 9, 7, 10, 6, 11),
     gsSPNTriangles_5b(6, 8, 11, 12, 13, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1643,9 +1643,9 @@ Gfx obj_w_myhome4_t1_model[] = {
     gsSPVertex(&obj_w_myhome4_v[194], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_light_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1658,9 +1658,9 @@ Gfx obj_w_myhome4_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 15, 17, 18, 19, 20, 21, 19, 21, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_fuda_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_fuda_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1673,9 +1673,9 @@ Gfx obj_w_myhome4_fuda_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_mark_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_mark_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1690,9 +1690,9 @@ Gfx obj_w_myhome4_mark_model[] = {
     gsSPNTriangles_5b(8, 9, 1, 9, 10, 1, 10, 11, 1, 11, 12, 1),
     gsSPNTriangles_5b(12, 13, 1, 13, 7, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_door_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1704,9 +1704,9 @@ Gfx obj_w_myhome4_door_model[] = {
     gsSPVertex(obj_w_myhome4_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_kazamiB_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_kazamiB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1720,9 +1720,9 @@ Gfx obj_w_myhome4_kazamiB_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_myhome4_kazamiA_model[] = {
+GFX_ARR_BEGIN(obj_w_myhome4_kazamiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1735,7 +1735,7 @@ Gfx obj_w_myhome4_kazamiA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_myhome4_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 828, 0, 2000 } },

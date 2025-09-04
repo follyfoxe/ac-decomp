@@ -34,7 +34,7 @@ Vtx int_din_ptera_Rwing_v[] = {
 #include "assets/int_din_ptera_Rwing_v.inc"
 };
 
-Gfx int_din_ptera_Rwing_model[] = {
+GFX_ARR_BEGIN(int_din_ptera_Rwing_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_din_ptera_Rwing_model[] = {
     gsSPNTriangles_5b(0, 4, 5, 3, 2, 6, 3, 6, 4, 5, 7, 1),
     gsSPNTriangles_5b(5, 1, 0, 4, 6, 7, 4, 7, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_din_ptera_RwingT_model[] = {
+GFX_ARR_BEGIN(int_din_ptera_RwingT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -79,4 +79,4 @@ Gfx int_din_ptera_RwingT_model[] = {
     gsSPVertex(&int_din_ptera_Rwing_v[28], 5, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 1, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -30,7 +30,7 @@ Vtx int_ike_jny_houi01_v[] = {
 #include "assets/int_ike_jny_houi01_v.inc"
 };
 
-Gfx int_ike_jny_houi01_on_hari_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_houi01_on_hari_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -42,9 +42,9 @@ Gfx int_ike_jny_houi01_on_hari_model[] = {
     gsSPVertex(int_ike_jny_houi01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 0, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_houi01_on_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_houi01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -68,9 +68,9 @@ Gfx int_ike_jny_houi01_on_model[] = {
     gsSPNTriangles_5b(22, 20, 19, 21, 23, 19, 24, 22, 19, 23, 25, 19),
     gsSPNTriangles_5b(25, 24, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_houi01_off_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_houi01_off_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -86,7 +86,7 @@ Gfx int_ike_jny_houi01_off_model[] = {
     gsSPNTriangles_5b(5, 3, 2, 4, 6, 2, 7, 5, 2, 6, 8, 2),
     gsSPNTriangles_5b(8, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_jny_houi01_tbl[] = { 0, 0, 7, 7 };
 

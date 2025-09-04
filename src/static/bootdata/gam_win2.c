@@ -14,7 +14,7 @@ static Vtx gam_win2_v[] = {
 #include "assets/bootdata/win2/gam_win2_v.inc"
 };
 
-Gfx gam_win2_moji_model[] = {
+GFX_ARR_BEGIN(gam_win2_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 50, 50, 60, 255),
@@ -36,9 +36,9 @@ Gfx gam_win2_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx gam_win2_winT_model[] = {
+GFX_ARR_BEGIN(gam_win2_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 225, 255, 255, 255),
@@ -119,4 +119,4 @@ Gfx gam_win2_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END

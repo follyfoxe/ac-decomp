@@ -46,7 +46,7 @@ Vtx int_sum_bdcake01_v[] = {
 #include "assets/int_sum_bdcake01_v.inc"
 };
 
-Gfx int_sum_bdcake01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_bdcake01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -81,9 +81,9 @@ Gfx int_sum_bdcake01_on_model[] = {
     gsSPNTriangles_5b(7, 5, 8, 7, 8, 9, 9, 8, 10, 9, 10, 11),
     gsSPNTriangles_5b(12, 4, 3, 12, 13, 4, 12, 14, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bdcake01_off1_model[] = {
+GFX_ARR_BEGIN(int_sum_bdcake01_off1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -96,9 +96,9 @@ Gfx int_sum_bdcake01_off1_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 4, 5, 6, 7),
     gsSPNTriangles_5b(8, 9, 10, 11, 12, 13, 14, 15, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bdcake01_off_model[] = {
+GFX_ARR_BEGIN(int_sum_bdcake01_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -111,4 +111,4 @@ Gfx int_sum_bdcake01_off_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 2, 5, 6, 7),
     gsSPNTriangles_5b(8, 9, 10, 11, 12, 13, 14, 15, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

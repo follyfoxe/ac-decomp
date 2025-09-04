@@ -17,7 +17,7 @@ Vtx int_din_trex_dummy_v[] = {
 #include "assets/int_din_trex_dummy_v.inc"
 };
 
-Gfx int_din_trex_dummy_model[] = {
+GFX_ARR_BEGIN(int_din_trex_dummy_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -31,4 +31,4 @@ Gfx int_din_trex_dummy_model[] = {
     gsSPNTriangles_5b(3, 4, 5, 6, 7, 1, 6, 1, 0, 5, 4, 7),
     gsSPNTriangles_5b(5, 7, 6, 0, 3, 5, 0, 5, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

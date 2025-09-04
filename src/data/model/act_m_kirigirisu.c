@@ -16,7 +16,7 @@ static Vtx act_m_kirigirisu_v[] = {
 #include "assets/act_m_kirigirisu/act_m_kirigirisu_v.inc"
 };
 
-Gfx act_m_kirigirisu1T_model[] = {
+GFX_ARR_BEGIN(act_m_kirigirisu1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -30,9 +30,9 @@ Gfx act_m_kirigirisu1T_model[] = {
     gsSPNTriangles_5b(3, 5, 1, 5, 6, 1, 6, 4, 1, 7, 8, 9),
     gsSPNTriangles_5b(7, 9, 10, 11, 12, 13, 11, 13, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_kirigirisu2_2T_model[] = {
+GFX_ARR_BEGIN(act_m_kirigirisu2_2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, COMBINED, 0,
                        ENVIRONMENT, 0),
@@ -45,4 +45,4 @@ Gfx act_m_kirigirisu2_2T_model[] = {
     gsSPVertex(&act_m_kirigirisu_v[15], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

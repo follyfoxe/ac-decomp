@@ -13,7 +13,7 @@ Vtx lat_letter23_v[] = {
 #include "assets/lat_letter23_v.inc"
 };
 
-Gfx lat_letter23_model[] = {
+GFX_ARR_BEGIN(lat_letter23_model)
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter23_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, lat_letter23_4),
@@ -38,4 +38,4 @@ Gfx lat_letter23_model[] = {
     gsSP2Triangles(7, 6, 0, 0, 7, 0, 3, 0),
     gsSP2Triangles(1, 5, 4, 0, 1, 4, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

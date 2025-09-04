@@ -18,7 +18,7 @@ Vtx act_mus_wakasa_a1_v[] = {
 #include "assets/act_mus_wakasa_a1_v.inc"
 };
 
-Gfx act_mus_wakasa_sakana_body_model[] = {
+GFX_ARR_BEGIN(act_mus_wakasa_sakana_body_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPVertex(act_mus_wakasa_a1_v, 8, 0),
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
@@ -33,9 +33,9 @@ Gfx act_mus_wakasa_sakana_body_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 4, 5, 6, 7),
     gsSPNTriangles_5b(0, 4, 1, 7, 8, 9, 9, 5, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_wakasa_sakana_head_model[] = {
+GFX_ARR_BEGIN(act_mus_wakasa_sakana_head_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, int_sum_wakasagi_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 16, act_mus_wakasagi_body_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -49,7 +49,7 @@ Gfx act_mus_wakasa_sakana_head_model[] = {
     gsSPNTriangles_5b(18, 24, 27, 28, 26, 22, 21, 29, 22, 18, 17, 23),
     gsSPNTriangles_5b(22, 29, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_act_mus_wakasa_a1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 65529, 697 } },

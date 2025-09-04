@@ -26,7 +26,7 @@ Vtx int_sugi_torch_v[] = {
 #include "assets/int_sugi_torch_v.inc"
 };
 
-Gfx sugi_tu_core_model[] = {
+GFX_ARR_BEGIN(sugi_tu_core_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -58,9 +58,9 @@ Gfx sugi_tu_core_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(1, 7, 8, 9, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sugi_tu_bar_model[] = {
+GFX_ARR_BEGIN(sugi_tu_bar_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -97,9 +97,9 @@ Gfx sugi_tu_bar_model[] = {
     gsSPNTriangles_5b(21, 20, 23, 24, 25, 23, 24, 23, 26, 27, 28, 26),
     gsSPNTriangles_5b(27, 26, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sugi_fireto_model[] = {
+GFX_ARR_BEGIN(sugi_fireto_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, TEXEL0,
                        1, PRIM_LOD_FRAC, COMBINED),
@@ -116,7 +116,7 @@ Gfx sugi_fireto_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sugi_torch_tbl[] = { 0, 0, 0, 0 };
 

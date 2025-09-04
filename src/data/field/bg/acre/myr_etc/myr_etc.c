@@ -16,7 +16,7 @@ static Vtx myr_kotei_v[] = {
 #include "assets/field/bg/myr_kotei_v.inc"
 };
 
-static Gfx myr_kotei_model[] = {
+static GFX_ARR_BEGIN(myr_kotei_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
@@ -32,9 +32,9 @@ static Gfx myr_kotei_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSP2Triangles(4, 5, 2, 0, 5, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx myr_out_model[] = {
+static GFX_ARR_BEGIN(myr_out_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PASS2),
@@ -45,9 +45,9 @@ static Gfx myr_out_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx myr_koteiT_model[] = {
+static GFX_ARR_BEGIN(myr_koteiT_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
@@ -63,12 +63,12 @@ static Gfx myr_koteiT_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx myr_etc_model[] = {
+extern GFX_ARR_BEGIN(myr_etc_model)
     gsDPPipeSync(),
     gsSPDisplayList(myr_kotei_model),
     gsSPDisplayList(myr_koteiT_model),
     gsSPDisplayList(myr_out_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

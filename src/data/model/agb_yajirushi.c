@@ -13,7 +13,7 @@ Vtx agb_yajirushi_v[] = {
 #include "assets/agb_yajirushi_v.inc"
 };
 
-Gfx agb_win_yajirushiT_model[] = {
+GFX_ARR_BEGIN(agb_win_yajirushiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -25,4 +25,4 @@ Gfx agb_win_yajirushiT_model[] = {
     gsSPVertex(agb_yajirushi_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

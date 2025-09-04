@@ -24,11 +24,11 @@ static Vtx tmp2_v[] = {
 #include "assets/field/bg/tmp2_v.inc"
 };
 
-extern Gfx tmp2_modelT[] = {
+extern GFX_ARR_BEGIN(tmp2_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx tmp2_model[] = {
+extern GFX_ARR_BEGIN(tmp2_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -146,4 +146,4 @@ extern Gfx tmp2_model[] = {
     gsSPVertex(&tmp2_v[228], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

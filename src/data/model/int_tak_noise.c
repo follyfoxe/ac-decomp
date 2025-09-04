@@ -26,7 +26,7 @@ Vtx int_tak_noise_v[] = {
 #include "assets/int_tak_noise_v.inc"
 };
 
-Gfx int_tak_noise_on_model[] = {
+GFX_ARR_BEGIN(int_tak_noise_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -49,9 +49,9 @@ Gfx int_tak_noise_on_model[] = {
     gsSPNTriangles_5b(14, 16, 17, 17, 16, 11, 17, 11, 10, 18, 19, 15),
     gsSPNTriangles_5b(18, 15, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_noise_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_noise_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -68,4 +68,4 @@ Gfx int_tak_noise_onT_model[] = {
     gsSPNTriangles_5b(8, 13, 9, 14, 15, 16, 14, 16, 17, 14, 17, 8),
     gsSPNTriangles_5b(18, 19, 20, 18, 20, 21, 18, 21, 22, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

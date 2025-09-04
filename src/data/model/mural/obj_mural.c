@@ -5,7 +5,7 @@ static Vtx obj_mural_v[] = {
 #include "assets/obj_mural_v.inc"
 };
 
-Gfx obj_mural_model[] = {
+GFX_ARR_BEGIN(obj_mural_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -25,6 +25,6 @@ Gfx obj_mural_model[] = {
     gsSPVertex(&obj_mural_v[0], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format on

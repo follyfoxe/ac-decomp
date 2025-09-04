@@ -5,7 +5,7 @@ static Vtx gst_1_v[] = {
 #include "assets/npc/mdl/gst_1_v.inc"
 };
 
-static Gfx head_gst_model[] = {
+static GFX_ARR_BEGIN(head_gst_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, ENVIRONMENT, 0, COMBINED, 0, PRIM_LOD_FRAC, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -220,9 +220,9 @@ static Gfx head_gst_model[] = {
                       0, 0, 0    // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx feel_gst_model[] = {
+static GFX_ARR_BEGIN(feel_gst_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, ENVIRONMENT, 0, COMBINED, 0, PRIM_LOD_FRAC, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -237,9 +237,9 @@ static Gfx feel_gst_model[] = {
                           0, 0, 0  // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx chest_gst_model[] = {
+static GFX_ARR_BEGIN(chest_gst_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, ENVIRONMENT, 0, COMBINED, 0, PRIM_LOD_FRAC, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -284,9 +284,9 @@ static Gfx chest_gst_model[] = {
                       0, 0, 0   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail1_gst_model[] = {
+static GFX_ARR_BEGIN(tail1_gst_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, ENVIRONMENT, 0, COMBINED, 0, PRIM_LOD_FRAC, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -331,9 +331,9 @@ static Gfx tail1_gst_model[] = {
                       0, 0, 0  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx base_gst_model[] = {
+static GFX_ARR_BEGIN(base_gst_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, ENVIRONMENT, 0, COMBINED, 0, PRIM_LOD_FRAC, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -368,7 +368,7 @@ static Gfx base_gst_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format off
 static cKF_Joint_R_c cKF_je_r_gst_1_tbl[] = {

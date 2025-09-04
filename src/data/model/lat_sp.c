@@ -5,7 +5,7 @@
 #include "ac_npc.h"
 #include "ef_effect_control.h"
 
-Gfx lat_sousa_mode[] = {
+GFX_ARR_BEGIN(lat_sousa_mode)
     gsDPPipeSync(),
     gsSPClearGeometryMode(G_ZBUFFER | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR | G_LOD |
                           G_DECAL_LEQUAL),
@@ -15,7 +15,7 @@ Gfx lat_sousa_mode[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_CLD_SURF | G_RM_CLD_SURF2),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 lat_sousa_sp_tex[] = {
 #include "assets/lat_sousa_sp_tex.inc"
@@ -25,7 +25,7 @@ Vtx lat_sp_v[] = {
 #include "assets/lat_sp_v.inc"
 };
 
-Gfx lat_sousa_spT_model[] = {
+GFX_ARR_BEGIN(lat_sousa_spT_model)
     gsDPPipeSync(),
     gsSPDisplayList(lat_sousa_mode),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
@@ -43,7 +43,7 @@ Gfx lat_sousa_spT_model[] = {
     gsSPVertex(lat_sp_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 lat_tegami_end_tex[] = {
 #include "assets/lat_tegami_end_tex.inc"
@@ -53,7 +53,7 @@ Vtx lat_end_v[] = {
 #include "assets/lat_end_v.inc"
 };
 
-Gfx lat_end_cordT_model[] = {
+GFX_ARR_BEGIN(lat_end_cordT_model)
     gsDPPipeSync(),
     gsSPDisplayList(lat_sousa_mode),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
@@ -74,4 +74,4 @@ Gfx lat_end_cordT_model[] = {
     gsSPVertex(lat_end_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

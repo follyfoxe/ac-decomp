@@ -21,7 +21,7 @@ Vtx obj_e_tukimi_r_v[] = {
 #include "assets/obj_e_tukimi_r_v.inc"
 };
 
-Gfx obj_e_tukimi_r_ne2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_ne2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -29,9 +29,9 @@ Gfx obj_e_tukimi_r_ne2_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_ne1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_ne1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -39,9 +39,9 @@ Gfx obj_e_tukimi_r_ne1_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_moti_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_moti_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -51,9 +51,9 @@ Gfx obj_e_tukimi_r_moti_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 6, 9, 7, 8, 10, 11),
     gsSPNTriangles_5b(8, 7, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_hako_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_hako_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -67,9 +67,9 @@ Gfx obj_e_tukimi_r_hako_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 4, 7, 8, 7, 9, 10, 11, 12),
     gsSPNTriangles_5b(10, 12, 13, 14, 10, 13, 14, 13, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_endai_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_endai_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -82,9 +82,9 @@ Gfx obj_e_tukimi_r_endai_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[68], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_dai_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_dai_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -94,9 +94,9 @@ Gfx obj_e_tukimi_r_dai_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_kuki2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_kuki2_model)
     gsSPMatrix(&anime_6_mdl[9], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_r_v[63], 2, 0),
@@ -107,9 +107,9 @@ Gfx obj_e_tukimi_r_kuki2_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[65], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 1, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_ho2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_ho2_model)
     gsSPMatrix(&anime_6_mdl[3], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_r_v[58], 2, 0),
@@ -120,9 +120,9 @@ Gfx obj_e_tukimi_r_ho2_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[60], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_kuki1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_kuki1_model)
     gsSPMatrix(&anime_6_mdl[8], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_r_v[53], 2, 0),
@@ -133,9 +133,9 @@ Gfx obj_e_tukimi_r_kuki1_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[55], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 1, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_r_ho1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_ho1_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_r_v[48], 2, 0),
@@ -146,7 +146,7 @@ Gfx obj_e_tukimi_r_ho1_model[] = {
     gsSPVertex(&obj_e_tukimi_r_v[50], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_tukimi_r_tbl[] = {
     { obj_e_tukimi_r_dai_model, 7, cKF_JOINT_FLAG_DISP_OPA, { 0, 63536, 0 } },
@@ -203,7 +203,7 @@ Vtx obj_e_tukimi_l_v[] = {
 #include "assets/obj_e_tukimi_l_v.inc"
 };
 
-Gfx obj_e_tukimi_l_ne2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_ne2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_l_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -211,9 +211,9 @@ Gfx obj_e_tukimi_l_ne2_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_ne1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_ne1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_l_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -221,9 +221,9 @@ Gfx obj_e_tukimi_l_ne1_model[] = {
     gsSPVertex(obj_e_tukimi_l_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_moti_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_moti_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_l_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -233,9 +233,9 @@ Gfx obj_e_tukimi_l_moti_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 6, 9, 7, 8, 10, 11),
     gsSPNTriangles_5b(8, 7, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_hako_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_hako_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -249,9 +249,9 @@ Gfx obj_e_tukimi_l_hako_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 4, 7, 8, 7, 9, 10, 11, 12),
     gsSPNTriangles_5b(10, 12, 13, 14, 10, 13, 14, 13, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_endai_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_endai_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -264,9 +264,9 @@ Gfx obj_e_tukimi_l_endai_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_dai_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_dai_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_tukimi_l_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_MIRROR, 0, 0),
@@ -276,9 +276,9 @@ Gfx obj_e_tukimi_l_dai_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_kuki2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_kuki2_model)
     gsSPMatrix(&anime_6_mdl[9], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_l_v[67], 2, 0),
@@ -289,9 +289,9 @@ Gfx obj_e_tukimi_l_kuki2_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[69], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 1, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_ho2_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_ho2_model)
     gsSPMatrix(&anime_6_mdl[3], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_l_v[62], 2, 0),
@@ -302,9 +302,9 @@ Gfx obj_e_tukimi_l_ho2_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[64], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_kuki1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_kuki1_model)
     gsSPMatrix(&anime_6_mdl[8], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_l_v[57], 2, 0),
@@ -315,9 +315,9 @@ Gfx obj_e_tukimi_l_kuki1_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[59], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 1, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_tukimi_l_ho1_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_ho1_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_e_tukimi_l_v[52], 2, 0),
@@ -328,7 +328,7 @@ Gfx obj_e_tukimi_l_ho1_model[] = {
     gsSPVertex(&obj_e_tukimi_l_v[54], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_tukimi_l_tbl[] = { { obj_e_tukimi_l_dai_model, 7, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                 { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 64220, 2800, 600 } },

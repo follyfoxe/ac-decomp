@@ -37,7 +37,7 @@ Vtx kan_hyouji2_v[] = {
 #include "assets/kan_hyouji2_v.inc"
 };
 
-Gfx kan_win_genzaiT_model[] = {
+GFX_ARR_BEGIN(kan_win_genzaiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -48,9 +48,9 @@ Gfx kan_win_genzaiT_model[] = {
     gsSPVertex(kan_hyouji2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npc2T_base_model[] = {
+GFX_ARR_BEGIN(kan_win_npc2T_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -59,30 +59,30 @@ Gfx kan_win_npc2T_base_model[] = {
     gsSPVertex(&kan_hyouji2_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npc2T_1_model[] = {
+GFX_ARR_BEGIN(kan_win_npc2T_1_model)
     gsDPSetPrimColor(0, 255, 90, 90, 225, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npc2T_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npc2T_2_model[] = {
+GFX_ARR_BEGIN(kan_win_npc2T_2_model)
     gsDPSetPrimColor(0, 255, 145, 70, 205, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npc2T_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npc2T_3_model[] = {
+GFX_ARR_BEGIN(kan_win_npc2T_3_model)
     gsDPSetPrimColor(0, 255, 170, 115, 20, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npc2T_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npcT_base_model[] = {
+GFX_ARR_BEGIN(kan_win_npcT_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -91,30 +91,30 @@ Gfx kan_win_npcT_base_model[] = {
     gsSPVertex(&kan_hyouji2_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npcT_1_model[] = {
+GFX_ARR_BEGIN(kan_win_npcT_1_model)
     gsDPSetPrimColor(0, 255, 110, 110, 185, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npcT_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npcT_2_model[] = {
+GFX_ARR_BEGIN(kan_win_npcT_2_model)
     gsDPSetPrimColor(0, 255, 145, 70, 205, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npcT_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_npcT_3_model[] = {
+GFX_ARR_BEGIN(kan_win_npcT_3_model)
     gsDPSetPrimColor(0, 255, 170, 115, 20, 255),
     gsDPSetEnvColor(225, 225, 225, 255),
     gsSPDisplayList(kan_win_npcT_base_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_koubanT_model[] = {
+GFX_ARR_BEGIN(kan_win_koubanT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 195, 80, 45, 255),
@@ -123,9 +123,9 @@ Gfx kan_win_koubanT_model[] = {
     gsSPVertex(&kan_hyouji2_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_yashiroT_model[] = {
+GFX_ARR_BEGIN(kan_win_yashiroT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 190, 70, 60, 255),
@@ -136,9 +136,9 @@ Gfx kan_win_yashiroT_model[] = {
     gsSPVertex(&kan_hyouji2_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_omiseT_model[] = {
+GFX_ARR_BEGIN(kan_win_omiseT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 195, 80, 45, 255),
@@ -147,9 +147,9 @@ Gfx kan_win_omiseT_model[] = {
     gsSPVertex(&kan_hyouji2_v[24], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_yuuT_model[] = {
+GFX_ARR_BEGIN(kan_win_yuuT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 190, 70, 60, 255),
@@ -158,9 +158,9 @@ Gfx kan_win_yuuT_model[] = {
     gsSPVertex(&kan_hyouji2_v[28], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kan_win_playerT_model[] = {
+GFX_ARR_BEGIN(kan_win_playerT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -171,4 +171,4 @@ Gfx kan_win_playerT_model[] = {
     gsSPVertex(&kan_hyouji2_v[32], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

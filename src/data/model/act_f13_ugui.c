@@ -15,7 +15,7 @@ Vtx act_f13_ugui_a_v[] = {
 #include "assets/act_f13_ugui_a_v.inc"
 };
 
-Gfx act_f13_ugui_aT_model[] = {
+GFX_ARR_BEGIN(act_f13_ugui_aT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -29,13 +29,13 @@ Gfx act_f13_ugui_aT_model[] = {
     gsSPNTriangles_5b(1, 5, 4, 0, 6, 1, 6, 5, 1, 6, 7, 8),
     gsSPNTriangles_5b(6, 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f13_ugui_b_v[] = {
 #include "assets/act_f13_ugui_b_v.inc"
 };
 
-Gfx act_f13_ugui_bT_model[] = {
+GFX_ARR_BEGIN(act_f13_ugui_bT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -49,13 +49,13 @@ Gfx act_f13_ugui_bT_model[] = {
     gsSPNTriangles_5b(1, 5, 4, 0, 6, 1, 6, 5, 1, 6, 7, 8),
     gsSPNTriangles_5b(6, 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f13_ugui_c_v[] = {
 #include "assets/act_f13_ugui_c_v.inc"
 };
 
-Gfx act_f13_ugui_cT_model[] = {
+GFX_ARR_BEGIN(act_f13_ugui_cT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -69,4 +69,4 @@ Gfx act_f13_ugui_cT_model[] = {
     gsSPNTriangles_5b(1, 5, 4, 0, 6, 1, 6, 5, 1, 6, 7, 8),
     gsSPNTriangles_5b(6, 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

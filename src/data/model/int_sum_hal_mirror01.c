@@ -46,7 +46,7 @@ Vtx int_sum_hal_mirror01_v[] = {
 #include "assets/int_sum_hal_mirror01_v.inc"
 };
 
-Gfx int_sum_hal_mirror01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_mirror01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -78,9 +78,9 @@ Gfx int_sum_hal_mirror01_on_model[] = {
     gsSPVertex(&int_sum_hal_mirror01_v[49], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 0, 3, 1, 1, 4, 2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_mirror01_evw_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_mirror01_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -93,9 +93,9 @@ Gfx int_sum_hal_mirror01_evw_model[] = {
     gsSPVertex(&int_sum_hal_mirror01_v[54], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_mirror01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_mirror01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -108,4 +108,4 @@ Gfx int_sum_hal_mirror01_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPNTriangles_5b(5, 6, 7, 6, 8, 7, 8, 9, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

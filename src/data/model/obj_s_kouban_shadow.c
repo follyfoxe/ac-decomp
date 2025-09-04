@@ -13,7 +13,7 @@ Vtx obj_s_kouban_shadow_v[] = {
 #include "assets/obj_s_kouban_shadow_v.inc"
 };
 
-Gfx obj_s_kouban_shadow_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_DECAL2),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -28,4 +28,4 @@ Gfx obj_s_kouban_shadow_model[] = {
     gsSPNTrianglesInit_5b(6, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

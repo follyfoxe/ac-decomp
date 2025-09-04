@@ -46,7 +46,7 @@ Vtx obj_suisou1_v[] = {
 #include "assets/obj_suisou1_v.inc"
 };
 
-Gfx obj_suisou1_modelT[] = {
+GFX_ARR_BEGIN(obj_suisou1_modelT)
     gsSPTexture(1500, 5000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, 1, 0, ENVIRONMENT, COMBINED, 1, 0, PRIMITIVE,
                        COMBINED),
@@ -104,9 +104,9 @@ Gfx obj_suisou1_modelT[] = {
     gsSPNTriangles_5b(23, 25, 24, 25, 26, 24, 26, 27, 24, 26, 28, 27),
     gsSPNTriangles_5b(26, 29, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_suisou1_model[] = {
+GFX_ARR_BEGIN(obj_suisou1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -133,13 +133,13 @@ Gfx obj_suisou1_model[] = {
     gsSPVertex(&obj_suisou1_v[49], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_fish_set_mode[] = {
+GFX_ARR_BEGIN(act_mus_fish_set_mode)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

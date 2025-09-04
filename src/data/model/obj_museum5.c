@@ -74,7 +74,7 @@ Vtx obj_museum5_v[] = {
 #include "assets/obj_museum5_v.inc"
 };
 
-Gfx obj_museum5_modelT[] = {
+GFX_ARR_BEGIN(obj_museum5_modelT)
     gsSPTexture(1500, 5000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, 1, 0, ENVIRONMENT, COMBINED, 1, 0, PRIMITIVE,
                        COMBINED),
@@ -115,9 +115,9 @@ Gfx obj_museum5_modelT[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 1, 3, 4, 5, 6, 7),
     gsSPNTriangles_5b(6, 5, 3, 7, 6, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_model[] = {
+GFX_ARR_BEGIN(obj_museum5_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -294,4 +294,4 @@ Gfx obj_museum5_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(2, 4, 5, 6, 5, 4, 6, 7, 5, 7, 8, 5),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -9,24 +9,24 @@ u8 lat_atena_win_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/lat_atena_win_tex.inc"
 };
 
-Gfx lat_atena_kageT_model[] = {
+GFX_ARR_BEGIN(lat_atena_kageT_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0),
     gsDPSetPrimColor(0, 255, 20, 40, 0, 185),
     gsSPVertex(anime_2_txt, 8, 0),
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 2, 5),
     gsSPNTriangles_5b(0, 2, 4, 4, 5, 6, 7, 4, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_atena_winT_model[] = {
+GFX_ARR_BEGIN(lat_atena_winT_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsSPVertex(anime_1_txt, 8, 0),
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 5, 1),
     gsSPNTriangles_5b(1, 5, 3, 6, 7, 5, 4, 6, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_atena_mode[] = {
+GFX_ARR_BEGIN(lat_atena_mode)
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE,
@@ -35,10 +35,10 @@ Gfx lat_atena_mode[] = {
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, lat_atena_win_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_atena_model[] = {
+GFX_ARR_BEGIN(lat_atena_model)
     gsSPDisplayList(lat_atena_mode),
     gsSPDisplayList(lat_atena_kageT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

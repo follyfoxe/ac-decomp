@@ -15,7 +15,7 @@ Vtx act_f35_zarigani_a_v[] = {
 #include "assets/act_f35_zarigani_a_v.inc"
 };
 
-Gfx act_f35_zarigani_aT_model[] = {
+GFX_ARR_BEGIN(act_f35_zarigani_aT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -29,13 +29,13 @@ Gfx act_f35_zarigani_aT_model[] = {
     gsSPNTriangles_5b(5, 0, 6, 0, 7, 6, 0, 2, 7, 0, 8, 1),
     gsSPNTriangles_5b(0, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f35_zarigani_b_v[] = {
 #include "assets/act_f35_zarigani_b_v.inc"
 };
 
-Gfx act_f35_zarigani_bT_model[] = {
+GFX_ARR_BEGIN(act_f35_zarigani_bT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -49,13 +49,13 @@ Gfx act_f35_zarigani_bT_model[] = {
     gsSPNTriangles_5b(5, 0, 6, 0, 7, 6, 0, 2, 7, 0, 8, 1),
     gsSPNTriangles_5b(0, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f35_zarigani_c_v[] = {
 #include "assets/act_f35_zarigani_c_v.inc"
 };
 
-Gfx act_f35_zarigani_cT_model[] = {
+GFX_ARR_BEGIN(act_f35_zarigani_cT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -69,4 +69,4 @@ Gfx act_f35_zarigani_cT_model[] = {
     gsSPNTriangles_5b(5, 0, 6, 0, 7, 6, 0, 2, 7, 0, 8, 1),
     gsSPNTriangles_5b(0, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

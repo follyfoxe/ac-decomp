@@ -58,7 +58,7 @@ Vtx int_sum_log_hatoclk_v[] = {
 #include "assets/int_sum_log_hatoclk_v.inc"
 };
 
-Gfx int_sum_log_hatoclk_long_model[] = {
+GFX_ARR_BEGIN(int_sum_log_hatoclk_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -71,9 +71,9 @@ Gfx int_sum_log_hatoclk_long_model[] = {
     gsSPVertex(int_sum_log_hatoclk_v, 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_log_hatoclk_base_model[] = {
+GFX_ARR_BEGIN(int_sum_log_hatoclk_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -109,9 +109,9 @@ Gfx int_sum_log_hatoclk_base_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(1, 25, 26, 27, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_log_hatoclk_short_model[] = {
+GFX_ARR_BEGIN(int_sum_log_hatoclk_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -124,9 +124,9 @@ Gfx int_sum_log_hatoclk_short_model[] = {
     gsSPVertex(&int_sum_log_hatoclk_v[74], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_log_hatoclk_hato1_model[] = {
+GFX_ARR_BEGIN(int_sum_log_hatoclk_hato1_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -161,9 +161,9 @@ Gfx int_sum_log_hatoclk_hato1_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 13, 14, 15, 13, 16, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_log_hatoclk_door_model[] = {
+GFX_ARR_BEGIN(int_sum_log_hatoclk_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -175,7 +175,7 @@ Gfx int_sum_log_hatoclk_door_model[] = {
     gsSPVertex(&int_sum_log_hatoclk_v[77], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_log_hatoclk_tbl[] = { 0, 0, 0, 2, 0, 2, 0, 0, 0 };
 

@@ -18,7 +18,7 @@ Vtx obj_museum5_hasu_v[] = {
 #include "assets/obj_museum5_hasu_v.inc"
 };
 
-Gfx obj_museum5_hasu1_model[] = {
+GFX_ARR_BEGIN(obj_museum5_hasu1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -31,9 +31,9 @@ Gfx obj_museum5_hasu1_model[] = {
     gsSPNTriangles(4, 0, 1, 2, 1, 3, 2, 0, 4, 1),
     gsSPNTriangles_5b(4, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_hasu3_model[] = {
+GFX_ARR_BEGIN(obj_museum5_hasu3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -46,9 +46,9 @@ Gfx obj_museum5_hasu3_model[] = {
     gsSPNTriangles(6, 0, 1, 2, 0, 3, 1, 0, 4, 5),
     gsSPNTriangles_5b(0, 6, 4, 0, 7, 6, 0, 8, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_hasu2_model[] = {
+GFX_ARR_BEGIN(obj_museum5_hasu2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -61,7 +61,7 @@ Gfx obj_museum5_hasu2_model[] = {
     gsSPNTriangles(6, 0, 1, 2, 0, 3, 1, 0, 4, 3),
     gsSPNTriangles_5b(0, 5, 4, 0, 6, 7, 0, 8, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_museum5_hasu_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 3390, 0, 2800 } },

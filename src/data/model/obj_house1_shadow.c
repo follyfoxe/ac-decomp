@@ -13,7 +13,7 @@ Vtx obj_house1_shadow_v[] = {
 #include "assets/obj_house1_shadow_v.inc"
 };
 
-Gfx obj_house1_shadow_model[] = {
+GFX_ARR_BEGIN(obj_house1_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,7 +27,7 @@ Gfx obj_house1_shadow_model[] = {
     gsSPNTriangles_5b(17, 18, 19, 5, 4, 2, 5, 2, 3, 0, 1, 7),
     gsSPNTriangles_5b(0, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_s_house2_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_s_house2_shadow_tex_txt.inc"
@@ -37,7 +37,7 @@ Vtx obj_s_house2_shadow_v[] = {
 #include "assets/obj_s_house2_shadow_v.inc"
 };
 
-Gfx obj_s_house2_shadow_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -53,7 +53,7 @@ Gfx obj_s_house2_shadow_model[] = {
     gsSPNTrianglesInit_5b(4, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_s_house3_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_s_house3_shadow_tex_txt.inc"
@@ -63,7 +63,7 @@ Vtx obj_s_house3_shadow_v[] = {
 #include "assets/obj_s_house3_shadow_v.inc"
 };
 
-Gfx obj_s_house3_shadow_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -78,7 +78,7 @@ Gfx obj_s_house3_shadow_model[] = {
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_s_house4_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_s_house4_shadow_tex_txt.inc"
@@ -88,7 +88,7 @@ Vtx obj_s_house4_shadow_v[] = {
 #include "assets/obj_s_house4_shadow_v.inc"
 };
 
-Gfx obj_s_house4_shadow_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -104,7 +104,7 @@ Gfx obj_s_house4_shadow_model[] = {
     gsSPNTrianglesInit_5b(4, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_s_house5_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_s_house5_shadow_tex_txt.inc"
@@ -114,7 +114,7 @@ Vtx obj_s_house5_shadow_v[] = {
 #include "assets/obj_s_house5_shadow_v.inc"
 };
 
-Gfx obj_s_house5_shadow_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -130,4 +130,4 @@ Gfx obj_s_house5_shadow_model[] = {
     gsSPNTrianglesInit_5b(4, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

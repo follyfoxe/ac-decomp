@@ -26,7 +26,7 @@ Vtx int_nog_s_tree_v[] = {
 #include "assets/int_nog_s_tree_v.inc"
 };
 
-Gfx int_nog_s_tree_model[] = {
+GFX_ARR_BEGIN(int_nog_s_tree_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -38,9 +38,9 @@ Gfx int_nog_s_tree_model[] = {
     gsSPVertex(int_nog_s_tree_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_s_treeT_model[] = {
+GFX_ARR_BEGIN(int_nog_s_treeT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -75,4 +75,4 @@ Gfx int_nog_s_treeT_model[] = {
     gsSPNTriangles_5b(16, 18, 19, 20, 21, 22, 20, 22, 23, 24, 21, 20),
     gsSPNTriangles_5b(24, 20, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

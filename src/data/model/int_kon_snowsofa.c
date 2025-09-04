@@ -30,7 +30,7 @@ Vtx int_kon_snowsofa_v[] = {
 #include "assets/int_kon_snowsofa_v.inc"
 };
 
-Gfx int_kon_snowsofa_model[] = {
+GFX_ARR_BEGIN(int_kon_snowsofa_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -57,9 +57,9 @@ Gfx int_kon_snowsofa_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 8, 3, 7, 0, 2, 9, 8, 7, 10),
     gsSPNTriangles_5b(7, 11, 10, 7, 6, 11, 4, 0, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_snowsofaT_model[] = {
+GFX_ARR_BEGIN(int_kon_snowsofaT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -72,4 +72,4 @@ Gfx int_kon_snowsofaT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 2, 3, 0, 3, 1, 0),
     gsSPNTriangles_5b(4, 5, 6, 4, 6, 7, 7, 5, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

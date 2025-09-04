@@ -18,7 +18,7 @@ Vtx crw_cobra_v[] = {
 #include "assets/crw_cobra_v.inc"
 };
 
-Gfx crw_cobra_model[] = {
+GFX_ARR_BEGIN(crw_cobra_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,4 +42,4 @@ Gfx crw_cobra_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 6, 10, 7, 9, 4, 7, 11, 1, 0),
     gsSPNTriangles_5b(0, 12, 13, 6, 14, 15, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

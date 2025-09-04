@@ -16,7 +16,7 @@ static Vtx act_m_mino_v[] = {
 #include "assets/act_m_mino/act_m_mino_v.inc"
 };
 
-Gfx act_m_mino1_1T_model[] = {
+GFX_ARR_BEGIN(act_m_mino1_1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -29,9 +29,9 @@ Gfx act_m_mino1_1T_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 3, 2, 4),
     gsSPNTriangles_5b(3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mino1_2T_model[] = {
+GFX_ARR_BEGIN(act_m_mino1_2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -44,9 +44,9 @@ Gfx act_m_mino1_2T_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(6, 5, 7, 6, 7, 8, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mino2T_model[] = {
+GFX_ARR_BEGIN(act_m_mino2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 180),
@@ -58,4 +58,4 @@ Gfx act_m_mino2T_model[] = {
     gsSPVertex(&act_m_mino_v[15], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

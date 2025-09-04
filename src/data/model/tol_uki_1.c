@@ -17,7 +17,7 @@ static Vtx tol_uki_1_v[] = {
 #include "assets/tol_uki_1/tol_uki_1_v.inc"
 };
 
-Gfx inv_uki_model[] = {
+GFX_ARR_BEGIN(inv_uki_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,4 +57,4 @@ Gfx inv_uki_model[] = {
     gsSP2Triangles(18, 22, 23, 0, 18, 23, 20, 0),
     gsSP1Triangle(20, 23, 21, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

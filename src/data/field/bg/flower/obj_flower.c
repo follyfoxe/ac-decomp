@@ -18,25 +18,25 @@ static Vtx obj_flower_c_v[] = {
 #include "assets/flower/obj_flower_c_v.inc"
 };
 
-extern Gfx obj_flower_aT_mat_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_aT_mat_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPLoadTextureBlock_4b_Dolphin(obj_flower_tex, G_IM_FMT_CI, 128, 32, 0, GX_CLAMP, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_bT_mat_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_bT_mat_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPLoadTextureBlock_4b_Dolphin(obj_flower_tex, G_IM_FMT_CI, 128, 32, 1, GX_CLAMP, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_cT_mat_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_cT_mat_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPLoadTextureBlock_4b_Dolphin(obj_flower_tex, G_IM_FMT_CI, 128, 32, 2, GX_CLAMP, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_aT_gfx_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_aT_gfx_model)
     gsSPVertex(&obj_flower_a_v[0], 8, 0),
     gsSPNTrianglesInit_5b(
         4,       // tri count
@@ -51,9 +51,9 @@ extern Gfx obj_flower_aT_gfx_model[] = {
         0, 0, 0  // tri3
     ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_bT_gfx_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_bT_gfx_model)
     gsSPVertex(&obj_flower_b_v[0], 8, 0),
     gsSPNTrianglesInit_5b(
         4, // tri count
@@ -68,9 +68,9 @@ extern Gfx obj_flower_bT_gfx_model[] = {
         0, 0, 0 // tri3
     ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_cT_gfx_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_cT_gfx_model)
     gsSPVertex(&obj_flower_c_v[0], 8, 0),
     gsSPNTrianglesInit_5b(
         4, // tri count
@@ -85,6 +85,6 @@ extern Gfx obj_flower_cT_gfx_model[] = {
         0, 0, 0 // tri3
     ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format on

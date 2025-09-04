@@ -17,7 +17,7 @@ Vtx clg_music_v[] = {
 #include "assets/clg_music_v.inc"
 };
 
-Gfx mCL_music_model[] = {
+GFX_ARR_BEGIN(mCL_music_model)
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_AA_TEX_EDGE, G_RM_AA_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
@@ -41,4 +41,4 @@ Gfx mCL_music_model[] = {
     gsSPVertex(clg_music_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

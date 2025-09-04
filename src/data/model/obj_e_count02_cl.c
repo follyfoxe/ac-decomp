@@ -49,7 +49,7 @@ Vtx obj_e_count02_cl_v[] = {
 #include "assets/obj_e_count02_cl_v.inc"
 };
 
-Gfx obj_e_c2_ani_cl01_sita_model[] = {
+GFX_ARR_BEGIN(obj_e_c2_ani_cl01_sita_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -63,9 +63,9 @@ Gfx obj_e_c2_ani_cl01_sita_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 7, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_c2_ani_ci01_mae_model[] = {
+GFX_ARR_BEGIN(obj_e_c2_ani_ci01_mae_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -79,7 +79,7 @@ Gfx obj_e_c2_ani_ci01_mae_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 7, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_count02_cl_tbl[] = {
     { obj_e_c2_ani_cl01_sita_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

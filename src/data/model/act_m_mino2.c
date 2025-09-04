@@ -6,7 +6,7 @@
 #include "ef_effect_control.h"
 
 extern Vtx act_m_mino_v[];
-static Vtx act_m_mino_v[] = {
+Vtx act_m_mino_v[] = {
 #include "assets/act_m_mino2/act_m_mino_v.inc"
 };
 
@@ -18,7 +18,7 @@ static u8 act_m_mino_tex[] = {
 #include "assets/act_m_mino2/act_m_mino_tex.inc"
 };
 
-Gfx act_m_mu_mino1_1T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_mino1_1T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -47,9 +47,9 @@ Gfx act_m_mu_mino1_1T_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_mino1_2T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_mino1_2T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -79,9 +79,9 @@ Gfx act_m_mu_mino1_2T_model[] = {
     gsSP2Triangles(3, 5, 6, 0, 6, 5, 7, 0),
     gsSP1Triangle(6, 7, 8, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_mino2T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_mino2T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -109,4 +109,4 @@ Gfx act_m_mu_mino2T_model[] = {
     gsSPVertex(&act_m_mino_v[15], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

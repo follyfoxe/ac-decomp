@@ -13,7 +13,7 @@ Vtx lat_kakunin_v[] = {
 #include "assets/lat_kakunin_v.inc"
 };
 
-Gfx lat_kakunin_DL_mode[] = {
+GFX_ARR_BEGIN(lat_kakunin_DL_mode)
     gsDPPipeSync(),
     gsSPSetGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPClearGeometryMode(G_ZBUFFER | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
@@ -23,18 +23,18 @@ Gfx lat_kakunin_DL_mode[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_AA_TEX_EDGE | G_RM_AA_TEX_EDGE2),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_kakunin_c_model[] = {
+GFX_ARR_BEGIN(lat_kakunin_c_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE),
     gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
     gsSPVertex(lat_kakunin_v, 3, 0),
     gsSP1Triangle(0, 1, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_kakunin_wakuT_model[] = {
+GFX_ARR_BEGIN(lat_kakunin_wakuT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -46,4 +46,4 @@ Gfx lat_kakunin_wakuT_model[] = {
     gsSPVertex(&lat_kakunin_v[3], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -16,11 +16,11 @@ static Vtx tmp4_v[] = {
 #include "assets/field/bg/tmp4_v.inc"
 };
 
-extern Gfx tmp4_modelT[] = {
+extern GFX_ARR_BEGIN(tmp4_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx tmp4_model[] = {
+extern GFX_ARR_BEGIN(tmp4_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -136,4 +136,4 @@ extern Gfx tmp4_model[] = {
     gsSP2Triangles(5, 6, 7, 0, 1, 5, 8, 0),
     gsSP2Triangles(9, 10, 11, 0, 10, 3, 12, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

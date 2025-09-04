@@ -13,7 +13,7 @@ Vtx tol_rope_1_shadow_v[] = {
 #include "assets/tol_rope_1_shadow_v.inc"
 };
 
-Gfx tol_rope_1_shadowT_model[] = {
+GFX_ARR_BEGIN(tol_rope_1_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 10, 0, 50, 0),
@@ -29,4 +29,4 @@ Gfx tol_rope_1_shadowT_model[] = {
     gsSPNTriangles_5b(22, 24, 25, 26, 27, 28, 26, 28, 29, 25, 24, 30),
     gsSPNTriangles_5b(25, 30, 31, 31, 30, 19, 31, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

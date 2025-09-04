@@ -25,7 +25,7 @@ Vtx ef_ongen_v[] = {
 #include "assets/ef_ongen_v.inc"
 };
 
-Gfx ef_ongen_mic_model[] = {
+GFX_ARR_BEGIN(ef_ongen_mic_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -37,9 +37,9 @@ Gfx ef_ongen_mic_model[] = {
     gsSPVertex(ef_ongen_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_ongen_mouth_model[] = {
+GFX_ARR_BEGIN(ef_ongen_mouth_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -51,4 +51,4 @@ Gfx ef_ongen_mouth_model[] = {
     gsSPVertex(ef_ongen_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

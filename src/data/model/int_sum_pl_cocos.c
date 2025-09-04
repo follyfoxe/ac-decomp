@@ -34,7 +34,7 @@ Vtx int_sum_pl_cocos_v[] = {
 #include "assets/int_sum_pl_cocos_v.inc"
 };
 
-Gfx int_sum_pl_cocos_on_model[] = {
+GFX_ARR_BEGIN(int_sum_pl_cocos_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,9 +54,9 @@ Gfx int_sum_pl_cocos_on_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 12, 15, 13, 16, 15, 12),
     gsSPNTriangles_5b(16, 17, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_pl_cocos_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_pl_cocos_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -77,4 +77,4 @@ Gfx int_sum_pl_cocos_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 15, 16, 17, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(21, 23, 24, 25, 15, 26, 23, 25, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

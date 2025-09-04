@@ -13,7 +13,7 @@ Vtx obj_w_kamakura_shadow_v[] = {
 #include "assets/obj_w_kamakura_shadow_v.inc"
 };
 
-Gfx obj_e_kamakura_shadow_model[] = {
+GFX_ARR_BEGIN(obj_e_kamakura_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,4 +27,4 @@ Gfx obj_e_kamakura_shadow_model[] = {
     gsSPNTriangles_5b(12, 11, 10, 14, 15, 13, 14, 13, 12, 9, 8, 16),
     gsSPNTriangles_5b(9, 16, 17, 15, 14, 18, 15, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

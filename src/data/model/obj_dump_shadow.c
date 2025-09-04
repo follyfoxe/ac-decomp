@@ -13,7 +13,7 @@ Vtx obj_dump_shadow_v[] = {
 #include "assets/obj_dump_shadow_v.inc"
 };
 
-Gfx obj_dump_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_dump_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -31,4 +31,4 @@ Gfx obj_dump_shadowT_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -17,7 +17,7 @@ static u8 obj_item_fish_tex[] = {
 #include "assets/obj_item_fish/obj_item_fish_tex.inc"
 };
 
-Gfx fish_DL_mode[] = {
+GFX_ARR_BEGIN(fish_DL_mode)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE |
@@ -43,11 +43,11 @@ Gfx fish_DL_mode[] = {
     gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx fish_DL_vtx[] = {
+GFX_ARR_BEGIN(fish_DL_vtx)
     gsSPVertex(obj_item_fish_v, 4, 0),
     gsSPCullDisplayList(0, 3),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

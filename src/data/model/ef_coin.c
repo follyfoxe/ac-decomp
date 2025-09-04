@@ -14,7 +14,7 @@ Vtx ef_coin_v[] = {
 #include "assets/ef_coin_v.inc"
 };
 
-Gfx ef_coin_model[] = {
+GFX_ARR_BEGIN(ef_coin_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -40,9 +40,9 @@ Gfx ef_coin_model[] = {
     gsSPNTriangles_5b(21, 17, 9, 18, 22, 23, 18, 23, 19, 20, 24, 6),
     gsSPNTriangles_5b(25, 21, 9, 22, 26, 27, 22, 27, 23, 24, 28, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_coin_modelT[] = {
+GFX_ARR_BEGIN(ef_coin_modelT)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -67,4 +67,4 @@ Gfx ef_coin_modelT[] = {
     gsSPNTriangles_5b(21, 17, 9, 18, 22, 23, 18, 23, 19, 20, 24, 6),
     gsSPNTriangles_5b(25, 21, 9, 22, 26, 27, 22, 27, 23, 24, 28, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

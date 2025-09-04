@@ -18,7 +18,7 @@ Vtx obj_museum5_kusa2_v[] = {
 #include "assets/obj_museum5_kusa2_v.inc"
 };
 
-Gfx obj_museum5_kusa2_1_model[] = {
+GFX_ARR_BEGIN(obj_museum5_kusa2_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -31,9 +31,9 @@ Gfx obj_museum5_kusa2_1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 1, 4, 5),
     gsSPNTriangles_5b(1, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_kusa2_2_model[] = {
+GFX_ARR_BEGIN(obj_museum5_kusa2_2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -51,9 +51,9 @@ Gfx obj_museum5_kusa2_2_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 4, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 5, 6, 7, 5, 7, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_kusa2_3_model[] = {
+GFX_ARR_BEGIN(obj_museum5_kusa2_3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -71,9 +71,9 @@ Gfx obj_museum5_kusa2_3_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 4, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 5, 6, 7, 5, 7, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum5_kusa2_4_model[] = {
+GFX_ARR_BEGIN(obj_museum5_kusa2_4_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -90,7 +90,7 @@ Gfx obj_museum5_kusa2_4_model[] = {
     gsSPVertex(&obj_museum5_kusa2_v[2], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 4, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_museum5_kusa2_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 5000, 0 } },

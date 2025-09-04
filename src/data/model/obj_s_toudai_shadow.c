@@ -13,7 +13,7 @@ Vtx obj_s_toudai_shadow_v[] = {
 #include "assets/obj_s_toudai_shadow_v.inc"
 };
 
-Gfx obj_s_toudai_shadow_1_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_shadow_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -24,4 +24,4 @@ Gfx obj_s_toudai_shadow_1_model[] = {
     gsSPNTriangles_5b(2, 1, 4, 6, 7, 8, 7, 9, 8, 5, 4, 6),
     gsSPNTriangles_5b(4, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

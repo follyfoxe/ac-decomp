@@ -49,7 +49,7 @@ Vtx obj_s_toudai_v[] = {
 #include "assets/obj_s_toudai_v.inc"
 };
 
-Gfx obj_s_toudai_mirror_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_mirror_model)
     gsSPTexture(1000, 1000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -63,9 +63,9 @@ Gfx obj_s_toudai_mirror_model[] = {
     gsSPNTriangles_5b(6, 7, 8, 6, 8, 5, 6, 5, 4, 0, 4, 1),
     gsSPNTriangles_5b(7, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_toudai_glass_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_glass_model)
     gsSPTexture(2400, 500, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 155, 190, 255, 130),
@@ -80,9 +80,9 @@ Gfx obj_s_toudai_glass_model[] = {
     gsSPNTriangles_5b(5, 7, 8, 6, 3, 9, 0, 2, 4, 3, 4, 9),
     gsSPNTriangles_5b(7, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_toudai_body_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_body_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, obj_s_toudai_dai_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -126,9 +126,9 @@ Gfx obj_s_toudai_body_model[] = {
     gsSPVertex(&obj_s_toudai_v[127], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_toudai_light_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIM_LOD_FRAC, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -144,9 +144,9 @@ Gfx obj_s_toudai_light_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 13, 15, 14, 15, 16, 14),
     gsSPNTriangles_5b(13, 17, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_toudai_lenz_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_lenz_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -161,9 +161,9 @@ Gfx obj_s_toudai_lenz_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(0, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_toudai_arm_model[] = {
+GFX_ARR_BEGIN(obj_s_toudai_arm_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, obj_s_toudai_arm_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
@@ -171,7 +171,7 @@ Gfx obj_s_toudai_arm_model[] = {
     gsSPVertex(&obj_s_toudai_v[24], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_toudai_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 10000, 0 } },
                                               { obj_s_toudai_body_model, 3, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -239,7 +239,7 @@ Vtx obj_w_toudai_v[] = {
 #include "assets/obj_w_toudai_v.inc"
 };
 
-Gfx obj_w_toudai_mirror_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_mirror_model)
     gsSPTexture(1000, 1000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -253,9 +253,9 @@ Gfx obj_w_toudai_mirror_model[] = {
     gsSPNTriangles_5b(6, 7, 8, 6, 8, 5, 6, 5, 4, 0, 4, 1),
     gsSPNTriangles_5b(7, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_toudai_glass_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_glass_model)
     gsSPTexture(2400, 500, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 155, 190, 255, 130),
@@ -270,9 +270,9 @@ Gfx obj_w_toudai_glass_model[] = {
     gsSPNTriangles_5b(5, 7, 8, 6, 3, 9, 0, 2, 4, 3, 4, 9),
     gsSPNTriangles_5b(7, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_toudai_body_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_body_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 16, obj_w_toudai_dai_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_CLAMP, 0, 0),
@@ -316,9 +316,9 @@ Gfx obj_w_toudai_body_model[] = {
     gsSPVertex(&obj_w_toudai_v[143], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_toudai_light_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIM_LOD_FRAC, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -334,9 +334,9 @@ Gfx obj_w_toudai_light_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 13, 15, 14, 15, 16, 14),
     gsSPNTriangles_5b(13, 17, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_toudai_lenz_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_lenz_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -351,9 +351,9 @@ Gfx obj_w_toudai_lenz_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(0, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_toudai_arm_model[] = {
+GFX_ARR_BEGIN(obj_w_toudai_arm_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, obj_w_toudai_arm_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
@@ -361,7 +361,7 @@ Gfx obj_w_toudai_arm_model[] = {
     gsSPVertex(&obj_w_toudai_v[24], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_toudai_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 10000, 0 } },
                                               { obj_w_toudai_body_model, 3, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

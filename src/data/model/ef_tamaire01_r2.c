@@ -17,7 +17,7 @@ static Vtx ef_tamaire01_r_v[] = {
 #include "assets/ef_tamaire01_r2/ef_tamaire01_r_v.inc"
 };
 
-Gfx ef_tamaire01_r_modelT[] = {
+GFX_ARR_BEGIN(ef_tamaire01_r_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -28,7 +28,7 @@ Gfx ef_tamaire01_r_modelT[] = {
     gsSPVertex(ef_tamaire01_r_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 ef_tamaire01_w_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_tamaire01_w_pal.inc"
@@ -42,7 +42,7 @@ Vtx ef_tamaire01_w_v[] = {
 #include "assets/ef_tamaire01_w_v.inc"
 };
 
-Gfx ef_tamaire01_w_modelT[] = {
+GFX_ARR_BEGIN(ef_tamaire01_w_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -53,7 +53,7 @@ Gfx ef_tamaire01_w_modelT[] = {
     gsSPVertex(ef_tamaire01_w_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_tama_shadow_in_v[] = {
 #include "assets/ef_tama_shadow_in_v.inc"
@@ -63,7 +63,7 @@ u8 ef_tama_shadow_in_0[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_tama_shadow_in_0.inc"
 };
 
-Gfx ef_tamaire_shadow_modelT[] = {
+GFX_ARR_BEGIN(ef_tamaire_shadow_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIM_LOD_FRAC, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -73,4 +73,4 @@ Gfx ef_tamaire_shadow_modelT[] = {
     gsSPVertex(ef_tama_shadow_in_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

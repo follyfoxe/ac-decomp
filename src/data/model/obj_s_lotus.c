@@ -17,7 +17,7 @@ Vtx obj_s_lotus_v[] = {
 #include "assets/obj_s_lotus_v.inc"
 };
 
-Gfx obj_s_lotus_flower1_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_flower1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, obj_lotus_flower_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -38,9 +38,9 @@ Gfx obj_s_lotus_flower1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafH_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafH_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -50,9 +50,9 @@ Gfx obj_s_lotus_leafH_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafG_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafG_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -62,9 +62,9 @@ Gfx obj_s_lotus_leafG_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafF_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafF_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -74,9 +74,9 @@ Gfx obj_s_lotus_leafF_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafE_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafE_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -86,9 +86,9 @@ Gfx obj_s_lotus_leafE_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafD_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafD_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -98,9 +98,9 @@ Gfx obj_s_lotus_leafD_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafC_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafC_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -110,9 +110,9 @@ Gfx obj_s_lotus_leafC_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafB_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafB_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -122,9 +122,9 @@ Gfx obj_s_lotus_leafB_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_lotus_leafA_model[] = {
+GFX_ARR_BEGIN(obj_s_lotus_leafA_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_lotus_leaf_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -134,7 +134,7 @@ Gfx obj_s_lotus_leafA_model[] = {
     gsSPNTriangles_5b(3, 2, 4, 5, 6, 7, 8, 5, 7, 9, 8, 7),
     gsSPNTriangles_5b(9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_lotus_tbl[] = { { NULL, 9, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                              { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 4000, 49536, 3000 } },

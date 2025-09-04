@@ -46,7 +46,7 @@ Vtx int_tak_toudai_v[] = {
 #include "assets/int_tak_toudai_v.inc"
 };
 
-Gfx int_tak_toudai_right_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_right_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -60,9 +60,9 @@ Gfx int_tak_toudai_right_model[] = {
     gsSPNTriangles_5b(9, 7, 8, 9, 8, 10, 10, 11, 9, 4, 6, 11),
     gsSPNTriangles_5b(11, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_back_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_back_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -74,9 +74,9 @@ Gfx int_tak_toudai_back_model[] = {
     gsSPVertex(&int_tak_toudai_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_tesuri_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_tesuri_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -94,9 +94,9 @@ Gfx int_tak_toudai_tesuri_model[] = {
     gsSPNTriangles_5b(19, 21, 20, 23, 22, 24, 23, 24, 25, 25, 24, 26),
     gsSPNTriangles_5b(25, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_grass_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_grass_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -108,9 +108,9 @@ Gfx int_tak_toudai_grass_model[] = {
     gsSPVertex(&int_tak_toudai_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_evw_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 200, 200, 255, 155),
@@ -126,9 +126,9 @@ Gfx int_tak_toudai_evw_model[] = {
     gsSPNTriangles_5b(9, 5, 4, 2, 3, 10, 3, 11, 10, 10, 11, 12),
     gsSPNTriangles_5b(11, 13, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_dai_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_dai_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -143,9 +143,9 @@ Gfx int_tak_toudai_dai_model[] = {
     gsSPNTriangles_5b(6, 9, 10, 10, 11, 7, 10, 7, 6, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 12, 15, 16, 12, 16, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_toudai_body_model[] = {
+GFX_ARR_BEGIN(int_tak_toudai_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -164,7 +164,7 @@ Gfx int_tak_toudai_body_model[] = {
     gsSPNTriangles_5b(14, 15, 16, 17, 12, 11, 18, 17, 11, 19, 6, 20),
     gsSPNTriangles_5b(21, 16, 22, 23, 7, 8, 24, 25, 26, 27, 22, 10),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_tak_toudai_tbl[] = { 0, 0, 0, 0, 0, 0, 1, 0 };
 

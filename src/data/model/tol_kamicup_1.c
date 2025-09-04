@@ -18,7 +18,7 @@ Vtx tol_kamicup_1_v[] = {
 #include "assets/tol_kamicup_1_v.inc"
 };
 
-Gfx tol_kamicup_1T_model[] = {
+GFX_ARR_BEGIN(tol_kamicup_1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -41,4 +41,4 @@ Gfx tol_kamicup_1T_model[] = {
     gsSPNTriangles_5b(12, 11, 10, 14, 15, 13, 14, 13, 12, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

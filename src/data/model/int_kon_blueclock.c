@@ -38,7 +38,7 @@ Vtx int_kon_blueclock_v[] = {
 #include "assets/int_kon_blueclock_v.inc"
 };
 
-Gfx int_kon_blueclock_long_model[] = {
+GFX_ARR_BEGIN(int_kon_blueclock_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -50,9 +50,9 @@ Gfx int_kon_blueclock_long_model[] = {
     gsSPVertex(int_kon_blueclock_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_blueclock_evw_model[] = {
+GFX_ARR_BEGIN(int_kon_blueclock_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -71,9 +71,9 @@ Gfx int_kon_blueclock_evw_model[] = {
     gsSPNTriangles_5b(8, 13, 9, 14, 11, 9, 14, 9, 13, 8, 10, 15),
     gsSPNTriangles_5b(8, 15, 12, 10, 11, 14, 10, 14, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_blueclock_base_model[] = {
+GFX_ARR_BEGIN(int_kon_blueclock_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -95,9 +95,9 @@ Gfx int_kon_blueclock_base_model[] = {
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 124, 124),
     gsSPNTrianglesInit_5b(2, 12, 13, 14, 12, 14, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_blueclock_short_model[] = {
+GFX_ARR_BEGIN(int_kon_blueclock_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -109,7 +109,7 @@ Gfx int_kon_blueclock_short_model[] = {
     gsSPVertex(&int_kon_blueclock_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_kon_blueclock_tbl[] = { 0, 0, 0, 0, 0, 0 };
 

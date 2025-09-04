@@ -73,7 +73,7 @@ Vtx dia_win_v[] = {
 #include "assets/dia_win_v.inc"
 };
 
-Gfx dia_win_moji_model[] = {
+GFX_ARR_BEGIN(dia_win_moji_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 50, 50, 115, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 16, dia_win_entry_tex),
@@ -81,9 +81,9 @@ Gfx dia_win_moji_model[] = {
     gsSPVertex(dia_win_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_win_wT_model[] = {
+GFX_ARR_BEGIN(dia_win_wT_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter01_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, lat_letter01_04_tex),
@@ -94,9 +94,9 @@ Gfx dia_win_wT_model[] = {
     gsSPNTriangles_5b(10, 11, 2, 10, 1, 12, 1, 13, 12, 1, 3, 13),
     gsSPNTriangles_5b(3, 14, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_win_fusenT_model[] = {
+GFX_ARR_BEGIN(dia_win_fusenT_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0),
     gsDPSetPrimColor(0, 255, 100, 100, 135, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, lat_tegami_fusen_tex),
@@ -104,9 +104,9 @@ Gfx dia_win_fusenT_model[] = {
     gsSPVertex(&dia_win_v[19], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_win_tukiT_model[] = {
+GFX_ARR_BEGIN(dia_win_tukiT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 30, 30, 90, 255),
@@ -114,4 +114,4 @@ Gfx dia_win_tukiT_model[] = {
     gsSPVertex(&dia_win_v[23], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

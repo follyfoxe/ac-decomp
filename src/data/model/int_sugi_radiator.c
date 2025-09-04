@@ -18,7 +18,7 @@ Vtx int_sugi_radiator_v[] = {
 #include "assets/int_sugi_radiator_v.inc"
 };
 
-Gfx sugi_radiator_model[] = {
+GFX_ARR_BEGIN(sugi_radiator_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -53,4 +53,4 @@ Gfx sugi_radiator_model[] = {
     gsSPNTrianglesInit_5b(6, 14, 15, 16, 14, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(18, 20, 21, 22, 23, 24, 22, 24, 25, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

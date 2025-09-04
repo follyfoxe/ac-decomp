@@ -49,11 +49,11 @@ Vtx obj_e_hfes_a_v[] = {
 #include "assets/obj_e_hfes_a_v.inc"
 };
 
-Gfx obj_e_hfes_a_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_a_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_hfes_a_model[] = {
+GFX_ARR_BEGIN(obj_e_hfes_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -122,17 +122,17 @@ Gfx obj_e_hfes_a_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 17, 18, 15, 19, 20, 21, 21, 22, 19),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_hfes_b_v[] = {
 #include "assets/obj_e_hfes_b_v.inc"
 };
 
-Gfx obj_e_hfes_b_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_b_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_hfes_b_model[] = {
+GFX_ARR_BEGIN(obj_e_hfes_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -200,7 +200,7 @@ Gfx obj_e_hfes_b_model[] = {
     gsSPNTriangles_5b(22, 23, 20, 24, 25, 26, 26, 27, 24, 28, 29, 30),
     gsSPNTriangles_5b(30, 31, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_e_hfes01_t5_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_e_hfes01_t5_pal.inc"
@@ -214,11 +214,11 @@ Vtx obj_e_hfes_c_v[] = {
 #include "assets/obj_e_hfes_c_v.inc"
 };
 
-Gfx obj_e_hfes_c_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_c_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_hfes_c_model[] = {
+GFX_ARR_BEGIN(obj_e_hfes_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -320,4 +320,4 @@ Gfx obj_e_hfes_c_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 10, 11, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

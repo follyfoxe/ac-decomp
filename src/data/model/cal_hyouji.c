@@ -41,7 +41,7 @@ Vtx cal_hyouji_v[] = {
 #include "assets/cal_hyouji_v.inc"
 };
 
-Gfx cal_hyouji_b2_model[] = {
+GFX_ARR_BEGIN(cal_hyouji_b2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
@@ -53,9 +53,9 @@ Gfx cal_hyouji_b2_model[] = {
     gsSPVertex(cal_hyouji_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyouji_3DT_model[] = {
+GFX_ARR_BEGIN(cal_hyouji_3DT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -67,9 +67,9 @@ Gfx cal_hyouji_3DT_model[] = {
     gsSPVertex(&cal_hyouji_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyouji_shitaT_model[] = {
+GFX_ARR_BEGIN(cal_hyouji_shitaT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 0, 0, 0, 255),
@@ -79,9 +79,9 @@ Gfx cal_hyouji_shitaT_model[] = {
     gsSPVertex(&cal_hyouji_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyouji_amojiT_model[] = {
+GFX_ARR_BEGIN(cal_hyouji_amojiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -93,9 +93,9 @@ Gfx cal_hyouji_amojiT_model[] = {
     gsSPVertex(&cal_hyouji_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyouji_stT_model[] = {
+GFX_ARR_BEGIN(cal_hyouji_stT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -105,9 +105,9 @@ Gfx cal_hyouji_stT_model[] = {
     gsSPVertex(&cal_hyouji_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyoji_yaji1T_model[] = {
+GFX_ARR_BEGIN(cal_hyoji_yaji1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -118,14 +118,14 @@ Gfx cal_hyoji_yaji1T_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cal_hyouji_v[20], 8, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyoji_yajiA_gfx[] = {
+GFX_ARR_BEGIN(cal_hyoji_yajiA_gfx)
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_hyoji_yajiB_gfx[] = {
+GFX_ARR_BEGIN(cal_hyoji_yajiB_gfx)
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 5, 7, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

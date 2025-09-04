@@ -22,7 +22,7 @@ Vtx int_nog_kamakura_v[] = {
 #include "assets/int_nog_kamakura_v.inc"
 };
 
-Gfx int_nog_kamakura_on_model[] = {
+GFX_ARR_BEGIN(int_nog_kamakura_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -34,9 +34,9 @@ Gfx int_nog_kamakura_on_model[] = {
     gsSPVertex(int_nog_kamakura_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_kamakura_offT_model[] = {
+GFX_ARR_BEGIN(int_nog_kamakura_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_nog_kamakura_offT_model[] = {
     gsSPVertex(&int_nog_kamakura_v[4], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 0, 4, 4, 0, 2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_kamakura_onT_model[] = {
+GFX_ARR_BEGIN(int_nog_kamakura_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -69,4 +69,4 @@ Gfx int_nog_kamakura_onT_model[] = {
     gsSPNTriangles_5b(8, 20, 6, 6, 21, 5, 12, 22, 10, 0, 23, 12),
     gsSPNTriangles_5b(10, 24, 14, 14, 25, 17, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

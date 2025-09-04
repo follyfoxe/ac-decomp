@@ -53,26 +53,26 @@ u8 cal_win_nen_before[] = {
 #include "assets/cal_win_nen_before.inc"
 };
 
-Gfx cal_win_nen1_model[] = {
+GFX_ARR_BEGIN(cal_win_nen1_model)
     gsSPVertex(cal_nen_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_nen2_model[] = {
+GFX_ARR_BEGIN(cal_win_nen2_model)
     gsSPVertex(&cal_nen_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_nen3_model[] = {
+GFX_ARR_BEGIN(cal_win_nen3_model)
     gsSPVertex(&cal_nen_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_nen4_model[] = {
+GFX_ARR_BEGIN(cal_win_nen4_model)
     gsSPVertex(&cal_nen_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

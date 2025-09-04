@@ -13,7 +13,7 @@ Vtx ef_situren01_00_v[] = {
 #include "assets/ef_situren01_00_v.inc"
 };
 
-Gfx ef_situren01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_situren01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -25,7 +25,7 @@ Gfx ef_situren01_00_modelT[] = {
     gsSPVertex(ef_situren01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 3, 2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_situren01_1[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_situren01_1.inc"
@@ -35,7 +35,7 @@ Vtx ef_situren01_01_v[] = {
 #include "assets/ef_situren01_01_v.inc"
 };
 
-Gfx ef_situren01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_situren01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -48,13 +48,13 @@ Gfx ef_situren01_01_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 0, 2, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_situren01_02_v[] = {
 #include "assets/ef_situren01_02_v.inc"
 };
 
-Gfx ef_situren01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_situren01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -67,4 +67,4 @@ Gfx ef_situren01_02_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 0, 2, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

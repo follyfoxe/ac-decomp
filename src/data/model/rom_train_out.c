@@ -42,7 +42,7 @@ Vtx rom_train_out_v[] = {
 #include "assets/rom_train_out_v.inc"
 };
 
-Gfx rom_train_out_bgcloud_modelT[] = {
+GFX_ARR_BEGIN(rom_train_out_bgcloud_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, PRIM_LOD_FRAC, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -56,9 +56,9 @@ Gfx rom_train_out_bgcloud_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_train_out_bgtree_modelT[] = {
+GFX_ARR_BEGIN(rom_train_out_bgtree_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, PRIM_LOD_FRAC, ENVIRONMENT, 0, 0, 0, TEXEL0, TEXEL1, 0, COMBINED, 0, 0, 0, 0,
                        COMBINED),
@@ -73,9 +73,9 @@ Gfx rom_train_out_bgtree_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_train_out_shineglass_modelT[] = {
+GFX_ARR_BEGIN(rom_train_out_shineglass_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, TEXEL1, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIM_LOD_FRAC, 0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 8, rom_train_shine_tex_rgb_i4),
@@ -89,9 +89,9 @@ Gfx rom_train_out_shineglass_modelT[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_train_out_tunnel_model[] = {
+GFX_ARR_BEGIN(rom_train_out_tunnel_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, PRIM_LOD_FRAC, ENVIRONMENT, 0, 0, 0, TEXEL0, TEXEL1, 0, COMBINED, 0, 0, 0, 0,
                        COMBINED),
@@ -106,9 +106,9 @@ Gfx rom_train_out_tunnel_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_train_out_bgsky_model[] = {
+GFX_ARR_BEGIN(rom_train_out_bgsky_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -120,4 +120,4 @@ Gfx rom_train_out_bgsky_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

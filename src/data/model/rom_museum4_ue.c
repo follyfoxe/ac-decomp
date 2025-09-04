@@ -72,7 +72,7 @@ Vtx rom_museum4_ue_v[] = {
 extern u16 bush_pal_dummy[];
 extern u8 bush_a_tex_dummy[];
 
-Gfx rom_museum4_ue_model[] = {
+GFX_ARR_BEGIN(rom_museum4_ue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -192,4 +192,4 @@ Gfx rom_museum4_ue_model[] = {
     gsSPNTriangles_5b(18, 23, 19, 23, 24, 19, 18, 21, 23, 15, 25, 16),
     gsSPNTriangles_5b(25, 22, 16, 15, 26, 25, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

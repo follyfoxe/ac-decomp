@@ -59,8 +59,12 @@ void guLookAtHilite (Mtx *m, LookAt *l, Hilite *h,
 		float xl1,  float yl1,  float zl1,   /* light 1 direction */
 		float xl2,  float yl2,  float zl2,   /* light 2 direction */
 		int twidth, int theight);	     /* highlight txtr size*/
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 extern signed short sins (unsigned short angle);
 extern signed short coss (unsigned short angle);
-
+#ifdef __cplusplus
+}
+#endif
 #endif

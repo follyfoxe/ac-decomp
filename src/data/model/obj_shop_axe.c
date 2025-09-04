@@ -17,7 +17,7 @@ Vtx obj_shop_axe_v[] = {
 #include "assets/obj_shop_axe_v.inc"
 };
 
-Gfx obj_axeT_mat_model[] = {
+GFX_ARR_BEGIN(obj_axeT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -27,9 +27,9 @@ Gfx obj_axeT_mat_model[] = {
     gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_axeT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_axeT_gfx_model)
     gsSPVertex(obj_shop_axe_v, 26, 0),
     gsSPNTrianglesInit_5b(16, 0, 1, 2, 0, 2, 3, 2, 4, 5),
     gsSPNTriangles_5b(2, 5, 3, 6, 7, 8, 6, 8, 9, 8, 10, 9),
@@ -37,4 +37,4 @@ Gfx obj_axeT_gfx_model[] = {
     gsSPNTriangles_5b(17, 18, 19, 20, 21, 22, 20, 22, 23, 23, 24, 25),
     gsSPNTriangles_5b(23, 25, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

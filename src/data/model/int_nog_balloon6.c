@@ -26,7 +26,7 @@ Vtx int_nog_balloon6_v[] = {
 #include "assets/int_nog_balloon6_v.inc"
 };
 
-Gfx int_nog_balloon6_weight_model[] = {
+GFX_ARR_BEGIN(int_nog_balloon6_weight_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -43,9 +43,9 @@ Gfx int_nog_balloon6_weight_model[] = {
     gsSPNTriangles_5b(14, 18, 19, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_balloon6_a_model[] = {
+GFX_ARR_BEGIN(int_nog_balloon6_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -57,9 +57,9 @@ Gfx int_nog_balloon6_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_balloon6_b_model[] = {
+GFX_ARR_BEGIN(int_nog_balloon6_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -79,9 +79,9 @@ Gfx int_nog_balloon6_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_balloon6_c_model[] = {
+GFX_ARR_BEGIN(int_nog_balloon6_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -101,9 +101,9 @@ Gfx int_nog_balloon6_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_balloon6_head_model[] = {
+GFX_ARR_BEGIN(int_nog_balloon6_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -151,7 +151,7 @@ Gfx int_nog_balloon6_head_model[] = {
     gsSPNTriangles_5b(23, 20, 8, 23, 8, 7, 24, 5, 25, 24, 22, 5),
     gsSPNTriangles_5b(24, 19, 22, 18, 19, 24, 18, 24, 0, 18, 0, 15),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_nog_balloon6_tbl[] = { 0, 0, 3, 3, 3, 3 };
 

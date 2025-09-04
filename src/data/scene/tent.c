@@ -4,7 +4,7 @@ extern Door_data_c TENT_door_data[];
 extern Actor_data TENT_player_data[];
 extern s16 TENT_ctrl_actor_data[];
 
-extern Scene_Word_u tent_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, tent_info)
     mSc_DATA_SOUND(0, 0),                           // Sound data
     mSc_DATA_DOOR_DATA(1, TENT_door_data),          // Door data
     mSc_DATA_PLAYER(TENT_player_data),              // Player Data
@@ -13,7 +13,7 @@ extern Scene_Word_u tent_info[] = {
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_DUMMY, 1, 0xA000, mSc_ROOM_TYPE_MISC_ROOM,
                      FIELD_DRAW_TYPE_INDOORS), // Field construct params
     mSc_DATA_END(),                            // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data TENT_player_data[] = {
     {

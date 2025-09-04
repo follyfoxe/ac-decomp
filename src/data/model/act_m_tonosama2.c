@@ -6,7 +6,7 @@
 #include "ef_effect_control.h"
 
 extern Vtx act_m_tonosama_v[];
-static Vtx act_m_tonosama_v[] = {
+Vtx act_m_tonosama_v[] = {
 #include "assets/act_m_tonosama2/act_m_tonosama_v.inc"
 };
 
@@ -18,7 +18,7 @@ static u8 act_m_tonosama[] = {
 #include "assets/act_m_tonosama2/act_m_tonosama.inc"
 };
 
-Gfx act_m_mu_tonosama1T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_tonosama1T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -49,9 +49,9 @@ Gfx act_m_mu_tonosama1T_model[] = {
     gsSP2Triangles(6, 7, 8, 0, 6, 8, 9, 0),
     gsSP2Triangles(10, 11, 12, 0, 10, 12, 13, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_tonosama2_2T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_tonosama2_2T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -79,4 +79,4 @@ Gfx act_m_mu_tonosama2_2T_model[] = {
     gsSPVertex(&act_m_tonosama_v[14], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

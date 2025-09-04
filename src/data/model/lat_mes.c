@@ -13,7 +13,7 @@ Vtx lat_mes_v[] = {
 #include "assets/lat_mes_v.inc"
 };
 
-Gfx lat_mes_winT_model[] = {
+GFX_ARR_BEGIN(lat_mes_winT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
@@ -28,4 +28,4 @@ Gfx lat_mes_winT_model[] = {
     gsSPVertex(lat_mes_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

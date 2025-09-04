@@ -17,7 +17,7 @@ Vtx int_nog_rail_v[] = {
 #include "assets/int_nog_rail_v.inc"
 };
 
-Gfx int_nog_rail_model[] = {
+GFX_ARR_BEGIN(int_nog_rail_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -31,4 +31,4 @@ Gfx int_nog_rail_model[] = {
     gsSPNTriangles_5b(4, 5, 2, 4, 6, 7, 4, 7, 5, 8, 9, 10),
     gsSPNTriangles_5b(8, 10, 11, 12, 13, 14, 12, 14, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

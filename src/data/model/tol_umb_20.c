@@ -22,7 +22,7 @@ Vtx tol_umb_20_v[] = {
 #include "assets/tol_umb_20_v.inc"
 };
 
-Gfx kasa_umb20_model[] = {
+GFX_ARR_BEGIN(kasa_umb20_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -37,9 +37,9 @@ Gfx kasa_umb20_model[] = {
     gsSPNTriangles_5b(5, 1, 8, 9, 10, 11, 11, 6, 9, 5, 9, 6),
     gsSPNTriangles_5b(5, 8, 9, 10, 9, 8, 8, 1, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx e_umb20_model[] = {
+GFX_ARR_BEGIN(e_umb20_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -56,4 +56,4 @@ Gfx e_umb20_model[] = {
     gsSPNTriangles_5b(14, 19, 15, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

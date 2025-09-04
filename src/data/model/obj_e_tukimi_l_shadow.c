@@ -13,7 +13,7 @@ Vtx obj_e_tukimi_l_shadow_v[] = {
 #include "assets/obj_e_tukimi_l_shadow_v.inc"
 };
 
-Gfx obj_e_tukimi_l_shadow_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_l_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -24,7 +24,7 @@ Gfx obj_e_tukimi_l_shadow_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 0, 3),
     gsSPNTriangles_5b(4, 3, 5, 6, 4, 5, 6, 5, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_e_tukimi_r_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_e_tukimi_r_shadow_tex_txt.inc"
@@ -34,7 +34,7 @@ Vtx obj_e_tukimi_r_shadow_v[] = {
 #include "assets/obj_e_tukimi_r_shadow_v.inc"
 };
 
-Gfx obj_e_tukimi_r_shadow_model[] = {
+GFX_ARR_BEGIN(obj_e_tukimi_r_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -45,4 +45,4 @@ Gfx obj_e_tukimi_r_shadow_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 0, 3),
     gsSPNTriangles_5b(4, 3, 5, 6, 4, 5, 6, 5, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -13,7 +13,7 @@ Vtx ef_hanabira01_00_v[] = {
 #include "assets/ef_hanabira01_00_v.inc"
 };
 
-Gfx ef_hanabira01_00_setmode[] = {
+GFX_ARR_BEGIN(ef_hanabira01_00_setmode)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, SHADE, PRIM_LOD_FRAC, SHADE, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, ENVIRONMENT, COMBINED,
                        ENVIRONMENT, 0, 0, 0, COMBINED),
@@ -24,11 +24,11 @@ Gfx ef_hanabira01_00_setmode[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_hanabira01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_hanabira01_00_modelT)
     gsSPVertex(ef_hanabira01_00_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
     gsSP1Triangle(0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

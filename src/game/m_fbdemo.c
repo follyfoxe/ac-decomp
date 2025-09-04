@@ -6,7 +6,7 @@
 #include "m_play.h"
 #include "libultra/libultra.h"
 
-static Gfx fbdemo_gfx_init[] = {
+static GFX_ARR_BEGIN(fbdemo_gfx_init)
     gsDPPipeSync(),
     gsSPTexture(0x8000, 0x8000, 0, G_TX_RENDERTILE, G_ON),
     gsSPClearGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN |
@@ -16,7 +16,7 @@ static Gfx fbdemo_gfx_init[] = {
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_1PRIMITIVE,
                      G_AC_NONE | G_ZS_PIXEL | G_RM_AA_OPA_SURF | G_RM_AA_OPA_SURF2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 extern void fbdemo_init_gfx(fbdemo_c* this) {
     int col;

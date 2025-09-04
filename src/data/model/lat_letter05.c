@@ -12,7 +12,7 @@ Vtx lat_letter05_v[] = {
 #include "assets/lat_letter05_v.inc"
 };
 
-Gfx lat_letter05_model[] = {
+GFX_ARR_BEGIN(lat_letter05_model)
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter05_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 16, lat_letter05_2),
@@ -35,4 +35,4 @@ Gfx lat_letter05_model[] = {
     gsSP2Triangles(3, 5, 6, 0, 7, 0, 2, 0),
     gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

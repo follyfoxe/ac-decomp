@@ -15,7 +15,7 @@ Vtx obj_gara_v[] = {
 #include "assets/obj_gara_v.inc"
 };
 
-Gfx obj_gara_base_model[] = {
+GFX_ARR_BEGIN(obj_gara_base_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -54,9 +54,9 @@ Gfx obj_gara_base_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_gara_hex_model[] = {
+GFX_ARR_BEGIN(obj_gara_hex_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -96,7 +96,7 @@ Gfx obj_gara_hex_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_gara_tbl[] = { 0, 0, 1 };
 
@@ -135,7 +135,7 @@ Vtx act_fukutama_v[] = {
 #include "assets/act_fukutama_v.inc"
 };
 
-Gfx act_fukutama_modelT[] = {
+GFX_ARR_BEGIN(act_fukutama_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -163,7 +163,7 @@ Gfx act_fukutama_modelT[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSP2Triangles(3, 4, 1, 0, 4, 2, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_gara_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

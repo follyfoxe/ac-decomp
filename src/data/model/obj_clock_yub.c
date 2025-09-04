@@ -26,7 +26,7 @@ Vtx obj_clock_yub_v[] = {
 #include "assets/obj_clock_yub_v.inc"
 };
 
-Gfx obj_clock_yub_side_model[] = {
+GFX_ARR_BEGIN(obj_clock_yub_side_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -59,9 +59,9 @@ Gfx obj_clock_yub_side_model[] = {
     gsSP2Triangles(9, 8, 10, 0, 9, 10, 11, 0),
     gsSP2Triangles(11, 10, 12, 0, 11, 12, 13, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_yub_front_model[] = {
+GFX_ARR_BEGIN(obj_clock_yub_front_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -89,9 +89,9 @@ Gfx obj_clock_yub_front_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(0, 3, 4, 0, 0, 4, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_yub_long_model[] = {
+GFX_ARR_BEGIN(obj_clock_yub_long_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -118,9 +118,9 @@ Gfx obj_clock_yub_long_model[] = {
     gsSPVertex(obj_clock_yub_v, 3, 0),
     gsSP1Triangle(0, 1, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_yub_short_model[] = {
+GFX_ARR_BEGIN(obj_clock_yub_short_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -147,7 +147,7 @@ Gfx obj_clock_yub_short_model[] = {
     gsSPVertex(&obj_clock_yub_v[3], 3, 0),
     gsSP1Triangle(0, 1, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_clock_yub_tbl[] = { 0, 0, 0, 0, 0, 0 };
 

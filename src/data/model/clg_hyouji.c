@@ -25,7 +25,7 @@ Vtx clg_hyouji_v[] = {
 #include "assets/clg_hyouji_v.inc"
 };
 
-Gfx clg_win_cbT_model[] = {
+GFX_ARR_BEGIN(clg_win_cbT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 40, 225, 0, 255),
@@ -53,4 +53,4 @@ Gfx clg_win_cbT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 5, 7, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

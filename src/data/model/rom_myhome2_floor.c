@@ -8,7 +8,7 @@ Vtx rom_myhome2_floor_v[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/rom_myhome2_floor_v.inc"
 };
 
-Gfx rom_myhome2_floor_model[] = {
+GFX_ARR_BEGIN(rom_myhome2_floor_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -47,4 +47,4 @@ Gfx rom_myhome2_floor_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 0, 4, 1),
     gsSPNTriangles_5b(5, 1, 6, 0, 2, 7, 2, 3, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

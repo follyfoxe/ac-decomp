@@ -58,7 +58,7 @@ Vtx int_tak_ice_v[] = {
 #include "assets/int_tak_ice_v.inc"
 };
 
-Gfx int_tak_ice_rot_model[] = {
+GFX_ARR_BEGIN(int_tak_ice_rot_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -78,9 +78,9 @@ Gfx int_tak_ice_rot_model[] = {
     gsSPNTrianglesInit_5b(4, 9, 10, 11, 9, 12, 10, 9, 11, 12),
     gsSPNTriangles_5b(11, 10, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ice_yuki_model[] = {
+GFX_ARR_BEGIN(int_tak_ice_yuki_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -95,9 +95,9 @@ Gfx int_tak_ice_yuki_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ice_base_model[] = {
+GFX_ARR_BEGIN(int_tak_ice_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -147,9 +147,9 @@ Gfx int_tak_ice_base_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ice_block_model[] = {
+GFX_ARR_BEGIN(int_tak_ice_block_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -167,7 +167,7 @@ Gfx int_tak_ice_block_model[] = {
     gsSPNTriangles_5b(21, 22, 23, 24, 20, 21, 24, 21, 25, 20, 14, 17),
     gsSPNTriangles_5b(20, 17, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_tak_ice_tbl[] = { 0, 0, 0, 1, 0, 2 };
 

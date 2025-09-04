@@ -34,7 +34,7 @@ Vtx int_sum_uwa_vase02_v[] = {
 #include "assets/int_sum_uwa_vase02_v.inc"
 };
 
-Gfx int_sum_uwa_vase02_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_uwa_vase02_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -69,4 +69,4 @@ Gfx int_sum_uwa_vase02_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 3, 1, 4, 5, 1, 9, 0, 8),
     gsSPNTriangles_5b(10, 11, 8, 16, 15, 14, 5, 17, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

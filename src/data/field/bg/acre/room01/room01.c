@@ -20,7 +20,7 @@ static Vtx room01_v[] = {
 #include "assets/field/bg/room01_v.inc"
 };
 
-static Gfx room01_grp_room01__edge[] = {
+static GFX_ARR_BEGIN(room01_grp_room01__edge)
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPLoadTLUT_pal16(15, room),
@@ -30,18 +30,18 @@ static Gfx room01_grp_room01__edge[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx room01_grp_room_out01[] = {
+static GFX_ARR_BEGIN(room01_grp_room_out01)
     gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PASS2),
     gsSPVertex(&room01_v[72], 8, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx room01_grp_room01[] = {
+static GFX_ARR_BEGIN(room01_grp_room01)
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPLoadTLUT_pal16(15, room),
@@ -80,9 +80,9 @@ static Gfx room01_grp_room01[] = {
     gsSP2Triangles(27, 8, 13, 0, 8, 14, 13, 0),
     gsSP2Triangles(8, 16, 14, 0, 17, 9, 24, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx room01_model[] = {
+extern GFX_ARR_BEGIN(room01_model)
     gsDPPipeSync(),
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_NOOP, G_RM_AA_ZB_TEX_EDGE2),
@@ -93,4 +93,4 @@ extern Gfx room01_model[] = {
     gsSPDisplayList(room01_grp_room_out01),
     gsSPDisplayList(room01_grp_room01__edge),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

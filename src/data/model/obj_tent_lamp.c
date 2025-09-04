@@ -26,7 +26,7 @@ Vtx obj_tent_lamp_v[] = {
 #include "assets/obj_tent_lamp_v.inc"
 };
 
-Gfx obj_tent_lamp_model[] = {
+GFX_ARR_BEGIN(obj_tent_lamp_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -48,4 +48,4 @@ Gfx obj_tent_lamp_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 5, 6, 7, 3),
     gsSPNTriangles_5b(8, 9, 10, 11, 12, 6, 10, 13, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

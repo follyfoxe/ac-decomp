@@ -13,7 +13,7 @@ Vtx obj_uranai_shadow_v[] = {
 #include "assets/obj_uranai_shadow_v.inc"
 };
 
-Gfx obj_uranai_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_uranai_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_OVL_SURF2),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -25,4 +25,4 @@ Gfx obj_uranai_shadowT_model[] = {
     gsSPNTriangles_5b(6, 7, 4, 6, 0, 7, 0, 2, 7, 8, 2, 9),
     gsSPNTriangles_5b(8, 9, 10, 11, 8, 10, 11, 10, 12, 13, 11, 12),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

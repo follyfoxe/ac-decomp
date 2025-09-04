@@ -43,7 +43,7 @@ Vtx obj_s_shrine_v[] = {
 #include "assets/obj_s_shrine_v.inc"
 };
 
-Gfx obj_s_shrine_water_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_water_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, 0, SHADE, COMBINED, COMBINED, 0,
                        PRIM_LOD_FRAC, PRIMITIVE),
@@ -74,9 +74,9 @@ Gfx obj_s_shrine_water_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 4, 6, 7),
     gsSPNTriangles_5b(8, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_trunk_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_trunk_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -98,9 +98,9 @@ Gfx obj_s_shrine_trunk_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(6, 8, 9, 9, 3, 5, 5, 6, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_statue_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_statue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -142,9 +142,9 @@ Gfx obj_s_shrine_statue_model[] = {
     gsSPNTriangles_5b(8, 19, 5, 20, 5, 19, 5, 20, 6, 6, 20, 19),
     gsSPNTriangles_5b(21, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_sprash_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_sprash_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, 0, SHADE, COMBINED, COMBINED, 0,
                        PRIM_LOD_FRAC, 0),
@@ -163,9 +163,9 @@ Gfx obj_s_shrine_sprash_model[] = {
     gsSPNTriangles_5b(16, 7, 17, 9, 12, 15, 9, 15, 10, 13, 16, 17),
     gsSPNTriangles_5b(13, 17, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_leaf_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_leaf_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -182,9 +182,9 @@ Gfx obj_s_shrine_leaf_model[] = {
     gsSPNTriangles_5b(19, 18, 16, 20, 21, 22, 21, 23, 22, 20, 22, 24),
     gsSPNTriangles_5b(22, 23, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_figure_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_figure_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -205,9 +205,9 @@ Gfx obj_s_shrine_figure_model[] = {
     gsSPVertex(&obj_s_shrine_v[401], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_bubble_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_bubble_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 180),
@@ -220,9 +220,9 @@ Gfx obj_s_shrine_bubble_model[] = {
     gsSPVertex(&obj_s_shrine_v[405], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_shrine_base_model[] = {
+GFX_ARR_BEGIN(obj_s_shrine_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -276,7 +276,7 @@ Gfx obj_s_shrine_base_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 obj_w_shrine_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_s_shrine/obj_w_shrine_pal.inc"
@@ -318,7 +318,7 @@ Vtx obj_w_shrine_v[] = {
 #include "assets/obj_w_shrine_v.inc"
 };
 
-Gfx obj_w_shrine_water_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_water_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, 0, SHADE, COMBINED, COMBINED, 0,
                        PRIM_LOD_FRAC, PRIMITIVE),
@@ -349,9 +349,9 @@ Gfx obj_w_shrine_water_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 4, 6, 7),
     gsSPNTriangles_5b(8, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_trunk_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_trunk_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -373,9 +373,9 @@ Gfx obj_w_shrine_trunk_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(6, 8, 9, 9, 3, 5, 5, 6, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_statue_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_statue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -417,9 +417,9 @@ Gfx obj_w_shrine_statue_model[] = {
     gsSPNTriangles_5b(8, 19, 5, 20, 5, 19, 5, 20, 6, 6, 20, 19),
     gsSPNTriangles_5b(21, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_sprash_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_sprash_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, 0, SHADE, COMBINED, COMBINED, 0,
                        PRIM_LOD_FRAC, 0),
@@ -438,9 +438,9 @@ Gfx obj_w_shrine_sprash_model[] = {
     gsSPNTriangles_5b(16, 7, 17, 9, 12, 15, 9, 15, 10, 13, 16, 17),
     gsSPNTriangles_5b(13, 17, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_leaf_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_leaf_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -457,9 +457,9 @@ Gfx obj_w_shrine_leaf_model[] = {
     gsSPNTriangles_5b(19, 18, 16, 20, 21, 22, 21, 23, 22, 20, 22, 24),
     gsSPNTriangles_5b(22, 23, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_figure_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_figure_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -480,9 +480,9 @@ Gfx obj_w_shrine_figure_model[] = {
     gsSPVertex(&obj_w_shrine_v[401], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_bubble_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_bubble_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 180),
@@ -495,9 +495,9 @@ Gfx obj_w_shrine_bubble_model[] = {
     gsSPVertex(&obj_w_shrine_v[405], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_shrine_base_model[] = {
+GFX_ARR_BEGIN(obj_w_shrine_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -551,4 +551,4 @@ Gfx obj_w_shrine_base_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

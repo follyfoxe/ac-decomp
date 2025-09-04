@@ -17,7 +17,7 @@ Vtx mus_icon_v[] = {
 #include "assets/mus_icon_v.inc"
 };
 
-Gfx mus_icon_model_before[] = {
+GFX_ARR_BEGIN(mus_icon_model_before)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -26,10 +26,10 @@ Gfx mus_icon_model_before[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx mus_icon_model[] = {
+GFX_ARR_BEGIN(mus_icon_model)
     gsSPVertex(mus_icon_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

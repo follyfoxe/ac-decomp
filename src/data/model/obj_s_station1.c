@@ -21,7 +21,7 @@ Vtx obj_s_station1_v[] = {
 #include "assets/obj_s_station1_v.inc"
 };
 
-Gfx obj_s_station1_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_station1_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station1_t3_tex_txt),
@@ -38,9 +38,9 @@ Gfx obj_s_station1_t3_model[] = {
     gsSPNTriangles_5b(16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23),
     gsSPNTriangles_5b(24, 25, 26, 24, 26, 27, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station1_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_station1_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station1_t2_tex_txt),
@@ -50,9 +50,9 @@ Gfx obj_s_station1_t2_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 2, 5),
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 7, 9, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station1_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_station1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station1_t1_tex_txt),
@@ -67,9 +67,9 @@ Gfx obj_s_station1_t1_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 10, 11, 12, 10, 13, 11, 14, 15, 16),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station1_short_model[] = {
+GFX_ARR_BEGIN(obj_s_station1_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station1_t3_tex_txt),
@@ -78,9 +78,9 @@ Gfx obj_s_station1_short_model[] = {
     gsSPVertex(obj_s_station1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station1_long_model[] = {
+GFX_ARR_BEGIN(obj_s_station1_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station1_t3_tex_txt),
@@ -89,7 +89,7 @@ Gfx obj_s_station1_long_model[] = {
     gsSPVertex(&obj_s_station1_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_station1_tbl[] = { { obj_s_station1_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                 { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8000, 13000, 6000 } },
@@ -125,7 +125,7 @@ Vtx obj_w_station1_v[] = {
 #include "assets/obj_w_station1_v.inc"
 };
 
-Gfx obj_w_station1_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_station1_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station1_t3_tex_txt),
@@ -142,9 +142,9 @@ Gfx obj_w_station1_t3_model[] = {
     gsSPNTriangles_5b(1, 5, 4, 6, 7, 8, 6, 8, 9, 9, 8, 10),
     gsSPNTriangles_5b(9, 10, 11, 12, 13, 14, 12, 14, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station1_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_station1_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station1_t2_tex_txt),
@@ -155,9 +155,9 @@ Gfx obj_w_station1_t2_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 6, 8, 9, 6, 9, 7, 1, 10, 3),
     gsSPNTriangles_5b(10, 11, 3, 3, 12, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station1_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_station1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station1_t1_tex_txt),
@@ -174,9 +174,9 @@ Gfx obj_w_station1_t1_model[] = {
     gsSPNTriangles_5b(4, 7, 5, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 7, 17, 18, 19, 17, 19, 20, 0, 21, 1),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station1_short_model[] = {
+GFX_ARR_BEGIN(obj_w_station1_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station1_t3_tex_txt),
@@ -185,9 +185,9 @@ Gfx obj_w_station1_short_model[] = {
     gsSPVertex(obj_w_station1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station1_long_model[] = {
+GFX_ARR_BEGIN(obj_w_station1_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station1_t3_tex_txt),
@@ -196,7 +196,7 @@ Gfx obj_w_station1_long_model[] = {
     gsSPVertex(&obj_w_station1_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_station1_tbl[] = { { obj_w_station1_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                 { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8000, 13000, 6000 } },
@@ -232,7 +232,7 @@ Vtx obj_s_station2_v[] = {
 #include "assets/obj_s_station2_v.inc"
 };
 
-Gfx obj_s_station2_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_station2_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station2_t3_tex_txt),
@@ -245,9 +245,9 @@ Gfx obj_s_station2_t3_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station2_t2_2_model[] = {
+GFX_ARR_BEGIN(obj_s_station2_t2_2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station2_t2_tex_txt),
@@ -258,9 +258,9 @@ Gfx obj_s_station2_t2_2_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(12, 15, 13, 16, 17, 18, 17, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station2_t1_1_model[] = {
+GFX_ARR_BEGIN(obj_s_station2_t1_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station2_t1_tex_txt),
@@ -278,9 +278,9 @@ Gfx obj_s_station2_t1_1_model[] = {
     gsSPNTriangles_5b(12, 1, 13, 14, 12, 13, 14, 13, 15, 16, 17, 18),
     gsSPNTriangles_5b(16, 19, 17, 16, 18, 20, 18, 21, 20, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station2_short_model[] = {
+GFX_ARR_BEGIN(obj_s_station2_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station2_t3_tex_txt),
@@ -289,9 +289,9 @@ Gfx obj_s_station2_short_model[] = {
     gsSPVertex(&obj_s_station2_v[109], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station2_long_model[] = {
+GFX_ARR_BEGIN(obj_s_station2_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station2_t3_tex_txt),
@@ -300,7 +300,7 @@ Gfx obj_s_station2_long_model[] = {
     gsSPVertex(&obj_s_station2_v[105], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_station2_tbl[] = { { obj_s_station2_t1_1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                 { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8000, 11200, 6000 } },
@@ -335,7 +335,7 @@ Vtx obj_w_station2_v[] = {
 #include "assets/obj_w_station2_v.inc"
 };
 
-Gfx obj_w_station2_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_station2_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station2_t3_tex_txt),
@@ -348,9 +348,9 @@ Gfx obj_w_station2_t3_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station2_t2_1_model[] = {
+GFX_ARR_BEGIN(obj_w_station2_t2_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station2_t2_tex_txt),
@@ -361,9 +361,9 @@ Gfx obj_w_station2_t2_1_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 15, 13, 16, 17, 18, 17, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station2_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_station2_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station2_t1_tex_txt),
@@ -381,9 +381,9 @@ Gfx obj_w_station2_t1_model[] = {
     gsSPNTriangles_5b(9, 11, 13, 11, 14, 13, 15, 16, 17, 15, 17, 18),
     gsSPNTriangles_5b(19, 20, 21, 19, 21, 22, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station2_short_model[] = {
+GFX_ARR_BEGIN(obj_w_station2_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station2_t3_tex_txt),
@@ -392,9 +392,9 @@ Gfx obj_w_station2_short_model[] = {
     gsSPVertex(&obj_w_station2_v[107], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_ststion2_long_model[] = {
+GFX_ARR_BEGIN(obj_w_ststion2_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station2_t3_tex_txt),
@@ -403,7 +403,7 @@ Gfx obj_w_ststion2_long_model[] = {
     gsSPVertex(&obj_w_station2_v[111], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_station2_tbl[] = { { obj_w_station2_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                 { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8000, 11200, 6000 } },
@@ -438,7 +438,7 @@ Vtx obj_s_station3_v[] = {
 #include "assets/obj_s_station3_v.inc"
 };
 
-Gfx obj_s_station3_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_station3_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station3_t3_tex_txt),
@@ -449,9 +449,9 @@ Gfx obj_s_station3_t3_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 11, 9, 12, 13, 14),
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station3_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_station3_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station3_t2_tex_txt),
@@ -466,9 +466,9 @@ Gfx obj_s_station3_t2_model[] = {
     gsSPVertex(&obj_s_station3_v[78], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station3_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_station3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station3_t1_tex_txt),
@@ -482,9 +482,9 @@ Gfx obj_s_station3_t1_model[] = {
     gsSPVertex(&obj_s_station3_v[39], 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 1, 0, 4, 5, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_station3_shourt_model[] = {
+GFX_ARR_BEGIN(obj_s_station3_shourt_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station3_t3_tex_txt),
@@ -493,9 +493,9 @@ Gfx obj_s_station3_shourt_model[] = {
     gsSPVertex(&obj_s_station3_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_ststion3_long_model[] = {
+GFX_ARR_BEGIN(obj_s_ststion3_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_station3_t3_tex_txt),
@@ -504,7 +504,7 @@ Gfx obj_s_ststion3_long_model[] = {
     gsSPVertex(obj_s_station3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_station3_tbl[] = {
     { obj_s_station3_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -541,7 +541,7 @@ Vtx obj_w_station3_v[] = {
 #include "assets/obj_w_station3_v.inc"
 };
 
-Gfx obj_w_station3_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_station3_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station3_t3_tex_txt),
@@ -552,9 +552,9 @@ Gfx obj_w_station3_t3_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 11, 9, 12, 13, 14),
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station3_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_station3_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station3_t2_tex_txt),
@@ -569,9 +569,9 @@ Gfx obj_w_station3_t2_model[] = {
     gsSPVertex(&obj_w_station3_v[55], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station3_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_station3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station3_t1_tex_txt),
@@ -585,9 +585,9 @@ Gfx obj_w_station3_t1_model[] = {
     gsSPVertex(&obj_w_station3_v[91], 8, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 0, 5, 6, 7),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_station3_shourt_model[] = {
+GFX_ARR_BEGIN(obj_w_station3_shourt_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station3_t3_tex_txt),
@@ -596,9 +596,9 @@ Gfx obj_w_station3_shourt_model[] = {
     gsSPVertex(&obj_w_station3_v[99], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_ststion3_long_model[] = {
+GFX_ARR_BEGIN(obj_w_ststion3_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_station3_t3_tex_txt),
@@ -607,7 +607,7 @@ Gfx obj_w_ststion3_long_model[] = {
     gsSPVertex(obj_w_station3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_station3_tbl[] = {
     { obj_w_station3_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

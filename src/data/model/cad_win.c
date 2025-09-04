@@ -69,16 +69,16 @@ Vtx cad_win_v[] = {
 #include "assets/cad_win_v.inc"
 };
 
-Gfx cad_win_w9_model[] = {
+GFX_ARR_BEGIN(cad_win_w9_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws4_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, cad_win_ws4_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(cad_win_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_mb_model[] = {
+GFX_ARR_BEGIN(cad_win_mb_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, anime_2_txt),
@@ -86,9 +86,9 @@ Gfx cad_win_mb_model[] = {
     gsSPVertex(&cad_win_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_f_model[] = {
+GFX_ARR_BEGIN(cad_win_f_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 40, 90, 40, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 32, inv_carde_waku_tex),
@@ -96,81 +96,81 @@ Gfx cad_win_f_model[] = {
     gsSPVertex(&cad_win_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w1T_model[] = {
+GFX_ARR_BEGIN(cad_win_w1T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, cad_win_ws1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w2T_model[] = {
+GFX_ARR_BEGIN(cad_win_w2T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws2_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, cad_win_ws2_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w3T_model[] = {
+GFX_ARR_BEGIN(cad_win_w3T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, cad_win_ws1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w4T_model[] = {
+GFX_ARR_BEGIN(cad_win_w4T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, cad_win_ws3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[24], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w5T_model[] = {
+GFX_ARR_BEGIN(cad_win_w5T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, cad_win_ws1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[28], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w6T_model[] = {
+GFX_ARR_BEGIN(cad_win_w6T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws2_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, cad_win_ws2_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[32], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w7T_model[] = {
+GFX_ARR_BEGIN(cad_win_w7T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, cad_win_ws1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_w8T_model[] = {
+GFX_ARR_BEGIN(cad_win_w8T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, cad_win_ws3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, cad_win_ws3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&cad_win_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_ueT_model[] = {
+GFX_ARR_BEGIN(cad_win_ueT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 30, 80, 30, 255),
@@ -194,9 +194,9 @@ Gfx cad_win_ueT_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 11, 8, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 12, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_mode[] = {
+GFX_ARR_BEGIN(cad_win_mode)
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_2CYCLE | G_PM_NPRIMITIVE,
@@ -207,9 +207,9 @@ Gfx cad_win_mode[] = {
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, cad_win_nuno_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 14, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cad_win_model[] = {
+GFX_ARR_BEGIN(cad_win_model)
     gsSPDisplayList(cad_win_w1T_model),
     gsSPDisplayList(cad_win_w2T_model),
     gsSPDisplayList(cad_win_w3T_model),
@@ -225,4 +225,4 @@ Gfx cad_win_model[] = {
     gsSPDisplayList(cad_win_mb_model),
     gsSPDisplayList(cad_win_f_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

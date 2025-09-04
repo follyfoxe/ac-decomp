@@ -22,7 +22,7 @@ Vtx obj_clock_koban_v[] = {
 #include "assets/obj_clock_koban_v.inc"
 };
 
-Gfx obj_clock_koban_body_model[] = {
+GFX_ARR_BEGIN(obj_clock_koban_body_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -82,9 +82,9 @@ Gfx obj_clock_koban_body_model[] = {
     gsSP2Triangles(22, 10, 8, 0, 7, 22, 8, 0),
     gsSP2Triangles(23, 7, 6, 0, 5, 23, 6, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_koban_long_model[] = {
+GFX_ARR_BEGIN(obj_clock_koban_long_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -111,9 +111,9 @@ Gfx obj_clock_koban_long_model[] = {
     gsSPVertex(obj_clock_koban_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_koban_short_model[] = {
+GFX_ARR_BEGIN(obj_clock_koban_short_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -140,7 +140,7 @@ Gfx obj_clock_koban_short_model[] = {
     gsSPVertex(&obj_clock_koban_v[37], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_clock_koban_tbl[] = { 0, 0, 0, 0, 0 };
 

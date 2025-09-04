@@ -13,7 +13,7 @@ Vtx ef_hana01_tu_a_v[] = {
 #include "assets/ef_hana01_tu_a_v.inc"
 };
 
-Gfx ef_hana01_tu_a_modelT[] = {
+GFX_ARR_BEGIN(ef_hana01_tu_a_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -25,7 +25,7 @@ Gfx ef_hana01_tu_a_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_hana01_co_a_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_hana01_co_a_tex.inc"
@@ -35,7 +35,7 @@ Vtx ef_hana01_co_a_v[] = {
 #include "assets/ef_hana01_co_a_v.inc"
 };
 
-Gfx ef_hana01_co_a_modelT[] = {
+GFX_ARR_BEGIN(ef_hana01_co_a_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -47,7 +47,7 @@ Gfx ef_hana01_co_a_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_hana01_pa_a_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_hana01_pa_a_tex.inc"
@@ -57,7 +57,7 @@ Vtx ef_hana01_pa_a_v[] = {
 #include "assets/ef_hana01_pa_a_v.inc"
 };
 
-Gfx ef_hana01_pa_a_modelT[] = {
+GFX_ARR_BEGIN(ef_hana01_pa_a_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -69,7 +69,7 @@ Gfx ef_hana01_pa_a_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_hana01_ha_a_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_hana01_ha_a_tex.inc"
@@ -79,7 +79,7 @@ Vtx ef_hana01_ha_a_v[] = {
 #include "assets/ef_hana01_ha_a_v.inc"
 };
 
-Gfx ef_hana01_ha_a_modelT[] = {
+GFX_ARR_BEGIN(ef_hana01_ha_a_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -91,4 +91,4 @@ Gfx ef_hana01_ha_a_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

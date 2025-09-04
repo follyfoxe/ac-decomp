@@ -14,7 +14,7 @@ Vtx lat_letter27_v[] = {
 #include "assets/lat_letter27_v.inc"
 };
 
-Gfx lat_letter27_win_model[] = {
+GFX_ARR_BEGIN(lat_letter27_win_model)
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter27_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 128, lat_letter27_8),
@@ -23,9 +23,9 @@ Gfx lat_letter27_win_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter27_winT_model[] = {
+GFX_ARR_BEGIN(lat_letter27_winT_model)
     gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter27_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 32, lat_letter27_6),
@@ -43,10 +43,10 @@ Gfx lat_letter27_winT_model[] = {
     gsSPVertex(&lat_letter27_v[16], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter27_model[] = {
+GFX_ARR_BEGIN(lat_letter27_model)
     gsSPDisplayList(lat_letter27_win_model),
     gsSPDisplayList(lat_letter27_winT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

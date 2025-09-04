@@ -38,7 +38,7 @@ Vtx int_tak_snowlamp_v[] = {
 #include "assets/int_tak_snowlamp_v.inc"
 };
 
-Gfx int_tak_snowlamp_off_model[] = {
+GFX_ARR_BEGIN(int_tak_snowlamp_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -60,9 +60,9 @@ Gfx int_tak_snowlamp_off_model[] = {
     gsSPNTriangles_5b(14, 5, 16, 14, 6, 5, 6, 17, 4, 0, 18, 19),
     gsSPNTriangles_5b(15, 17, 6, 19, 18, 17, 0, 2, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_snowlamp_offT_model[] = {
+GFX_ARR_BEGIN(int_tak_snowlamp_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -86,4 +86,4 @@ Gfx int_tak_snowlamp_offT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(1, 20, 21, 22, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -12,7 +12,7 @@ Vtx lat_letter19_v[] = {
 #include "assets/lat_letter19_v.inc"
 };
 
-Gfx lat_letter19_model[] = {
+GFX_ARR_BEGIN(lat_letter19_model)
     gsDPSetTextureLUT(G_TT_NONE),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 32, lat_letter19_2),
@@ -35,4 +35,4 @@ Gfx lat_letter19_model[] = {
     gsSPVertex(&lat_letter19_v[20], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

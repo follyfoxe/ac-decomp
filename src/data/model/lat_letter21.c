@@ -12,7 +12,7 @@ Vtx lat_letter21_v[] = {
 #include "assets/lat_letter21_v.inc"
 };
 
-Gfx lat_letter21_model[] = {
+GFX_ARR_BEGIN(lat_letter21_model)
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter21_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, lat_letter21_1),
@@ -20,9 +20,9 @@ Gfx lat_letter21_model[] = {
     gsSPVertex(lat_letter21_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter21_sen_model[] = {
+GFX_ARR_BEGIN(lat_letter21_sen_model)
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
     gsDPSetEnvColor(255, 255, 255, 155),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 16, 16, lat_letter21_sen),
@@ -32,4 +32,4 @@ Gfx lat_letter21_sen_model[] = {
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

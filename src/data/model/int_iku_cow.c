@@ -34,7 +34,7 @@ Vtx int_iku_cow_v[] = {
 #include "assets/int_iku_cow_v.inc"
 };
 
-Gfx int_iku_cow_model[] = {
+GFX_ARR_BEGIN(int_iku_cow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -73,4 +73,4 @@ Gfx int_iku_cow_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 0, 2, 3, 2, 4),
     gsSPNTriangles_5b(4, 5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

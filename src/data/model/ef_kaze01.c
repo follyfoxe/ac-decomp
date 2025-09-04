@@ -25,7 +25,7 @@ Vtx ef_kaze01_v2[] = {
 #include "assets/ef_kaze01_v2.inc"
 };
 
-Gfx ef_kaze01_modelT[] = {
+GFX_ARR_BEGIN(ef_kaze01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, TEXEL1, 0, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, COMBINED,
                        ENVIRONMENT, COMBINED, 0, PRIMITIVE, 0),
@@ -41,9 +41,9 @@ Gfx ef_kaze01_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 0, 4, 1),
     gsSPNTriangles_5b(4, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_kaze01_modelT2[] = {
+GFX_ARR_BEGIN(ef_kaze01_modelT2)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, TEXEL1, 0, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, COMBINED,
                        ENVIRONMENT, COMBINED, 0, PRIMITIVE, 0),
@@ -59,7 +59,7 @@ Gfx ef_kaze01_modelT2[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 0, 4, 1),
     gsSPNTriangles_5b(4, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_kaze01_2[] = {
 #include "assets/ef_kaze01_2.inc"
@@ -69,7 +69,7 @@ Vtx ef_kaze01_happa_v[] = {
 #include "assets/ef_kaze01_happa_v.inc"
 };
 
-Gfx ef_kaze01_happa_modelT[] = {
+GFX_ARR_BEGIN(ef_kaze01_happa_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -82,4 +82,4 @@ Gfx ef_kaze01_happa_modelT[] = {
     gsSPVertex(ef_kaze01_happa_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

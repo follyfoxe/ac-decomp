@@ -23,7 +23,7 @@ Vtx act_gyoei02_00_v[] = {
 #include "assets/act_gyoei02_00_v.inc"
 };
 
-Gfx act_gyoei02_00_modelT[] = {
+GFX_ARR_BEGIN(act_gyoei02_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, 0, 0, 0, COMBINED, COMBINED, 0,
                        PRIMITIVE, 0),
@@ -36,4 +36,4 @@ Gfx act_gyoei02_00_modelT[] = {
     gsSPVertex(act_gyoei02_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

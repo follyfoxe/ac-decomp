@@ -17,7 +17,7 @@ Vtx obj_e_radio_v[] = {
 #include "assets/obj_e_radio_v.inc"
 };
 
-Gfx obj_e_radio_t1_model[] = {
+GFX_ARR_BEGIN(obj_e_radio_t1_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_radio_t1_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -26,9 +26,9 @@ Gfx obj_e_radio_t1_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_radio_t2T_model[] = {
+GFX_ARR_BEGIN(obj_e_radio_t2T_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_radio_t2_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -40,9 +40,9 @@ Gfx obj_e_radio_t2T_model[] = {
     gsSPNTriangles_5b(14, 10, 15, 16, 12, 11, 16, 11, 17, 18, 13, 12),
     gsSPNTriangles_5b(18, 12, 19, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx radio_DL_model[] = {
+GFX_ARR_BEGIN(radio_DL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -51,4 +51,4 @@ Gfx radio_DL_model[] = {
     gsSPDisplayList(obj_e_radio_t1_model),
     gsSPDisplayList(obj_e_radio_t2T_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

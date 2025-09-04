@@ -3,14 +3,14 @@
 extern Actor_data BG_TEST01_XLU_player_data[];
 extern s16 BG_TEST01_XLU_ctrl_actor_data[];
 
-extern Scene_Word_u BG_TEST01_XLU_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, BG_TEST01_XLU_info)
     mSc_DATA_SOUND(0, 0),                                    // Sound data
     mSc_DATA_PLAYER(BG_TEST01_XLU_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(11, BG_TEST01_XLU_ctrl_actor_data), // Control actors
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_BGITEM, 4, 0x7800, mSc_ROOM_TYPE_OUTDOORS,
                      FIELD_DRAW_TYPE_OUTDOORS), // Field construct params
     mSc_DATA_END(),                             // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data BG_TEST01_XLU_player_data[] = {
     {

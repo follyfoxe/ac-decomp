@@ -15,7 +15,7 @@ Vtx obj_w_honeycomb_v[] = {
 #include "assets/obj_w_honeycomb_v.inc"
 };
 
-Gfx obj_w_honeycombT_mat_model[] = {
+GFX_ARR_BEGIN(obj_w_honeycombT_mat_model)
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, obj_w_honeycomb_pal),
     gsDPTileSync(),
@@ -34,10 +34,10 @@ Gfx obj_w_honeycombT_mat_model[] = {
                 G_TX_NOMIRROR | G_TX_CLAMP, 5, G_TX_NOLOD),
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 124, 124),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_honeycombT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_w_honeycombT_gfx_model)
     gsSPVertex(obj_w_honeycomb_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

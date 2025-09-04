@@ -12,16 +12,16 @@ Vtx lat_letter33_v[] = {
 #include "assets/lat_letter33_v.inc"
 };
 
-Gfx lat_letter33_sen_model[] = {
+GFX_ARR_BEGIN(lat_letter33_sen_model)
     gsDPSetPrimColor(0, 255, 215, 110, 0, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_8b, 16, 16, lat_letter33_xk_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPVertex(lat_letter33_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter33_model[] = {
+GFX_ARR_BEGIN(lat_letter33_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter33_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, lat_letter33_ed_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_MIRROR, 0, 0),
@@ -36,4 +36,4 @@ Gfx lat_letter33_model[] = {
     gsSP2Triangles(15, 17, 18, 0, 18, 19, 0, 0),
     gsSP2Triangles(18, 0, 15, 0, 19, 1, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

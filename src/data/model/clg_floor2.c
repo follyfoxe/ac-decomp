@@ -9,7 +9,7 @@ Vtx clg_floor2_v[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/clg_floor2_v.inc"
 };
 
-Gfx mCL_rom_myhome1_floor_model[] = {
+GFX_ARR_BEGIN(mCL_rom_myhome1_floor_model)
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
@@ -39,4 +39,4 @@ Gfx mCL_rom_myhome1_floor_model[] = {
     gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
     gsSP2Triangles(12, 13, 14, 0, 12, 14, 15, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

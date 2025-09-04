@@ -46,7 +46,7 @@ Vtx int_ike_tent_knap01_v[] = {
 #include "assets/int_ike_tent_knap01_v.inc"
 };
 
-Gfx int_ike_tent_knap01_model[] = {
+GFX_ARR_BEGIN(int_ike_tent_knap01_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -110,4 +110,4 @@ Gfx int_ike_tent_knap01_model[] = {
     gsSPNTriangles_5b(10, 12, 13, 14, 15, 16, 16, 17, 14, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 18, 19, 20, 20, 19, 21, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

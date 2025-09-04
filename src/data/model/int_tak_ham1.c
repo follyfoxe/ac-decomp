@@ -42,7 +42,7 @@ Vtx int_tak_ham1_v[] = {
 #include "assets/int_tak_ham1_v.inc"
 };
 
-Gfx int_tak_ham1_wa_model[] = {
+GFX_ARR_BEGIN(int_tak_ham1_wa_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -58,9 +58,9 @@ Gfx int_tak_ham1_wa_model[] = {
     gsSPNTriangles_5b(14, 11, 10, 16, 17, 15, 16, 15, 14, 3, 2, 17),
     gsSPNTriangles_5b(3, 17, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ham1_maru_model[] = {
+GFX_ARR_BEGIN(int_tak_ham1_maru_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -72,9 +72,9 @@ Gfx int_tak_ham1_maru_model[] = {
     gsSPVertex(int_tak_ham1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ham1_kuzu_model[] = {
+GFX_ARR_BEGIN(int_tak_ham1_kuzu_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -86,9 +86,9 @@ Gfx int_tak_ham1_kuzu_model[] = {
     gsSPVertex(&int_tak_ham1_v[25], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ham1_cage_model[] = {
+GFX_ARR_BEGIN(int_tak_ham1_cage_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -120,9 +120,9 @@ Gfx int_tak_ham1_cage_model[] = {
     gsSPNTriangles_5b(4, 0, 3, 6, 7, 8, 6, 8, 9, 7, 10, 11),
     gsSPNTriangles_5b(7, 11, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_ham1_a1_model[] = {
+GFX_ARR_BEGIN(int_tak_ham1_a1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -134,7 +134,7 @@ Gfx int_tak_ham1_a1_model[] = {
     gsSPVertex(&int_tak_ham1_v[22], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_tak_ham1_tbl[] = { 0, 0, 0, 1, 0, 1, 0 };
 

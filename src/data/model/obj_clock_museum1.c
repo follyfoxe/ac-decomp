@@ -26,7 +26,7 @@ Vtx obj_clock_museum1_v[] = {
 #include "assets/obj_clock_museum1_v.inc"
 };
 
-Gfx obj_clock_museum1_body_model[] = {
+GFX_ARR_BEGIN(obj_clock_museum1_body_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, PRIMITIVE, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
@@ -81,9 +81,9 @@ Gfx obj_clock_museum1_body_model[] = {
     gsSP2Triangles(3, 4, 2, 0, 4, 3, 5, 0),
     gsSP1Triangle(4, 6, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_museum1_long_model[] = {
+GFX_ARR_BEGIN(obj_clock_museum1_long_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
@@ -104,9 +104,9 @@ Gfx obj_clock_museum1_long_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_museum1_short_model[] = {
+GFX_ARR_BEGIN(obj_clock_museum1_short_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
@@ -126,7 +126,7 @@ Gfx obj_clock_museum1_short_model[] = {
     gsSPVertex(&obj_clock_museum1_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_clock_museum1_tbl[] = { 0, 0, 0, 0, 0 };
 

@@ -42,7 +42,7 @@ Vtx int_sum_slot_v[] = {
 #include "assets/int_sum_slot_v.inc"
 };
 
-Gfx int_sum_slot_reel_model[] = {
+GFX_ARR_BEGIN(int_sum_slot_reel_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -58,9 +58,9 @@ Gfx int_sum_slot_reel_model[] = {
     gsSPNTriangles_5b(10, 12, 13, 14, 6, 9, 14, 9, 15, 4, 16, 17),
     gsSPNTriangles_5b(4, 17, 5, 14, 15, 17, 14, 17, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_slot_base_model[] = {
+GFX_ARR_BEGIN(int_sum_slot_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -103,9 +103,9 @@ Gfx int_sum_slot_base_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 17, 18, 19, 20, 21, 22, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_slot_lever_model[] = {
+GFX_ARR_BEGIN(int_sum_slot_lever_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -117,7 +117,7 @@ Gfx int_sum_slot_lever_model[] = {
     gsSPVertex(&int_sum_slot_v[18], 5, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_slot_tbl[] = { 0, 0, 0, 2, 4 };
 

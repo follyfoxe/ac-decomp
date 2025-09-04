@@ -42,7 +42,7 @@ Vtx int_sum_viola01_v[] = {
 #include "assets/int_sum_viola01_v.inc"
 };
 
-Gfx int_sum_viola01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_viola01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -60,9 +60,9 @@ Gfx int_sum_viola01_on_model[] = {
     gsSPNTriangles_5b(23, 22, 20, 24, 25, 22, 24, 22, 23, 26, 27, 25),
     gsSPNTriangles_5b(26, 25, 24, 5, 27, 26, 6, 5, 26, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_viola01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_viola01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -93,4 +93,4 @@ Gfx int_sum_viola01_onT_model[] = {
     gsSPNTrianglesInit_5b(4, 21, 22, 23, 21, 24, 22, 21, 25, 24),
     gsSPNTriangles_5b(23, 25, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

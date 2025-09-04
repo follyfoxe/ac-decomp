@@ -9,14 +9,14 @@ Vtx obj_s_cedar5_v[] = {
 
 extern u8 obj_s_cedar_leaf_tex[];
 
-Gfx obj_s_cedar5_leafT_mat_model[] = {
+GFX_ARR_BEGIN(obj_s_cedar5_leafT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_s_cedar_leaf_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 7, GX_REPEAT, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_cedar5_leafT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_s_cedar5_leafT_gfx_model)
     gsSPVertex(obj_s_cedar5_v, 32, 0),
     gsSPNTrianglesInit_5b(14, 0, 1, 2, 2, 3, 4, 5, 6, 0),
     gsSPNTriangles_5b(7, 8, 5, 9, 10, 11, 11, 12, 13, 14, 15, 9),
@@ -30,20 +30,20 @@ Gfx obj_s_cedar5_leafT_gfx_model[] = {
     gsSPVertex(&obj_s_cedar5_v[62], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 extern u8 obj_s_cedar_trunk_tex[];
 
-Gfx obj_s_cedar5_trunkT_mat_model[] = {
+GFX_ARR_BEGIN(obj_s_cedar5_trunkT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_s_cedar_trunk_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 7, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_cedar5_trunkT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_s_cedar5_trunkT_gfx_model)
     gsSPVertex(&obj_s_cedar5_v[68], 7, 0),
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 2, 5),
     gsSPNTriangles_5b(4, 0, 2, 5, 2, 6, 2, 3, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

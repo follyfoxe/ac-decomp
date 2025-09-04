@@ -13,7 +13,7 @@ Vtx ef_s_cedar4_cutL_v[] = {
 #include "assets/ef_s_cedar4_cutL_v.inc"
 };
 
-Gfx ef_s_cedar4_cutL_leaf_model[] = {
+GFX_ARR_BEGIN(ef_s_cedar4_cutL_leaf_model)
     gsSPDisplayList(ef_s_cedar_leaf_modeset),
     gsSPVertex(ef_s_cedar4_cutL_v, 32, 0),
     gsSPNTrianglesInit_5b(13, 0, 1, 2, 2, 3, 4, 5, 6, 0),
@@ -24,9 +24,9 @@ Gfx ef_s_cedar4_cutL_leaf_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(8, 9, 10, 10, 11, 12, 13, 14, 15, 12, 16, 13),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_s_cedar4_cutL_trunk_model[] = {
+GFX_ARR_BEGIN(ef_s_cedar4_cutL_trunk_model)
     gsSPDisplayList(ef_s_cedar_trunk_modeset),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 48, obj_s_cedar_cutL_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -34,7 +34,7 @@ Gfx ef_s_cedar4_cutL_trunk_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPNTriangles_5b(1, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_ef_s_cedar4_cutL_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 64786, 0, 0 } },

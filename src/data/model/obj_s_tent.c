@@ -33,7 +33,7 @@ Vtx obj_s_tent_v[] = {
 #include "assets/obj_s_tent_v.inc"
 };
 
-Gfx obj_s_tent_model[] = {
+GFX_ARR_BEGIN(obj_s_tent_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -84,4 +84,4 @@ Gfx obj_s_tent_model[] = {
     gsSPVertex(&obj_s_tent_v[98], 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -44,7 +44,7 @@ static u8 ctl_att_w6_tex[] ATTRIBUTE_ALIGN(32) = {
 static Vtx dvd_keikoku1_v[] = {
 #include "assets/dvd_keikoku1_v.inc"
 };
-static Gfx keikoku1_dvd_att_moji_model[] = {
+static GFX_ARR_BEGIN(keikoku1_dvd_att_moji_model)
   /* init */
   gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
@@ -83,9 +83,9 @@ static Gfx keikoku1_dvd_att_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx keikoku1_dvd_att_winT_model[] = {
+static GFX_ARR_BEGIN(keikoku1_dvd_att_winT_model)
   gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 100, 0, 170, 255),
@@ -173,7 +173,7 @@ static Gfx keikoku1_dvd_att_winT_model[] = {
   ),
 
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u8 dvd_keikoku_moji2_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/dvd_keikoku_moji2_tex.inc"
@@ -188,7 +188,7 @@ static u8 dvd_keikoku_moji2_3_tex[] ATTRIBUTE_ALIGN(32) = {
 static Vtx dvd_keikoku2_v[] = {
 #include "assets/dvd_keikoku2_v.inc"
 };
-static Gfx keikoku2_dvd_att_moji_model[] = {
+static GFX_ARR_BEGIN(keikoku2_dvd_att_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 235, 235, 255, 255),
@@ -217,9 +217,9 @@ static Gfx keikoku2_dvd_att_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx keikoku2_dvd_att_winT_model[] = {
+static GFX_ARR_BEGIN(keikoku2_dvd_att_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 100, 0, 170, 255),
@@ -300,7 +300,7 @@ static Gfx keikoku2_dvd_att_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u8 dvd_keikoku_moji4_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/dvd_keikoku_moji4_tex.inc"
@@ -318,7 +318,7 @@ static u8 dvd_keikoku_moji3_3_tex[] ATTRIBUTE_ALIGN(32) = {
 static Vtx dvd_keikoku3_v[] = {
 #include "assets/dvd_keikoku3_v.inc"
 };
-static Gfx keikoku3_dvd_att_moji_model[] = {
+GFX_ARR_BEGIN(keikoku3_dvd_att_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 235, 235, 255, 255),
@@ -366,9 +366,9 @@ static Gfx keikoku3_dvd_att_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx keikoku3_dvd_att_winT_model[] = {
+static GFX_ARR_BEGIN(keikoku3_dvd_att_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 100, 0, 170, 255),
@@ -449,7 +449,7 @@ static Gfx keikoku3_dvd_att_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u8 dvd_keikoku_moji5_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/dvd_keikoku_moji5_tex.inc"
@@ -476,7 +476,7 @@ static u8 dvd_keikoku_moji6_new2_tex[] ATTRIBUTE_ALIGN(32) = {
 static Vtx dvd_keikoku4_v[] = {
 #include "assets/dvd_keikoku4_v.inc"
 };
-static Gfx keikoku4_dvd_att_moji_model[] = {
+static GFX_ARR_BEGIN(keikoku4_dvd_att_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 235, 235, 255, 255),
@@ -533,9 +533,9 @@ static Gfx keikoku4_dvd_att_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx keikoku4_dvd_att_winT_model[] = {
+static GFX_ARR_BEGIN(keikoku4_dvd_att_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 100, 0, 170, 255),
@@ -616,7 +616,7 @@ static Gfx keikoku4_dvd_att_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u8 dvd_keikoku_moji7_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/dvd_keikoku_moji7_tex.inc"
@@ -640,7 +640,7 @@ static u8 dvd_keikoku_moji9_tex[] ATTRIBUTE_ALIGN(32) = {
 static Vtx dvd_keikoku5_v[] = {
 #include "assets/dvd_keikoku5_v.inc"
 };
-static Gfx keikoku5_dvd_att_moji_model[] = {
+static GFX_ARR_BEGIN(keikoku5_dvd_att_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 235, 235, 255, 255),
@@ -690,9 +690,9 @@ static Gfx keikoku5_dvd_att_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx keikoku5_dvd_att_winT_model[] = {
+static GFX_ARR_BEGIN(keikoku5_dvd_att_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 100, 0, 170, 255),
@@ -773,7 +773,7 @@ static Gfx keikoku5_dvd_att_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static dvderr_work Dvderr_work;
 static dvderr_work* const this = &Dvderr_work;
@@ -783,7 +783,7 @@ static Vp Dvderr_viewport = {{
   { 1280, 960, 511, 0 }
 }};
 
-static Gfx Dvderr_initial_dl[] = {
+static GFX_ARR_BEGIN(Dvderr_initial_dl)
   gsDPSetOtherMode(G_AD_PATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_CONV | G_TF_POINT | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_NONE | G_CYC_FILL | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_NOOP | G_RM_NOOP2),
   gsDPSetFillColor(GPACK_RGBA5551(0, 0, 0, 1) << 16 | GPACK_RGBA5551(0, 0, 0, 1)), /* fill color to black */
   gsDPFillRectangle(0, 0, 639, 479), /* fill in rectangle which is the size of the screen */
@@ -795,7 +795,7 @@ static Gfx Dvderr_initial_dl[] = {
   gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_NOOP | G_RM_NOOP2),
   gsSPMatrix(&Dvderr_work.modelview, G_MTX_NOPUSH | G_MTX_MUL | G_MTX_MODELVIEW),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 
 static void dvderr_exec_dl(Gfx* dl) {

@@ -30,7 +30,7 @@ Vtx int_sum_bla_table01_v[] = {
 #include "assets/int_sum_bla_table01_v.inc"
 };
 
-Gfx int_sum_bla_table01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_table01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -52,9 +52,9 @@ Gfx int_sum_bla_table01_onT_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bla_table01_evwT_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_table01_evwT_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -69,4 +69,4 @@ Gfx int_sum_bla_table01_evwT_model[] = {
     gsSPVertex(&int_sum_bla_table01_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -13,7 +13,7 @@ Vtx reserve_shadow_v[] = {
 #include "assets/reserve_shadow_v.inc"
 };
 
-Gfx reserve_shadow_model[] = {
+GFX_ARR_BEGIN(reserve_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -23,7 +23,7 @@ Gfx reserve_shadow_model[] = {
     gsSPVertex(anime_1_txt, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_attention_shadow_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_attention_shadow_tex.inc"
@@ -33,7 +33,7 @@ Vtx obj_attention_shadow_v[] = {
 #include "assets/obj_attention_shadow_v.inc"
 };
 
-Gfx obj_attention_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_attention_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -42,4 +42,4 @@ Gfx obj_attention_shadowT_model[] = {
     gsSPVertex(anime_1_txt, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

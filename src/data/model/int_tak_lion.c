@@ -38,7 +38,7 @@ Vtx int_tak_lion_v[] = {
 #include "assets/int_tak_lion_v.inc"
 };
 
-Gfx int_tak_lion_on_model[] = {
+GFX_ARR_BEGIN(int_tak_lion_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,9 +57,9 @@ Gfx int_tak_lion_on_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(1, 18, 19, 20, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_lion_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_lion_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -100,9 +100,9 @@ Gfx int_tak_lion_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 1, 3, 4, 1, 4, 2, 2, 4, 5),
     gsSPNTriangles_5b(5, 4, 11, 11, 4, 7, 4, 3, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_lion_alphaT_model[] = {
+GFX_ARR_BEGIN(int_tak_lion_alphaT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL1, TEXEL0, PRIMITIVE_ALPHA, TEXEL0, SHADE, 0, PRIM_LOD_FRAC, 0, COMBINED, 0, SHADE, 0, 0, 0,
                        0, COMBINED),
@@ -120,4 +120,4 @@ Gfx int_tak_lion_alphaT_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(1, 8, 7, 6, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

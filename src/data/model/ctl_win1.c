@@ -205,7 +205,7 @@ Vtx ctl_win1_v[] = {
 #include "assets/ctl_win1_v.inc"
 };
 
-Gfx ctl_win1_w13_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w13_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w8_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, ctl_win_w8_tex_rgb_ci4),
@@ -213,9 +213,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(ctl_win1_v, 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_ue1T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_ue1T_model)
 gsDPPipeSync(),
 gsSPDisplayList(anime_1_txt),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 32, 32, inv_mwin_nwaku_tex),
@@ -224,9 +224,9 @@ gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOT
 gsSPVertex(&ctl_win1_v[4], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_ue2T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_ue2T_model)
 gsDPPipeSync(),
 gsSPDisplayList(anime_1_txt + 0x18),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 32, 32, ctl_win_aw7_tex),
@@ -277,9 +277,9 @@ gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 gsSP2Triangles(8, 9, 10, 0, 9, 2, 10, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_nameT_model[] = {
+GFX_ARR_BEGIN(ctl_win1_nameT_model)
 gsDPPipeSync(),
 gsSPDisplayList(anime_1_txt + 0x30),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 64, 32, ctl_win_waku4_tex),
@@ -302,9 +302,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[82], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu1T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu1T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 235, 205, 30, 255),
 gsDPSetEnvColor(255, 215, 40, 255),
@@ -313,9 +313,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[86], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu2T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu2T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 20, 205, 195, 255),
 gsDPSetEnvColor(60, 225, 255, 255),
@@ -324,9 +324,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[90], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu3T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu3T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 215, 80, 225, 255),
 gsDPSetEnvColor(255, 110, 255, 255),
@@ -335,9 +335,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[94], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu4T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu4T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 55, 215, 145, 255),
 gsDPSetEnvColor(75, 225, 165, 255),
@@ -346,9 +346,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[98], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu5T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu5T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 225, 125, 80, 255),
 gsDPSetEnvColor(255, 155, 110, 255),
@@ -357,9 +357,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[102], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu6T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu6T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 165, 145, 215, 255),
 gsDPSetEnvColor(185, 165, 255, 255),
@@ -368,9 +368,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[106], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu7T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu7T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 235, 105, 130, 255),
 gsDPSetEnvColor(255, 125, 150, 255),
@@ -379,9 +379,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[110], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_tagu8T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_tagu8T_model)
 gsDPPipeSync(),
 gsDPSetPrimColor(0, 255, 125, 225, 60, 255),
 gsDPSetEnvColor(155, 255, 90, 255),
@@ -390,9 +390,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&ctl_win1_v[114], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w1T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w1T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w1_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, ctl_win_w1_tex_rgb_ci4),
@@ -400,9 +400,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[118], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w2T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w2T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w2_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w2_tex_rgb_ci4),
@@ -410,9 +410,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[122], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w3T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w3T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w3_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, ctl_win_w3_tex_rgb_ci4),
@@ -420,9 +420,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[126], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w4T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w4T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w6_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w6_tex_rgb_ci4),
@@ -430,9 +430,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[130], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w5T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w5T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w7_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w7_tex_rgb_ci4),
@@ -440,9 +440,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[134], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w6T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w6T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w6_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w6_tex_rgb_ci4),
@@ -451,9 +451,9 @@ gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
 gsSPVertex(&ctl_win1_v[138], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w7T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w7T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w3_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, ctl_win_w3_tex_rgb_ci4),
@@ -461,9 +461,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[142], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w8T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w8T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w2_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w2_tex_rgb_ci4),
@@ -471,9 +471,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[146], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w9T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w9T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w1_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, ctl_win_w1_tex_rgb_ci4),
@@ -481,9 +481,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[150], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w10T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w10T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w4_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w4_tex_rgb_ci4),
@@ -491,9 +491,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[154], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w11T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w11T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w5_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w5_tex_rgb_ci4),
@@ -501,9 +501,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[158], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_w12T_model[] = {
+GFX_ARR_BEGIN(ctl_win1_w12T_model)
 gsDPPipeSync(),
 gsDPLoadTLUT_Dolphin(15, 16, 1, ctl_win_w4_tex_rgb_ci4_pal),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, ctl_win_w4_tex_rgb_ci4),
@@ -511,9 +511,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&ctl_win1_v[162], 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_kageT_model[] = {
+GFX_ARR_BEGIN(ctl_win1_kageT_model)
 gsDPPipeSync(),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0),
 gsDPSetPrimColor(0, 255, 0, 0, 0, 20),
@@ -534,27 +534,27 @@ gsSPVertex(&ctl_win1_v[178], 8, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win_mode[] = {
+GFX_ARR_BEGIN(ctl_win_mode)
 gsDPPipeSync(),
 gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
 gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_2CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_PASS | G_RM_AA_TEX_EDGE2),
 gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_tag_mode[] = {
+GFX_ARR_BEGIN(ctl_tag_mode)
 gsDPPipeSync(),
 gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
 gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_XLU_SURF | G_RM_XLU_SURF2),
 gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win_model[] = {
+GFX_ARR_BEGIN(ctl_win_model)
 gsSPDisplayList(ctl_win1_w1T_model),
 gsSPDisplayList(ctl_win1_w2T_model),
 gsSPDisplayList(ctl_win1_w3T_model),
@@ -578,9 +578,9 @@ gsDPPipeSync(),
 gsSPDisplayList(ctl_win1_ue2T_model),
 gsSPDisplayList(ctl_win1_nameT_model),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win8_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win8_color_mode)
 gsDPSetPrimColor(0, 255, 225, 255, 170, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -590,9 +590,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 215, 255, 195, 255),
 gsDPSetEnvColor(155, 255, 90, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win7_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win7_color_mode)
 gsDPSetPrimColor(0, 255, 255, 190, 220, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -602,9 +602,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 255, 195, 225, 255),
 gsDPSetEnvColor(255, 125, 150, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win6_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win6_color_mode)
 gsDPSetPrimColor(0, 255, 215, 170, 255, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -614,9 +614,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 225, 205, 255, 255),
 gsDPSetEnvColor(185, 165, 255, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win5_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win5_color_mode)
 gsDPSetPrimColor(0, 255, 255, 205, 170, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -626,9 +626,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 255, 215, 185, 255),
 gsDPSetEnvColor(255, 155, 110, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win4_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win4_color_mode)
 gsDPSetPrimColor(0, 255, 170, 255, 255, 255),
 gsDPSetEnvColor(255, 60, 50, 255),
 gsSPEndDisplayList(),
@@ -638,9 +638,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 185, 255, 245, 255),
 gsDPSetEnvColor(75, 225, 165, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win3_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win3_color_mode)
 gsDPSetPrimColor(0, 255, 230, 170, 255, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -650,9 +650,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 255, 185, 255, 255),
 gsDPSetEnvColor(255, 110, 255, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win2_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win2_color_mode)
 gsDPSetPrimColor(0, 255, 170, 230, 255, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -662,9 +662,9 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 195, 245, 245, 255),
 gsDPSetEnvColor(60, 225, 255, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ctl_win1_color_mode[] = {
+GFX_ARR_BEGIN(ctl_win1_color_mode)
 gsDPSetPrimColor(0, 255, 255, 255, 170, 255),
 gsDPSetEnvColor(255, 60, 60, 255),
 gsSPEndDisplayList(),
@@ -674,5 +674,5 @@ gsSPEndDisplayList(),
 gsDPSetPrimColor(0, 255, 255, 255, 185, 255),
 gsDPSetEnvColor(255, 215, 40, 255),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

@@ -45,7 +45,7 @@ Vtx obj_e_ghog_v[] = {
 #include "assets/obj_e_ghog_v.inc"
 };
 
-Gfx obj_e_ghog_modelT[] = {
+GFX_ARR_BEGIN(obj_e_ghog_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,9 +80,9 @@ Gfx obj_e_ghog_modelT[] = {
     gsSPNTrianglesInit_5b(4, 7, 8, 9, 7, 9, 10, 13, 14, 15),
     gsSPNTriangles_5b(13, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_ghog_model[] = {
+GFX_ARR_BEGIN(obj_e_ghog_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -101,4 +101,4 @@ Gfx obj_e_ghog_model[] = {
     gsSPNTriangles_5b(15, 17, 12, 18, 14, 13, 18, 13, 19, 20, 21, 13),
     gsSPNTriangles_5b(20, 13, 12, 15, 14, 22, 15, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

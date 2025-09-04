@@ -15,7 +15,7 @@ Vtx act_f36_kaeru_a_v[] = {
 #include "assets/act_f36_kaeru_a_v.inc"
 };
 
-Gfx act_f36_kaeru_aT_model[] = {
+GFX_ARR_BEGIN(act_f36_kaeru_aT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -28,13 +28,13 @@ Gfx act_f36_kaeru_aT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 3, 1, 1, 4, 2),
     gsSPNTriangles_5b(2, 5, 6, 6, 7, 0, 2, 6, 0, 0, 7, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f36_kaeru_b_v[] = {
 #include "assets/act_f36_kaeru_b_v.inc"
 };
 
-Gfx act_f36_kaeru_bT_model[] = {
+GFX_ARR_BEGIN(act_f36_kaeru_bT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -47,13 +47,13 @@ Gfx act_f36_kaeru_bT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 0, 4, 1, 0),
     gsSPNTriangles_5b(3, 5, 4, 6, 7, 3, 0, 2, 6, 0, 6, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx act_f36_kaeru_c_v[] = {
 #include "assets/act_f36_kaeru_c_v.inc"
 };
 
-Gfx act_f36_kaeru_cT_model[] = {
+GFX_ARR_BEGIN(act_f36_kaeru_cT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -66,4 +66,4 @@ Gfx act_f36_kaeru_cT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 0, 4, 1, 0),
     gsSPNTriangles_5b(3, 5, 4, 6, 7, 3, 0, 2, 6, 0, 6, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

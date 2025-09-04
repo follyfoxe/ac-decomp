@@ -376,7 +376,7 @@ static void mCoBG_GetNormTriangle(xyz_t* norm, s_xyz* ground_angle, mCoBG_Collis
   mCoBG_GetGroundAngleFromVtx3(ground_angle, v0, v1, v2, area);
 }
 
-static mCoBG_ActorInf_c l_ActorInf;
+//static mCoBG_ActorInf_c l_ActorInf;
 
 static void mCoBG_AdjustActorY(xyz_t* rev_pos, ACTOR* actor, f32 ground_y, f32 water_y, f32 ground_dist, mCoBG_CheckResult_c* check_res, mCoBG_ActorInf_c* actor_info, int check_water) {
   actor->bg_collision_check.ground_y = ground_y;

@@ -25,7 +25,7 @@ Vtx obj_art_dummy03_v[] = {
 #include "assets/obj_art_dummy03_v.inc"
 };
 
-Gfx obj_art_dummy03_model[] = {
+GFX_ARR_BEGIN(obj_art_dummy03_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -46,4 +46,4 @@ Gfx obj_art_dummy03_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 21, 22, 23, 21, 23, 18, 17, 24, 25),
     gsSPNTriangles_5b(17, 25, 14, 26, 27, 28, 26, 28, 29, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

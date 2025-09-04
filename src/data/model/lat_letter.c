@@ -5,7 +5,7 @@
 #include "ac_npc.h"
 #include "ef_effect_control.h"
 
-Gfx lat_letter_mode[] = {
+GFX_ARR_BEGIN(lat_letter_mode)
     gsDPPipeSync(),
     gsSPSetGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPClearGeometryMode(G_ZBUFFER | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
@@ -16,12 +16,12 @@ Gfx lat_letter_mode[] = {
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter_sen_mode[] = {
+GFX_ARR_BEGIN(lat_letter_sen_mode)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

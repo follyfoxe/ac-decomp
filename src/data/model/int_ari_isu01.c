@@ -26,7 +26,7 @@ Vtx int_ari_isu01_v[] = {
 #include "assets/int_ari_isu01_v.inc"
 };
 
-Gfx int_ari_isu01_00T_model[] = {
+GFX_ARR_BEGIN(int_ari_isu01_00T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -53,4 +53,4 @@ Gfx int_ari_isu01_00T_model[] = {
     gsSPNTriangles_5b(17, 16, 15, 17, 15, 14, 18, 2, 1, 19, 18, 1),
     gsSPNTriangles_5b(0, 19, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

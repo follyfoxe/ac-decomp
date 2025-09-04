@@ -17,7 +17,7 @@ Vtx obj_myhome_step_down_v[] = {
 #include "assets/obj_myhome_step_down_v.inc"
 };
 
-Gfx obj_myhome_step_down_model[] = {
+GFX_ARR_BEGIN(obj_myhome_step_down_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(SHADE, 0, TEXEL0, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -33,4 +33,4 @@ Gfx obj_myhome_step_down_model[] = {
     gsSPNTriangles_5b(16, 14, 17, 18, 19, 20, 18, 20, 21, 4, 22, 23),
     gsSPNTriangles_5b(4, 23, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

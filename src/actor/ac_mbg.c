@@ -9,7 +9,7 @@ static Vtx mbg_v[] = {
 #include "assets/mbg_v.inc"
 };
 
-static Gfx mbg_model[] = {
+static GFX_ARR_BEGIN(mbg_model)
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, 0, 0, 0, 1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -22,7 +22,7 @@ static Gfx mbg_model[] = {
     gsSP2Triangles(4, 0, 5, 0, 5, 0, 1, 0),
     gsSP2Triangles(4, 7, 0, 0, 0, 7, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static void Mbg_Actor_ct(ACTOR* actorx, GAME* game);
 static void Mbg_Actor_dt(ACTOR* actorx, GAME* game);

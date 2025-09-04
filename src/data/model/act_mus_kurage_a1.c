@@ -22,7 +22,7 @@ Vtx act_mus_kurage_a1_v[] = {
 #include "assets/act_mus_kurage_a1_v.inc"
 };
 
-Gfx act_mus_kurage_sakana_foot_model[] = {
+GFX_ARR_BEGIN(act_mus_kurage_sakana_foot_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 180),
@@ -40,9 +40,9 @@ Gfx act_mus_kurage_sakana_foot_model[] = {
     gsSPNTriangles_5b(19, 21, 22, 18, 20, 21, 22, 23, 13, 22, 13, 12),
     gsSPNTriangles_5b(23, 16, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_kurage_sakana_body_model[] = {
+GFX_ARR_BEGIN(act_mus_kurage_sakana_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 180),
@@ -62,4 +62,4 @@ Gfx act_mus_kurage_sakana_body_model[] = {
     gsSPNTriangles_5b(13, 21, 14, 16, 14, 17, 24, 21, 22, 24, 25, 21),
     gsSPNTriangles_5b(17, 24, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

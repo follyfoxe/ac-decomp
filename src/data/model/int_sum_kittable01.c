@@ -30,7 +30,7 @@ Vtx int_sum_kittable01_v[] = {
 #include "assets/int_sum_kittable01_v.inc"
 };
 
-Gfx int_sum_kittable01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_kittable01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -51,9 +51,9 @@ Gfx int_sum_kittable01_on_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 22, 23, 24, 22, 24, 25, 26, 27, 23),
     gsSPNTriangles_5b(26, 23, 22, 11, 10, 28, 11, 28, 29, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kittable01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_kittable01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -67,4 +67,4 @@ Gfx int_sum_kittable01_onT_model[] = {
     gsSPNTriangles_5b(8, 9, 7, 10, 11, 12, 13, 14, 12, 15, 16, 17),
     gsSPNTriangles_5b(15, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

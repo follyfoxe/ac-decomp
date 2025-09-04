@@ -25,7 +25,7 @@ Vtx obj_s_car_v[] = {
 #include "assets/obj_s_car_v.inc"
 };
 
-Gfx obj_s_car_t1T_model[] = {
+GFX_ARR_BEGIN(obj_s_car_t1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -44,9 +44,9 @@ Gfx obj_s_car_t1T_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 10, 11, 12, 10, 12, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_car_t2T_model[] = {
+GFX_ARR_BEGIN(obj_s_car_t2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -59,9 +59,9 @@ Gfx obj_s_car_t2T_model[] = {
     gsSPNTriangles_5b(2, 3, 5, 3, 6, 5, 6, 3, 7, 6, 8, 9),
     gsSPNTriangles_5b(8, 6, 7, 10, 11, 12, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_car_t3T_model[] = {
+GFX_ARR_BEGIN(obj_s_car_t3T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -75,9 +75,9 @@ Gfx obj_s_car_t3T_model[] = {
     gsSPNTriangles_5b(8, 12, 9, 12, 11, 9, 13, 14, 15, 13, 15, 16),
     gsSPNTriangles_5b(17, 18, 19, 17, 19, 20, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_car_innerT_model[] = {
+GFX_ARR_BEGIN(obj_s_car_innerT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -93,12 +93,12 @@ Gfx obj_s_car_innerT_model[] = {
     gsSPNTriangles_5b(19, 20, 21, 22, 19, 21, 22, 21, 23, 24, 25, 18),
     gsSPNTriangles_5b(24, 18, 17, 26, 27, 28, 26, 28, 29, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx s_car_DL_model[] = {
+GFX_ARR_BEGIN(s_car_DL_model)
     gsSPDisplayList(obj_s_car_t1T_model),
     gsSPDisplayList(obj_s_car_t2T_model),
     gsSPDisplayList(obj_s_car_t3T_model),
     gsSPDisplayList(obj_s_car_innerT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

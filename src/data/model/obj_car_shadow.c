@@ -13,7 +13,7 @@ Vtx obj_car_shadow_v[] = {
 #include "assets/obj_car_shadow_v.inc"
 };
 
-Gfx obj_car_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_car_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,4 +27,4 @@ Gfx obj_car_shadowT_model[] = {
     gsSPNTriangles_5b(15, 11, 9, 1, 16, 17, 16, 18, 17, 16, 19, 18),
     gsSPNTriangles_5b(1, 20, 16, 20, 21, 16, 21, 22, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

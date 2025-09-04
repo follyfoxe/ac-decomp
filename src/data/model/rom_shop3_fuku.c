@@ -118,11 +118,11 @@ Vtx rom_shop3_fuku_v[] = {
 #include "assets/rom_shop3_fuku_v.inc"
 };
 
-Gfx rom_shop3_fuku_modelT[] = {
+GFX_ARR_BEGIN(rom_shop3_fuku_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_shop3_fuku_model[] = {
+GFX_ARR_BEGIN(rom_shop3_fuku_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -358,4 +358,4 @@ Gfx rom_shop3_fuku_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 2, 3, 4),
     gsSPNTriangles_5b(3, 5, 4, 6, 7, 8, 9, 6, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -19,7 +19,7 @@ Vtx ef_daruma01_00_v[] = {
 #include "assets/ef_daruma01_00_v.inc"
 };
 
-Gfx ef_daruma01_00_model[] = {
+GFX_ARR_BEGIN(ef_daruma01_00_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -34,13 +34,13 @@ Gfx ef_daruma01_00_model[] = {
     gsSPNTriangles_5b(0, 19, 20, 21, 22, 23, 21, 23, 5, 24, 25, 26),
     gsSPNTriangles_5b(27, 24, 26, 26, 25, 28, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_daruma01_01_v[] = {
 #include "assets/ef_daruma01_01_v.inc"
 };
 
-Gfx ef_daruma01_01_model[] = {
+GFX_ARR_BEGIN(ef_daruma01_01_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -58,13 +58,13 @@ Gfx ef_daruma01_01_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_daruma01_02_v[] = {
 #include "assets/ef_daruma01_02_v.inc"
 };
 
-Gfx ef_daruma01_02_model[] = {
+GFX_ARR_BEGIN(ef_daruma01_02_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -82,4 +82,4 @@ Gfx ef_daruma01_02_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 3, 5),
     gsSPNTriangles_5b(5, 4, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

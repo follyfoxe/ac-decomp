@@ -34,7 +34,7 @@ Vtx dia_hyouji_v[] = {
 #include "assets/dia_hyouji_v.inc"
 };
 
-Gfx kei_win_b2_model_1_data_4075A0[] = {
+GFX_ARR_BEGIN(kei_win_b2_model_1_data_4075A0)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32, lat_tegami_b3_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -43,9 +43,9 @@ Gfx kei_win_b2_model_1_data_4075A0[] = {
     gsSPVertex(dia_hyouji_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_win_bb_model[] = {
+GFX_ARR_BEGIN(dia_win_bb_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32, lat_tegami_b2_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -54,9 +54,9 @@ Gfx dia_win_bb_model[] = {
     gsSPVertex(&dia_hyouji_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kei_win_amojiT_model_1_data_407620[] = {
+GFX_ARR_BEGIN(kei_win_amojiT_model_1_data_407620)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -66,9 +66,9 @@ Gfx kei_win_amojiT_model_1_data_407620[] = {
     gsSPVertex(&dia_hyouji_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_win_mojiT_model[] = {
+GFX_ARR_BEGIN(dia_win_mojiT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 235, 235, 255),
@@ -78,22 +78,22 @@ Gfx dia_win_mojiT_model[] = {
     gsSPVertex(&dia_hyouji_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_init_mode_letter[] = {
+GFX_ARR_BEGIN(dia_init_mode_letter)
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE,
                      G_AC_NONE | G_ZS_PIXEL | G_RM_CLD_SURF | G_RM_CLD_SURF2),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dia_init_mode[] = {
+GFX_ARR_BEGIN(dia_init_mode)
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_2CYCLE | G_PM_NPRIMITIVE,
                      G_AC_NONE | G_ZS_PIXEL | G_RM_PASS | G_RM_CLD_SURF2),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

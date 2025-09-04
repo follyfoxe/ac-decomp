@@ -13,7 +13,7 @@ Vtx ef_bodyprint01_00_v[] = {
 #include "assets/ef_bodyprint01_00_v.inc"
 };
 
-Gfx ef_bodyprint01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_bodyprint01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -23,7 +23,7 @@ Gfx ef_bodyprint01_00_modelT[] = {
     gsSPVertex(ef_bodyprint01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_footprint01_0[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_footprint01_0.inc"
@@ -33,7 +33,7 @@ Vtx ef_footprint01_00_v[] = {
 #include "assets/ef_footprint01_00_v.inc"
 };
 
-Gfx ef_footprint01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_footprint01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -43,7 +43,7 @@ Gfx ef_footprint01_00_modelT[] = {
     gsSPVertex(ef_footprint01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_footprint01_1[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_footprint01_1.inc"
@@ -53,7 +53,7 @@ Vtx ef_turn_footprint_v[] = {
 #include "assets/ef_turn_footprint_v.inc"
 };
 
-Gfx ef_turn_footprint_modelT[] = {
+GFX_ARR_BEGIN(ef_turn_footprint_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -63,7 +63,7 @@ Gfx ef_turn_footprint_modelT[] = {
     gsSPVertex(ef_turn_footprint_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_footprint01_2[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_footprint01_2.inc"
@@ -73,7 +73,7 @@ Vtx ef_footprint01_02_v[] = {
 #include "assets/ef_footprint01_02_v.inc"
 };
 
-Gfx ef_footprint01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_footprint01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -83,4 +83,4 @@ Gfx ef_footprint01_02_modelT[] = {
     gsSPVertex(ef_footprint01_02_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -50,7 +50,7 @@ Vtx int_sum_mizunomi_v[] = {
 #include "assets/int_sum_mizunomi_v.inc"
 };
 
-Gfx int_sum_mizunomi_head_model[] = {
+GFX_ARR_BEGIN(int_sum_mizunomi_head_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -74,9 +74,9 @@ Gfx int_sum_mizunomi_head_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 17, 18, 19, 17, 19, 20, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_mizunomi_env2_model[] = {
+GFX_ARR_BEGIN(int_sum_mizunomi_env2_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -90,9 +90,9 @@ Gfx int_sum_mizunomi_env2_model[] = {
     gsSPVertex(&int_sum_mizunomi_v[10], 6, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 1, 0, 4, 3, 5),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_mizunomi_env_model[] = {
+GFX_ARR_BEGIN(int_sum_mizunomi_env_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -108,9 +108,9 @@ Gfx int_sum_mizunomi_env_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 1, 5, 2, 1, 3, 5, 6, 7, 4),
     gsSPNTriangles_5b(8, 7, 6, 6, 4, 9, 9, 8, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_mizunomi_base_model[] = {
+GFX_ARR_BEGIN(int_sum_mizunomi_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -132,7 +132,7 @@ Gfx int_sum_mizunomi_base_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 15, 13, 16, 15, 14, 13),
     gsSPNTriangles_5b(15, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_mizunomi_tbl[] = { 0, 2, 0, 0 };
 

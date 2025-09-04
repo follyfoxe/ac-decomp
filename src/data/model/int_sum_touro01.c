@@ -42,7 +42,7 @@ Vtx int_sum_touro01_v[] = {
 #include "assets/int_sum_touro01_v.inc"
 };
 
-Gfx int_sum_touro01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_touro01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -66,9 +66,9 @@ Gfx int_sum_touro01_on_model[] = {
     gsSPNTrianglesInit_5b(4, 18, 19, 20, 18, 21, 19, 20, 22, 23),
     gsSPNTriangles_5b(20, 19, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_touro01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_touro01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -99,4 +99,4 @@ Gfx int_sum_touro01_onT_model[] = {
     gsSPNTriangles_5b(10, 7, 11, 0, 12, 13, 0, 13, 14, 15, 16, 17),
     gsSPNTriangles_5b(15, 17, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

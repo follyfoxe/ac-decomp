@@ -6,7 +6,7 @@
 #include "ef_effect_control.h"
 
 extern u8 obj_s_tree_leaf_tex_txt[];
-Gfx ef_s_tree_leaf_modeset[] = {
+GFX_ARR_BEGIN(ef_s_tree_leaf_modeset)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, COMBINED, 0, PRIM_LOD_FRAC,
                        PRIMITIVE),
@@ -15,13 +15,13 @@ Gfx ef_s_tree_leaf_modeset[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_s_tree_trunk_modeset[] = {
+GFX_ARR_BEGIN(ef_s_tree_trunk_modeset)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, COMBINED, 0, PRIM_LOD_FRAC,
                        PRIMITIVE),
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

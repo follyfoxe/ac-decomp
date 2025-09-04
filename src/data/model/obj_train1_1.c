@@ -21,7 +21,7 @@ Vtx obj_train1_1_v[] = {
 #include "assets/obj_train1_1_v.inc"
 };
 
-Gfx obj_train1_1_t3_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_t3_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_train1_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -37,9 +37,9 @@ Gfx obj_train1_1_t3_model[] = {
     gsSPNTriangles_5b(10, 13, 11, 14, 15, 16, 14, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(18, 21, 19, 22, 23, 24, 23, 25, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_t2_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_t2_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -51,9 +51,9 @@ Gfx obj_train1_1_t2_model[] = {
     gsSPNTriangles_5b(13, 14, 15, 13, 16, 14, 12, 11, 17, 10, 18, 11),
     gsSPNTriangles_5b(19, 20, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_t1_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_t1_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_train1_t1_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -69,43 +69,43 @@ Gfx obj_train1_1_t1_model[] = {
     gsSPNTriangles_5b(13, 14, 11, 12, 15, 13, 13, 16, 14, 13, 17, 16),
     gsSPNTriangles_5b(13, 15, 17, 18, 19, 20, 21, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_wheel2_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_wheel2_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_train1_1_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_rod1_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_rod1_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_train1_1_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_rod2_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_rod2_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(obj_train1_1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_1_wheel1_model[] = {
+GFX_ARR_BEGIN(obj_train1_1_wheel1_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(&obj_train1_1_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_train1_t3_tex_txt_tansui[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_train1_t3_tex_txt_tansui.inc"
@@ -115,7 +115,7 @@ Vtx obj_train_2_v[] = {
 #include "assets/obj_train_2_v.inc"
 };
 
-Gfx obj_train1_2_t2_model[] = {
+GFX_ARR_BEGIN(obj_train1_2_t2_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_train1_t3_tex_txt_tansui),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&obj_train_2_v[29], 20, 0),
@@ -123,9 +123,9 @@ Gfx obj_train1_2_t2_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 12, 14, 16, 17, 18, 17, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_2_t1_model[] = {
+GFX_ARR_BEGIN(obj_train1_2_t1_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_train1_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(obj_train_2_v, 29, 0),
@@ -135,9 +135,9 @@ Gfx obj_train1_2_t1_model[] = {
     gsSPNTriangles_5b(18, 20, 19, 21, 22, 23, 21, 24, 22, 25, 26, 27),
     gsSPNTriangles_5b(25, 27, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_2_model[] = {
+GFX_ARR_BEGIN(obj_train1_2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -147,7 +147,7 @@ Gfx obj_train1_2_model[] = {
     gsSPDisplayList(obj_train1_2_t2_model),
     gsSPDisplayList(obj_train1_2_t1_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_train1_1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 60036, 1500, 0 } },
                                               { obj_train1_1_t1_model, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

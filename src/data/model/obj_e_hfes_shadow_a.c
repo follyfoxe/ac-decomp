@@ -13,7 +13,7 @@ Vtx obj_e_hfes_shadow_a_v[] = {
 #include "assets/obj_e_hfes_shadow_a_v.inc"
 };
 
-Gfx obj_e_hfes_shadow_a_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_shadow_a_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,13 +27,13 @@ Gfx obj_e_hfes_shadow_a_modelT[] = {
     gsSPNTriangles_5b(17, 12, 16, 18, 19, 20, 19, 21, 20, 19, 22, 21),
     gsSPNTriangles_5b(19, 23, 22, 24, 25, 26, 24, 26, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_hfes_shadow_b_v[] = {
 #include "assets/obj_e_hfes_shadow_b_v.inc"
 };
 
-Gfx obj_e_hfes_shadow_b_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_shadow_b_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -47,13 +47,13 @@ Gfx obj_e_hfes_shadow_b_modelT[] = {
     gsSPNTriangles_5b(16, 14, 17, 18, 19, 20, 18, 21, 19, 21, 22, 19),
     gsSPNTriangles_5b(22, 23, 19, 24, 25, 26, 25, 27, 26, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_hfes_shadow_c_v[] = {
 #include "assets/obj_e_hfes_shadow_c_v.inc"
 };
 
-Gfx obj_e_hfes_shadow_c_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hfes_shadow_c_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -67,4 +67,4 @@ Gfx obj_e_hfes_shadow_c_modelT[] = {
     gsSPNTriangles_5b(16, 14, 17, 18, 19, 20, 18, 21, 19, 21, 22, 19),
     gsSPNTriangles_5b(22, 23, 19, 24, 25, 26, 24, 27, 25, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

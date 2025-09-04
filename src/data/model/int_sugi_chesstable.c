@@ -18,7 +18,7 @@ Vtx int_sugi_chesstable_v[] = {
 #include "assets/int_sugi_chesstable_v.inc"
 };
 
-Gfx sugi_chesstable_model[] = {
+GFX_ARR_BEGIN(sugi_chesstable_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,4 +42,4 @@ Gfx sugi_chesstable_model[] = {
     gsSPVertex(&int_sugi_chesstable_v[63], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

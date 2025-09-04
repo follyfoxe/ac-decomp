@@ -5,7 +5,7 @@ static Vtx end_1_v[] = {
 #include "assets/npc/mdl/end_1_v.inc"
 };
 
-static Gfx head_end_model[] = {
+static GFX_ARR_BEGIN(head_end_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -186,9 +186,9 @@ static Gfx head_end_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm2_end_model[] = {
+static GFX_ARR_BEGIN(Rarm2_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*11, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -226,9 +226,9 @@ static Gfx Rarm2_end_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm1_end_model[] = {
+static GFX_ARR_BEGIN(Rarm1_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*8, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -251,9 +251,9 @@ static Gfx Rarm1_end_model[] = {
                       2, 12, 13  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm2_end_model[] = {
+static GFX_ARR_BEGIN(Larm2_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*9, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -291,9 +291,9 @@ static Gfx Larm2_end_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm1_end_model[] = {
+static GFX_ARR_BEGIN(Larm1_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*8, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -316,9 +316,9 @@ static Gfx Larm1_end_model[] = {
                       2, 12, 13  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx chest_end_model[] = {
+static GFX_ARR_BEGIN(chest_end_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -351,9 +351,9 @@ static Gfx chest_end_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail1_end_model[] = {
+static GFX_ARR_BEGIN(tail1_end_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -372,9 +372,9 @@ static Gfx tail1_end_model[] = {
                       2, 4, 0  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot3_end_model[] = {
+static GFX_ARR_BEGIN(Rfoot3_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*5, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -402,9 +402,9 @@ static Gfx Rfoot3_end_model[] = {
                           15, 13, 12  // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot2_end_model[] = {
+static GFX_ARR_BEGIN(Rfoot2_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*4, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -427,9 +427,9 @@ static Gfx Rfoot2_end_model[] = {
                       2, 3, 13   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot1_end_model[] = {
+static GFX_ARR_BEGIN(Rfoot1_end_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -467,9 +467,9 @@ static Gfx Rfoot1_end_model[] = {
                       27, 22, 24  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot3_end_model[] = {
+static GFX_ARR_BEGIN(Lfoot3_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*2, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -503,9 +503,9 @@ static Gfx Lfoot3_end_model[] = {
                           18, 16, 19  // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot2_end_model[] = {
+static GFX_ARR_BEGIN(Lfoot2_end_model)
     gsSPMatrix(anime_6_model+sizeof(Mtx)*1, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -533,9 +533,9 @@ static Gfx Lfoot2_end_model[] = {
                       0, 0, 0    // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot1_end_model[] = {
+static GFX_ARR_BEGIN(Lfoot1_end_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -563,9 +563,9 @@ static Gfx Lfoot1_end_model[] = {
                       0, 0, 0    // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx base_end_model[] = {
+static GFX_ARR_BEGIN(base_end_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -672,7 +672,7 @@ static Gfx base_end_model[] = {
                       12, 4, 13  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format off
 static cKF_Joint_R_c cKF_je_r_end_1_tbl[] = {

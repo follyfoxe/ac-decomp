@@ -30,7 +30,7 @@ Vtx int_nog_lawnmower_v[] = {
 #include "assets/int_nog_lawnmower_v.inc"
 };
 
-Gfx int_nog_lawnmower_grass_model[] = {
+GFX_ARR_BEGIN(int_nog_lawnmower_grass_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, COMBINED, 0, TEXEL0, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -44,9 +44,9 @@ Gfx int_nog_lawnmower_grass_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 3, 4, 2),
     gsSPNTriangles_5b(5, 6, 7, 6, 8, 7, 6, 9, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_lawnmower_bodyT_model[] = {
+GFX_ARR_BEGIN(int_nog_lawnmower_bodyT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -86,4 +86,4 @@ Gfx int_nog_lawnmower_bodyT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 6, 5, 7),
     gsSPNTriangles_5b(8, 9, 10, 10, 11, 8, 10, 12, 11, 10, 13, 12),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

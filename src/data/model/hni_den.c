@@ -69,7 +69,7 @@ Vtx hni_den_v[] = {
 #include "assets/hni_den_v.inc"
 };
 
-Gfx hni_den_senT_model[] = {
+GFX_ARR_BEGIN(hni_den_senT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 70, 50, 70, 255),
@@ -85,9 +85,9 @@ Gfx hni_den_senT_model[] = {
     gsSPVertex(hni_den_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hni_den_win2T_model[] = {
+GFX_ARR_BEGIN(hni_den_win2T_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, TEXEL0,
                        0),
@@ -250,9 +250,9 @@ Gfx hni_den_win2T_model[] = {
     gsSPVertex(&hni_den_v[56], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hni_den_3DmT_model[] = {
+GFX_ARR_BEGIN(hni_den_3DmT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 255, 0, 0, 255),
@@ -268,9 +268,9 @@ Gfx hni_den_3DmT_model[] = {
     gsSPVertex(&hni_den_v[60], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hni_den_mode[] = {
+GFX_ARR_BEGIN(hni_den_mode)
     gsDPPipeSync(),
     gsSPLoadGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
@@ -278,12 +278,12 @@ Gfx hni_den_mode[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_XLU_SURF | G_RM_XLU_SURF2),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hni_den_model[] = {
+GFX_ARR_BEGIN(hni_den_model)
     gsSPDisplayList(hni_den_mode),
     gsSPDisplayList(hni_den_3DmT_model),
     gsSPDisplayList(hni_den_win2T_model),
     gsSPDisplayList(hni_den_senT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

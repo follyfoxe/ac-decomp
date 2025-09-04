@@ -13,7 +13,7 @@ Vtx ef_shock01_00_v[] = {
 #include "assets/ef_shock01_00_v.inc"
 };
 
-Gfx ef_shock01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_shock01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -23,4 +23,4 @@ Gfx ef_shock01_00_modelT[] = {
     gsSPVertex(ef_shock01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

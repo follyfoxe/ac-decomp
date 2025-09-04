@@ -30,7 +30,7 @@ Vtx int_ike_jny_hariko01_v[] = {
 #include "assets/int_ike_jny_hariko01_v.inc"
 };
 
-Gfx int_ike_jny_hariko01_head_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_hariko01_head_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -53,9 +53,9 @@ Gfx int_ike_jny_hariko01_head_model[] = {
     gsSPNTriangles_5b(19, 20, 13, 21, 22, 16, 13, 23, 24, 12, 23, 13),
     gsSPNTriangles_5b(13, 24, 19, 13, 25, 11, 25, 13, 15, 13, 20, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_hariko01_body_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_hariko01_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -132,7 +132,7 @@ Gfx int_ike_jny_hariko01_body_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(1, 6, 7, 8, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_jny_hariko01_tbl[] = { 56, 7 };
 

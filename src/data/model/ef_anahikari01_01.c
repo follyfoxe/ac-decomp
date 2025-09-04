@@ -13,7 +13,7 @@ Vtx ef_anahikari01_01_v[] = {
 #include "assets/ef_anahikari01_01_v.inc"
 };
 
-Gfx ef_anahikari01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_anahikari01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, ENVIRONMENT, COMBINED, ENVIRONMENT,
                        COMBINED, 0, PRIMITIVE, 0),
@@ -32,7 +32,7 @@ Gfx ef_anahikari01_01_modelT[] = {
     gsSPNTriangles_5b(15, 13, 14, 15, 14, 16, 17, 15, 16, 17, 16, 18),
     gsSPNTriangles_5b(19, 17, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_anahikari01_01_int_i4[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_anahikari01_01_int_i4.inc"
@@ -42,7 +42,7 @@ Vtx ef_anahikari01_02_v[] = {
 #include "assets/ef_anahikari01_02_v.inc"
 };
 
-Gfx ef_anahikari01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_anahikari01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, ENVIRONMENT, COMBINED, ENVIRONMENT,
                        COMBINED, 0, PRIMITIVE, 0),
@@ -61,7 +61,7 @@ Gfx ef_anahikari01_02_modelT[] = {
     gsSPNTriangles_5b(15, 13, 14, 15, 14, 16, 17, 15, 16, 17, 16, 18),
     gsSPNTriangles_5b(19, 17, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 EVW_ANIME_SCROLL ef_anahikari01_01_evw_anime_2[] = { { 1, 0, 32, 16 }, { -2, 0, 32, 16 } };
 

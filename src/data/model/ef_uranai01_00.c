@@ -17,7 +17,7 @@ Vtx ef_uranai01_00_v[] = {
 #include "assets/ef_uranai01_00_v.inc"
 };
 
-Gfx ef_uranai01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_uranai01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, ENVIRONMENT, COMBINED, ENVIRONMENT,
                        COMBINED, 0, PRIMITIVE, 0),
@@ -34,7 +34,7 @@ Gfx ef_uranai01_00_modelT[] = {
     gsSPNTriangles_5b(1, 5, 4, 1, 6, 5, 1, 7, 6, 1, 8, 7),
     gsSPNTriangles_5b(1, 9, 8, 1, 10, 9, 1, 11, 10, 1, 12, 11),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 EVW_ANIME_SCROLL ef_uranai01_00_evw_anime_1[] = { { -1, 0, 32, 32 }, { 1, 7, 32, 32 } };
 

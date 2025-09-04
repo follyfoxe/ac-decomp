@@ -34,7 +34,7 @@ Vtx int_sum_sofe03_v[] = {
 #include "assets/int_sum_sofe03_v.inc"
 };
 
-Gfx int_sum_sofe03_on_model[] = {
+GFX_ARR_BEGIN(int_sum_sofe03_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -64,9 +64,9 @@ Gfx int_sum_sofe03_on_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 1, 4, 2, 5),
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 7, 9, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_sofe03_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_sofe03_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,4 +80,4 @@ Gfx int_sum_sofe03_onT_model[] = {
     gsSPNTriangles_5b(9, 10, 11, 6, 12, 13, 14, 15, 11, 16, 17, 2),
     gsSPNTriangles_5b(3, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

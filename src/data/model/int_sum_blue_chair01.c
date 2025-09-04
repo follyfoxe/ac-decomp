@@ -26,7 +26,7 @@ Vtx int_sum_blue_chair01_v[] = {
 #include "assets/int_sum_blue_chair01_v.inc"
 };
 
-Gfx int_sum_blue_chair01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_blue_chair01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -40,9 +40,9 @@ Gfx int_sum_blue_chair01_on_model[] = {
     gsSPNTriangles_5b(2, 5, 3, 6, 7, 8, 6, 8, 9, 10, 11, 4),
     gsSPNTriangles_5b(10, 4, 2, 9, 8, 12, 9, 12, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_blue_chair01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_blue_chair01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -61,4 +61,4 @@ Gfx int_sum_blue_chair01_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

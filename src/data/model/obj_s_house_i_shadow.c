@@ -13,7 +13,7 @@ Vtx obj_s_house_i_shadow_v[] = {
 #include "assets/obj_s_house_i_shadow_v.inc"
 };
 
-Gfx obj_s_house_i_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_s_house_i_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,4 +27,4 @@ Gfx obj_s_house_i_shadowT_model[] = {
     gsSPNTrianglesInit_5b(6, 20, 21, 22, 21, 23, 22, 24, 20, 25),
     gsSPNTriangles_5b(20, 22, 25, 26, 24, 25, 26, 27, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

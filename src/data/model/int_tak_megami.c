@@ -58,7 +58,7 @@ Vtx int_tak_megami_v[] = {
 #include "assets/int_tak_megami_v.inc"
 };
 
-Gfx int_tak_megami_on_model[] = {
+GFX_ARR_BEGIN(int_tak_megami_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -101,9 +101,9 @@ Gfx int_tak_megami_on_model[] = {
     gsSPNTriangles_5b(7, 16, 8, 17, 18, 7, 7, 6, 17, 6, 19, 17),
     gsSPNTriangles_5b(8, 3, 2, 1, 8, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_megami_offT_model[] = {
+GFX_ARR_BEGIN(int_tak_megami_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -117,9 +117,9 @@ Gfx int_tak_megami_offT_model[] = {
     gsSPNTriangles_5b(5, 1, 0, 1, 0, 4, 1, 5, 0, 1, 0, 2),
     gsSPNTriangles_5b(1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_megami_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_megami_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -168,4 +168,4 @@ Gfx int_tak_megami_onT_model[] = {
     gsSPNTriangles_5b(9, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

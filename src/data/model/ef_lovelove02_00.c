@@ -13,7 +13,7 @@ Vtx ef_lovelove02_00_v[] = {
 #include "assets/ef_lovelove02_00_v.inc"
 };
 
-Gfx ef_lovelove02_00_modelT[] = {
+GFX_ARR_BEGIN(ef_lovelove02_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -25,4 +25,4 @@ Gfx ef_lovelove02_00_modelT[] = {
     gsSPVertex(ef_lovelove02_00_v, 4, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 3, 2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

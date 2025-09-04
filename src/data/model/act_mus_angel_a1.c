@@ -14,7 +14,7 @@ Vtx act_mus_angel_a1_v[] = {
 #include "assets/act_mus_angel_a1_v.inc"
 };
 
-Gfx act_mus_angel_sakana_body_model[] = {
+GFX_ARR_BEGIN(act_mus_angel_sakana_body_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPVertex(act_mus_angel_a1_v, 7, 0),
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
@@ -29,9 +29,9 @@ Gfx act_mus_angel_sakana_body_model[] = {
     gsSPNTriangles_5b(5, 7, 8, 9, 6, 5, 0, 4, 1, 5, 10, 11),
     gsSPNTriangles_5b(11, 9, 5, 12, 13, 3, 12, 3, 0, 8, 7, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_angel_sakana_head_model[] = {
+GFX_ARR_BEGIN(act_mus_angel_sakana_head_model)
     gsDPSetTextureImage_Dolphin(G_IM_FMT_RGBA, G_IM_SIZ_16b, 48, 32, act_mus_angel_body_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&act_mus_angel_a1_v[40], 14, 0),
@@ -40,7 +40,7 @@ Gfx act_mus_angel_sakana_head_model[] = {
     gsSPNTriangles_5b(5, 11, 3, 12, 6, 9, 3, 11, 9, 8, 7, 13),
     gsSPNTriangles_5b(8, 10, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_act_mus_angel_a1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8, 65524, 699 } },

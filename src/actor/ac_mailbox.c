@@ -128,20 +128,20 @@ static Gfx post_flag_saki_common_DL[] = {
     gsSPEndDisplayList(),
 };
 
-static Gfx post_flag_saki_model_type0[] = {
+static GFX_ARR_BEGIN(post_flag_saki_model_type0)
     gsSPDisplayList(post_flag_saki_common_DL),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPLoadTextureBlock_4b_Dolphin(anime_1_txt, G_IM_FMT_CI, 16, 32, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsDPSetTileSize(0, 0, 0, 124, 124),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx post_flag_saki_model_type1[] = {
+static GFX_ARR_BEGIN(post_flag_saki_model_type1)
     gsSPDisplayList(post_flag_saki_common_DL),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPLoadTextureBlock_4b_Dolphin(anime_2_txt, G_IM_FMT_CI, 16, 32, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static int aMBX_actor_draw_before(GAME* game, cKF_SkeletonInfo_R_c* keyframe, int joint_idx, Gfx** joint_shape,
                                   u8* joint_flags, void* arg, s_xyz* joint_rot, xyz_t* joint_pos) {

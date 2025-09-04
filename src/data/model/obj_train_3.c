@@ -21,7 +21,7 @@ Vtx obj_train_3_v[] = {
 #include "assets/obj_train_3_v.inc"
 };
 
-Gfx obj_train1_3_t6_model[] = {
+GFX_ARR_BEGIN(obj_train1_3_t6_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -36,9 +36,9 @@ Gfx obj_train1_3_t6_model[] = {
     gsSPNTriangles_5b(13, 14, 15, 14, 16, 15, 17, 18, 19, 19, 20, 17),
     gsSPNTriangles_5b(17, 21, 18, 22, 23, 24, 22, 25, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_3_t5_model[] = {
+GFX_ARR_BEGIN(obj_train1_3_t5_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -62,9 +62,9 @@ Gfx obj_train1_3_t5_model[] = {
     gsSPVertex(&obj_train_3_v[50], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_3_t4_model[] = {
+GFX_ARR_BEGIN(obj_train1_3_t4_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,9 +80,9 @@ Gfx obj_train1_3_t4_model[] = {
     gsSPNTriangles_5b(9, 12, 13, 12, 15, 13, 13, 16, 14, 15, 16, 13),
     gsSPNTriangles_5b(17, 18, 19, 17, 19, 20, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_3_door1_model[] = {
+GFX_ARR_BEGIN(obj_train1_3_door1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -94,9 +94,9 @@ Gfx obj_train1_3_door1_model[] = {
     gsSPVertex(&obj_train_3_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_train1_3_door2_model[] = {
+GFX_ARR_BEGIN(obj_train1_3_door2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -108,7 +108,7 @@ Gfx obj_train1_3_door2_model[] = {
     gsSPVertex(obj_train_3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_train1_3_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 8000, 2000, 2500 } },
                                               { obj_train1_3_t4_model, 3, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

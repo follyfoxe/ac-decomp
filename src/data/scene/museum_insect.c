@@ -6,7 +6,7 @@ extern s16 MUSEUM_INSECT_ctrl_actor_data[];
 extern Actor_data MUSEUM_INSECT_actor_data[];
 extern s16 MUSEUM_INSECT_object_bank[];
 
-extern Scene_Word_u museum_insect_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, museum_insect_info)
     mSc_DATA_SOUND(0, 1),                                    // Sound data
     mSc_DATA_DOOR_DATA(1, MUSEUM_INSECT_door_data),          // Door data
     mSc_DATA_PLAYER(MUSEUM_INSECT_player_data),              // Player Data
@@ -16,7 +16,7 @@ extern Scene_Word_u museum_insect_info[] = {
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_DUMMY, 1, 0xB000, mSc_ROOM_TYPE_MY_ROOM,
                      FIELD_DRAW_TYPE_INDOORS), // Field construct params
     mSc_DATA_END(),                            // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data MUSEUM_INSECT_player_data[] = {
     {

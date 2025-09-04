@@ -13,7 +13,7 @@ Vtx onp_sentaku_v[] = {
 #include "assets/onp_sentaku_v.inc"
 };
 
-Gfx lat_sentaku_c_model[] = {
+GFX_ARR_BEGIN(lat_sentaku_c_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE),
@@ -22,9 +22,9 @@ Gfx lat_sentaku_c_model[] = {
     gsSPVertex(onp_sentaku_v, 3, 0),
     gsSP1Triangle(0, 1, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_sentaku_winT_model[] = {
+GFX_ARR_BEGIN(lat_sentaku_winT_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
@@ -39,4 +39,4 @@ Gfx lat_sentaku_winT_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSP2Triangles(4, 5, 6, 0, 7, 4, 6, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

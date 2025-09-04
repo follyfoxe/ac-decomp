@@ -42,7 +42,7 @@ Vtx int_sum_uwa_cup01_v[] = {
 #include "assets/int_sum_uwa_cup01_v.inc"
 };
 
-Gfx int_sum_uwa_cup01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_uwa_cup01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -62,9 +62,9 @@ Gfx int_sum_uwa_cup01_on_model[] = {
     gsSPNTriangles_5b(13, 15, 14, 15, 16, 14, 16, 12, 14, 17, 11, 10),
     gsSPNTriangles_5b(9, 17, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_uwa_cup01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_uwa_cup01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -97,4 +97,4 @@ Gfx int_sum_uwa_cup01_onT_model[] = {
     gsSPNTriangles_5b(17, 11, 15, 18, 15, 11, 19, 5, 14, 20, 14, 5),
     gsSPNTriangles_5b(21, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

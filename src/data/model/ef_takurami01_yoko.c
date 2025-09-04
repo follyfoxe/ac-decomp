@@ -18,7 +18,7 @@ Vtx ef_takurami01_yoko_v2[] = {
 #include "assets/ef_takurami01_yoko_v2.inc"
 };
 
-Gfx ef_takurami01_yoko_modelT[] = {
+GFX_ARR_BEGIN(ef_takurami01_yoko_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -30,9 +30,9 @@ Gfx ef_takurami01_yoko_modelT[] = {
     gsSPVertex(ef_takurami01_yoko_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_takurami01_yoko_modelT2[] = {
+GFX_ARR_BEGIN(ef_takurami01_yoko_modelT2)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -44,13 +44,13 @@ Gfx ef_takurami01_yoko_modelT2[] = {
     gsSPVertex(ef_takurami01_yoko_v2, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_takurami01_kira_v[] = {
 #include "assets/ef_takurami01_kira_v.inc"
 };
 
-Gfx ef_takurami01_kira_modelT[] = {
+GFX_ARR_BEGIN(ef_takurami01_kira_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
@@ -72,18 +72,18 @@ Gfx ef_takurami01_kira_modelT[] = {
     gsSPVertex(ef_takurami01_kira_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_takurami01_1[] = {
 #include "assets/ef_takurami01_1.inc"
 };
 
-Gfx ef_takurami01_normal_render_mode[] = {
+GFX_ARR_BEGIN(ef_takurami01_normal_render_mode)
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_takurami01_menu_render_mode[] = {
+GFX_ARR_BEGIN(ef_takurami01_menu_render_mode)
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

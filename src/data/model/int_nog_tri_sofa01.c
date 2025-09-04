@@ -18,7 +18,7 @@ Vtx int_nog_tri_sofa01_v[] = {
 #include "assets/int_nog_tri_sofa01_v.inc"
 };
 
-Gfx int_nog_tri_sofa01_model[] = {
+GFX_ARR_BEGIN(int_nog_tri_sofa01_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -40,4 +40,4 @@ Gfx int_nog_tri_sofa01_model[] = {
     gsSPNTriangles_5b(13, 14, 15, 13, 15, 16, 17, 18, 19, 17, 19, 20),
     gsSPNTriangles_5b(21, 22, 23, 21, 23, 24, 25, 26, 27, 25, 27, 28),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

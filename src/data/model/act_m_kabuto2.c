@@ -17,7 +17,7 @@ static u8 act_m_kabuto[] = {
 #include "assets/act_m_kabuto2/act_m_kabuto.inc"
 };
 
-Gfx act_m_mu_kabuto1T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_kabuto1T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -47,4 +47,4 @@ Gfx act_m_mu_kabuto1T_model[] = {
     gsSP2Triangles(0, 4, 1, 0, 4, 5, 6, 0),
     gsSP2Triangles(4, 6, 1, 0, 6, 2, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -25,7 +25,7 @@ Vtx int_sum_md01_v[] = {
 #include "assets/int_sum_md01_v.inc"
 };
 
-Gfx int_sum_md01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_md01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,4 +54,4 @@ Gfx int_sum_md01_on_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 27, 28, 29, 29, 30, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

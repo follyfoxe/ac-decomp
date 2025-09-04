@@ -36,11 +36,11 @@ static Vtx rom_museum2_v[] = {
 #include "assets/field/bg/rom_museum2_v.inc"
 };
 
-extern Gfx rom_museum2_modelT[] = {
+extern GFX_ARR_BEGIN(rom_museum2_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx rom_museum2_model[] = {
+extern GFX_ARR_BEGIN(rom_museum2_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -414,4 +414,4 @@ extern Gfx rom_museum2_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

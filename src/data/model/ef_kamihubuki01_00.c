@@ -9,7 +9,7 @@ Vtx ef_kamihubuki01_00_v[] = {
 #include "assets/ef_kamihubuki01_00_v.inc"
 };
 
-Gfx ef_kamihubuki01_00_model[] = {
+GFX_ARR_BEGIN(ef_kamihubuki01_00_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -18,13 +18,13 @@ Gfx ef_kamihubuki01_00_model[] = {
     gsSPVertex(ef_kamihubuki01_00_v, 6, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_tape01_01_v[] = {
 #include "assets/ef_tape01_01_v.inc"
 };
 
-Gfx ef_tape01_01_model[] = {
+GFX_ARR_BEGIN(ef_tape01_01_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -43,4 +43,4 @@ Gfx ef_tape01_01_model[] = {
     gsSP2Triangles(16, 18, 19, 0, 16, 19, 17, 0),
     gsSP2Triangles(18, 20, 21, 0, 18, 21, 19, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

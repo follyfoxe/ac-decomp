@@ -34,7 +34,7 @@ Vtx int_din_trex_body_v[] = {
 #include "assets/int_din_trex_body_v.inc"
 };
 
-Gfx int_din_trex_body_model[] = {
+GFX_ARR_BEGIN(int_din_trex_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_din_trex_body_model[] = {
     gsSPNTriangles_5b(3, 4, 5, 6, 7, 1, 6, 1, 0, 5, 4, 7),
     gsSPNTriangles_5b(5, 7, 6, 0, 3, 5, 0, 5, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_din_trex_bodyT_model[] = {
+GFX_ARR_BEGIN(int_din_trex_bodyT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -82,4 +82,4 @@ Gfx int_din_trex_bodyT_model[] = {
     gsSPNTriangles_5b(23, 22, 27, 23, 27, 18, 28, 26, 20, 28, 20, 19),
     gsSPNTriangles_5b(29, 21, 25, 29, 25, 30, 24, 26, 25, 21, 29, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

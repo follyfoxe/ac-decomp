@@ -29,7 +29,7 @@ Vtx obj_w_kamakura_v[] = {
 #include "assets/obj_w_kamakura_v.inc"
 };
 
-Gfx obj_w_kamakura_light_model[] = {
+GFX_ARR_BEGIN(obj_w_kamakura_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -37,9 +37,9 @@ Gfx obj_w_kamakura_light_model[] = {
     gsSPVertex(obj_w_kamakura_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kamakura_t2_on_model[] = {
+GFX_ARR_BEGIN(obj_w_kamakura_t2_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -63,9 +63,9 @@ Gfx obj_w_kamakura_t2_on_model[] = {
     gsSPNTriangles_5b(8, 10, 11, 8, 11, 9, 10, 12, 11, 13, 14, 15),
     gsSPNTriangles_5b(16, 13, 15, 16, 15, 17, 18, 5, 16, 18, 16, 17),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kamakura_window_model[] = {
+GFX_ARR_BEGIN(obj_w_kamakura_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -75,9 +75,9 @@ Gfx obj_w_kamakura_window_model[] = {
     gsSPVertex(&obj_w_kamakura_v[54], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kamakura_t1_onT_model[] = {
+GFX_ARR_BEGIN(obj_w_kamakura_t1_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -90,9 +90,9 @@ Gfx obj_w_kamakura_t1_onT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(5, 6, 7, 6, 8, 7, 9, 10, 11, 9, 12, 10),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kamakura_t3_onT_model[] = {
+GFX_ARR_BEGIN(obj_w_kamakura_t3_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -106,12 +106,12 @@ Gfx obj_w_kamakura_t3_onT_model[] = {
     gsSPNTriangles_5b(4, 5, 2, 5, 6, 2, 6, 7, 2, 6, 8, 7),
     gsSPNTriangles_5b(8, 9, 7, 9, 10, 7, 10, 11, 7, 11, 12, 7),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kamakura_DL_model[] = {
+GFX_ARR_BEGIN(kamakura_DL_model)
     gsSPDisplayList(obj_w_kamakura_light_model),
     gsSPDisplayList(obj_w_kamakura_t2_on_model),
     gsSPDisplayList(obj_w_kamakura_t1_onT_model),
     gsSPDisplayList(obj_w_kamakura_t3_onT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

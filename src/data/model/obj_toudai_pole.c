@@ -40,7 +40,7 @@ Vtx obj_toudai_pole_v[] = {
 #include "assets/obj_toudai_pole_v.inc"
 };
 
-Gfx obj_toudai_pole_kage_model[] = {
+GFX_ARR_BEGIN(obj_toudai_pole_kage_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 200, 0, 0, 0, 255),
@@ -76,9 +76,9 @@ Gfx obj_toudai_pole_kage_model[] = {
     gsSPNTriangles_5b(11, 12, 13, 13, 12, 14, 13, 14, 15, 15, 14, 1),
     gsSPNTriangles_5b(15, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_pole_evw_model[] = {
+GFX_ARR_BEGIN(obj_toudai_pole_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED),
     gsDPSetEnvColor(100, 140, 190, 255),
@@ -116,9 +116,9 @@ Gfx obj_toudai_pole_evw_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 14, 13, 12, 14, 15, 13, 2, 15, 14),
     gsSPNTriangles_5b(2, 1, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleE_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleE_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -139,9 +139,9 @@ Gfx obj_toudai_poleE_model[] = {
     gsSPNTriangles_5b(8, 7, 11, 12, 6, 9, 13, 12, 9, 14, 12, 13),
     gsSPNTriangles_5b(15, 14, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleD1_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleD1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -157,9 +157,9 @@ Gfx obj_toudai_poleD1_model[] = {
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 10, 17, 11, 10, 8, 9, 16),
     gsSPNTriangles_5b(9, 17, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleC1_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleC1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -173,9 +173,9 @@ Gfx obj_toudai_poleC1_model[] = {
     gsSPNTriangles_5b(6, 7, 2, 7, 8, 2, 2, 9, 10, 11, 2, 10),
     gsSPNTriangles_5b(12, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleB_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -191,9 +191,9 @@ Gfx obj_toudai_poleB_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleD2_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleD2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -211,9 +211,9 @@ Gfx obj_toudai_poleD2_model[] = {
     gsSPNTriangles_5b(22, 11, 23, 11, 13, 23, 20, 25, 21, 20, 8, 25),
     gsSPNTriangles_5b(8, 10, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleC2_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleC2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -227,9 +227,9 @@ Gfx obj_toudai_poleC2_model[] = {
     gsSPNTriangles_5b(5, 6, 1, 7, 8, 1, 8, 9, 1, 10, 11, 1),
     gsSPNTriangles_5b(11, 12, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleD3_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleD3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -247,9 +247,9 @@ Gfx obj_toudai_poleD3_model[] = {
     gsSPNTriangles_5b(22, 16, 23, 24, 23, 21, 20, 24, 21, 25, 22, 23),
     gsSPNTriangles_5b(24, 25, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_toudai_poleC3_model[] = {
+GFX_ARR_BEGIN(obj_toudai_poleC3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -265,7 +265,7 @@ Gfx obj_toudai_poleC3_model[] = {
     gsSPNTriangles_5b(14, 15, 1, 16, 17, 1, 17, 18, 1, 18, 19, 1),
     gsSPNTriangles_5b(19, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_toudai_pole_tbl[] = { 0, 0, 0, 2, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0 };
 

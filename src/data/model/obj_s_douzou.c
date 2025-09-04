@@ -97,7 +97,7 @@ Vtx obj_s_douzou_v[] = {
 #include "assets/obj_s_douzou_v.inc"
 };
 
-Gfx obj_s_douzou_name_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -108,9 +108,9 @@ Gfx obj_s_douzou_name_model[] = {
     gsSPVertex(&obj_s_douzou_v[279], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_dai_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_dai_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -124,9 +124,9 @@ Gfx obj_s_douzou_dai_model[] = {
     gsSPNTriangles_5b(3, 5, 4, 3, 6, 7, 6, 8, 7, 9, 1, 10),
     gsSPNTriangles_5b(1, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_girl_mouth_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_girl_mouth_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -137,9 +137,9 @@ Gfx obj_s_douzou_girl_mouth_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 4, 3),
     gsSPNTriangles_5b(5, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_girl_face_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_girl_face_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -150,9 +150,9 @@ Gfx obj_s_douzou_girl_face_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 0, 2, 3, 2, 4),
     gsSPNTriangles_5b(0, 5, 1, 6, 3, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_girl_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_girl_model)
     gsSPTexture(2700, 480, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -194,9 +194,9 @@ Gfx obj_s_douzou_girl_model[] = {
     gsSPNTriangles_5b(8, 4, 17, 4, 15, 19, 4, 19, 18, 17, 4, 18),
     gsSPNTriangles_5b(20, 13, 9, 20, 9, 16, 9, 17, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_boy_mouth_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_boy_mouth_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -206,9 +206,9 @@ Gfx obj_s_douzou_boy_mouth_model[] = {
     gsSPVertex(&obj_s_douzou_v[262], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_boy_face_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_boy_face_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -219,9 +219,9 @@ Gfx obj_s_douzou_boy_face_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 2, 1, 3, 4, 2),
     gsSPNTriangles_5b(0, 2, 5, 2, 6, 5, 2, 4, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_douzou_boy_model[] = {
+GFX_ARR_BEGIN(obj_s_douzou_boy_model)
     gsSPTexture(2700, 480, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -266,7 +266,7 @@ Gfx obj_s_douzou_boy_model[] = {
     gsSPNTriangles_5b(25, 24, 27, 24, 23, 28, 29, 24, 28, 30, 22, 5),
     gsSPNTriangles_5b(30, 5, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_s_douzou_tbl[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
@@ -381,7 +381,7 @@ Vtx obj_w_douzou_v[] = {
 #include "assets/obj_w_douzou_v.inc"
 };
 
-Gfx obj_w_douzou_name_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -392,9 +392,9 @@ Gfx obj_w_douzou_name_model[] = {
     gsSPVertex(&obj_w_douzou_v[279], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_dai_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_dai_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -408,9 +408,9 @@ Gfx obj_w_douzou_dai_model[] = {
     gsSPNTriangles_5b(3, 5, 4, 3, 6, 7, 6, 8, 7, 9, 1, 10),
     gsSPNTriangles_5b(1, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_girl_mouth_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_girl_mouth_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -422,9 +422,9 @@ Gfx obj_w_douzou_girl_mouth_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 4, 3),
     gsSPNTriangles_5b(5, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_girl_face_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_girl_face_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -435,9 +435,9 @@ Gfx obj_w_douzou_girl_face_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 0, 2, 3, 2, 4),
     gsSPNTriangles_5b(0, 5, 1, 6, 3, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_girl_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_girl_model)
     gsSPTexture(2700, 480, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -479,9 +479,9 @@ Gfx obj_w_douzou_girl_model[] = {
     gsSPNTriangles_5b(8, 4, 17, 4, 15, 19, 4, 19, 18, 17, 4, 18),
     gsSPNTriangles_5b(20, 13, 9, 20, 9, 16, 9, 17, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_boy_mouth_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_boy_mouth_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -491,9 +491,9 @@ Gfx obj_w_douzou_boy_mouth_model[] = {
     gsSPVertex(&obj_w_douzou_v[262], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_boy_face_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_boy_face_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -504,9 +504,9 @@ Gfx obj_w_douzou_boy_face_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 2, 1, 3, 4, 2),
     gsSPNTriangles_5b(0, 2, 5, 2, 6, 5, 2, 4, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_douzou_boy_model[] = {
+GFX_ARR_BEGIN(obj_w_douzou_boy_model)
     gsSPTexture(2700, 480, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, ENVIRONMENT, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -551,7 +551,7 @@ Gfx obj_w_douzou_boy_model[] = {
     gsSPNTriangles_5b(25, 24, 27, 24, 23, 28, 29, 24, 28, 30, 22, 5),
     gsSPNTriangles_5b(30, 5, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_w_douzou_tbl[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 

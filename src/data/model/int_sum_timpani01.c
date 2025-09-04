@@ -38,7 +38,7 @@ Vtx int_sum_timpani01_v[] = {
 #include "assets/int_sum_timpani01_v.inc"
 };
 
-Gfx int_sum_timpani01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_timpani01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,4 +80,4 @@ Gfx int_sum_timpani01_on_model[] = {
     gsSPNTriangles_5b(13, 9, 14, 13, 8, 9, 15, 13, 16, 13, 14, 16),
     gsSPNTriangles_5b(8, 13, 17, 18, 13, 15, 5, 8, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

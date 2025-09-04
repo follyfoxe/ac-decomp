@@ -54,7 +54,7 @@ Vtx int_tak_eisei_v[] = {
 #include "assets/int_tak_eisei_v.inc"
 };
 
-Gfx int_tak_eisei_ude_on_model[] = {
+GFX_ARR_BEGIN(int_tak_eisei_ude_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -73,9 +73,9 @@ Gfx int_tak_eisei_ude_on_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 12, 13, 14, 15, 16, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_eisei_ude_env_model[] = {
+GFX_ARR_BEGIN(int_tak_eisei_ude_env_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -89,9 +89,9 @@ Gfx int_tak_eisei_ude_env_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_eisei_base_on_model[] = {
+GFX_ARR_BEGIN(int_tak_eisei_base_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -126,7 +126,7 @@ Gfx int_tak_eisei_base_on_model[] = {
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 124, 60),
     gsSPNTrianglesInit_5b(2, 19, 20, 21, 19, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_tak_eisei_tbl[] = { 0, 0, 2, 0 };
 

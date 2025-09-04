@@ -18,7 +18,7 @@ Vtx ef_reset_hole_v[] = {
 #include "assets/ef_reset_hole_v.inc"
 };
 
-Gfx ef_reset_hole_modelT[] = {
+GFX_ARR_BEGIN(ef_reset_hole_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,4 +45,4 @@ Gfx ef_reset_hole_modelT[] = {
     gsSPVertex(&ef_reset_hole_v[95], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -50,7 +50,7 @@ Vtx int_iku_turkey_bed_v[] = {
 #include "assets/int_iku_turkey_bed_v.inc"
 };
 
-Gfx int_iku_turkey_bed_modl_a_model[] = {
+GFX_ARR_BEGIN(int_iku_turkey_bed_modl_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -102,9 +102,9 @@ Gfx int_iku_turkey_bed_modl_a_model[] = {
     gsSPNTrianglesInit_5b(4, 22, 23, 24, 25, 26, 27, 25, 27, 28),
     gsSPNTriangles_5b(22, 24, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_iku_turkey_bed_model_b_model[] = {
+GFX_ARR_BEGIN(int_iku_turkey_bed_model_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -117,4 +117,4 @@ Gfx int_iku_turkey_bed_model_b_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 0, 0, 4, 1),
     gsSPNTriangles_5b(3, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

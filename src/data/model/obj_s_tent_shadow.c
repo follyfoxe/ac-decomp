@@ -13,7 +13,7 @@ Vtx obj_s_tent_shadow_v[] = {
 #include "assets/obj_s_tent_shadow_v.inc"
 };
 
-Gfx obj_s_tent_shadow_modelT[] = {
+GFX_ARR_BEGIN(obj_s_tent_shadow_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -27,4 +27,4 @@ Gfx obj_s_tent_shadow_modelT[] = {
     gsSPNTriangles_5b(16, 18, 19, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

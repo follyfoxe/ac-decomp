@@ -25,7 +25,7 @@ Vtx obj_e_count01_v[] = {
 #include "assets/obj_e_count01_v.inc"
 };
 
-Gfx obj_e_count_spot_model[] = {
+GFX_ARR_BEGIN(obj_e_count_spot_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, TEXEL1, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetPrimColor(0, 255, 255, 255, 180, 120),
@@ -39,9 +39,9 @@ Gfx obj_e_count_spot_model[] = {
     gsSPVertex(&obj_e_count01_v[13], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_lamp_model[] = {
+GFX_ARR_BEGIN(obj_e_count_lamp_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -55,9 +55,9 @@ Gfx obj_e_count_lamp_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 6, 7, 8, 7, 9, 8, 7, 10, 9),
     gsSPNTriangles_5b(7, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_front_model[] = {
+GFX_ARR_BEGIN(obj_e_count_front_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, SHADE, ENVIRONMENT, PRIMITIVE, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -74,9 +74,9 @@ Gfx obj_e_count_front_model[] = {
     gsSPNTrianglesInit_5b(4, 6, 7, 8, 7, 9, 8, 6, 8, 10),
     gsSPNTriangles_5b(8, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_baloon_model[] = {
+GFX_ARR_BEGIN(obj_e_count_baloon_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, SHADE, ENVIRONMENT, PRIMITIVE, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -93,9 +93,9 @@ Gfx obj_e_count_baloon_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(12, 15, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_back_model[] = {
+GFX_ARR_BEGIN(obj_e_count_back_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -107,9 +107,9 @@ Gfx obj_e_count_back_model[] = {
     gsSPVertex(obj_e_count01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_new_model[] = {
+GFX_ARR_BEGIN(obj_e_count_new_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, COMBINED, ENVIRONMENT, 0, 0,
                        0, COMBINED),
@@ -121,9 +121,9 @@ Gfx obj_e_count_new_model[] = {
     gsSPVertex(&obj_e_count01_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_count_down_model[] = {
+GFX_ARR_BEGIN(obj_e_count_down_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -135,7 +135,7 @@ Gfx obj_e_count_down_model[] = {
     gsSPVertex(&obj_e_count01_v[8], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_count01_tbl[] = { { obj_e_count_back_model, 5, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                                { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 6500, 61536 } },

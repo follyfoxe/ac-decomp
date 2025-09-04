@@ -21,7 +21,7 @@ Vtx obj_shop_umb01_v[] = {
 #include "assets/obj_shop_umb01_v.inc"
 };
 
-Gfx obj_shop_umb01_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb01_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -44,11 +44,11 @@ Gfx obj_shop_umb01_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb01_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb01_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb02_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb02_pal.inc"
@@ -70,7 +70,7 @@ Vtx obj_shop_umb02_v[] = {
 #include "assets/obj_shop_umb02_v.inc"
 };
 
-Gfx obj_shop_umb02_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb02_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -98,11 +98,11 @@ Gfx obj_shop_umb02_model[] = {
     gsSPNTriangles_5b(8, 13, 14, 4, 15, 3, 2, 3, 0, 5, 6, 1),
     gsSPNTriangles_5b(14, 11, 8, 16, 17, 18, 7, 18, 6, 18, 7, 16),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb02_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb02_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_03_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_03_pal.inc"
@@ -120,7 +120,7 @@ Vtx obj_shop_umb03_v[] = {
 #include "assets/obj_shop_umb03_v.inc"
 };
 
-Gfx obj_shop_umb03_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb03_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -144,11 +144,11 @@ Gfx obj_shop_umb03_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb03_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb03_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_04_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_04_pal.inc"
@@ -170,7 +170,7 @@ Vtx obj_shop_umb04_v[] = {
 #include "assets/obj_shop_umb04_v.inc"
 };
 
-Gfx obj_shop_umb04_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb04_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -196,11 +196,11 @@ Gfx obj_shop_umb04_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb04_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb04_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb_05_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb_05_pal.inc"
@@ -218,7 +218,7 @@ Vtx obj_shop_umb05_v[] = {
 #include "assets/obj_shop_umb05_v.inc"
 };
 
-Gfx obj_shop_umb05_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb05_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -241,11 +241,11 @@ Gfx obj_shop_umb05_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb05_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb05_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_06_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_06_pal.inc"
@@ -263,7 +263,7 @@ Vtx obj_shop_umb06_v[] = {
 #include "assets/obj_shop_umb06_v.inc"
 };
 
-Gfx obj_shop_umb06_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb06_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -291,11 +291,11 @@ Gfx obj_shop_umb06_model[] = {
     gsSPVertex(&obj_shop_umb06_v[88], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb06_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb06_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb07_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb07_pal.inc"
@@ -317,11 +317,11 @@ Vtx obj_shop_umb07_v[] = {
 #include "assets/obj_shop_umb07_v.inc"
 };
 
-Gfx obj_shop_umb07_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb07_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb07_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb07_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -350,7 +350,7 @@ Gfx obj_shop_umb07_model[] = {
     gsSPNTriangles_5b(8, 13, 14, 4, 15, 3, 2, 3, 0, 5, 6, 1),
     gsSPNTriangles_5b(14, 11, 8, 16, 17, 18, 7, 18, 6, 18, 7, 16),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb08_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb08_pal.inc"
@@ -372,7 +372,7 @@ Vtx obj_shop_umb08_v[] = {
 #include "assets/obj_shop_umb08_v.inc"
 };
 
-Gfx obj_shop_umb08_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb08_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -399,11 +399,11 @@ Gfx obj_shop_umb08_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb08_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb08_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb09_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb09_pal.inc"
@@ -425,7 +425,7 @@ Vtx obj_shop_umb09_v[] = {
 #include "assets/obj_shop_umb09_v.inc"
 };
 
-Gfx obj_shop_umb09_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb09_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -452,11 +452,11 @@ Gfx obj_shop_umb09_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb09_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb09_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb10_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb10_pal.inc"
@@ -478,7 +478,7 @@ Vtx obj_shop_umb10_v[] = {
 #include "assets/obj_shop_umb10_v.inc"
 };
 
-Gfx obj_shop_umb10_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb10_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -505,11 +505,11 @@ Gfx obj_shop_umb10_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb10_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb10_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb11_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb11_pal.inc"
@@ -531,7 +531,7 @@ Vtx obj_shop_umb11_v[] = {
 #include "assets/obj_shop_umb11_v.inc"
 };
 
-Gfx obj_shop_umb11_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb11_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -558,11 +558,11 @@ Gfx obj_shop_umb11_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb11_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb11_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb12_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb12_pal.inc"
@@ -584,7 +584,7 @@ Vtx obj_shop_umb12_v[] = {
 #include "assets/obj_shop_umb12_v.inc"
 };
 
-Gfx obj_shop_umb12_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb12_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -611,11 +611,11 @@ Gfx obj_shop_umb12_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb12_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb12_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb13_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb13_pal.inc"
@@ -637,7 +637,7 @@ Vtx obj_shop_umb13_v[] = {
 #include "assets/obj_shop_umb13_v.inc"
 };
 
-Gfx obj_shop_umb13_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb13_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -664,11 +664,11 @@ Gfx obj_shop_umb13_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb13_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb13_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb_14_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb_14_pal.inc"
@@ -686,7 +686,7 @@ Vtx obj_shop_umb14_v[] = {
 #include "assets/obj_shop_umb14_v.inc"
 };
 
-Gfx obj_shop_umb14_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb14_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -709,11 +709,11 @@ Gfx obj_shop_umb14_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb14_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb14_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_15_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_15_pal.inc"
@@ -735,7 +735,7 @@ Vtx obj_shop_umb15_v[] = {
 #include "assets/obj_shop_umb15_v.inc"
 };
 
-Gfx obj_shop_umb15_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb15_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -760,11 +760,11 @@ Gfx obj_shop_umb15_model[] = {
     gsSPNTriangles_5b(17, 23, 24, 10, 25, 8, 7, 26, 5, 13, 27, 11),
     gsSPNTriangles_5b(24, 20, 17, 28, 29, 30, 16, 30, 14, 30, 16, 28),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb15_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb15_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_16_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_16_pal.inc"
@@ -782,7 +782,7 @@ Vtx obj_shop_umb16_v[] = {
 #include "assets/obj_shop_umb16_v.inc"
 };
 
-Gfx obj_shop_umb16_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb16_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -805,11 +805,11 @@ Gfx obj_shop_umb16_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb16_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb16_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_17_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_17_pal.inc"
@@ -827,7 +827,7 @@ Vtx obj_shop_umb17_v[] = {
 #include "assets/obj_shop_umb17_v.inc"
 };
 
-Gfx obj_shop_umb17_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb17_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -855,11 +855,11 @@ Gfx obj_shop_umb17_model[] = {
     gsSPNTriangles_5b(15, 16, 17, 0, 18, 19, 20, 21, 22, 10, 9, 23),
     gsSPNTriangles_5b(4, 24, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb17_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb17_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb18_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb18_pal.inc"
@@ -881,7 +881,7 @@ Vtx obj_shop_umb18_v[] = {
 #include "assets/obj_shop_umb18_v.inc"
 };
 
-Gfx obj_shop_umb18_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb18_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -908,11 +908,11 @@ Gfx obj_shop_umb18_model[] = {
     gsSPNTriangles_5b(22, 21, 11, 13, 23, 24, 13, 24, 25, 13, 25, 15),
     gsSPNTriangles_5b(20, 26, 19, 18, 19, 16, 21, 22, 17, 11, 9, 22),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb18_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb18_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_19_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_19_pal.inc"
@@ -934,7 +934,7 @@ Vtx obj_shop_umb19_v[] = {
 #include "assets/obj_shop_umb19_v.inc"
 };
 
-Gfx obj_shop_umb19_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb19_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -963,11 +963,11 @@ Gfx obj_shop_umb19_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 11, 16, 11, 10, 18, 19, 17),
     gsSPNTriangles_5b(18, 17, 16, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb19_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb19_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_20_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_20_pal.inc"
@@ -985,7 +985,7 @@ Vtx obj_shop_umb20_v[] = {
 #include "assets/obj_shop_umb20_v.inc"
 };
 
-Gfx obj_shop_umb20_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb20_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1009,11 +1009,11 @@ Gfx obj_shop_umb20_model[] = {
     gsSPNTriangles_5b(5, 1, 8, 9, 10, 7, 7, 6, 9, 5, 9, 6),
     gsSPNTriangles_5b(5, 8, 9, 10, 9, 8, 8, 1, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb20_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb20_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_21_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_21_pal.inc"
@@ -1031,7 +1031,7 @@ Vtx obj_shop_umb21_v[] = {
 #include "assets/obj_shop_umb21_v.inc"
 };
 
-Gfx obj_shop_umb21_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb21_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1057,11 +1057,11 @@ Gfx obj_shop_umb21_model[] = {
     gsSPNTriangles_5b(10, 9, 8, 12, 13, 14, 12, 14, 15, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 19, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb21_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb21_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb_22_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb_22_pal.inc"
@@ -1083,7 +1083,7 @@ Vtx obj_shop_umb22_v[] = {
 #include "assets/obj_shop_umb22_v.inc"
 };
 
-Gfx obj_shop_umb22_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb22_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1111,11 +1111,11 @@ Gfx obj_shop_umb22_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb22_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb22_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_23_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_23_pal.inc"
@@ -1137,7 +1137,7 @@ Vtx obj_shop_umb23_v[] = {
 #include "assets/obj_shop_umb23_v.inc"
 };
 
-Gfx obj_shop_umb23_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb23_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1163,11 +1163,11 @@ Gfx obj_shop_umb23_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 11, 16, 11, 10, 18, 19, 17),
     gsSPNTriangles_5b(18, 17, 16, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb23_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb23_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_24_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_24_pal.inc"
@@ -1189,7 +1189,7 @@ Vtx obj_shop_umb24_v[] = {
 #include "assets/obj_shop_umb24_v.inc"
 };
 
-Gfx obj_shop_umb24_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb24_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1214,11 +1214,11 @@ Gfx obj_shop_umb24_model[] = {
     gsSPNTriangles_5b(17, 23, 24, 10, 25, 8, 7, 26, 5, 13, 27, 11),
     gsSPNTriangles_5b(24, 20, 17, 28, 29, 30, 16, 30, 14, 30, 16, 28),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb24_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb24_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb_25_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb_25_pal.inc"
@@ -1236,7 +1236,7 @@ Vtx obj_shop_umb25_v[] = {
 #include "assets/obj_shop_umb25_v.inc"
 };
 
-Gfx obj_shop_umb25_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb25_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1259,11 +1259,11 @@ Gfx obj_shop_umb25_model[] = {
     gsSPNTriangles_5b(13, 12, 14, 16, 15, 8, 10, 9, 11, 17, 18, 19),
     gsSPNTriangles_5b(17, 19, 20, 21, 22, 23, 21, 23, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb25_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb25_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_26_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_26_pal.inc"
@@ -1285,7 +1285,7 @@ Vtx obj_shop_umb26_v[] = {
 #include "assets/obj_shop_umb26_v.inc"
 };
 
-Gfx obj_shop_umb26_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb26_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1312,11 +1312,11 @@ Gfx obj_shop_umb26_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb26_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb26_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_27_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_27_pal.inc"
@@ -1338,7 +1338,7 @@ Vtx obj_shop_umb27_v[] = {
 #include "assets/obj_shop_umb27_v.inc"
 };
 
-Gfx obj_shop_umb27_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb27_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1370,11 +1370,11 @@ Gfx obj_shop_umb27_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb27_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb27_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_28_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_28_pal.inc"
@@ -1392,7 +1392,7 @@ Vtx obj_shop_umb28_v[] = {
 #include "assets/obj_shop_umb28_v.inc"
 };
 
-Gfx obj_shop_umb28_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb28_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1415,11 +1415,11 @@ Gfx obj_shop_umb28_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 5, 4, 17),
     gsSPNTriangles_5b(5, 17, 16, 20, 21, 22, 20, 22, 23, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb28_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb28_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_29_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_29_pal.inc"
@@ -1437,7 +1437,7 @@ Vtx obj_shop_umb29_v[] = {
 #include "assets/obj_shop_umb29_v.inc"
 };
 
-Gfx obj_shop_umb29_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb29_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1460,11 +1460,11 @@ Gfx obj_shop_umb29_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb29_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb29_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 obj_shop_umb_30_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/obj_shop_umb_30_pal.inc"
@@ -1482,7 +1482,7 @@ Vtx obj_shop_umb30_v[] = {
 #include "assets/obj_shop_umb30_v.inc"
 };
 
-Gfx obj_shop_umb30_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb30_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1506,11 +1506,11 @@ Gfx obj_shop_umb30_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb30_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb30_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 obj_shop_umb_31_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb_31_pal.inc"
@@ -1532,7 +1532,7 @@ Vtx obj_shop_umb31_v[] = {
 #include "assets/obj_shop_umb31_v.inc"
 };
 
-Gfx obj_shop_umb31_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb31_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1559,11 +1559,11 @@ Gfx obj_shop_umb31_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 3, 8, 3, 2, 10, 11, 9),
     gsSPNTriangles_5b(10, 9, 8, 12, 13, 14, 12, 14, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb31_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb31_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 obj_shop_umb_32_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/obj_shop_umb_32_pal.inc"
@@ -1581,7 +1581,7 @@ Vtx obj_shop_umb32_v[] = {
 #include "assets/obj_shop_umb32_v.inc"
 };
 
-Gfx obj_shop_umb32_model[] = {
+GFX_ARR_BEGIN(obj_shop_umb32_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1604,11 +1604,11 @@ Gfx obj_shop_umb32_model[] = {
     gsSPNTriangles_5b(9, 27, 28, 22, 29, 2, 13, 12, 23, 15, 14, 25),
     gsSPNTriangles_5b(5, 7, 3, 28, 10, 9, 21, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_shop_umb32_modelT[] = {
+GFX_ARR_BEGIN(obj_shop_umb32_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_umb_w_tuka_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_shop_umb01/tol_umb_w_tuka_pal.inc"
@@ -1622,7 +1622,7 @@ Vtx obj_shop_umb_w_v[] = {
 #include "assets/obj_shop_umb_w_v.inc"
 };
 
-Gfx obj_shop_umbmy_model[] = {
+GFX_ARR_BEGIN(obj_shop_umbmy_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1647,4 +1647,4 @@ Gfx obj_shop_umbmy_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

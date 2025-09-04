@@ -5,7 +5,7 @@ static Vtx rhn_1_v[] = {
 #include "assets/npc/mdl/rhn_1_v.inc"
 };
 
-static Gfx head_rhn_model[] = {
+static GFX_ARR_BEGIN(head_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 7, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -286,9 +286,9 @@ static Gfx head_rhn_model[] = {
                       0, 0, 0    // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx mouth_rhn_model[] = {
+static GFX_ARR_BEGIN(mouth_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 13.0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -331,9 +331,9 @@ static Gfx mouth_rhn_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm2_rhn_model[] = {
+static GFX_ARR_BEGIN(Rarm2_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 10.0, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -367,9 +367,9 @@ static Gfx Rarm2_rhn_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm1_rhn_model[] = {
+static GFX_ARR_BEGIN(Rarm1_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 7, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -393,9 +393,9 @@ static Gfx Rarm1_rhn_model[] = {
                       3, 13, 14  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm2_rhn_model[] = {
+static GFX_ARR_BEGIN(Larm2_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 8, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -429,9 +429,9 @@ static Gfx Larm2_rhn_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm1_rhn_model[] = {
+static GFX_ARR_BEGIN(Larm1_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 7, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -455,9 +455,9 @@ static Gfx Larm1_rhn_model[] = {
                       1, 12, 13  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx chest_rhn_model[] = {
+static GFX_ARR_BEGIN(chest_rhn_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -496,9 +496,9 @@ static Gfx chest_rhn_model[] = {
                           0, 0, 0   // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail1_rhn_model[] = {
+static GFX_ARR_BEGIN(tail1_rhn_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -517,9 +517,9 @@ static Gfx tail1_rhn_model[] = {
                       0, 0, 0  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail2_rhn_model[] = {
+static GFX_ARR_BEGIN(tail2_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 5, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -557,9 +557,9 @@ static Gfx tail2_rhn_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot2_rhn_model[] = {
+static GFX_ARR_BEGIN(Rfoot2_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 3, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -598,9 +598,9 @@ static Gfx Rfoot2_rhn_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot1_rhn_model[] = {
+static GFX_ARR_BEGIN(Rfoot1_rhn_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -641,9 +641,9 @@ static Gfx Rfoot1_rhn_model[] = {
                       20, 21, 18  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot2_rhn_model[] = {
+static GFX_ARR_BEGIN(Lfoot2_rhn_model)
     gsSPMatrix(anime_6_model + sizeof(Mtx) * 1, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -682,9 +682,9 @@ static Gfx Lfoot2_rhn_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot1_rhn_model[] = {
+static GFX_ARR_BEGIN(Lfoot1_rhn_model)
     gsSPMatrix(anime_6_model, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -725,9 +725,9 @@ static Gfx Lfoot1_rhn_model[] = {
                       23, 22, 27  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx base_rhn_model[] = {
+static GFX_ARR_BEGIN(base_rhn_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -757,7 +757,7 @@ static Gfx base_rhn_model[] = {
                       0, 0, 0  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format off
 static cKF_Joint_R_c cKF_je_r_rhn_1_tbl[] = {

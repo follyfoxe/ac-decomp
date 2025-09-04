@@ -18,7 +18,7 @@ Vtx act_mus_kaeru_a1_v[] = {
 #include "assets/act_mus_kaeru_a1_v.inc"
 };
 
-Gfx act_mus_kaeru_a1_anime_model[] = {
+GFX_ARR_BEGIN(act_mus_kaeru_a1_anime_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -38,9 +38,9 @@ Gfx act_mus_kaeru_a1_anime_model[] = {
     gsSPVertex(&act_mus_kaeru_a1_v[30], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 0, 2, 3, 4, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_kaeru_a1_foot2_model[] = {
+GFX_ARR_BEGIN(act_mus_kaeru_a1_foot2_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -57,9 +57,9 @@ Gfx act_mus_kaeru_a1_foot2_model[] = {
     gsSPNTrianglesInit_5b(4, 5, 4, 7, 4, 6, 8, 2, 3, 9),
     gsSPNTriangles_5b(0, 1, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_kaeru_a1_body_model[] = {
+GFX_ARR_BEGIN(act_mus_kaeru_a1_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -86,9 +86,9 @@ Gfx act_mus_kaeru_a1_body_model[] = {
     gsSPNTriangles_5b(17, 18, 19, 9, 19, 18, 9, 18, 7, 7, 18, 11),
     gsSPNTriangles_5b(11, 18, 17, 16, 10, 11, 16, 11, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_kaeru_a1_foot1_model[] = {
+GFX_ARR_BEGIN(act_mus_kaeru_a1_foot1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -100,7 +100,7 @@ Gfx act_mus_kaeru_a1_foot1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(9, 10, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_act_mus_kaeru_a1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 1610 } },

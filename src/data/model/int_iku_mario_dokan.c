@@ -30,7 +30,7 @@ Vtx int_iku_mario_dokan_v[] = {
 #include "assets/int_iku_mario_dokan_v.inc"
 };
 
-Gfx int_iku_mario_dokan_model_b_model[] = {
+GFX_ARR_BEGIN(int_iku_mario_dokan_model_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -49,9 +49,9 @@ Gfx int_iku_mario_dokan_model_b_model[] = {
     gsSPNTriangles_5b(9, 11, 8, 12, 10, 8, 11, 13, 8, 14, 12, 8),
     gsSPNTriangles_5b(13, 14, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_iku_mario_dokan_model_a_model[] = {
+GFX_ARR_BEGIN(int_iku_mario_dokan_model_a_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -72,4 +72,4 @@ Gfx int_iku_mario_dokan_model_a_model[] = {
     gsSPNTriangles_5b(28, 25, 29, 30, 28, 29, 30, 29, 31, 26, 30, 31),
     gsSPNTriangles_5b(26, 31, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

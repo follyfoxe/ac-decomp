@@ -17,7 +17,7 @@ static Vtx obj_item_apple_v[] = {
 #include "assets/obj_item_apple/obj_item_apple_v.inc"
 };
 
-Gfx obj_apple2_modelT[] = {
+GFX_ARR_BEGIN(obj_apple2_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -29,4 +29,4 @@ Gfx obj_apple2_modelT[] = {
     gsSPVertex(obj_item_apple_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

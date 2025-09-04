@@ -25,7 +25,7 @@ Vtx obj_shop_kaza3_v[] = {
 #include "assets/obj_shop_kaza3_v.inc"
 };
 
-Gfx obj_shop_kaza3_model[] = {
+GFX_ARR_BEGIN(obj_shop_kaza3_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
 gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -56,5 +56,5 @@ gsSPNTrianglesInit_5b(1, 24, 25, 26, 0, 0, 0, 0, 0, 0),
 gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
 gsSPNTrianglesInit_5b(1, 27, 28, 29, 0, 0, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

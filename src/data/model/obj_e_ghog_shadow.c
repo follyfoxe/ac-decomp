@@ -13,7 +13,7 @@ Vtx obj_e_ghog_shadow_v[] = {
 #include "assets/obj_e_ghog_shadow_v.inc"
 };
 
-Gfx obj_e_ghog_shadow_modelT[] = {
+GFX_ARR_BEGIN(obj_e_ghog_shadow_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_DECAL2),
@@ -25,4 +25,4 @@ Gfx obj_e_ghog_shadow_modelT[] = {
     gsSPNTriangles_5b(3, 1, 4, 2, 3, 6, 3, 7, 6, 8, 1, 0),
     gsSPNTriangles_5b(9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

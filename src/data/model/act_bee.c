@@ -11,7 +11,7 @@ Vtx act_bee_v[] = {
 #include "assets/act_bee_v.inc"
 };
 
-Gfx act_bee_C_model[] = {
+GFX_ARR_BEGIN(act_bee_C_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 1, 0, TEXEL0, TEXEL1, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -31,9 +31,9 @@ Gfx act_bee_C_model[] = {
     gsSPNTrianglesInit_5b(5, 20, 21, 22, 22, 21, 23, 24, 21, 25),
     gsSPNTriangles_5b(23, 21, 24, 25, 21, 20, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
-Gfx act_bee_B_model[] = {
+GFX_ARR_BEGIN(act_bee_B_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 1, 0, TEXEL0, TEXEL1, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -51,9 +51,9 @@ Gfx act_bee_B_model[] = {
     gsSPNTriangles_5b(3, 10, 4, 0, 11, 12, 0, 13, 1, 4, 14, 15),
     gsSPNTriangles_5b(4, 16, 0, 1, 17, 18, 1, 19, 2, 0, 0, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
-Gfx act_bee_A_model[] = {
+GFX_ARR_BEGIN(act_bee_A_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 1, 0, TEXEL0, TEXEL1, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -69,7 +69,7 @@ Gfx act_bee_A_model[] = {
     gsSPNTriangles_5b(8, 10, 11, 8, 11, 9, 7, 6, 10, 7, 10, 8),
     gsSPNTriangles_5b(7, 8, 2, 9, 11, 3, 9, 3, 0, 9, 0, 2),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_act_bee_tbl[] = { 0, 0, 2, 2 };
 

@@ -14,7 +14,7 @@ Vtx ef_car01_v[] = {
 #include "assets/ef_car01_v.inc"
 };
 
-Gfx ef_car01_modelT[] = {
+GFX_ARR_BEGIN(ef_car01_modelT)
     gsSPTexture(5000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, TEXEL1, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetPrimColor(0, 130, 255, 255, 255, 255),
@@ -50,7 +50,7 @@ Gfx ef_car01_modelT[] = {
     gsSPVertex(&ef_car01_v[32], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 0, 2, 2, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_carhosi01_01[] = {
 #include "assets/ef_carhosi01_01.inc"
@@ -60,7 +60,7 @@ Vtx ef_carhosi01_00_v[] = {
 #include "assets/ef_carhosi01_00_v.inc"
 };
 
-Gfx ef_carhosi01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_carhosi01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -72,4 +72,4 @@ Gfx ef_carhosi01_00_modelT[] = {
     gsSPVertex(ef_carhosi01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

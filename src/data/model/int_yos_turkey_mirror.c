@@ -46,7 +46,7 @@ Vtx int_yos_turkey_mirror_v[] = {
 #include "assets/int_yos_turkey_mirror_v.inc"
 };
 
-Gfx int_yos_turkey_mirror_obj_model[] = {
+GFX_ARR_BEGIN(int_yos_turkey_mirror_obj_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -94,9 +94,9 @@ Gfx int_yos_turkey_mirror_obj_model[] = {
     gsSPNTriangles_5b(13, 14, 15, 16, 17, 13, 12, 11, 18, 18, 17, 16),
     gsSPNTriangles_5b(15, 14, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_yos_turkey_mirror_env_model[] = {
+GFX_ARR_BEGIN(int_yos_turkey_mirror_env_model)
     gsSPTexture(4000, 3200, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -110,4 +110,4 @@ Gfx int_yos_turkey_mirror_env_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 3, 5, 0),
     gsSPNTriangles_5b(0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

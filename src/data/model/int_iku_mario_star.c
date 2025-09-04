@@ -29,7 +29,7 @@ Vtx int_iku_mario_star_v[] = {
 #include "assets/int_iku_mario_star_v.inc"
 };
 
-Gfx int_iku_mario_star_model[] = {
+GFX_ARR_BEGIN(int_iku_mario_star_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -51,4 +51,4 @@ Gfx int_iku_mario_star_model[] = {
     gsSPNTriangles_5b(8, 4, 6, 15, 0, 21, 21, 0, 29, 29, 0, 2),
     gsSPNTriangles_5b(17, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

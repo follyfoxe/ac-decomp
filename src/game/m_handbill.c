@@ -601,7 +601,7 @@ static void mHandbill_Load_PsStringFromRom(u8* buf, int buf_size, int ps_no) {
 
 static u8 mHandbill_mail_buff[263] ATTRIBUTE_ALIGN(32);
 
-static u8 mHandbill_mail_buff[263] ATTRIBUTE_ALIGN(32);
+//static u8 mHandbill_mail_buff[263] ATTRIBUTE_ALIGN(32);
 
 static void mHandbill_Load_MailFromRom(u8* buf, int mail_no) {
     if (mail_no >= 0 && mail_no < mHandbill_MAIL_NUM) {

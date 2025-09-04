@@ -30,7 +30,7 @@ Vtx int_kon_isi04_v[] = {
 #include "assets/int_kon_isi04_v.inc"
 };
 
-Gfx int_kon_isi04_on_model[] = {
+GFX_ARR_BEGIN(int_kon_isi04_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_kon_isi04_on_model[] = {
     gsSPNTrianglesInit_5b(6, 10, 11, 12, 10, 12, 13, 11, 14, 15),
     gsSPNTriangles_5b(11, 15, 12, 16, 10, 13, 16, 13, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_isi04_onT_model[] = {
+GFX_ARR_BEGIN(int_kon_isi04_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -71,4 +71,4 @@ Gfx int_kon_isi04_onT_model[] = {
     gsSPNTriangles_5b(7, 11, 8, 12, 7, 6, 13, 14, 3, 13, 3, 5),
     gsSPNTriangles_5b(4, 2, 15, 9, 8, 16, 9, 16, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

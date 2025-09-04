@@ -17,7 +17,7 @@ Vtx obj_koban_shine_v[] = {
 #include "assets/obj_koban_shine_v.inc"
 };
 
-Gfx obj_koban_shine_modelT[] = {
+GFX_ARR_BEGIN(obj_koban_shine_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -54,4 +54,4 @@ Gfx obj_koban_shine_modelT[] = {
     gsSPVertex(&obj_koban_shine_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

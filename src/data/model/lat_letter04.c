@@ -20,7 +20,7 @@ Vtx lat_letter04_v[] = {
 #include "assets/lat_letter04_v.inc"
 };
 
-Gfx lat_letter04_win_model[] = {
+GFX_ARR_BEGIN(lat_letter04_win_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPSetRenderMode(G_RM_OPA_SURF, G_RM_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter04_pal),
@@ -43,9 +43,9 @@ Gfx lat_letter04_win_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 17, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter04_winT_model[] = {
+GFX_ARR_BEGIN(lat_letter04_winT_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter04_pal),
@@ -65,9 +65,9 @@ Gfx lat_letter04_winT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 12, 13, 14, 13, 15, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter04_senT_model[] = {
+GFX_ARR_BEGIN(lat_letter04_senT_model)
     gsDPSetPrimColor(0, 255, 255, 0, 0, 255),
     gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, lat_letter04_fusen_tex),
@@ -76,10 +76,10 @@ Gfx lat_letter04_senT_model[] = {
     gsSPVertex(&lat_letter04_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter04_model[] = {
+GFX_ARR_BEGIN(lat_letter04_model)
     gsSPDisplayList(lat_letter04_win_model),
     gsSPDisplayList(lat_letter04_winT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

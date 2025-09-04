@@ -18,7 +18,7 @@ Vtx tol_npcsao_1_v[] = {
 #include "assets/tol_npcsao_1_v.inc"
 };
 
-Gfx tol_npcsao_1_sao_model[] = {
+GFX_ARR_BEGIN(tol_npcsao_1_sao_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -35,9 +35,9 @@ Gfx tol_npcsao_1_sao_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 20, 22, 23, 20, 23, 21, 22, 24, 25),
     gsSPNTriangles_5b(22, 25, 23, 24, 26, 25, 27, 28, 29, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_npcsao_1_uki_model[] = {
+GFX_ARR_BEGIN(tol_npcsao_1_uki_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -57,4 +57,4 @@ Gfx tol_npcsao_1_uki_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 1, 0, 7, 0, 8, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

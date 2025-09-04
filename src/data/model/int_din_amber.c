@@ -38,7 +38,7 @@ Vtx int_din_amber_v[] = {
 #include "assets/int_din_amber_v.inc"
 };
 
-Gfx int_din_amber_on1_model[] = {
+GFX_ARR_BEGIN(int_din_amber_on1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -64,9 +64,9 @@ Gfx int_din_amber_on1_model[] = {
     gsSPNTrianglesInit_5b(5, 6, 7, 8, 6, 8, 9, 8, 7, 10),
     gsSPNTriangles_5b(11, 10, 7, 10, 11, 12, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_din_amber_env_model[] = {
+GFX_ARR_BEGIN(int_din_amber_env_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 80),
@@ -83,9 +83,9 @@ Gfx int_din_amber_env_model[] = {
     gsSPVertex(&int_din_amber_v[71], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_din_amber_on1T_model[] = {
+GFX_ARR_BEGIN(int_din_amber_on1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -97,4 +97,4 @@ Gfx int_din_amber_on1T_model[] = {
     gsSPVertex(&int_din_amber_v[74], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

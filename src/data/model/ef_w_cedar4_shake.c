@@ -11,7 +11,7 @@ Vtx ef_w_cedar4_shake_v[] = {
 #include "assets/ef_w_cedar4_shake_v.inc"
 };
 
-Gfx ef_w_cedar4_shake_model[] = {
+GFX_ARR_BEGIN(ef_w_cedar4_shake_model)
     gsSPDisplayList(ef_w_cedar_leaf_modeset),
     gsSPVertex(ef_w_cedar4_shake_v, 32, 0),
     gsSPNTrianglesInit_5b(13, 0, 1, 2, 2, 3, 4, 5, 6, 0),
@@ -22,7 +22,7 @@ Gfx ef_w_cedar4_shake_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(8, 9, 10, 10, 11, 12, 13, 14, 15, 12, 16, 13),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_ef_w_cedar4_shake_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 6750, 0 } },

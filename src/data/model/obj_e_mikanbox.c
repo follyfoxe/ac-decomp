@@ -13,7 +13,7 @@ static Vtx obj_e_mikanbox_v[] = {
 #include "assets/obj_e_mikanbox/obj_e_mikanbox_v.inc"
 };
 
-Gfx obj_e_mikanbox_model[] = {
+GFX_ARR_BEGIN(obj_e_mikanbox_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, obj_e_mikanbox_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -24,13 +24,13 @@ Gfx obj_e_mikanbox_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 copyright_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/copyright_tex.inc"
 };
 
-Gfx obj_e_mikanbox_copyrightT_model[] = {
+GFX_ARR_BEGIN(obj_e_mikanbox_copyrightT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCycleType(G_CYC_2CYCLE),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -39,7 +39,7 @@ Gfx obj_e_mikanbox_copyrightT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 end_notice2_tex[] = {
 #include "assets/end_notice2_tex.inc"
@@ -57,7 +57,7 @@ Vtx end_notice_v[] = {
 #include "assets/end_notice_v.inc"
 };
 
-Gfx obj_e_mikanbox_copyrightT_model2[] = {
+GFX_ARR_BEGIN(obj_e_mikanbox_copyrightT_model2)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -73,4 +73,4 @@ Gfx obj_e_mikanbox_copyrightT_model2[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -12,7 +12,7 @@ static Vtx act_m_genji2_v[] = {
 #include "assets/act_m_genji2/act_m_genji2_v.inc"
 };
 
-Gfx act_m_genji2_d_model[] = {
+GFX_ARR_BEGIN(act_m_genji2_d_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -25,9 +25,9 @@ Gfx act_m_genji2_d_model[] = {
     gsSPVertex(act_m_genji2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_genji2_c_model[] = {
+GFX_ARR_BEGIN(act_m_genji2_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -40,9 +40,9 @@ Gfx act_m_genji2_c_model[] = {
     gsSPVertex(&act_m_genji2_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_genji2_b_model[] = {
+GFX_ARR_BEGIN(act_m_genji2_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -55,9 +55,9 @@ Gfx act_m_genji2_b_model[] = {
     gsSPVertex(&act_m_genji2_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_genji2_a_model[] = {
+GFX_ARR_BEGIN(act_m_genji2_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -70,4 +70,4 @@ Gfx act_m_genji2_a_model[] = {
     gsSPVertex(&act_m_genji2_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

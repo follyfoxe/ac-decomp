@@ -22,7 +22,7 @@ Vtx int_ike_jny_rosia01_v[] = {
 #include "assets/int_ike_jny_rosia01_v.inc"
 };
 
-Gfx int_ike_jny_rosia01_lb_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_rosia01_lb_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,9 +42,9 @@ Gfx int_ike_jny_rosia01_lb_model[] = {
     gsSPNTriangles_5b(9, 8, 19, 10, 13, 8, 18, 19, 17, 0, 0, 0),
     gsSPNTrianglesInit_5b(3, 20, 21, 22, 20, 22, 23, 20, 23, 24),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_rosia01_l_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_rosia01_l_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -59,9 +59,9 @@ Gfx int_ike_jny_rosia01_l_model[] = {
     gsSPNTriangles_5b(10, 4, 2, 8, 1, 6, 1, 0, 9, 5, 12, 3),
     gsSPNTriangles_5b(4, 3, 2, 3, 0, 2, 0, 3, 12, 12, 9, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_rosia01_2mb_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_rosia01_2mb_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -76,9 +76,9 @@ Gfx int_ike_jny_rosia01_2mb_model[] = {
     gsSPNTriangles_5b(1, 0, 11, 2, 5, 0, 10, 11, 9, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 12, 15, 16, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_rosia01_2sb_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_rosia01_2sb_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -96,9 +96,9 @@ Gfx int_ike_jny_rosia01_2sb_model[] = {
     gsSPNTriangles_5b(16, 11, 9, 15, 14, 17, 9, 8, 14, 10, 18, 8),
     gsSPNTriangles_5b(5, 13, 3, 7, 17, 13, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_jny_rosia01_m_model[] = {
+GFX_ARR_BEGIN(int_ike_jny_rosia01_m_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -113,7 +113,7 @@ Gfx int_ike_jny_rosia01_m_model[] = {
     gsSPNTriangles_5b(10, 4, 2, 8, 1, 6, 1, 0, 9, 5, 12, 3),
     gsSPNTriangles_5b(4, 3, 2, 3, 0, 2, 0, 3, 12, 12, 9, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_jny_rosia01_tbl[] = { 0, 0, 0, 7, 7, 0, 7, 0, 7, 7, 7 };
 

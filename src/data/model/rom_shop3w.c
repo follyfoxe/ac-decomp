@@ -122,11 +122,11 @@ Vtx rom_shop3w_v[] = {
 #include "assets/rom_shop3w_v.inc"
 };
 
-Gfx rom_shop3w_modelT[] = {
+GFX_ARR_BEGIN(rom_shop3w_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_shop3w_model[] = {
+GFX_ARR_BEGIN(rom_shop3w_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -382,4 +382,4 @@ Gfx rom_shop3w_model[] = {
     gsSPNTriangles_5b(3, 5, 4, 6, 7, 8, 9, 6, 8, 10, 11, 12),
     gsSPNTriangles_5b(11, 13, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

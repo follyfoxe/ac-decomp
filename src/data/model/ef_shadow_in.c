@@ -10,7 +10,7 @@ static Vtx ef_shadow_in_v[] = {
 #include "assets/ef_shadow_in/ef_shadow_in_v.inc"
 };
 
-Gfx ef_shadow_insect_modelT[] = {
+GFX_ARR_BEGIN(ef_shadow_insect_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIM_LOD_FRAC, 0),
@@ -30,4 +30,4 @@ Gfx ef_shadow_insect_modelT[] = {
     gsSPVertex(ef_shadow_in_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

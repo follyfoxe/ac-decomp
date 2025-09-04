@@ -13,7 +13,7 @@ Vtx logo_us_tm_v[] = {
 #include "assets/logo_us_tm_v.inc"
 };
 
-Gfx logo_us_tm_model[] = {
+GFX_ARR_BEGIN(logo_us_tm_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 32, logo_us_tm_tex_4i4_txt),
@@ -21,4 +21,4 @@ Gfx logo_us_tm_model[] = {
     gsSPVertex(logo_us_tm_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

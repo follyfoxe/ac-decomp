@@ -30,7 +30,7 @@ Vtx int_sum_liccachair_v[] = {
 #include "assets/int_sum_liccachair_v.inc"
 };
 
-Gfx int_sum_liccachair_on_model[] = {
+GFX_ARR_BEGIN(int_sum_liccachair_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_sum_liccachair_on_model[] = {
     gsSPNTrianglesInit_5b(5, 12, 13, 14, 13, 15, 14, 15, 16, 14),
     gsSPNTriangles_5b(16, 17, 14, 17, 12, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_liccachair_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_liccachair_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -74,4 +74,4 @@ Gfx int_sum_liccachair_onT_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 3, 4, 5, 3, 5, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

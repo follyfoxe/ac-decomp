@@ -13,7 +13,7 @@ Vtx obj_e_yatai_shadow_l_v[] = {
 #include "assets/obj_e_yatai_shadow_l_v.inc"
 };
 
-Gfx obj_e_yatai_shadow_l_modelT[] = {
+GFX_ARR_BEGIN(obj_e_yatai_shadow_l_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -24,13 +24,13 @@ Gfx obj_e_yatai_shadow_l_modelT[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 3, 4, 5),
     gsSPNTriangles_5b(3, 1, 4, 2, 3, 6, 3, 5, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_yatai_shadow_r_v[] = {
 #include "assets/obj_e_yatai_shadow_r_v.inc"
 };
 
-Gfx obj_e_yatai_shadow_r_modelT[] = {
+GFX_ARR_BEGIN(obj_e_yatai_shadow_r_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -41,4 +41,4 @@ Gfx obj_e_yatai_shadow_r_modelT[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 3, 1, 4, 5, 3),
     gsSPNTriangles_5b(5, 1, 3, 6, 3, 0, 6, 4, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

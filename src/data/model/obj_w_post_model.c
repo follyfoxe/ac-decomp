@@ -44,7 +44,7 @@ Vtx obj_w_post_v[] = {
 #include "assets/obj_w_post_v.inc"
 };
 
-Gfx obj_w_post_main_model[] = {
+GFX_ARR_BEGIN(obj_w_post_main_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -70,9 +70,9 @@ Gfx obj_w_post_main_model[] = {
     gsSPNTriangles_5b(1, 5, 2, 6, 0, 3, 6, 3, 7, 8, 9, 10),
     gsSPNTriangles_5b(8, 10, 11, 9, 6, 7, 9, 7, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_post_front_model[] = {
+GFX_ARR_BEGIN(obj_w_post_front_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -89,15 +89,15 @@ Gfx obj_w_post_front_model[] = {
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 124, 124),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_post_flag_saki_model[] = {
+GFX_ARR_BEGIN(obj_w_post_flag_saki_model)
     gsSPVertex(&obj_w_post_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_post_flag_ne_model[] = {
+GFX_ARR_BEGIN(obj_w_post_flag_ne_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -110,7 +110,7 @@ Gfx obj_w_post_flag_ne_model[] = {
     gsSPVertex(obj_w_post_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_post_tbl[] = { { obj_w_post_main_model, 2, cKF_JOINT_FLAG_DISP_OPA, { 550, 0, 65086 } },
                                             { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 63656, 2200, 100 } },

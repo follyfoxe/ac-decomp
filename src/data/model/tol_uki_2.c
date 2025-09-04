@@ -17,7 +17,7 @@ static u8 tol_sao_2_uki1_tex_txt[] = {
 #include "assets/tol_uki_2/tol_sao_2_uki1_tex_txt.inc"
 };
 
-Gfx inv_uki2_model[] = {
+GFX_ARR_BEGIN(inv_uki2_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,4 +57,4 @@ Gfx inv_uki2_model[] = {
     gsSP2Triangles(18, 22, 23, 0, 18, 23, 20, 0),
     gsSP1Triangle(20, 23, 21, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -13,7 +13,7 @@ Vtx clg_hoshi_v[] = {
 #include "assets/clg_hoshi_v.inc"
 };
 
-Gfx clg_win_hoshiT_model[] = {
+GFX_ARR_BEGIN(clg_win_hoshiT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
 gsDPSetPrimColor(0, 255, 255, 0, 215, 255),
@@ -23,5 +23,5 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(clg_hoshi_v, 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

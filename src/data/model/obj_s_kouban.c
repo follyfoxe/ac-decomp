@@ -25,7 +25,7 @@ Vtx obj_s_kouban_v[] = {
 #include "assets/obj_s_kouban_v.inc"
 };
 
-Gfx obj_s_kouban_window_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -35,9 +35,9 @@ Gfx obj_s_kouban_window_model[] = {
     gsSPVertex(&obj_s_kouban_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_kouban_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -46,9 +46,9 @@ Gfx obj_s_kouban_t3_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(0, 2, 7, 6, 8, 9, 6, 5, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_kouban_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -59,9 +59,9 @@ Gfx obj_s_kouban_t2_model[] = {
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 18, 17, 12, 18, 19, 20, 21),
     gsSPNTriangles_5b(19, 21, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_t1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_s_kouban_t1_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -72,9 +72,9 @@ Gfx obj_s_kouban_t1_model[] = {
     gsSPNTriangles_5b(10, 13, 11, 14, 15, 16, 15, 17, 16, 18, 19, 20),
     gsSPNTriangles_5b(18, 21, 19, 22, 23, 24, 23, 25, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_neon_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_neon_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -86,9 +86,9 @@ Gfx obj_s_kouban_neon_model[] = {
     gsSPVertex(&obj_s_kouban_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_light_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -96,13 +96,13 @@ Gfx obj_s_kouban_light_model[] = {
     gsSPVertex(&obj_s_kouban_v[10], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_kouban_model[] = {
+GFX_ARR_BEGIN(obj_s_kouban_model)
     gsSPDisplayList(obj_s_kouban_t3_model),    gsSPDisplayList(obj_s_kouban_t2_model),
     gsSPDisplayList(obj_s_kouban_t1_model),    gsSPDisplayList(obj_s_kouban_neon_model),
     gsSPDisplayList(obj_s_kouban_light_model), gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_w_kouban_t3_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_w_kouban_t3_tex_txt.inc"
@@ -124,7 +124,7 @@ Vtx obj_w_kouban_v[] = {
 #include "assets/obj_w_kouban_v.inc"
 };
 
-Gfx obj_w_kouban_window_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -134,9 +134,9 @@ Gfx obj_w_kouban_window_model[] = {
     gsSPVertex(&obj_w_kouban_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_t3_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_kouban_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -145,9 +145,9 @@ Gfx obj_w_kouban_t3_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(0, 2, 7, 6, 8, 9, 6, 5, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_t2_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_kouban_t2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -158,9 +158,9 @@ Gfx obj_w_kouban_t2_model[] = {
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 18, 17, 12, 18, 19, 20, 21),
     gsSPNTriangles_5b(19, 21, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_t1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_w_kouban_t1_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -171,9 +171,9 @@ Gfx obj_w_kouban_t1_model[] = {
     gsSPNTriangles_5b(10, 13, 11, 14, 15, 16, 15, 17, 16, 18, 19, 20),
     gsSPNTriangles_5b(18, 21, 19, 22, 23, 24, 23, 25, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_neon_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_neon_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -185,9 +185,9 @@ Gfx obj_w_kouban_neon_model[] = {
     gsSPVertex(&obj_w_kouban_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_light_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, ENVIRONMENT, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -195,10 +195,10 @@ Gfx obj_w_kouban_light_model[] = {
     gsSPVertex(&obj_w_kouban_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_kouban_model[] = {
+GFX_ARR_BEGIN(obj_w_kouban_model)
     gsSPDisplayList(obj_w_kouban_t3_model),    gsSPDisplayList(obj_w_kouban_t2_model),
     gsSPDisplayList(obj_w_kouban_t1_model),    gsSPDisplayList(obj_w_kouban_neon_model),
     gsSPDisplayList(obj_w_kouban_light_model), gsSPEndDisplayList(),
-};
+GFX_ARR_END

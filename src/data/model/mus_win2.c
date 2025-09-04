@@ -13,7 +13,7 @@ Vtx mus_win2_v[] = {
 #include "assets/mus_win2_v.inc"
 };
 
-Gfx mus_tag_nes_model[] = {
+GFX_ARR_BEGIN(mus_tag_nes_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -25,4 +25,4 @@ Gfx mus_tag_nes_model[] = {
     gsSPVertex(mus_win2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

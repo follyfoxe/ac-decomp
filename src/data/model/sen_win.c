@@ -29,16 +29,16 @@ Vtx sen_win_v[] = {
 #include "assets/sen_win_v.inc"
 };
 
-Gfx sen_win_cursor_model[] = {
+GFX_ARR_BEGIN(sen_win_cursor_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE),
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsSPVertex(sen_win_v, 3, 0),
     gsSP1Triangle(0, 1, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_win_kageT_model[] = {
+GFX_ARR_BEGIN(sen_win_kageT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0),
     gsDPSetPrimColor(0, 255, 20, 20, 30, 160),
@@ -48,9 +48,9 @@ Gfx sen_win_kageT_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
     gsSP2Triangles(4, 5, 6, 0, 6, 7, 4, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_win_wakuT_model[] = {
+GFX_ARR_BEGIN(sen_win_wakuT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -66,9 +66,9 @@ Gfx sen_win_wakuT_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSP2Triangles(4, 3, 5, 0, 6, 4, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_win_yajirushiT_model[] = {
+GFX_ARR_BEGIN(sen_win_yajirushiT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, sen_item2_yaji_tex),
@@ -76,9 +76,9 @@ Gfx sen_win_yajirushiT_model[] = {
     gsSPVertex(&sen_win_v[26], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_win_yajirushi2T_model[] = {
+GFX_ARR_BEGIN(sen_win_yajirushi2T_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -88,4 +88,4 @@ Gfx sen_win_yajirushi2T_model[] = {
     gsSPVertex(&sen_win_v[30], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

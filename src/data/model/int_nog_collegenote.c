@@ -18,7 +18,7 @@ Vtx int_nog_collegenote_v[] = {
 #include "assets/int_nog_collegenote_v.inc"
 };
 
-Gfx int_nog_collegenote_model[] = {
+GFX_ARR_BEGIN(int_nog_collegenote_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,4 +42,4 @@ Gfx int_nog_collegenote_model[] = {
     gsSPNTriangles_5b(20, 21, 22, 23, 24, 25, 22, 26, 23, 25, 27, 28),
     gsSPNTriangles_5b(28, 29, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

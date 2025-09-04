@@ -17,7 +17,7 @@ Vtx int_sum_ratan_screen_v[] = {
 #include "assets/int_sum_ratan_screen_v.inc"
 };
 
-Gfx int_sum_ratan_screen_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_ratan_screen_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -35,4 +35,4 @@ Gfx int_sum_ratan_screen_onT_model[] = {
     gsSPNTriangles_5b(0, 7, 12, 4, 3, 13, 3, 1, 13, 1, 0, 13),
     gsSPNTriangles_5b(0, 4, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

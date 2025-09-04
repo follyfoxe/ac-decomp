@@ -34,50 +34,50 @@ Vtx logo_us_cros_v[] = {
 #include "assets/logo_us_cros_v.inc"
 };
 
-Gfx logo_us_zs_model[] = {
+GFX_ARR_BEGIN(logo_us_zs_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, logo_us_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 48, 64, logo_us_s_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(logo_us_cros_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx logo_us_zr_model[] = {
+GFX_ARR_BEGIN(logo_us_zr_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, logo_us_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, logo_us_r_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&logo_us_cros_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx logo_us_zo_model[] = {
+GFX_ARR_BEGIN(logo_us_zo_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, logo_us_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, logo_us_o_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&logo_us_cros_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx logo_us_zcB_model[] = {
+GFX_ARR_BEGIN(logo_us_zcB_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, logo_us_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, logo_us_c_2_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&logo_us_cros_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx logo_us_zcA_model[] = {
+GFX_ARR_BEGIN(logo_us_zcA_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, logo_us_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, logo_us_c_1_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&logo_us_cros_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_logo_us_cros_tbl[] = { { NULL, 4, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 55911, 62411, 61036 } },

@@ -14,7 +14,7 @@ Vtx act_ball_s_v[] = {
 #include "assets/act_ball_s_v.inc"
 };
 
-Gfx act_ball_s_model[] = {
+GFX_ARR_BEGIN(act_ball_s_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -72,4 +72,4 @@ Gfx act_ball_s_model[] = {
     gsSP2Triangles(11, 12, 13, 0, 14, 15, 16, 0),
     gsSP2Triangles(3, 17, 18, 0, 6, 19, 20, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END

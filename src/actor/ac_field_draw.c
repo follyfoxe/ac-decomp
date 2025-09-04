@@ -319,19 +319,19 @@ static Vtx aFD_culling_vtx[] ATTRIBUTE_ALIGN(32) = {
     // clang-format on
 };
 
-static Gfx aFD_cull_set_gfx[] ATTRIBUTE_ALIGN(32) = {
+static GFX_ARR_BEGIN(aFD_cull_set_gfx, ATTRIBUTE_ALIGN(32))
     gsSPClearGeometryMode(G_FOG | G_LIGHTING),
     gsSPVertex(&aFD_culling_vtx[0], 8, 0),
     gsSPCullDisplayList(0, 7),
     gsSPSetGeometryMode(G_FOG | G_LIGHTING),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx aFD_cull_set_model[] ATTRIBUTE_ALIGN(32) = {
+static GFX_ARR_BEGIN(aFD_cull_set_model, ATTRIBUTE_ALIGN(32))
     gsSPDisplayList(aFD_cull_set_gfx),
     gsSPDisplayList(SEGMENT_ADDR(G_MWO_SEGMENT_A, 0)), /* Dynamic segment 0x0A */
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static EVW_ANIME_SCROLL aFD_texture_scroll2_data[2] = { { 1, -1, 32, 32 }, { -1, -2, 32, 32 } };
 

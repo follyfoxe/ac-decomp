@@ -34,7 +34,7 @@ Vtx int_din_hutaba_head_v[] = {
 #include "assets/int_din_hutaba_head_v.inc"
 };
 
-Gfx int_din_hutaba_head_model[] = {
+GFX_ARR_BEGIN(int_din_hutaba_head_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -48,9 +48,9 @@ Gfx int_din_hutaba_head_model[] = {
     gsSPNTriangles_5b(4, 1, 0, 3, 2, 6, 3, 6, 7, 0, 3, 7),
     gsSPNTriangles_5b(0, 7, 4, 7, 6, 5, 7, 5, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_din_hutaba_headT_model[] = {
+GFX_ARR_BEGIN(int_din_hutaba_headT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -81,4 +81,4 @@ Gfx int_din_hutaba_headT_model[] = {
     gsSPNTriangles_5b(17, 16, 19, 21, 22, 20, 22, 23, 18, 22, 18, 20),
     gsSPNTriangles_5b(18, 23, 24, 18, 24, 14, 24, 12, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

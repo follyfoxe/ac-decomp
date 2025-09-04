@@ -26,7 +26,7 @@ Vtx crw_hat1_v[] = {
 #include "assets/crw_hat1_v.inc"
 };
 
-Gfx crw_hat1_body_model[] = {
+GFX_ARR_BEGIN(crw_hat1_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -55,4 +55,4 @@ Gfx crw_hat1_body_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 2, 5, 3, 2),
     gsSPNTriangles_5b(6, 0, 2, 1, 5, 2, 4, 6, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

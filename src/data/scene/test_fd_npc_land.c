@@ -5,7 +5,7 @@ extern s16 TEST_FD_NPC_LAND_ctrl_actor_data[];
 extern Actor_data TEST_FD_NPC_LAND_actor_data[];
 extern s16 TEST_FD_NPC_LAND_object_bank[];
 
-extern Scene_Word_u test_fd_npc_land_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, test_fd_npc_land_info)
     mSc_DATA_SOUND(0, 0),                                       // Sound data
     mSc_DATA_PLAYER(TEST_FD_NPC_LAND_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(17, TEST_FD_NPC_LAND_ctrl_actor_data), // Control actors
@@ -14,7 +14,7 @@ extern Scene_Word_u test_fd_npc_land_info[] = {
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_BGITEM, 4, 0x1C00, mSc_ROOM_TYPE_OUTDOORS,
                      FIELD_DRAW_TYPE_OUTDOORS), // Field construct params
     mSc_DATA_END(),                             // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data TEST_FD_NPC_LAND_player_data[] = {
     {

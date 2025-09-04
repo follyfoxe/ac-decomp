@@ -34,7 +34,7 @@ Vtx int_iid_yuki_v[] = {
 #include "assets/int_iid_yuki_v.inc"
 };
 
-Gfx int_iid_yuki_model[] = {
+GFX_ARR_BEGIN(int_iid_yuki_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -58,9 +58,9 @@ Gfx int_iid_yuki_model[] = {
     gsSPNTriangles_5b(20, 19, 18, 22, 23, 21, 22, 21, 20, 3, 2, 23),
     gsSPNTriangles_5b(3, 23, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_iid_yukiT_model[] = {
+GFX_ARR_BEGIN(int_iid_yukiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -94,4 +94,4 @@ Gfx int_iid_yukiT_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

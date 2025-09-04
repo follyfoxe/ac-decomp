@@ -42,7 +42,7 @@ Vtx int_kon_snowclock_v[] = {
 #include "assets/int_kon_snowclock_v.inc"
 };
 
-Gfx int_kon_snowclock_long_model[] = {
+GFX_ARR_BEGIN(int_kon_snowclock_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,9 +54,9 @@ Gfx int_kon_snowclock_long_model[] = {
     gsSPVertex(&int_kon_snowclock_v[14], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_snowclock_body_model[] = {
+GFX_ARR_BEGIN(int_kon_snowclock_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -87,9 +87,9 @@ Gfx int_kon_snowclock_body_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 9, 11, 12, 11, 13, 14),
     gsSPNTriangles_5b(13, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_snowclock_short_model[] = {
+GFX_ARR_BEGIN(int_kon_snowclock_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -101,9 +101,9 @@ Gfx int_kon_snowclock_short_model[] = {
     gsSPVertex(&int_kon_snowclock_v[17], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_snowclock_arm_model[] = {
+GFX_ARR_BEGIN(int_kon_snowclock_arm_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -119,7 +119,7 @@ Gfx int_kon_snowclock_arm_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 8, 9, 10, 11, 12, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_kon_snowclock_tbl[] = { 0, 7, 7, 0, 7, 0, 7, 0 };
 

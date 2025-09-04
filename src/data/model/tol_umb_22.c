@@ -22,7 +22,7 @@ Vtx tol_umb_22_v[] = {
 #include "assets/tol_umb_22_v.inc"
 };
 
-Gfx kasa_umb22_model[] = {
+GFX_ARR_BEGIN(kasa_umb22_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -43,9 +43,9 @@ Gfx kasa_umb22_model[] = {
     gsSPNTriangles_5b(12, 21, 15, 12, 22, 20, 12, 23, 22, 12, 19, 24),
     gsSPNTriangles_5b(12, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx e_umb22_model[] = {
+GFX_ARR_BEGIN(e_umb22_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -59,4 +59,4 @@ Gfx e_umb22_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

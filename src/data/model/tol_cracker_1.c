@@ -17,7 +17,7 @@ Vtx tol_cracker_1_v[] = {
 #include "assets/tol_cracker_1_v.inc"
 };
 
-Gfx tol_cracker_1T_model[] = {
+GFX_ARR_BEGIN(tol_cracker_1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -33,4 +33,4 @@ Gfx tol_cracker_1T_model[] = {
     gsSPNTriangles_5b(21, 22, 0, 23, 24, 25, 23, 26, 24, 26, 27, 24),
     gsSPNTriangles_5b(27, 25, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

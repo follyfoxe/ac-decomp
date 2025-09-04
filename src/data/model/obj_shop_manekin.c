@@ -25,7 +25,7 @@ Vtx obj_shop_manekin_v[] = {
 #include "assets/obj_shop_manekin_v.inc"
 };
 
-Gfx obj_shop_manekin_model[] = {
+GFX_ARR_BEGIN(obj_shop_manekin_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
 gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,5 +54,5 @@ gsSPNTriangles_5b(12, 14, 10, 16, 17, 18, 16, 19, 17, 18, 20, 16),
 gsSPNTriangles_5b(18, 21, 20, 19, 22, 17, 23, 24, 25, 26, 27, 28),
 gsSPNTriangles_5b(26, 28, 29, 29, 23, 25, 29, 25, 26, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

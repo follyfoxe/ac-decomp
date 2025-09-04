@@ -61,7 +61,7 @@ Vtx obj_e_boat_v[] = {
 #include "assets/obj_e_boat_v.inc"
 };
 
-Gfx obj_e_boat_boat1_model[] = {
+GFX_ARR_BEGIN(obj_e_boat_boat1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -111,9 +111,9 @@ Gfx obj_e_boat_boat1_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 3, 0, 4, 6, 3, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_boat_water1_model[] = {
+GFX_ARR_BEGIN(obj_e_boat_water1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -131,9 +131,9 @@ Gfx obj_e_boat_water1_model[] = {
     gsSPNTriangles_5b(3, 7, 2, 8, 13, 10, 6, 13, 8, 8, 12, 9),
     gsSPNTriangles_5b(10, 12, 8, 8, 4, 6, 7, 4, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_boat_water2_model[] = {
+GFX_ARR_BEGIN(obj_e_boat_water2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -153,9 +153,9 @@ Gfx obj_e_boat_water2_model[] = {
     gsSPNTriangles_5b(4, 10, 11, 0, 12, 13, 4, 2, 14, 3, 1, 15),
     gsSPNTriangles_5b(2, 3, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_boat_water3_model[] = {
+GFX_ARR_BEGIN(obj_e_boat_water3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -178,9 +178,9 @@ Gfx obj_e_boat_water3_model[] = {
     gsSPNTriangles_5b(20, 22, 25, 23, 26, 24, 25, 26, 23, 25, 23, 20),
     gsSPNTriangles_5b(24, 17, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_boat_oar1_model[] = {
+GFX_ARR_BEGIN(obj_e_boat_oar1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -204,7 +204,7 @@ Gfx obj_e_boat_oar1_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 26, 27, 28, 26, 28, 29, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_boat_tbl[] = { { obj_e_boat_boat1_model, 2, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                             { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 300, 2200, 61036 } },

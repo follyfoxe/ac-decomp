@@ -17,7 +17,7 @@ static Vtx tol_uki_1_v[] = {
 #include "assets/tol_uki_12/tol_uki_1_v.inc"
 };
 
-Gfx tol_uki1_model[] = {
+GFX_ARR_BEGIN(tol_uki1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -35,4 +35,4 @@ Gfx tol_uki1_model[] = {
     gsSPNTriangles_5b(18, 16, 19, 16, 18, 20, 16, 20, 17, 17, 20, 21),
     gsSPNTriangles_5b(22, 18, 19, 18, 22, 23, 18, 23, 20, 20, 23, 21),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

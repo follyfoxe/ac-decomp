@@ -21,7 +21,7 @@ Vtx crw_anrium1_v[] = {
 #include "assets/crw_anrium1_v.inc"
 };
 
-Gfx crw_anrium1_body_model[] = {
+GFX_ARR_BEGIN(crw_anrium1_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -46,4 +46,4 @@ Gfx crw_anrium1_body_model[] = {
     gsSPNTriangles_5b(21, 23, 24, 25, 24, 28, 28, 24, 23, 24, 29, 21),
     gsSPNTriangles_5b(27, 28, 29, 29, 28, 22, 26, 29, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -11,16 +11,16 @@ Vtx obj_s_pstump2_v[] = {
 #include "assets/obj_s_pstump2_v.inc"
 };
 
-Gfx obj_s_pstump2T_mat_model[] = {
+GFX_ARR_BEGIN(obj_s_pstump2T_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 64, obj_s_palm_young_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 7, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_pstump2T_gfx_model[] = {
+GFX_ARR_BEGIN(obj_s_pstump2T_gfx_model)
     gsSPVertex(obj_s_pstump2_v, 7, 0),
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 1, 4, 5),
     gsSPNTriangles_5b(1, 5, 2, 0, 6, 1, 6, 4, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

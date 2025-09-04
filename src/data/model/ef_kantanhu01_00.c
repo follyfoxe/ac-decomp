@@ -13,7 +13,7 @@ Vtx ef_kantanhu01_00_v[] = {
 #include "assets/ef_kantanhu01_00_v.inc"
 };
 
-Gfx ef_kantanhu01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_kantanhu01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -25,4 +25,4 @@ Gfx ef_kantanhu01_00_modelT[] = {
     gsSPVertex(ef_kantanhu01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -23,7 +23,7 @@ u8 nx_txt[] = {
 #include "assets/nx_txt.inc"
 };
 
-Gfx darrow_model[] = {
+GFX_ARR_BEGIN(darrow_model)
     gsSPVertex(darrow_v, 32, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
@@ -36,13 +36,13 @@ Gfx darrow_model[] = {
     gsSPVertex(&darrow_v[32], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx darrow_v[] = {
 #include "assets/darrow_v.inc"
 };
 
-Gfx camera_model[] = {
+GFX_ARR_BEGIN(camera_model)
     gsSPVertex(camera_v, 32, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSP2Triangles(3, 4, 2, 0, 5, 0, 2, 0),
@@ -58,7 +58,7 @@ Gfx camera_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx camera_v[] = {
 #include "assets/camera_v.inc"
@@ -68,8 +68,8 @@ u8 v_debug_texture[] = {
 #include "assets/v_debug_texture.inc"
 };
 
-Gfx RCP_debug_texture_16x16_8[] = {
+GFX_ARR_BEGIN(RCP_debug_texture_16x16_8)
     gsSPVertex(v_debug_texture, 4, 0),
     gsSP2Triangles(0, 2, 1, 0, 1, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

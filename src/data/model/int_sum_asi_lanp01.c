@@ -21,7 +21,7 @@ Vtx int_sum_asi_lanp01_v[] = {
 #include "assets/int_sum_asi_lanp01_v.inc"
 };
 
-Gfx int_sum_asi_lanp01_off_model[] = {
+GFX_ARR_BEGIN(int_sum_asi_lanp01_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,4 +45,4 @@ Gfx int_sum_asi_lanp01_off_model[] = {
     gsSPNTriangles_5b(14, 18, 15, 18, 17, 15, 17, 23, 15, 23, 21, 15),
     gsSPNTriangles_5b(21, 13, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

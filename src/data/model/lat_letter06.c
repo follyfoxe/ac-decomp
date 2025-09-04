@@ -15,7 +15,7 @@ Vtx lat_letter06_v[] = {
 #include "assets/lat_letter06_v.inc"
 };
 
-Gfx lat_letter06_model[] = {
+GFX_ARR_BEGIN(lat_letter06_model)
     gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter06_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, lat_letter06_6),
@@ -54,9 +54,9 @@ Gfx lat_letter06_model[] = {
     gsSP2Triangles(20, 21, 22, 0, 20, 22, 23, 0),
     gsSP2Triangles(24, 25, 26, 0, 24, 26, 27, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter06_sen_model[] = {
+GFX_ARR_BEGIN(lat_letter06_sen_model)
     gsDPSetCombineLERP(TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0),
     gsDPSetEnvColor(255, 127, 127, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 16, 16, lat_letter06_sen),
@@ -64,4 +64,4 @@ Gfx lat_letter06_sen_model[] = {
     gsSPVertex(&lat_letter06_v[76], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

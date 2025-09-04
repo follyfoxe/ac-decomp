@@ -34,7 +34,7 @@ Vtx int_sum_x_chest01_v[] = {
 #include "assets/int_sum_x_chest01_v.inc"
 };
 
-Gfx int_sum_x_chest01_L_model[] = {
+GFX_ARR_BEGIN(int_sum_x_chest01_L_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -50,9 +50,9 @@ Gfx int_sum_x_chest01_L_model[] = {
     gsSPNTrianglesInit_5b(5, 4, 5, 6, 7, 8, 9, 7, 9, 10),
     gsSPNTriangles_5b(11, 12, 13, 11, 14, 12, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_chest01_base_model[] = {
+GFX_ARR_BEGIN(int_sum_x_chest01_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,9 +80,9 @@ Gfx int_sum_x_chest01_base_model[] = {
     gsSPVertex(&int_sum_x_chest01_v[76], 5, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_x_chest01_R_model[] = {
+GFX_ARR_BEGIN(int_sum_x_chest01_R_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -98,7 +98,7 @@ Gfx int_sum_x_chest01_R_model[] = {
     gsSPNTrianglesInit_5b(5, 4, 5, 6, 7, 8, 9, 8, 10, 9),
     gsSPNTriangles_5b(11, 12, 13, 11, 13, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_x_chest01_tbl[] = { 56, 7, 0, 7, 7 };
 

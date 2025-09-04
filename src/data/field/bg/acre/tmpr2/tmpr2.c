@@ -20,7 +20,7 @@ static Vtx tmpr2_v[] = {
 #include "assets/field/bg/tmpr2_v.inc"
 };
 
-static Gfx tmpr2_grp_grd_s_r1_1_river[] = {
+static GFX_ARR_BEGIN(tmpr2_grp_grd_s_r1_1_river)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -41,9 +41,9 @@ static Gfx tmpr2_grp_grd_s_r1_1_river[] = {
     gsSP2Triangles(14, 17, 15, 0, 15, 13, 16, 0),
     gsSP2Triangles(15, 4, 13, 0, 10, 18, 11, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tmpr2_grp_grd_s_r1_1_grass[] = {
+static GFX_ARR_BEGIN(tmpr2_grp_grd_s_r1_1_grass)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -68,9 +68,9 @@ static Gfx tmpr2_grp_grd_s_r1_1_grass[] = {
     gsSP2Triangles(15, 21, 16, 0, 21, 22, 16, 0),
     gsSP2Triangles(21, 23, 22, 0, 21, 24, 23, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tmpr2_grp_grd_s_r1_1_waterT[] = {
+static GFX_ARR_BEGIN(tmpr2_grp_grd_s_r1_1_waterT)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -86,15 +86,15 @@ static Gfx tmpr2_grp_grd_s_r1_1_waterT[] = {
     gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
     gsSP2Triangles(6, 8, 7, 0, 8, 9, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx tmpr2_modelT[] = {
+extern GFX_ARR_BEGIN(tmpr2_modelT)
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_waterT),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx tmpr2_model[] = {
+extern GFX_ARR_BEGIN(tmpr2_model)
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_grass),
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_river),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

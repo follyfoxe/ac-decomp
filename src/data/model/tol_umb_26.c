@@ -26,7 +26,7 @@ Vtx tol_umb_26_v[] = {
 #include "assets/tol_umb_26_v.inc"
 };
 
-Gfx kasa_umb26_model[] = {
+GFX_ARR_BEGIN(kasa_umb26_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -46,9 +46,9 @@ Gfx kasa_umb26_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 2, 1, 3, 3, 4, 2),
     gsSPNTriangles_5b(5, 6, 7, 6, 8, 9, 9, 7, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx e_umb26_model[] = {
+GFX_ARR_BEGIN(e_umb26_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -63,4 +63,4 @@ Gfx e_umb26_model[] = {
     gsSPNTriangles_5b(12, 18, 19, 5, 20, 3, 2, 21, 0, 8, 22, 6),
     gsSPNTriangles_5b(19, 15, 12, 23, 24, 25, 11, 25, 9, 25, 11, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

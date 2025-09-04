@@ -13,7 +13,7 @@ Vtx ef_f_tree5_cutR_v[] = {
 #include "assets/ef_f_tree5_cutR_v.inc"
 };
 
-Gfx ef_f_tree5_cutR_leaf_model[] = {
+GFX_ARR_BEGIN(ef_f_tree5_cutR_leaf_model)
     gsSPDisplayList(ef_f_tree_leaf_modeset),
     gsSPVertex(ef_f_tree5_cutR_v, 15, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
@@ -23,9 +23,9 @@ Gfx ef_f_tree5_cutR_leaf_model[] = {
     gsSP2Triangles(10, 11, 12, 0, 10, 13, 11, 0),
     gsSP2Triangles(13, 14, 11, 0, 14, 12, 11, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_f_tree5_cutR_trunk_model[] = {
+GFX_ARR_BEGIN(ef_f_tree5_cutR_trunk_model)
     gsSPDisplayList(ef_f_tree_trunk_modeset),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 48, obj_f_tree_cutL_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -33,7 +33,7 @@ Gfx ef_f_tree5_cutR_trunk_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSP2Triangles(2, 1, 4, 0, 1, 5, 4, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_ef_f_tree5_cutR_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 1000, 0, 0 } },

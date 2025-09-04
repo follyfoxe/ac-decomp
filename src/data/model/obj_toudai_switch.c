@@ -16,7 +16,7 @@ Vtx obj_toudai_switch_v[] = {
 #include "assets/obj_toudai_switch_v.inc"
 };
 
-Gfx obj_toudai_switch_model[] = {
+GFX_ARR_BEGIN(obj_toudai_switch_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -30,7 +30,7 @@ Gfx obj_toudai_switch_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 7, 6, 1, 7, 1, 8, 9, 7, 8),
     gsSPNTriangles_5b(9, 8, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_toudai_switch_tbl[] = { 0, 2 };
 

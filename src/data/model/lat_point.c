@@ -13,7 +13,7 @@ Vtx lat_point_v[] = {
 #include "assets/lat_point_v.inc"
 };
 
-Gfx lat_point_mT_model[] = {
+GFX_ARR_BEGIN(lat_point_mT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 0, 0, 215, 255),
@@ -31,4 +31,4 @@ Gfx lat_point_mT_model[] = {
     gsSPVertex(lat_point_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

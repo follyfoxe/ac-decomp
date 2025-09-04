@@ -22,7 +22,7 @@ Vtx int_sugi_kpool_v[] = {
 #include "assets/int_sugi_kpool_v.inc"
 };
 
-Gfx sugi_kpool_w_model[] = {
+GFX_ARR_BEGIN(sugi_kpool_w_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, 1, COMBINED, 0, SHADE, 0, TEXEL0, 1,
                        PRIM_LOD_FRAC, COMBINED),
@@ -37,9 +37,9 @@ Gfx sugi_kpool_w_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 3, 4, 7, 3, 7, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sugi_kpool_t_model[] = {
+GFX_ARR_BEGIN(sugi_kpool_t_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -66,9 +66,9 @@ Gfx sugi_kpool_t_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sugi_kpool_model[] = {
+GFX_ARR_BEGIN(sugi_kpool_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -85,4 +85,4 @@ Gfx sugi_kpool_model[] = {
     gsSPNTriangles_5b(16, 18, 19, 17, 20, 21, 17, 21, 18, 1, 22, 23),
     gsSPNTriangles_5b(1, 23, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

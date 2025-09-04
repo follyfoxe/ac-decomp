@@ -26,7 +26,7 @@ Vtx fki_win_v[] = {
 #include "assets/fki_win_v.inc"
 };
 
-Gfx fki_win_w4_model[] = {
+GFX_ARR_BEGIN(fki_win_w4_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC,
                        0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, fki_win_wa_tex),
@@ -34,9 +34,9 @@ Gfx fki_win_w4_model[] = {
     gsSPVertex(fki_win_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx fki_win_w3T_model[] = {
+GFX_ARR_BEGIN(fki_win_w3T_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 255, 255, 215, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 32, fki_win_w2_tex),
@@ -44,9 +44,9 @@ Gfx fki_win_w3T_model[] = {
     gsSPVertex(&fki_win_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx fki_win_w1T_model[] = {
+GFX_ARR_BEGIN(fki_win_w1T_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 255, 255, 215, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, fki_win_de4_tex),
@@ -54,9 +54,9 @@ Gfx fki_win_w1T_model[] = {
     gsSPVertex(&fki_win_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx fki_win_w2T_model[] = {
+GFX_ARR_BEGIN(fki_win_w2T_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 255, 255, 215, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, fki_win_de3_tex),
@@ -64,13 +64,13 @@ Gfx fki_win_w2T_model[] = {
     gsSPVertex(&fki_win_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx fki_win_mode[] = {
+GFX_ARR_BEGIN(fki_win_mode)
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE,
                      G_AC_NONE | G_ZS_PIXEL | G_RM_TEX_EDGE | G_RM_TEX_EDGE2),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

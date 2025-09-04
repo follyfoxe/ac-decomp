@@ -30,7 +30,7 @@ Vtx int_nog_koban_v[] = {
 #include "assets/int_nog_koban_v.inc"
 };
 
-Gfx int_nog_koban_on_model[] = {
+GFX_ARR_BEGIN(int_nog_koban_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,9 +42,9 @@ Gfx int_nog_koban_on_model[] = {
     gsSPVertex(int_nog_koban_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_koban_onT_model[] = {
+GFX_ARR_BEGIN(int_nog_koban_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -70,9 +70,9 @@ Gfx int_nog_koban_onT_model[] = {
     gsSPNTriangles_5b(11, 13, 12, 16, 17, 5, 16, 5, 4, 18, 19, 1),
     gsSPNTriangles_5b(18, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_koban_offT_model[] = {
+GFX_ARR_BEGIN(int_nog_koban_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -86,4 +86,4 @@ Gfx int_nog_koban_offT_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

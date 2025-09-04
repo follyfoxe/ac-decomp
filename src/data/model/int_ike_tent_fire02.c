@@ -38,7 +38,7 @@ Vtx int_ike_tent_fire02_v[] = {
 #include "assets/int_ike_tent_fire02_v.inc"
 };
 
-Gfx int_ike_tent_firetree02_model[] = {
+GFX_ARR_BEGIN(int_ike_tent_firetree02_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -117,9 +117,9 @@ Gfx int_ike_tent_firetree02_model[] = {
     gsSPNTrianglesInit_5b(4, 24, 25, 26, 24, 26, 27, 25, 28, 29),
     gsSPNTriangles_5b(25, 29, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_fire1_model[] = {
+GFX_ARR_BEGIN(int_ike_fire1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, PRIMITIVE, 0,
                        COMBINED, 0, TEXEL0, 0),
@@ -136,7 +136,7 @@ Gfx int_ike_fire1_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_tent_fire02_tbl[] = { 0, 0, 0 };
 

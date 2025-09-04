@@ -17,7 +17,7 @@ Vtx ef_shadow_out_v[] = {
 #include "assets/ef_shadow_out_v.inc"
 };
 
-Gfx ef_shadow_out_modelT[] = {
+GFX_ARR_BEGIN(ef_shadow_out_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, TEXEL1, 0, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -45,4 +45,4 @@ Gfx ef_shadow_out_modelT[] = {
     gsSPVertex(ef_shadow_out_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

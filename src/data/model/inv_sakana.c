@@ -121,124 +121,124 @@ Vtx inv_sakana_v[] = {
 #include "assets/inv_sakana_v.inc"
 };
 
-Gfx inv_sakana_w14_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w14_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w5_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, inv_mushi_w5_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(inv_sakana_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_moji_model[] = {
+GFX_ARR_BEGIN(inv_sakana_moji_model)
     gsDPSetPrimColor(0, 255, 215, 215, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, inv_sakana_moji_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&inv_sakana_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w1T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w1T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w2T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w2T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, inv_mushi_w3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w3T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w3T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w4_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w4_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w4T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w4T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, inv_mushi_w3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w5T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w5T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[24], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w6T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w6T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w6_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 64, inv_mushi_w6_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[28], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w7T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w7T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w7_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 64, inv_mushi_w7_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[32], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w8T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w8T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[36], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w9T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w9T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, inv_mushi_w3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w10T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w10T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w4_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w4_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w11T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w11T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w3_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, inv_mushi_w3_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[48], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w12T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w12T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w1_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_mushi_w1_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -247,18 +247,18 @@ Gfx inv_sakana_w12T_model[] = {
     gsSPVertex(&inv_sakana_v[52], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_w13T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_w13T_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, inv_mushi_w2_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 64, inv_mushi_w2_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(&inv_sakana_v[56], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_waku2T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_waku2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCycleType(G_CYC_1CYCLE),
     gsDPSetTextureLUT(G_TT_NONE),
@@ -270,9 +270,9 @@ Gfx inv_sakana_waku2T_model[] = {
     gsSPVertex(&inv_sakana_v[60], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_ueT_model[] = {
+GFX_ARR_BEGIN(inv_sakana_ueT_model)
     gsDPSetPrimColor(0, 255, 185, 205, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, inv_mwin_aw5_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -304,9 +304,9 @@ Gfx inv_sakana_ueT_model[] = {
     gsSPNTriangles_5b(13, 14, 11, 15, 16, 17, 16, 18, 17, 19, 20, 21),
     gsSPNTriangles_5b(19, 16, 20, 22, 23, 24, 23, 0, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_ue2T_model[] = {
+GFX_ARR_BEGIN(inv_sakana_ue2T_model)
     gsDPSetPrimColor(0, 255, 185, 205, 255, 255),
     gsDPSetEnvColor(80, 165, 130, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 32, 32, inv_mwin_nwaku_tex),
@@ -315,9 +315,9 @@ Gfx inv_sakana_ue2T_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 4, 5, 6),
     gsSPNTriangles_5b(6, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_daimeiT_model[] = {
+GFX_ARR_BEGIN(inv_sakana_daimeiT_model)
     gsDPSetPrimColor(0, 255, 40, 40, 185, 255),
     gsDPSetEnvColor(100, 100, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 64, 32, inv_sakana_waku2_tex),
@@ -328,9 +328,9 @@ Gfx inv_sakana_daimeiT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 5, 7, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_shirushiT_model[] = {
+GFX_ARR_BEGIN(inv_sakana_shirushiT_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 215, 215, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 32, inv_mwin_shirushi2_tex),
@@ -338,17 +338,17 @@ Gfx inv_sakana_shirushiT_model[] = {
     gsSPVertex(&inv_sakana_v[144], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_scroll_mode[] = {
+GFX_ARR_BEGIN(inv_sakana_scroll_mode)
     gsDPPipeSync(),
     gsDPLoadTLUT_Dolphin(14, 16, 1, inv_sakana_nuno_tex_rgb_ci4_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, inv_sakana_nuno_tex_rgb_ci4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 14, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_model[] = {
+GFX_ARR_BEGIN(inv_sakana_model)
     gsDPPipeSync(),
     gsSPDisplayList(inv_sakana_w1T_model),
     gsSPDisplayList(inv_sakana_w2T_model),
@@ -377,10 +377,10 @@ Gfx inv_sakana_model[] = {
     gsSPDisplayList(inv_sakana_shirushiT_model),
     gsSPDisplayList(inv_sakana_moji_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_sakana_part_model[] = {
+GFX_ARR_BEGIN(inv_sakana_part_model)
     gsSPDisplayList(inv_sakana_waku2T_model),
     gsSPDisplayList(inv_sakana_shirushiT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

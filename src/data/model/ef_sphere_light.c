@@ -14,7 +14,7 @@ Vtx ef_sphere_light_v[] = {
 #include "assets/ef_sphere_light_v.inc"
 };
 
-Gfx ef_sphere_light_model[] = {
+GFX_ARR_BEGIN(ef_sphere_light_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, PRIM_LOD_FRAC, 0),
@@ -50,4 +50,4 @@ Gfx ef_sphere_light_model[] = {
     gsSPNTriangles_5b(3, 4, 19, 3, 19, 15, 15, 19, 18, 15, 18, 16),
     gsSPNTriangles_5b(14, 9, 12, 7, 9, 14, 5, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

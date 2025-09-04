@@ -21,14 +21,14 @@ ACTOR_PROFILE BoxTrick01_Profile = {
 };
 
 
-static void BoxTrick01_Actor_ct(ACTOR* actor, GAME* game){
+void BoxTrick01_Actor_ct(ACTOR* actor, GAME* game){
 
 }
 
-static void BoxTrick01_Actor_dt(ACTOR* actor, GAME* game){
+void BoxTrick01_Actor_dt(ACTOR* actor, GAME* game){
 
 }
 
-static void BoxTrick01_Actor_move(ACTOR* actor, GAME* game){
+void BoxTrick01_Actor_move(ACTOR* actor, GAME* game){
 
 }

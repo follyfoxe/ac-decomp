@@ -17,7 +17,7 @@ Vtx obj_e_kago_r_v[] = {
 #include "assets/obj_e_kago_r_v.inc"
 };
 
-Gfx obj_e_kago_r_t1T_model[] = {
+GFX_ARR_BEGIN(obj_e_kago_r_t1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -31,9 +31,9 @@ Gfx obj_e_kago_r_t1T_model[] = {
     gsSPNTriangles_5b(7, 8, 2, 9, 10, 11, 9, 11, 12, 10, 13, 14),
     gsSPNTriangles_5b(10, 14, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_kago_r_t2T_model[] = {
+GFX_ARR_BEGIN(obj_e_kago_r_t2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -50,13 +50,13 @@ Gfx obj_e_kago_r_t2T_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 22, 23, 24, 22, 24, 25, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kago_r_DL_model[] = {
+GFX_ARR_BEGIN(kago_r_DL_model)
     gsSPDisplayList(obj_e_kago_r_t1T_model),
     gsSPDisplayList(obj_e_kago_r_t2T_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 zobj_e_kago_r_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/zobj_e_kago_r_pal.inc"
@@ -70,7 +70,7 @@ Vtx obj_e_kago_r_ball_v[] = {
 #include "assets/obj_e_kago_r_ball_v.inc"
 };
 
-Gfx kago_r_ball_DL_model[] = {
+GFX_ARR_BEGIN(kago_r_ball_DL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -86,7 +86,7 @@ Gfx kago_r_ball_DL_model[] = {
     gsSPVertex(&obj_e_kago_r_ball_v[30], 9, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_e_kago_w_t1_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_e_kago_w_t1_tex.inc"
@@ -100,7 +100,7 @@ Vtx obj_e_kago_w_v[] = {
 #include "assets/obj_e_kago_w_v.inc"
 };
 
-Gfx obj_e_kago_w_t1T_model[] = {
+GFX_ARR_BEGIN(obj_e_kago_w_t1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -114,9 +114,9 @@ Gfx obj_e_kago_w_t1T_model[] = {
     gsSPNTriangles_5b(7, 8, 2, 9, 10, 11, 9, 11, 12, 10, 13, 14),
     gsSPNTriangles_5b(10, 14, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_kago_w_t2T_model[] = {
+GFX_ARR_BEGIN(obj_e_kago_w_t2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -133,13 +133,13 @@ Gfx obj_e_kago_w_t2T_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(2, 22, 23, 24, 22, 24, 25, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kago_w_DL_model[] = {
+GFX_ARR_BEGIN(kago_w_DL_model)
     gsSPDisplayList(obj_e_kago_w_t1T_model),
     gsSPDisplayList(obj_e_kago_w_t2T_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 zobj_e_kago_w_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/zobj_e_kago_w_pal.inc"
@@ -153,7 +153,7 @@ Vtx obj_e_kago_w_ball_v[] = {
 #include "assets/obj_e_kago_w_ball_v.inc"
 };
 
-Gfx kago_w_ball_DL_model[] = {
+GFX_ARR_BEGIN(kago_w_ball_DL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -169,4 +169,4 @@ Gfx kago_w_ball_DL_model[] = {
     gsSPVertex(&obj_e_kago_w_ball_v[30], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

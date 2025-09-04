@@ -17,28 +17,28 @@ Vtx room_lightL_v[] = {
 #include "assets/room_lightL_v.inc"
 };
 
-Gfx light_shine01_mode[] = {
+GFX_ARR_BEGIN(light_shine01_mode)
     gsDPPipeSync(),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_OFF),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, PRIMITIVE, SHADE, 0, PRIMITIVE, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx light_shineL01_vtx[] = {
+GFX_ARR_BEGIN(light_shineL01_vtx)
     gsSPVertex(room_lightL_v, 6, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx light_shineR01_vtx[] = {
+GFX_ARR_BEGIN(light_shineR01_vtx)
     gsSPVertex(room_lightR_v, 6, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(4, 1, 0, 0, 4, 0, 5, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx light_floor01_mode[] = {
+GFX_ARR_BEGIN(light_floor01_mode)
     gsDPPipeSync(),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK),
     gsDPSetOtherMode(G_AD_PATTERN | G_CD_BAYER | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
@@ -56,16 +56,16 @@ Gfx light_floor01_mode[] = {
                 G_TX_MIRROR | G_TX_WRAP, 4, G_TX_NOLOD),
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 60, 60),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx light_floorL01_vtx[] = {
+GFX_ARR_BEGIN(light_floorL01_vtx)
     gsSPVertex(&room_lightL_v[6], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx light_floorR01_vtx[] = {
+GFX_ARR_BEGIN(light_floorR01_vtx)
     gsSPVertex(&room_lightR_v[6], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

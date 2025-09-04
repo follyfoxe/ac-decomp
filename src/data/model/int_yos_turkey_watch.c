@@ -38,7 +38,7 @@ Vtx int_yos_turkey_watch_v[] = {
 #include "assets/int_yos_turkey_watch_v.inc"
 };
 
-Gfx int_yos_turkey_clk_long_model[] = {
+GFX_ARR_BEGIN(int_yos_turkey_clk_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -50,9 +50,9 @@ Gfx int_yos_turkey_clk_long_model[] = {
     gsSPVertex(int_yos_turkey_watch_v, 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_yos_turkey_clk_obj_model[] = {
+GFX_ARR_BEGIN(int_yos_turkey_clk_obj_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -85,9 +85,9 @@ Gfx int_yos_turkey_clk_obj_model[] = {
     gsSPNTriangles_5b(8, 4, 7, 9, 3, 6, 6, 2, 1, 8, 5, 4),
     gsSPNTriangles_5b(2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_yos_turkey_clk_short_model[] = {
+GFX_ARR_BEGIN(int_yos_turkey_clk_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -99,7 +99,7 @@ Gfx int_yos_turkey_clk_short_model[] = {
     gsSPVertex(&int_yos_turkey_watch_v[3], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_yos_turkey_watch_tbl[] = { 0, 0, 0, 0, 0 };
 

@@ -41,7 +41,7 @@ Vtx sen_qitem_v[] = {
 #include "assets/sen_qitem_v.inc"
 };
 
-Gfx sen_qitem_kage_model[] = {
+GFX_ARR_BEGIN(sen_qitem_kage_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0),
     gsDPSetPrimColor(0, 255, 30, 20, 20, 160),
@@ -50,9 +50,9 @@ Gfx sen_qitem_kage_model[] = {
     gsSPVertex(sen_qitem_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushi3_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushi3_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 210, 165, 60, 255),
@@ -61,9 +61,9 @@ Gfx sen_qitem_yajirushi3_model[] = {
     gsSPVertex(&sen_qitem_v[4], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushi5_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushi5_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 215, 165, 60, 255),
@@ -72,9 +72,9 @@ Gfx sen_qitem_yajirushi5_model[] = {
     gsSPVertex(&sen_qitem_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_wakuT_model[] = {
+GFX_ARR_BEGIN(sen_qitem_wakuT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -85,9 +85,9 @@ Gfx sen_qitem_wakuT_model[] = {
     gsSPVertex(&sen_qitem_v[12], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushiT_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushiT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, sen_item2_yaji_tex),
@@ -95,9 +95,9 @@ Gfx sen_qitem_yajirushiT_model[] = {
     gsSPVertex(&sen_qitem_v[16], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushi2T_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushi2T_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -108,9 +108,9 @@ Gfx sen_qitem_yajirushi2T_model[] = {
     gsSPVertex(&sen_qitem_v[20], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushi4T_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushi4T_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -121,9 +121,9 @@ Gfx sen_qitem_yajirushi4T_model[] = {
     gsSPVertex(&sen_qitem_v[24], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sen_qitem_yajirushi6T_model[] = {
+GFX_ARR_BEGIN(sen_qitem_yajirushi6T_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -134,4 +134,4 @@ Gfx sen_qitem_yajirushi6T_model[] = {
     gsSPVertex(&sen_qitem_v[28], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

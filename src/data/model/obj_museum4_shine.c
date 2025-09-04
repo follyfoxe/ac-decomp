@@ -17,7 +17,7 @@ Vtx obj_museum4_shine_v[] = {
 #include "assets/obj_museum4_shine_v.inc"
 };
 
-Gfx obj_museum4_shine_2T_model[] = {
+GFX_ARR_BEGIN(obj_museum4_shine_2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -42,9 +42,9 @@ Gfx obj_museum4_shine_2T_model[] = {
     gsSPNTriangles_5b(6, 8, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPClearGeometryMode(G_DECAL_GEQUAL),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum4_shine_1T_model[] = {
+GFX_ARR_BEGIN(obj_museum4_shine_1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -56,4 +56,4 @@ Gfx obj_museum4_shine_1T_model[] = {
     gsSPNTriangles_5b(4, 3, 5, 4, 5, 6, 6, 5, 7, 5, 1, 7),
     gsSPNTriangles_5b(7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

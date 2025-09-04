@@ -13,7 +13,7 @@ Vtx pos_yaji_v[] = {
 #include "assets/pos_yaji_v.inc"
 };
 
-Gfx pos_yaji_wakuT_model[] = {
+GFX_ARR_BEGIN(pos_yaji_wakuT_model)
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -33,4 +33,4 @@ Gfx pos_yaji_wakuT_model[] = {
     gsSPVertex(pos_yaji_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

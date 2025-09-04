@@ -42,7 +42,7 @@ Vtx int_sum_donko_v[] = {
 #include "assets/int_sum_donko_v.inc"
 };
 
-Gfx int_sum_donko_sakana_model[] = {
+GFX_ARR_BEGIN(int_sum_donko_sakana_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,9 +57,9 @@ Gfx int_sum_donko_sakana_model[] = {
     gsSPNTriangles_5b(6, 8, 7, 9, 5, 6, 9, 6, 0, 4, 5, 9),
     gsSPNTriangles_5b(3, 4, 9, 2, 3, 9, 2, 9, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_donko_top_model[] = {
+GFX_ARR_BEGIN(int_sum_donko_top_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -72,9 +72,9 @@ Gfx int_sum_donko_top_model[] = {
     gsSPVertex(&int_sum_donko_v[41], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_donko_evw_model[] = {
+GFX_ARR_BEGIN(int_sum_donko_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 80),
@@ -88,9 +88,9 @@ Gfx int_sum_donko_evw_model[] = {
     gsSPNTriangles_5b(3, 4, 5, 5, 4, 6, 5, 6, 7, 7, 6, 8),
     gsSPNTriangles_5b(7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_donko_base_model[] = {
+GFX_ARR_BEGIN(int_sum_donko_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -114,7 +114,7 @@ Gfx int_sum_donko_base_model[] = {
     gsSPNTrianglesInit_5b(4, 21, 22, 23, 21, 24, 25, 26, 27, 28),
     gsSPNTriangles_5b(26, 29, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_donko_tbl[] = { 56, 7, 0, 0, 7 };
 

@@ -22,7 +22,7 @@ Vtx int_iku_jersey_v[] = {
 #include "assets/int_iku_jersey_v.inc"
 };
 
-Gfx int_iku_jersey_model_model[] = {
+GFX_ARR_BEGIN(int_iku_jersey_model_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,4 +45,4 @@ Gfx int_iku_jersey_model_model[] = {
     gsSPNTriangles_5b(9, 14, 1, 15, 16, 17, 17, 18, 15, 4, 3, 12),
     gsSPNTriangles_5b(8, 19, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

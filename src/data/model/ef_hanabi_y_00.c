@@ -17,7 +17,7 @@ Vtx ef_hanabi_y_00_v[] = {
 #include "assets/ef_hanabi_y_00_v.inc"
 };
 
-Gfx ef_hanabi_y_00_modelT[] = {
+GFX_ARR_BEGIN(ef_hanabi_y_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, TEXEL1, TEXEL0, PRIM_LOD_FRAC, TEXEL0, PRIMITIVE,
                        ENVIRONMENT, COMBINED, ENVIRONMENT, COMBINED, 0, PRIMITIVE, 0),
@@ -30,4 +30,4 @@ Gfx ef_hanabi_y_00_modelT[] = {
     gsSPVertex(ef_hanabi_y_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -13,7 +13,7 @@ Vtx ef_onpu01_00_v[] = {
 #include "assets/ef_onpu01_00_v.inc"
 };
 
-Gfx ef_onpu01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_onpu01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -24,7 +24,7 @@ Gfx ef_onpu01_00_modelT[] = {
     gsSPVertex(ef_onpu01_00_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_onpu01_1[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_onpu01_1.inc"
@@ -34,7 +34,7 @@ Vtx ef_onpu01_01_v[] = {
 #include "assets/ef_onpu01_01_v.inc"
 };
 
-Gfx ef_onpu01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_onpu01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -46,7 +46,7 @@ Gfx ef_onpu01_01_modelT[] = {
     gsSPVertex(ef_onpu01_01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_onpu01_2[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_onpu01_2.inc"
@@ -56,7 +56,7 @@ Vtx ef_onpu01_02_v[] = {
 #include "assets/ef_onpu01_02_v.inc"
 };
 
-Gfx ef_onpu01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_onpu01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -68,4 +68,4 @@ Gfx ef_onpu01_02_modelT[] = {
     gsSPVertex(ef_onpu01_02_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

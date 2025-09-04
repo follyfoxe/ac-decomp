@@ -46,7 +46,7 @@ Vtx int_sum_hal_clk01_v[] = {
 #include "assets/int_sum_hal_clk01_v.inc"
 };
 
-Gfx int_sum_hal_clk01_long_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_clk01_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -58,9 +58,9 @@ Gfx int_sum_hal_clk01_long_model[] = {
     gsSPVertex(int_sum_hal_clk01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_clk01_base_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_clk01_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -103,9 +103,9 @@ Gfx int_sum_hal_clk01_base_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(3, 12, 13, 14, 15, 16, 17, 18, 19, 20),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_clk01_short_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_clk01_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -117,7 +117,7 @@ Gfx int_sum_hal_clk01_short_model[] = {
     gsSPVertex(&int_sum_hal_clk01_v[71], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_hal_clk01_tbl[] = { 0, 0, 0, 0, 0 };
 

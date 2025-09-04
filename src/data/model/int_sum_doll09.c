@@ -22,7 +22,7 @@ Vtx int_sum_doll09_v[] = {
 #include "assets/int_sum_doll09_v.inc"
 };
 
-Gfx int_sum_doll09_on_model[] = {
+GFX_ARR_BEGIN(int_sum_doll09_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -50,4 +50,4 @@ Gfx int_sum_doll09_on_model[] = {
     gsSPNTriangles_5b(6, 1, 0, 2, 7, 0, 5, 8, 3, 6, 9, 5),
     gsSPNTriangles_5b(0, 9, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

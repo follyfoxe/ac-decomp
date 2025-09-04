@@ -50,7 +50,7 @@ Vtx int_ike_prores_punch01_v[] = {
 #include "assets/int_ike_prores_punch01_v.inc"
 };
 
-Gfx int_ike_prores_punch_ball_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_punch_ball_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -68,9 +68,9 @@ Gfx int_ike_prores_punch_ball_model[] = {
     gsSPNTriangles_5b(8, 3, 9, 10, 11, 9, 10, 7, 11, 7, 8, 11),
     gsSPNTriangles_5b(8, 9, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_prores_punch_base_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_punch_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -111,7 +111,7 @@ Gfx int_ike_prores_punch_base_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 19, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_prores_punch01_tbl[] = { 0, 7 };
 

@@ -86,7 +86,7 @@ u32 entry(void) {
     return 0;
 }
 
-void main(void) {
+void main2(void) {
     OSReport("どうぶつの森 main2 開始\n");
     HotStartEntry = &entry;
 }

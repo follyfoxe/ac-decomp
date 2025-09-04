@@ -30,7 +30,7 @@ Vtx int_sum_pl_ananas_v[] = {
 #include "assets/int_sum_pl_ananas_v.inc"
 };
 
-Gfx int_sum_pl_ananas_on_model[] = {
+GFX_ARR_BEGIN(int_sum_pl_ananas_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -43,9 +43,9 @@ Gfx int_sum_pl_ananas_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 2, 1, 4),
     gsSPNTriangles_5b(2, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_pl_ananas_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_pl_ananas_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -74,4 +74,4 @@ Gfx int_sum_pl_ananas_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 0, 4, 5, 6, 7),
     gsSPNTriangles_5b(6, 3, 8, 9, 5, 10, 11, 9, 12, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

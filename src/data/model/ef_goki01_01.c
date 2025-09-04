@@ -25,7 +25,7 @@ Vtx ef_goki01_01_v[] = {
 #include "assets/ef_goki01_01_v.inc"
 };
 
-Gfx ef_goki01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_goki01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -37,7 +37,7 @@ Gfx ef_goki01_01_modelT[] = {
     gsSPVertex(ef_goki01_01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 void* ef_goki01_01_evw_anime_1_tex_table[] = { ef_goki01_0_int_i4, ef_goki01_1_int_i4, ef_goki01_2_int_i4,
                                                ef_goki01_3_int_i4 };

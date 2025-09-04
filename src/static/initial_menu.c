@@ -23,21 +23,21 @@
 static Mtx model_cursor;
 static u8 progressive_mode;
 
-static Gfx gam_win1_cursor_setup[] = {
+static GFX_ARR_BEGIN(gam_win1_cursor_setup)
   gsSPTexture(0, 0, 0, 0, G_OFF),
   gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PRIMITIVE),
   gsDPSetRenderMode(G_RM_AA_OPA_SURF, G_RM_AA_OPA_SURF2),
   gsSPLoadGeometryMode(G_SHADE | G_SHADING_SMOOTH),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx gam_win1_moji_setup[] = {
+static GFX_ARR_BEGIN(gam_win1_moji_setup)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_BLENDPRIMDECALA),
   gsDPSetRenderMode(G_RM_XLU_SURF, G_RM_XLU_SURF2),
   gsSPLoadGeometryMode(G_SHADE | G_SHADING_SMOOTH),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static Vp viewport = {
   1280, 960, 511, 0,
@@ -79,7 +79,7 @@ static Mtx logo_model_scale = {
   0x00000, 0x00000, 0x00000, 0x00000
 };
 
-static Gfx initial_dl[] = {
+static GFX_ARR_BEGIN(initial_dl)
   gsDPSetScissor(G_SC_NON_INTERLACE, 0, 0, 640, 480),
   gsSPClipRatio(FRUSTRATIO_2),
   gsSPViewport(&viewport),
@@ -88,9 +88,9 @@ static Gfx initial_dl[] = {
   gsSPMatrix(&default_model_scale, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
   gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_NOOP | G_RM_NOOP2),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx logo_initial_dl[] = {
+static GFX_ARR_BEGIN(logo_initial_dl)
   gsDPSetScissor(G_SC_NON_INTERLACE, 0, 0, 640, 480),
   gsSPClipRatio(FRUSTRATIO_2),
   gsSPViewport(&viewport),
@@ -99,9 +99,9 @@ static Gfx logo_initial_dl[] = {
   gsSPMatrix(&default_model_scale, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
   gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_NOOP | G_RM_NOOP2),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx logo_draw_dl[] = {
+static GFX_ARR_BEGIN(logo_draw_dl)
   gsSPDisplayList(logo_initial_dl),
   gsSPDisplayList(gam_win1_moji_setup),
   gsDPSetPrimColor(0, 255, 220, 0, 0, 255),
@@ -109,9 +109,9 @@ static Gfx logo_draw_dl[] = {
   gsSPDisplayList(logo_ninT_model),
   gsSPPopMatrix(G_MTX_MODELVIEW),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx step1_draw_dl[] = {
+static GFX_ARR_BEGIN(step1_draw_dl)
   gsSPDisplayList(initial_dl),
   gsSPDisplayList(gam_win1_moji_setup),
   gsSPDisplayList(gam_win1_winT_model),
@@ -125,9 +125,9 @@ static Gfx step1_draw_dl[] = {
   gsSPDisplayList(gam_win1_cursor_model),
   gsSPPopMatrix(G_MTX_MODELVIEW),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx step2_draw_dl[] = {
+static GFX_ARR_BEGIN(step2_draw_dl)
   gsSPDisplayList(initial_dl), /* call initial dl */
   gsSPDisplayList(gam_win1_moji_setup), /* call gam_win1_moji_setup */
   gsDPSetPrimColor(0, 255, 225, 255, 255, 255), /* set primitive color to off-white */
@@ -135,7 +135,7 @@ static Gfx step2_draw_dl[] = {
   gsDPSetPrimColor(0, 255, 50, 50, 60, 255), /* set primitive color to dark blue-gray */
   gsSPDisplayList(0x08000000), /* call progressive mode model set in step2_make_dl */
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static int pad_good_frame_count = -1;
 

@@ -18,7 +18,7 @@ Vtx obj_clock_tailor_v[] = {
 #include "assets/obj_clock_tailor_v.inc"
 };
 
-Gfx obj_clock_tailor_base_model[] = {
+GFX_ARR_BEGIN(obj_clock_tailor_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -41,9 +41,9 @@ Gfx obj_clock_tailor_base_model[] = {
     gsSPNTriangles_5b(12, 13, 9, 13, 14, 9, 14, 15, 9, 15, 16, 9),
     gsSPNTriangles_5b(16, 10, 9, 17, 18, 19, 18, 20, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_tailor_long_model[] = {
+GFX_ARR_BEGIN(obj_clock_tailor_long_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -54,9 +54,9 @@ Gfx obj_clock_tailor_long_model[] = {
     gsSPVertex(obj_clock_tailor_v, 5, 0),
     gsSPNTriangles(3, 0, 1, 2, 0, 3, 1, 0, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_tailor_short_model[] = {
+GFX_ARR_BEGIN(obj_clock_tailor_short_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -67,9 +67,9 @@ Gfx obj_clock_tailor_short_model[] = {
     gsSPVertex(&obj_clock_tailor_v[5], 5, 0),
     gsSPNTriangles(3, 0, 1, 2, 0, 3, 1, 0, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_tailor_furi_model[] = {
+GFX_ARR_BEGIN(obj_clock_tailor_furi_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,7 +80,7 @@ Gfx obj_clock_tailor_furi_model[] = {
     gsSPVertex(&obj_clock_tailor_v[10], 3, 0),
     gsSPNTriangles(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_clock_tailor_tbl[] = { 0, 0, 0, 1, 0, 0, 0 };
 

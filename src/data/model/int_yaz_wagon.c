@@ -34,7 +34,7 @@ Vtx int_yaz_wagon_v[] = {
 #include "assets/int_yaz_wagon_v.inc"
 };
 
-Gfx int_wagon_body_model[] = {
+GFX_ARR_BEGIN(int_wagon_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -75,4 +75,4 @@ Gfx int_wagon_body_model[] = {
     gsSPNTriangles_5b(9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(21, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

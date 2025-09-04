@@ -29,7 +29,7 @@ Vtx int_tak_table02_v[] = {
 #include "assets/int_tak_table02_v.inc"
 };
 
-Gfx int_tak_table02_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_table02_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -53,4 +53,4 @@ Gfx int_tak_table02_onT_model[] = {
     gsSPNTrianglesInit_5b(4, 20, 21, 22, 20, 22, 23, 24, 25, 26),
     gsSPNTriangles_5b(24, 26, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

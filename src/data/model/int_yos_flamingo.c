@@ -22,7 +22,7 @@ Vtx int_yos_flamingo_v[] = {
 #include "assets/int_yos_flamingo_v.inc"
 };
 
-Gfx int_yos_flamingo_body_model[] = {
+GFX_ARR_BEGIN(int_yos_flamingo_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -57,4 +57,4 @@ Gfx int_yos_flamingo_body_model[] = {
     gsSPNTriangles_5b(2, 7, 0, 2, 6, 7, 10, 9, 2, 4, 3, 9),
     gsSPNTriangles_5b(6, 2, 9, 8, 1, 0, 8, 9, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

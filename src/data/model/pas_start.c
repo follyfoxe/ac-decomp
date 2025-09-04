@@ -13,15 +13,15 @@ Vtx pas_start_v[] = {
 #include "assets/pas_start_v.inc"
 };
 
-Gfx pas_start_yaji_model[] = {
+GFX_ARR_BEGIN(pas_start_yaji_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE),
     gsDPSetPrimColor(0, 255, 205, 0, 0, 255),
     gsSPVertex(pas_start_v, 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx pas_start_buttonT_model[] = {
+GFX_ARR_BEGIN(pas_start_buttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 235, 235, 235, 255),
@@ -31,10 +31,10 @@ Gfx pas_start_buttonT_model[] = {
     gsSPVertex(&pas_start_v[7], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx pas_start_model[] = {
+GFX_ARR_BEGIN(pas_start_model)
     gsSPDisplayList(pas_start_yaji_model),
     gsSPDisplayList(pas_start_buttonT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

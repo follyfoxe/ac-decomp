@@ -5,7 +5,7 @@ extern s16 TEST03_ctrl_actor_data[];
 extern Actor_data TEST03_actor_data[];
 extern s16 TEST03_object_bank[];
 
-extern Scene_Word_u test03_info[] = {
+extern LAZY_ARR_BEGIN(Scene_Word_u, test03_info)
     mSc_DATA_SOUND(0, 0),                             // Sound data
     mSc_DATA_PLAYER(TEST03_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(12, TEST03_ctrl_actor_data), // Control actors
@@ -14,7 +14,7 @@ extern Scene_Word_u test03_info[] = {
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_BGITEM, 4, 0x5000, mSc_ROOM_TYPE_OUTDOORS,
                      FIELD_DRAW_TYPE_OUTDOORS), // Field construct params
     mSc_DATA_END(),                             // End of scene data
-};
+LAZY_ARR_END
 
 extern Actor_data TEST03_player_data[] = {
     {

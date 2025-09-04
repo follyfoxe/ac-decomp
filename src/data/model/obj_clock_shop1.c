@@ -18,7 +18,7 @@ Vtx obj_clock_shop1_v[] = {
 #include "assets/obj_clock_shop1_v.inc"
 };
 
-Gfx obj_clock_shop1_base_model[] = {
+GFX_ARR_BEGIN(obj_clock_shop1_base_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -61,9 +61,9 @@ Gfx obj_clock_shop1_base_model[] = {
     gsSP2Triangles(16, 17, 18, 0, 16, 18, 19, 0),
     gsSP2Triangles(19, 18, 20, 0, 19, 20, 21, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_shop1_long_model[] = {
+GFX_ARR_BEGIN(obj_clock_shop1_long_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -90,9 +90,9 @@ Gfx obj_clock_shop1_long_model[] = {
     gsSPVertex(obj_clock_shop1_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_shop1_short_model[] = {
+GFX_ARR_BEGIN(obj_clock_shop1_short_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -119,9 +119,9 @@ Gfx obj_clock_shop1_short_model[] = {
     gsSPVertex(&obj_clock_shop1_v[4], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_clock_shop1_pend_model[] = {
+GFX_ARR_BEGIN(obj_clock_shop1_pend_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -148,7 +148,7 @@ Gfx obj_clock_shop1_pend_model[] = {
     gsSPVertex(&obj_clock_shop1_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_obj_clock_shop1_tbl[] = { 0, 0, 0, 1, 0, 0, 0 };
 

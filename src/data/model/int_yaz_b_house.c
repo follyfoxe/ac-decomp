@@ -34,7 +34,7 @@ Vtx int_yaz_b_house_v[] = {
 #include "assets/int_yaz_b_house_v.inc"
 };
 
-Gfx int_yaz_b_house_body_model[] = {
+GFX_ARR_BEGIN(int_yaz_b_house_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -78,4 +78,4 @@ Gfx int_yaz_b_house_body_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 8, 11, 9, 8, 12, 11),
     gsSPNTriangles_5b(8, 10, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -21,7 +21,7 @@
  * The effect is that the .rodata section has pooling entirely disabled.
  */
 SQRTF_LINKAGE inline float sqrtf(float x) {
-    static const double _half = .5;
+    /*static const double _half = .5;
     static const double _three = 3.0;
     volatile float y;
 
@@ -34,7 +34,8 @@ SQRTF_LINKAGE inline float sqrtf(float x) {
         return y;
     }
 
-    return x;
+    return x;*/
+    return __sqrtf(x);
 }
 
 #ifdef SQRTF_LINKAGE
@@ -58,7 +59,7 @@ inline float fabsf(float x) {
 #define HUGE_VALF (*(float*)__float_huge)
 
 extern inline double sqrt(double x) {
-    if (x > 0.0) {
+    /*if (x > 0.0) {
         double guess = __frsqrte(x);
         guess = .5 * guess * (3.0 - guess * guess * x);
         guess = .5 * guess * (3.0 - guess * guess * x);
@@ -70,7 +71,8 @@ extern inline double sqrt(double x) {
     } else if (x) {
         return NAN;
     }
-    return INFINITY;
+    return INFINITY;*/
+    return __sqrt(x);
 }
 
 #ifdef __cplusplus

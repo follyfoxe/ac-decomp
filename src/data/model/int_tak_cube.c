@@ -22,7 +22,7 @@ Vtx int_tak_cube_v[] = {
 #include "assets/int_tak_cube_v.inc"
 };
 
-Gfx int_tak_cube_body_on_model[] = {
+GFX_ARR_BEGIN(int_tak_cube_body_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, 1, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -54,9 +54,9 @@ Gfx int_tak_cube_body_on_model[] = {
     gsSPVertex(&int_tak_cube_v[96], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_cube_evwT_model[] = {
+GFX_ARR_BEGIN(int_tak_cube_evwT_model)
     gsSPTexture(3500, 600, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -75,9 +75,9 @@ Gfx int_tak_cube_evwT_model[] = {
     gsSPNTriangles_5b(8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_cube_glass_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_cube_glass_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0,
                        0, 0, COMBINED),
@@ -95,4 +95,4 @@ Gfx int_tak_cube_glass_onT_model[] = {
     gsSPNTriangles_5b(1, 8, 9, 7, 10, 11, 7, 11, 8, 0, 1, 9),
     gsSPNTriangles_5b(0, 9, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

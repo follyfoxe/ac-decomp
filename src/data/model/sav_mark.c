@@ -13,7 +13,7 @@ Vtx sav_mark_v[] = {
 #include "assets/sav_mark_v.inc"
 };
 
-Gfx sav_mark_winT_before_model[] = {
+GFX_ARR_BEGIN(sav_mark_winT_before_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -21,10 +21,10 @@ Gfx sav_mark_winT_before_model[] = {
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 16, 16, inv_original_mark_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sav_mark_winT_model[] = {
+GFX_ARR_BEGIN(sav_mark_winT_model)
     gsSPVertex(sav_mark_v, 4, 0),
     gsSPNTriangles(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

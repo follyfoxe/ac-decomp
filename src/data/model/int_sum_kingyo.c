@@ -42,7 +42,7 @@ Vtx int_sum_kingyo_v[] = {
 #include "assets/int_sum_kingyo_v.inc"
 };
 
-Gfx int_sum_kingyo_sakana_model[] = {
+GFX_ARR_BEGIN(int_sum_kingyo_sakana_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,9 +57,9 @@ Gfx int_sum_kingyo_sakana_model[] = {
     gsSPNTriangles_5b(6, 8, 7, 9, 5, 6, 9, 6, 0, 4, 5, 9),
     gsSPNTriangles_5b(3, 4, 9, 2, 3, 9, 2, 9, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kingyo_glass_model[] = {
+GFX_ARR_BEGIN(int_sum_kingyo_glass_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 60),
@@ -74,9 +74,9 @@ Gfx int_sum_kingyo_glass_model[] = {
     gsSPNTriangles_5b(6, 5, 1, 7, 8, 9, 10, 9, 8, 11, 5, 9),
     gsSPNTriangles_5b(12, 9, 5, 13, 8, 14, 15, 14, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kingyo_body_model[] = {
+GFX_ARR_BEGIN(int_sum_kingyo_body_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 240),
@@ -91,9 +91,9 @@ Gfx int_sum_kingyo_body_model[] = {
     gsSPNTriangles_5b(4, 0, 2, 1, 5, 2, 1, 3, 5, 6, 7, 4),
     gsSPNTriangles_5b(8, 7, 6, 6, 4, 9, 9, 8, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kingyo_base_model[] = {
+GFX_ARR_BEGIN(int_sum_kingyo_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -109,7 +109,7 @@ Gfx int_sum_kingyo_base_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(1, 11, 12, 13, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_kingyo_tbl[] = { 56, 7, 0, 0, 7 };
 

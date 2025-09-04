@@ -13,7 +13,7 @@ Vtx obj_yamishop_shadow_v[] = {
 #include "assets/obj_yamishop_shadow_v.inc"
 };
 
-Gfx obj_yamishop_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_yamishop_shadowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_OVL_SURF2),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -24,4 +24,4 @@ Gfx obj_yamishop_shadowT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 1),
     gsSPNTriangles_5b(4, 1, 0, 3, 2, 6, 3, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

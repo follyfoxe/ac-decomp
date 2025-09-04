@@ -106,7 +106,7 @@ Vtx rom_shop2_fuku_v[] = {
 #include "assets/rom_shop2_fuku_v.inc"
 };
 
-Gfx rom_shop2_fuku_modelT[] = {
+GFX_ARR_BEGIN(rom_shop2_fuku_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 0, 0, 0, 65),
@@ -118,9 +118,9 @@ Gfx rom_shop2_fuku_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 1, 4, 2),
     gsSPNTriangles_5b(4, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_shop2_fuku_model[] = {
+GFX_ARR_BEGIN(rom_shop2_fuku_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -260,4 +260,4 @@ Gfx rom_shop2_fuku_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 20, 21, 22, 21, 23, 22, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

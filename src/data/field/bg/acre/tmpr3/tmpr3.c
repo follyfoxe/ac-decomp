@@ -23,7 +23,7 @@ static Vtx tmpr3_v[] = {
 #include "assets/field/bg/tmpr3_v.inc"
 };
 
-extern Gfx tmpr3_modelT[] = {
+extern GFX_ARR_BEGIN(tmpr3_modelT)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, SHADE, 0, 0, 0, 0,
@@ -113,9 +113,9 @@ extern Gfx tmpr3_modelT[] = {
     gsSP2Triangles(1, 4, 2, 0, 4, 5, 2, 0),
     gsSP1Triangle(1, 6, 4, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx tmpr3_model[] = {
+extern GFX_ARR_BEGIN(tmpr3_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -239,4 +239,4 @@ extern Gfx tmpr3_model[] = {
     gsSP2Triangles(9, 6, 8, 0, 11, 10, 12, 0),
     gsSP2Triangles(12, 10, 9, 0, 12, 13, 11, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

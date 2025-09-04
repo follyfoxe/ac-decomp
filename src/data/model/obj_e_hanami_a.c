@@ -49,11 +49,11 @@ Vtx obj_e_hanami_a_v[] = {
 #include "assets/obj_e_hanami_a_v.inc"
 };
 
-Gfx obj_e_hanami_a_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hanami_a_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_hanami_a_model[] = {
+GFX_ARR_BEGIN(obj_e_hanami_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -124,17 +124,17 @@ Gfx obj_e_hanami_a_model[] = {
     gsSPNTriangles_5b(14, 15, 12, 16, 17, 18, 18, 19, 16, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 24, 20, 23, 20, 24, 21, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx obj_e_hanami_b_v[] = {
 #include "assets/obj_e_hanami_b_v.inc"
 };
 
-Gfx obj_e_hanami_b_modelT[] = {
+GFX_ARR_BEGIN(obj_e_hanami_b_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_hanami_b_model[] = {
+GFX_ARR_BEGIN(obj_e_hanami_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -207,4 +207,4 @@ Gfx obj_e_hanami_b_model[] = {
     gsSPNTriangles_5b(10, 11, 12, 11, 13, 12, 11, 14, 13, 11, 10, 14),
     gsSPNTriangles_5b(15, 16, 17, 16, 18, 17, 16, 19, 18, 16, 15, 19),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

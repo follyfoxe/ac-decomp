@@ -30,7 +30,7 @@ Vtx int_sum_asi_plant01_v[] = {
 #include "assets/int_sum_asi_plant01_v.inc"
 };
 
-Gfx int_sum_asi_plant01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_asi_plant01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -47,9 +47,9 @@ Gfx int_sum_asi_plant01_on_model[] = {
     gsSPNTrianglesInit_5b(6, 6, 7, 8, 9, 7, 6, 10, 11, 12),
     gsSPNTriangles_5b(13, 11, 10, 14, 15, 16, 17, 15, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_asi_plant01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_asi_plant01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -70,4 +70,4 @@ Gfx int_sum_asi_plant01_onT_model[] = {
     gsSPNTriangles_5b(13, 9, 12, 14, 15, 16, 14, 16, 17, 18, 16, 15),
     gsSPNTriangles_5b(15, 14, 7, 15, 7, 6, 19, 15, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

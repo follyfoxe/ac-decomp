@@ -10,11 +10,11 @@ Vtx rom_shop2f_v[] = {
 #include "assets/rom_shop2f_v.inc"
 };
 
-Gfx rom_shop2f_modelT[] = {
+GFX_ARR_BEGIN(rom_shop2f_modelT)
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_shop2f_model[] = {
+GFX_ARR_BEGIN(rom_shop2f_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -47,4 +47,4 @@ Gfx rom_shop2f_model[] = {
     gsSPNTriangles_5b(6, 2, 1, 3, 7, 8, 6, 7, 2, 3, 2, 7),
     gsSPNTriangles_5b(3, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

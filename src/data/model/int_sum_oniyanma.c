@@ -38,7 +38,7 @@ Vtx int_sum_oniyanma_v[] = {
 #include "assets/int_sum_oniyanma_v.inc"
 };
 
-Gfx int_sum_oniyanma_side_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_side_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 140),
@@ -52,9 +52,9 @@ Gfx int_sum_oniyanma_side_model[] = {
     gsSPNTriangles_5b(4, 3, 5, 6, 7, 2, 1, 6, 2, 6, 8, 9),
     gsSPNTriangles_5b(6, 9, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oniyanma_komado_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_komado_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 140),
@@ -67,9 +67,9 @@ Gfx int_sum_oniyanma_komado_model[] = {
     gsSPVertex(&int_sum_oniyanma_v[51], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oniyanma_glass_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_glass_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 70),
@@ -83,9 +83,9 @@ Gfx int_sum_oniyanma_glass_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 7, 6, 1, 7, 1, 0, 4, 8, 9),
     gsSPNTriangles_5b(4, 9, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oniyanma_base_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -111,9 +111,9 @@ Gfx int_sum_oniyanma_base_model[] = {
     gsSPNTrianglesInit_5b(4, 25, 26, 27, 25, 27, 28, 29, 25, 28),
     gsSPNTriangles_5b(29, 28, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oniyanma_body_R_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_body_R_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 160),
@@ -125,9 +125,9 @@ Gfx int_sum_oniyanma_body_R_model[] = {
     gsSPVertex(&int_sum_oniyanma_v[59], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_oniyanma_body_L_model[] = {
+GFX_ARR_BEGIN(int_sum_oniyanma_body_L_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 160),
@@ -139,7 +139,7 @@ Gfx int_sum_oniyanma_body_L_model[] = {
     gsSPVertex(&int_sum_oniyanma_v[55], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_oniyanma_tbl[] = { 7, 0, 7, 0, 7, 0, 0, 0 };
 

@@ -18,7 +18,7 @@ Vtx act_mus_namazu_a1_v[] = {
 #include "assets/act_mus_namazu_a1_v.inc"
 };
 
-Gfx act_mus_namazu_sakana_body_model[] = {
+GFX_ARR_BEGIN(act_mus_namazu_sakana_body_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPVertex(act_mus_namazu_a1_v, 11, 0),
@@ -41,9 +41,9 @@ Gfx act_mus_namazu_sakana_body_model[] = {
     gsSPNTriangles_5b(10, 13, 2, 2, 12, 5, 5, 11, 3, 7, 14, 10),
     gsSPNTriangles_5b(13, 10, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_mus_namazu_sakana_head_model[] = {
+GFX_ARR_BEGIN(act_mus_namazu_sakana_head_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, int_sum_namazu_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 48, 32, act_mus_namazu_body_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -63,7 +63,7 @@ Gfx act_mus_namazu_sakana_head_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 22, 14, 16, 17, 23, 16, 17, 20, 18),
     gsSPNTriangles_5b(24, 19, 18, 16, 23, 22, 18, 21, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_act_mus_namazu_a1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 65529, 1199 } },

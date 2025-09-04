@@ -33,7 +33,7 @@ Vtx obj_w_kanban_v[] = {
 #include "assets/obj_w_kanban_v.inc"
 };
 
-Gfx write_model[] = {
+GFX_ARR_BEGIN(write_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,9 +45,9 @@ Gfx write_model[] = {
     gsSPVertex(obj_s_kanban_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_sign_s_model[] = {
+GFX_ARR_BEGIN(obj_sign_s_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -59,9 +59,9 @@ Gfx obj_sign_s_model[] = {
     gsSPVertex(&obj_s_kanban_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_sign_w_model[] = {
+GFX_ARR_BEGIN(obj_sign_w_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -73,7 +73,7 @@ Gfx obj_sign_w_model[] = {
     gsSPVertex(&obj_w_kanban_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_kanban_shadow_tex[] = {
 #include "assets/obj_kanban_shadow_tex.inc"
@@ -83,7 +83,7 @@ Vtx obj_kanban_shadow_v[] = {
 #include "assets/obj_kanban_shadow_v.inc"
 };
 
-Gfx obj_kanban_shadowT_model[] = {
+GFX_ARR_BEGIN(obj_kanban_shadowT_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -103,4 +103,4 @@ Gfx obj_kanban_shadowT_model[] = {
     gsSPVertex(anime_3_txt, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

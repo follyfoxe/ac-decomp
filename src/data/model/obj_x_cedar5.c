@@ -15,7 +15,7 @@ Vtx obj_x_cedar5_light_v[] = {
 #include "assets/obj_x_cedar5_light_v.inc"
 };
 
-Gfx obj_x_ceder5_lightT_mat_model[] = {
+GFX_ARR_BEGIN(obj_x_ceder5_lightT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -25,9 +25,9 @@ Gfx obj_x_ceder5_lightT_mat_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_x_ceder5_lightT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_x_ceder5_lightT_gfx_model)
     gsSPVertex(obj_x_cedar5_light_v, 28, 0),
     gsSPNTrianglesInit_5b(20, 0, 1, 2, 3, 0, 2, 4, 5, 6),
     gsSPNTriangles_5b(7, 4, 6, 8, 9, 10, 11, 8, 10, 12, 11, 13),
@@ -36,4 +36,4 @@ Gfx obj_x_ceder5_lightT_gfx_model[] = {
     gsSPNTriangles_5b(23, 18, 24, 21, 23, 25, 23, 26, 25, 26, 19, 27),
     gsSPNTriangles_5b(19, 22, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

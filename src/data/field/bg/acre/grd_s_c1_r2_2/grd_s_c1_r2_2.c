@@ -13,7 +13,7 @@ static Vtx grd_s_c1_r2_2_v[] = {
 #include "assets/field/bg/grd_s_c1_r2_2_v.inc"
 };
 
-extern Gfx grd_s_c1_r2_2_modelT[] = {
+extern GFX_ARR_BEGIN(grd_s_c1_r2_2_modelT)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 1, 0, TEXEL0, TEXEL1, COMBINED, 0, SHADE, TEXEL0,
                        COMBINED, 0, PRIM_LOD_FRAC, PRIMITIVE),
@@ -41,9 +41,9 @@ extern Gfx grd_s_c1_r2_2_modelT[] = {
                       7, 11, 8   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx grd_s_c1_r2_2_model[] = {
+extern GFX_ARR_BEGIN(grd_s_c1_r2_2_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -307,4 +307,4 @@ extern Gfx grd_s_c1_r2_2_model[] = {
                       6, 10, 5 // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

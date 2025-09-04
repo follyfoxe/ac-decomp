@@ -17,7 +17,7 @@ Vtx int_tak_syogi_v[] = {
 #include "assets/int_tak_syogi_v.inc"
 };
 
-Gfx int_tak_syogi01_on_model[] = {
+GFX_ARR_BEGIN(int_tak_syogi01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -32,4 +32,4 @@ Gfx int_tak_syogi01_on_model[] = {
     gsSPNTriangles_5b(13, 14, 15, 13, 15, 16, 13, 16, 17, 18, 19, 20),
     gsSPNTriangles_5b(18, 20, 21, 22, 23, 24, 22, 24, 25, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

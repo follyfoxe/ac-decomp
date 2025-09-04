@@ -18,7 +18,7 @@ Vtx int_tak_tent_lamp_v[] = {
 #include "assets/int_tak_tent_lamp_v.inc"
 };
 
-Gfx obj_tent_lamp_offT_model[] = {
+GFX_ARR_BEGIN(obj_tent_lamp_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -46,4 +46,4 @@ Gfx obj_tent_lamp_offT_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 22, 18, 21, 22, 21, 23, 24, 22, 23),
     gsSPNTriangles_5b(24, 23, 25, 26, 24, 25, 26, 25, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

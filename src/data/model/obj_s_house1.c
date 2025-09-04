@@ -29,7 +29,7 @@ Vtx obj_s_house1_v[] = {
 #include "assets/obj_s_house1_v.inc"
 };
 
-Gfx obj_s_house1_windowL_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -38,9 +38,9 @@ Gfx obj_s_house1_windowL_model[] = {
     gsSPVertex(&obj_s_house1_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_windowR_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -49,9 +49,9 @@ Gfx obj_s_house1_windowR_model[] = {
     gsSPVertex(&obj_s_house1_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_light_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -64,9 +64,9 @@ Gfx obj_s_house1_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_t4_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_t4_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -78,9 +78,9 @@ Gfx obj_s_house1_t4_model[] = {
     gsSPVertex(&obj_s_house1_v[111], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -93,9 +93,9 @@ Gfx obj_s_house1_t3_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 2, 3, 4, 0, 3),
     gsSPNTriangles_5b(4, 3, 5, 5, 6, 4, 7, 8, 9, 7, 9, 10),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -113,9 +113,9 @@ Gfx obj_s_house1_t2_model[] = {
     gsSPVertex(&obj_s_house1_v[71], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -133,9 +133,9 @@ Gfx obj_s_house1_t1_model[] = {
     gsSPVertex(&obj_s_house1_v[107], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house1_door_model[] = {
+GFX_ARR_BEGIN(obj_s_house1_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -147,7 +147,7 @@ Gfx obj_s_house1_door_model[] = {
     gsSPVertex(obj_s_house1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_house1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_s_house1_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -217,7 +217,7 @@ Vtx obj_s_house2_v[] = {
 #include "assets/obj_s_house2_v.inc"
 };
 
-Gfx obj_s_house2_window_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -228,9 +228,9 @@ Gfx obj_s_house2_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_light_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -242,9 +242,9 @@ Gfx obj_s_house2_light_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 11, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -263,9 +263,9 @@ Gfx obj_s_house2_t3_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -281,9 +281,9 @@ Gfx obj_s_house2_t2_model[] = {
     gsSPNTriangles_5b(12, 13, 14, 7, 6, 15, 7, 15, 13, 7, 12, 16),
     gsSPNTriangles_5b(7, 16, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -298,9 +298,9 @@ Gfx obj_s_house2_t1_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 5, 7, 8, 6, 9, 10, 6, 10, 7),
     gsSPNTriangles_5b(9, 11, 12, 9, 12, 10, 13, 14, 15, 13, 15, 16),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_name_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -312,9 +312,9 @@ Gfx obj_s_house2_name_model[] = {
     gsSPVertex(&obj_s_house2_v[105], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house2_door_model[] = {
+GFX_ARR_BEGIN(obj_s_house2_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -326,7 +326,7 @@ Gfx obj_s_house2_door_model[] = {
     gsSPVertex(obj_s_house2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_house2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_s_house2_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -396,7 +396,7 @@ Vtx obj_s_house3_v[] = {
 #include "assets/obj_s_house3_v.inc"
 };
 
-Gfx obj_s_house3_windowL_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -406,9 +406,9 @@ Gfx obj_s_house3_windowL_model[] = {
     gsSPVertex(&obj_s_house3_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_windowR_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -418,9 +418,9 @@ Gfx obj_s_house3_windowR_model[] = {
     gsSPVertex(&obj_s_house3_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_light_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -432,9 +432,9 @@ Gfx obj_s_house3_light_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 11, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -454,9 +454,9 @@ Gfx obj_s_house3_t3_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -472,9 +472,9 @@ Gfx obj_s_house3_t2_model[] = {
     gsSPNTriangles_5b(9, 5, 4, 6, 10, 11, 6, 11, 7, 0, 12, 13),
     gsSPNTriangles_5b(0, 13, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -488,9 +488,9 @@ Gfx obj_s_house3_t1_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(2, 3, 6, 2, 6, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_name_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -502,9 +502,9 @@ Gfx obj_s_house3_name_model[] = {
     gsSPVertex(&obj_s_house3_v[96], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house3_door_model[] = {
+GFX_ARR_BEGIN(obj_s_house3_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -516,7 +516,7 @@ Gfx obj_s_house3_door_model[] = {
     gsSPVertex(obj_s_house3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_house3_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_s_house3_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -585,7 +585,7 @@ Vtx obj_s_house4_v[] = {
 #include "assets/obj_s_house4_v.inc"
 };
 
-Gfx obj_s_house4_windowL_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -595,9 +595,9 @@ Gfx obj_s_house4_windowL_model[] = {
     gsSPVertex(&obj_s_house4_v[77], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_windowR_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -607,9 +607,9 @@ Gfx obj_s_house4_windowR_model[] = {
     gsSPVertex(&obj_s_house4_v[81], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_light_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -622,9 +622,9 @@ Gfx obj_s_house4_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 7, 12, 13),
     gsSPNTriangles_5b(7, 13, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -643,9 +643,9 @@ Gfx obj_s_house4_t3_model[] = {
     gsSPVertex(&obj_s_house4_v[59], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -661,9 +661,9 @@ Gfx obj_s_house4_t2_model[] = {
     gsSPNTriangles_5b(12, 14, 8, 15, 2, 1, 15, 1, 16, 17, 10, 9),
     gsSPNTriangles_5b(17, 9, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -677,9 +677,9 @@ Gfx obj_s_house4_t1_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(6, 0, 3, 6, 3, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_name_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -691,9 +691,9 @@ Gfx obj_s_house4_name_model[] = {
     gsSPVertex(&obj_s_house4_v[85], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house4_door_model[] = {
+GFX_ARR_BEGIN(obj_s_house4_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -705,7 +705,7 @@ Gfx obj_s_house4_door_model[] = {
     gsSPVertex(obj_s_house4_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_house4_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_s_house4_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -775,7 +775,7 @@ Vtx obj_s_house5_v[] = {
 #include "assets/obj_s_house5_v.inc"
 };
 
-Gfx obj_s_house5_windowL_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -785,9 +785,9 @@ Gfx obj_s_house5_windowL_model[] = {
     gsSPVertex(&obj_s_house5_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_windowR_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -797,9 +797,9 @@ Gfx obj_s_house5_windowR_model[] = {
     gsSPVertex(&obj_s_house5_v[24], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_light_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -812,9 +812,9 @@ Gfx obj_s_house5_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_t3_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -831,9 +831,9 @@ Gfx obj_s_house5_t3_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -854,9 +854,9 @@ Gfx obj_s_house5_t2_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 18, 15, 17, 19, 20, 21, 19, 22, 20),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -870,9 +870,9 @@ Gfx obj_s_house5_t1_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_name_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -884,9 +884,9 @@ Gfx obj_s_house5_name_model[] = {
     gsSPVertex(&obj_s_house5_v[127], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_house5_door_model[] = {
+GFX_ARR_BEGIN(obj_s_house5_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -898,7 +898,7 @@ Gfx obj_s_house5_door_model[] = {
     gsSPVertex(obj_s_house5_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_house5_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_s_house5_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -968,7 +968,7 @@ Vtx obj_w_house1_v[] = {
 #include "assets/obj_w_house1_v.inc"
 };
 
-Gfx obj_w_house1_windowL_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -977,9 +977,9 @@ Gfx obj_w_house1_windowL_model[] = {
     gsSPVertex(&obj_w_house1_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_windowR_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -988,9 +988,9 @@ Gfx obj_w_house1_windowR_model[] = {
     gsSPVertex(&obj_w_house1_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_light_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1003,9 +1003,9 @@ Gfx obj_w_house1_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_t4_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_t4_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1017,9 +1017,9 @@ Gfx obj_w_house1_t4_model[] = {
     gsSPVertex(&obj_w_house1_v[111], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1032,9 +1032,9 @@ Gfx obj_w_house1_t3_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 0, 2, 3, 4, 0, 3),
     gsSPNTriangles_5b(4, 3, 5, 5, 6, 4, 7, 8, 9, 7, 9, 10),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1052,9 +1052,9 @@ Gfx obj_w_house1_t2_model[] = {
     gsSPVertex(&obj_w_house1_v[107], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1072,9 +1072,9 @@ Gfx obj_w_house1_t1_model[] = {
     gsSPVertex(&obj_w_house1_v[71], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house1_door_model[] = {
+GFX_ARR_BEGIN(obj_w_house1_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1086,7 +1086,7 @@ Gfx obj_w_house1_door_model[] = {
     gsSPVertex(obj_w_house1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_house1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_w_house1_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1156,7 +1156,7 @@ Vtx obj_w_house2_v[] = {
 #include "assets/obj_w_house2_v.inc"
 };
 
-Gfx obj_w_house2_window_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1168,9 +1168,9 @@ Gfx obj_w_house2_window_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_light_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1182,9 +1182,9 @@ Gfx obj_w_house2_light_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 11, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1203,9 +1203,9 @@ Gfx obj_w_house2_t3_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1221,9 +1221,9 @@ Gfx obj_w_house2_t2_model[] = {
     gsSPNTriangles_5b(12, 13, 14, 7, 6, 15, 7, 15, 13, 7, 12, 16),
     gsSPNTriangles_5b(7, 16, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1238,9 +1238,9 @@ Gfx obj_w_house2_t1_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 5, 7, 8, 6, 9, 10, 6, 10, 7),
     gsSPNTriangles_5b(9, 11, 12, 9, 12, 10, 13, 14, 15, 13, 15, 16),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_name_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1252,9 +1252,9 @@ Gfx obj_w_house2_name_model[] = {
     gsSPVertex(&obj_w_house2_v[105], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house2_door_model[] = {
+GFX_ARR_BEGIN(obj_w_house2_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1266,7 +1266,7 @@ Gfx obj_w_house2_door_model[] = {
     gsSPVertex(obj_w_house2_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_house2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_w_house2_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1340,7 +1340,7 @@ Vtx obj_w_house3_v[] = {
 #include "assets/obj_w_house3_v.inc"
 };
 
-Gfx obj_w_house3_windowL_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1350,9 +1350,9 @@ Gfx obj_w_house3_windowL_model[] = {
     gsSPVertex(&obj_w_house3_v[40], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_windowR_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1362,9 +1362,9 @@ Gfx obj_w_house3_windowR_model[] = {
     gsSPVertex(&obj_w_house3_v[44], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_light_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1376,9 +1376,9 @@ Gfx obj_w_house3_light_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 11, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1398,9 +1398,9 @@ Gfx obj_w_house3_t3_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1416,9 +1416,9 @@ Gfx obj_w_house3_t2_model[] = {
     gsSPNTriangles_5b(9, 5, 4, 6, 10, 11, 6, 11, 7, 0, 12, 13),
     gsSPNTriangles_5b(0, 13, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1432,9 +1432,9 @@ Gfx obj_w_house3_t1_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(2, 3, 6, 2, 6, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_name_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1446,9 +1446,9 @@ Gfx obj_w_house3_name_model[] = {
     gsSPVertex(&obj_w_house3_v[96], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house3_door_model[] = {
+GFX_ARR_BEGIN(obj_w_house3_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1460,7 +1460,7 @@ Gfx obj_w_house3_door_model[] = {
     gsSPVertex(obj_w_house3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_house3_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_w_house3_name_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1529,7 +1529,7 @@ Vtx obj_w_house4_v[] = {
 #include "assets/obj_w_house4_v.inc"
 };
 
-Gfx obj_w_house4_windowL_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1539,9 +1539,9 @@ Gfx obj_w_house4_windowL_model[] = {
     gsSPVertex(&obj_w_house4_v[81], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_windowR_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1551,9 +1551,9 @@ Gfx obj_w_house4_windowR_model[] = {
     gsSPVertex(&obj_w_house4_v[85], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_light_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1563,9 +1563,9 @@ Gfx obj_w_house4_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 7, 12, 13),
     gsSPNTriangles_5b(7, 13, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1584,9 +1584,9 @@ Gfx obj_w_house4_t3_model[] = {
     gsSPVertex(&obj_w_house4_v[63], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1602,9 +1602,9 @@ Gfx obj_w_house4_t2_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 10, 9),
     gsSPNTriangles_5b(20, 9, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1618,9 +1618,9 @@ Gfx obj_w_house4_t1_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(6, 0, 3, 6, 3, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_name_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1632,9 +1632,9 @@ Gfx obj_w_house4_name_model[] = {
     gsSPVertex(&obj_w_house4_v[89], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house4_door_model[] = {
+GFX_ARR_BEGIN(obj_w_house4_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1646,7 +1646,7 @@ Gfx obj_w_house4_door_model[] = {
     gsSPVertex(obj_w_house4_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_house4_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_w_house4_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1716,7 +1716,7 @@ Vtx obj_w_house5_v[] = {
 #include "assets/obj_w_house5_v.inc"
 };
 
-Gfx obj_w_house5_windowL_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_windowL_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1726,9 +1726,9 @@ Gfx obj_w_house5_windowL_model[] = {
     gsSPVertex(&obj_w_house5_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_windowR_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_windowR_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -1738,9 +1738,9 @@ Gfx obj_w_house5_windowR_model[] = {
     gsSPVertex(&obj_w_house5_v[24], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_light_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -1753,9 +1753,9 @@ Gfx obj_w_house5_light_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_t3_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_t3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1772,9 +1772,9 @@ Gfx obj_w_house5_t3_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1795,9 +1795,9 @@ Gfx obj_w_house5_t2_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 16, 17, 18, 15, 17, 19, 20, 21, 20, 22, 21),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1811,9 +1811,9 @@ Gfx obj_w_house5_t1_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_name_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_name_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1825,9 +1825,9 @@ Gfx obj_w_house5_name_model[] = {
     gsSPVertex(&obj_w_house5_v[127], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_house5_door_model[] = {
+GFX_ARR_BEGIN(obj_w_house5_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1839,7 +1839,7 @@ Gfx obj_w_house5_door_model[] = {
     gsSPVertex(obj_w_house5_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_house5_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 2000, 0, 0 } },
                                               { obj_w_house5_light_model, 6, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

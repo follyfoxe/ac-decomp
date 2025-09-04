@@ -21,7 +21,7 @@ Vtx tol_utiwa_1_v[] = {
 #include "assets/tol_utiwa_1_v.inc"
 };
 
-Gfx main_utiwa1_model[] = {
+GFX_ARR_BEGIN(main_utiwa1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -36,4 +36,4 @@ Gfx main_utiwa1_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

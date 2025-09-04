@@ -25,7 +25,7 @@ Vtx obj_s_frag_v[] = {
 #include "assets/obj_s_frag_v.inc"
 };
 
-Gfx obj_s_frag_pole_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_pole_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -40,9 +40,9 @@ Gfx obj_s_frag_pole_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_frag_base_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -54,9 +54,9 @@ Gfx obj_s_frag_base_model[] = {
     gsSPVertex(&obj_s_frag_v[108], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_frag_wire_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_wire_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -74,9 +74,9 @@ Gfx obj_s_frag_wire_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 4, 1, 6, 5, 2, 3, 7),
     gsSPNTriangles_5b(3, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_frag_fragA_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_fragA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -91,9 +91,9 @@ Gfx obj_s_frag_fragA_model[] = {
     gsSPNTriangles_5b(8, 11, 9, 11, 12, 9, 11, 13, 12, 13, 11, 14),
     gsSPNTriangles_5b(13, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_frag_fragB_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_fragB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -115,9 +115,9 @@ Gfx obj_s_frag_fragB_model[] = {
     gsSPVertex(&obj_s_frag_v[78], 4, 10),
     gsSPNTrianglesInit_5b(3, 7, 8, 10, 8, 11, 12, 9, 13, 8),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_frag_fragC_model[] = {
+GFX_ARR_BEGIN(obj_s_frag_fragC_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -142,7 +142,7 @@ Gfx obj_s_frag_fragC_model[] = {
     gsSPNTriangles_5b(18, 20, 19, 17, 19, 15, 21, 22, 23, 22, 24, 25),
     gsSPNTriangles_5b(23, 22, 25, 21, 23, 26, 27, 21, 26, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_frag_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 65036, 63536, 0 } },
                                             { obj_s_frag_pole_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -189,7 +189,7 @@ Vtx obj_w_frag_v[] = {
 #include "assets/obj_w_frag_v.inc"
 };
 
-Gfx obj_w_frag_pole_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_pole_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -204,9 +204,9 @@ Gfx obj_w_frag_pole_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_frag_base_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -218,9 +218,9 @@ Gfx obj_w_frag_base_model[] = {
     gsSPVertex(&obj_w_frag_v[108], 6, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 4, 5, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_frag_wire_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_wire_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -238,9 +238,9 @@ Gfx obj_w_frag_wire_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 4, 1, 6, 5, 2, 3, 7),
     gsSPNTriangles_5b(3, 9, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_frag_fragA_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_fragA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -255,9 +255,9 @@ Gfx obj_w_frag_fragA_model[] = {
     gsSPNTriangles_5b(8, 11, 9, 11, 12, 9, 11, 13, 12, 13, 11, 14),
     gsSPNTriangles_5b(13, 14, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_frag_fragB_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_fragB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -279,9 +279,9 @@ Gfx obj_w_frag_fragB_model[] = {
     gsSPVertex(&obj_w_frag_v[78], 4, 10),
     gsSPNTrianglesInit_5b(3, 7, 8, 10, 8, 11, 12, 9, 13, 8),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_frag_fragC_model[] = {
+GFX_ARR_BEGIN(obj_w_frag_fragC_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -306,7 +306,7 @@ Gfx obj_w_frag_fragC_model[] = {
     gsSPNTriangles_5b(18, 20, 19, 17, 19, 15, 21, 22, 23, 22, 24, 25),
     gsSPNTriangles_5b(23, 22, 25, 21, 23, 26, 27, 21, 26, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_frag_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 65036, 63536, 0 } },
                                             { obj_w_frag_pole_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

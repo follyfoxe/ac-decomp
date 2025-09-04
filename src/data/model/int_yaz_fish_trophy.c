@@ -26,7 +26,7 @@ Vtx int_yaz_fish_trophy_v[] = {
 #include "assets/int_yaz_fish_trophy_v.inc"
 };
 
-Gfx int_yaz_fish_trophy_cup_model[] = {
+GFX_ARR_BEGIN(int_yaz_fish_trophy_cup_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -63,9 +63,9 @@ Gfx int_yaz_fish_trophy_cup_model[] = {
                          G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(3, 18, 19, 20, 21, 22, 23, 24, 25, 26),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_yaz_fish_trophy_base_model[] = {
+GFX_ARR_BEGIN(int_yaz_fish_trophy_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -89,4 +89,4 @@ Gfx int_yaz_fish_trophy_base_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

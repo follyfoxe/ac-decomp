@@ -13,7 +13,7 @@ Vtx cal_icon3_v[] = {
 #include "assets/cal_icon3_v.inc"
 };
 
-Gfx cal_icon_sakana_model[] = {
+GFX_ARR_BEGIN(cal_icon_sakana_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 200, 40, 40, 255),
@@ -23,23 +23,23 @@ Gfx cal_icon_sakana_model[] = {
     gsSPVertex(cal_icon3_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_icon_yajirushi_model[] = {
+GFX_ARR_BEGIN(cal_icon_yajirushi_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_icon_yajirushi_gfx[] = {
+GFX_ARR_BEGIN(cal_icon_yajirushi_gfx)
     gsSPVertex(&cal_icon3_v[4], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_icon_yajirushi_gfx2[] = {
+GFX_ARR_BEGIN(cal_icon_yajirushi_gfx2)
     gsSPVertex(&cal_icon3_v[7], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

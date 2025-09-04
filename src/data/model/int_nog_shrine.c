@@ -30,7 +30,7 @@ Vtx int_nog_shrine_v[] = {
 #include "assets/int_nog_shrine_v.inc"
 };
 
-Gfx int_nog_shrine_grass_model[] = {
+GFX_ARR_BEGIN(int_nog_shrine_grass_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,9 +42,9 @@ Gfx int_nog_shrine_grass_model[] = {
     gsSPVertex(int_nog_shrine_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_shrine_figure_model[] = {
+GFX_ARR_BEGIN(int_nog_shrine_figure_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -62,9 +62,9 @@ Gfx int_nog_shrine_figure_model[] = {
     gsSPNTriangles_5b(19, 20, 21, 19, 21, 22, 20, 23, 24, 20, 24, 21),
     gsSPNTriangles_5b(23, 25, 26, 23, 26, 24, 24, 27, 28, 24, 28, 21),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_shrine_baseT_model[] = {
+GFX_ARR_BEGIN(int_nog_shrine_baseT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -92,9 +92,9 @@ Gfx int_nog_shrine_baseT_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPNTriangles_5b(0, 5, 1, 5, 4, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_shrine_waterT_model[] = {
+GFX_ARR_BEGIN(int_nog_shrine_waterT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(1, 0, TEXEL0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -117,4 +117,4 @@ Gfx int_nog_shrine_waterT_model[] = {
     gsSPNTriangles_5b(10, 13, 16, 10, 16, 11, 14, 17, 18, 14, 18, 15),
     gsSPNTriangles_5b(17, 19, 20, 17, 20, 18, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

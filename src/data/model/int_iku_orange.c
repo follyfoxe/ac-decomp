@@ -26,7 +26,7 @@ Vtx int_iku_orange_v[] = {
 #include "assets/int_iku_orange_v.inc"
 };
 
-Gfx int_iku_orange_model_b_model[] = {
+GFX_ARR_BEGIN(int_iku_orange_model_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -46,9 +46,9 @@ Gfx int_iku_orange_model_b_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 22, 16, 17, 22, 17, 23, 19, 10, 13),
     gsSPNTriangles_5b(19, 13, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_iku_orange_model_a_model[] = {
+GFX_ARR_BEGIN(int_iku_orange_model_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -62,4 +62,4 @@ Gfx int_iku_orange_model_a_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 0, 3, 8, 3, 9, 5, 10, 11),
     gsSPNTriangles_5b(5, 11, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

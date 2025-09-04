@@ -30,7 +30,7 @@ Vtx int_nog_gong_v[] = {
 #include "assets/int_nog_gong_v.inc"
 };
 
-Gfx int_nog_gong_bell_model[] = {
+GFX_ARR_BEGIN(int_nog_gong_bell_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,9 +45,9 @@ Gfx int_nog_gong_bell_model[] = {
     gsSPNTriangles_5b(9, 10, 8, 10, 9, 11, 12, 10, 11, 11, 13, 12),
     gsSPNTriangles_5b(13, 14, 12, 13, 15, 14, 14, 15, 6, 15, 7, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_gong_base_model[] = {
+GFX_ARR_BEGIN(int_nog_gong_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -61,9 +61,9 @@ Gfx int_nog_gong_base_model[] = {
     gsSPNTriangles_5b(4, 1, 0, 3, 2, 6, 3, 6, 7, 8, 0, 3),
     gsSPNTriangles_5b(8, 3, 9, 1, 10, 11, 1, 11, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_gong_spring_model[] = {
+GFX_ARR_BEGIN(int_nog_gong_spring_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -75,9 +75,9 @@ Gfx int_nog_gong_spring_model[] = {
     gsSPVertex(&int_nog_gong_v[16], 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_gong_hammer_model[] = {
+GFX_ARR_BEGIN(int_nog_gong_hammer_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -91,7 +91,7 @@ Gfx int_nog_gong_hammer_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 6, 5, 10, 6, 10, 11, 11, 10, 4),
     gsSPNTriangles_5b(11, 4, 3, 12, 13, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_nog_gong_tbl[] = { 0, 0, 0, 2, 0, 2, 2 };
 

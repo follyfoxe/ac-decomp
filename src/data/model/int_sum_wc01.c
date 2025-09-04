@@ -66,7 +66,7 @@ Vtx int_sum_wc01_v[] = {
 #include "assets/int_sum_wc01_v.inc"
 };
 
-Gfx int_sum_wc01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_wc01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -79,9 +79,9 @@ Gfx int_sum_wc01_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 3, 4, 2),
     gsSPNTriangles_5b(4, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_wc01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_wc01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -130,9 +130,9 @@ Gfx int_sum_wc01_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_wc01_envT_model[] = {
+GFX_ARR_BEGIN(int_sum_wc01_envT_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 200),
@@ -145,4 +145,4 @@ Gfx int_sum_wc01_envT_model[] = {
     gsSPVertex(&int_sum_wc01_v[76], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

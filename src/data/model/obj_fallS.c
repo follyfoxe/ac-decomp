@@ -37,7 +37,7 @@ Vtx obj_fallS_v[] = {
 #include "assets/obj_fallS_v.inc"
 };
 
-Gfx obj_fallS_grpAT_model[] = {
+GFX_ARR_BEGIN(obj_fallS_grpAT_model)
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, TEXEL0, 0, TEXEL1, 0, TEXEL0, 0, PRIM_LOD_FRAC, COMBINED, 0, 0,
                        0, COMBINED),
     gsDPSetPrimColor(0, 32, 200, 220, 255, 255),
@@ -51,9 +51,9 @@ Gfx obj_fallS_grpAT_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 1, 5, 2, 6),
     gsSPNTriangles_5b(7, 6, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_fallS_grpBT_model[] = {
+GFX_ARR_BEGIN(obj_fallS_grpBT_model)
     gsDPSetCombineLERP(1, 0, PRIMITIVE, TEXEL0, TEXEL1, 0, TEXEL0, 0, COMBINED, 0, SHADE, TEXEL0, COMBINED, 0,
                        PRIM_LOD_FRAC, 0),
     gsDPSetPrimColor(0, 255, 100, 140, 255, 255),
@@ -68,9 +68,9 @@ Gfx obj_fallS_grpBT_model[] = {
     gsSPNTriangles_5b(5, 8, 9, 5, 9, 6, 9, 10, 7, 9, 7, 6),
     gsSPNTriangles_5b(8, 11, 12, 8, 12, 9, 12, 13, 10, 12, 10, 9),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_fallS_grpDT_model[] = {
+GFX_ARR_BEGIN(obj_fallS_grpDT_model)
     gsDPSetCombineLERP(1, 0, PRIMITIVE, TEXEL0, TEXEL0, 0, TEXEL1, 0, COMBINED, 0, SHADE, TEXEL1, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 32, 100, 140, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 32, 32, obj_fallCA1_tex_rgb_ia8),
@@ -82,9 +82,9 @@ Gfx obj_fallS_grpDT_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 0, 2, 3, 1, 4, 2),
     gsSPNTriangles_5b(4, 5, 2, 1, 6, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_fallS_grpCT_model[] = {
+GFX_ARR_BEGIN(obj_fallS_grpCT_model)
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, ENVIRONMENT, TEXEL0, 0, TEXEL1, TEXEL1, TEXEL1, 0, PRIM_LOD_FRAC, COMBINED,
                        0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 47, 200, 220, 255, 100),
@@ -99,9 +99,9 @@ Gfx obj_fallS_grpCT_model[] = {
     gsSPNTriangles_5b(0, 2, 5, 0, 7, 3, 0, 8, 7, 0, 9, 1),
     gsSPNTriangles_5b(4, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_fallS_rainbowT_model[] = {
+GFX_ARR_BEGIN(obj_fallS_rainbowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, PRIMITIVE, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, COMBINED, 0, TEXEL0, 0),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 120),
@@ -121,9 +121,9 @@ Gfx obj_fallS_rainbowT_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 0, 2, 4, 5, 6),
     gsSPNTriangles_5b(7, 8, 6, 8, 4, 6, 7, 6, 9, 10, 11, 12),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_fallS_model[] = {
+GFX_ARR_BEGIN(obj_fallS_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -132,7 +132,7 @@ Gfx obj_fallS_model[] = {
     gsSPDisplayList(obj_fallS_grpCT_model),
     gsSPDisplayList(obj_fallS_grpDT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 EVW_ANIME_SCROLL obj_fallS_evw_anime_1[] = { { 0, 0, 32, 32 }, { 0, 2, 16, 16 } };
 

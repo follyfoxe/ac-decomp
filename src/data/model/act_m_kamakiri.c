@@ -16,7 +16,7 @@ static Vtx act_m_kamakiri_v[] = {
 #include "assets/act_m_kamakiri/act_m_kamakiri_v.inc"
 };
 
-Gfx act_m_kamakiri1T_model[] = {
+GFX_ARR_BEGIN(act_m_kamakiri1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -30,9 +30,9 @@ Gfx act_m_kamakiri1T_model[] = {
     gsSPNTriangles_5b(1, 6, 7, 1, 8, 6, 9, 4, 5, 9, 1, 4),
     gsSPNTriangles_5b(10, 11, 1, 12, 13, 1, 13, 8, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_kamakiri2_2T_model[] = {
+GFX_ARR_BEGIN(act_m_kamakiri2_2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, COMBINED, 0,
                        ENVIRONMENT, 0),
@@ -45,4 +45,4 @@ Gfx act_m_kamakiri2_2T_model[] = {
     gsSPVertex(&act_m_kamakiri_v[14], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

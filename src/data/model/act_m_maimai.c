@@ -16,7 +16,7 @@ static Vtx act_m_maimai_v[] = {
 #include "assets/act_m_maimai/act_m_maimai_v.inc"
 };
 
-Gfx act_m_maimaiT_model[] = {
+GFX_ARR_BEGIN(act_m_maimaiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, ENVIRONMENT, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -32,4 +32,4 @@ Gfx act_m_maimaiT_model[] = {
     gsSPNTrianglesInit_5b(6, 9, 10, 11, 9, 12, 10, 12, 13, 10),
     gsSPNTriangles_5b(13, 14, 10, 14, 15, 10, 15, 11, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -38,7 +38,7 @@ Vtx int_sum_hal_chest02_v[] = {
 #include "assets/int_sum_hal_chest02_v.inc"
 };
 
-Gfx int_sum_hal_chest01_door_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_chest01_door_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -58,9 +58,9 @@ Gfx int_sum_hal_chest01_door_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_chest02_base_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_chest02_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -98,7 +98,7 @@ Gfx int_sum_hal_chest02_base_model[] = {
     gsSPNTrianglesInit_5b(4, 17, 18, 19, 20, 21, 22, 23, 24, 25),
     gsSPNTriangles_5b(26, 27, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_hal_chest02_tbl[] = { 56, 0, 7 };
 

@@ -33,7 +33,7 @@ Vtx att_win_v[] = {
 #include "assets/att_win_v.inc"
 };
 
-Gfx att_win_cursor_model[] = {
+GFX_ARR_BEGIN(att_win_cursor_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, 0, 0, 0, 0, PRIMITIVE, 0, 0, 0, 0),
     gsDPSetPrimColor(0, 255, 255, 0, 0, 255),
@@ -41,9 +41,9 @@ Gfx att_win_cursor_model[] = {
     gsSPVertex(att_win_v, 3, 0),
     gsSPNTrianglesInit_5b(1, 0, 1, 2, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx att_win_winT_model[] = {
+GFX_ARR_BEGIN(att_win_winT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 0, 0, 255, 255),
@@ -74,9 +74,9 @@ Gfx att_win_winT_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 11, 8, 10, 12, 13, 14),
     gsSPNTriangles_5b(13, 15, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx att_win_mode[] = {
+GFX_ARR_BEGIN(att_win_mode)
     gsDPPipeSync(),
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
@@ -84,10 +84,10 @@ Gfx att_win_mode[] = {
                      G_AC_THRESHOLD | G_ZS_PIXEL | G_RM_PASS | G_RM_AA_TEX_EDGE2),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx att_win_model[] = {
+GFX_ARR_BEGIN(att_win_model)
     gsSPDisplayList(att_win_mode),
     gsSPDisplayList(att_win_winT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -26,7 +26,7 @@ Vtx int_ike_prores_mat01_v[] = {
 #include "assets/int_ike_prores_mat01_v.inc"
 };
 
-Gfx int_ike_prores_mat1_on_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_mat1_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -44,9 +44,9 @@ Gfx int_ike_prores_mat1_on_model[] = {
     gsSPNTrianglesInit_5b(4, 15, 16, 17, 16, 18, 17, 15, 17, 19),
     gsSPNTriangles_5b(17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_prores_mat1_onT_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_mat1_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -60,4 +60,4 @@ Gfx int_ike_prores_mat1_onT_model[] = {
     gsSPNTriangles_5b(6, 7, 4, 8, 9, 10, 10, 11, 8, 12, 13, 14),
     gsSPNTriangles_5b(14, 15, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

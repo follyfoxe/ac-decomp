@@ -17,7 +17,7 @@ void _prolog() {
             (*constructor)();
         }
     }
-    main();
+    main2();
 }
 
 void _epilog() {

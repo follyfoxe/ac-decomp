@@ -38,7 +38,7 @@ Vtx int_sum_raigyo_v[] = {
 #include "assets/int_sum_raigyo_v.inc"
 };
 
-Gfx int_sum_raigyo_sakana_model[] = {
+GFX_ARR_BEGIN(int_sum_raigyo_sakana_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -57,9 +57,9 @@ Gfx int_sum_raigyo_sakana_model[] = {
     gsSPNTrianglesInit_5b(6, 13, 14, 15, 13, 15, 16, 17, 14, 13),
     gsSPNTriangles_5b(18, 17, 13, 19, 18, 13, 19, 13, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_raigyo_top_model[] = {
+GFX_ARR_BEGIN(int_sum_raigyo_top_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -72,9 +72,9 @@ Gfx int_sum_raigyo_top_model[] = {
     gsSPVertex(&int_sum_raigyo_v[41], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_raigyo_evw_model[] = {
+GFX_ARR_BEGIN(int_sum_raigyo_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 80),
@@ -88,9 +88,9 @@ Gfx int_sum_raigyo_evw_model[] = {
     gsSPNTriangles_5b(3, 4, 5, 5, 4, 6, 5, 6, 7, 7, 6, 8),
     gsSPNTriangles_5b(7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_raigyo_base_model[] = {
+GFX_ARR_BEGIN(int_sum_raigyo_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -109,7 +109,7 @@ Gfx int_sum_raigyo_base_model[] = {
     gsSPNTrianglesInit_5b(4, 16, 17, 18, 17, 19, 18, 19, 20, 18),
     gsSPNTriangles_5b(20, 16, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_raigyo_tbl[] = { 56, 7, 0, 0, 7 };
 

@@ -17,7 +17,7 @@ Vtx rom_museum4_wall_v[] = {
 #include "assets/rom_museum4_wall_v.inc"
 };
 
-Gfx rom_museum4_wall_model[] = {
+GFX_ARR_BEGIN(rom_museum4_wall_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -29,4 +29,4 @@ Gfx rom_museum4_wall_model[] = {
     gsSPNTrianglesInit_5b(5, 0, 1, 2, 1, 3, 2, 2, 4, 5),
     gsSPNTriangles_5b(4, 6, 5, 2, 3, 4, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -21,7 +21,7 @@ Vtx ef_axe1_v[] = {
 #include "assets/ef_axe1_v.inc"
 };
 
-Gfx ef_axe1_model[] = {
+GFX_ARR_BEGIN(ef_axe1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -41,7 +41,7 @@ Gfx ef_axe1_model[] = {
     gsSPNTriangles_5b(19, 22, 21, 19, 21, 16, 19, 16, 15, 20, 19, 15),
     gsSPNTriangles_5b(20, 15, 27, 21, 23, 26, 18, 28, 19, 28, 22, 19),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_axe_tuka2_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_axe_tuka2_tex_txt.inc"
@@ -55,7 +55,7 @@ Vtx ef_axe2_v[] = {
 #include "assets/ef_axe2_v.inc"
 };
 
-Gfx ef_axe2_model[] = {
+GFX_ARR_BEGIN(ef_axe2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -75,7 +75,7 @@ Gfx ef_axe2_model[] = {
     gsSPNTriangles_5b(15, 19, 18, 15, 18, 23, 21, 25, 15, 23, 22, 26),
     gsSPNTriangles_5b(16, 15, 25, 23, 20, 15, 26, 20, 23, 14, 19, 15),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_axe_edge3_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_axe_edge3_tex_txt.inc"
@@ -85,7 +85,7 @@ Vtx ef_axe3_v[] = {
 #include "assets/ef_axe3_v.inc"
 };
 
-Gfx ef_axe3_model[] = {
+GFX_ARR_BEGIN(ef_axe3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -97,4 +97,4 @@ Gfx ef_axe3_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(0, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

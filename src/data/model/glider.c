@@ -6,7 +6,7 @@ Vtx glider_v[] = {
 #include "assets/glider_v.inc"
 };
 
-Gfx glider_model[] = {
+GFX_ARR_BEGIN(glider_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_OFF),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -17,5 +17,4 @@ Gfx glider_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
     gsSP2Triangles(6, 7, 8, 0, 4, 9, 10, 0),
     gsSPEndDisplayList(),
-
-};
+GFX_ARR_END

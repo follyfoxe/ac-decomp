@@ -46,7 +46,7 @@ Vtx int_sum_roboconpo_v[] = {
 #include "assets/int_sum_roboconpo_v.inc"
 };
 
-Gfx int_sum_roboconpo_on_model[] = {
+GFX_ARR_BEGIN(int_sum_roboconpo_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -90,7 +90,7 @@ Gfx int_sum_roboconpo_on_model[] = {
     gsSPVertex(&int_sum_roboconpo_v[71], 8, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 5, 3, 6, 7),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_sum_roboconpo_tbl[] = { 0 };
 

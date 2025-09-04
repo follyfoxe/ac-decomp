@@ -16,23 +16,23 @@ static Vtx gam_win1_v[] = {
 #include "assets/bootdata/win1/gam_win1_v.inc"
 };
 
-Gfx gam_win1_cursor_model[] = {
-  gsSPTexture(0, 0, 0, 0, G_ON),
-  gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PASS2),
-  gsDPSetPrimColor(0, 255, 145, 40, 40, 255),
-  gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
-  gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH),
-  gsSPVertex(&gam_win1_v[0], 3, 0),
-  gsSPNTrianglesInit_5b(
-    1, // tri count
-    0, 1, 2, // tri0
-    0, 0, 0, // tri1
-    0, 0, 0 // tri2
-  ),
-  gsSPEndDisplayList(),
-};
+GFX_ARR_BEGIN(gam_win1_cursor_model)
+    gsSPTexture(0, 0, 0, 0, G_ON),
+    gsDPSetCombineMode(G_CC_PRIMITIVE, G_CC_PASS2),
+    gsDPSetPrimColor(0, 255, 145, 40, 40, 255),
+    gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
+    gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH),
+    gsSPVertex(&gam_win1_v[0], 3, 0),
+    gsSPNTrianglesInit_5b(
+      1, // tri count
+      0, 1, 2, // tri0
+      0, 0, 0, // tri1
+      0, 0, 0 // tri2
+    ),
+    gsSPEndDisplayList(),
+GFX_ARR_END
 
-Gfx gam_win1_moji_model[] = {
+GFX_ARR_BEGIN(gam_win1_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 50, 50, 60, 255),
@@ -54,9 +54,9 @@ Gfx gam_win1_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx gam_win1_moji2_model[] = {
+GFX_ARR_BEGIN(gam_win1_moji2_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 90, 90, 155, 255),
@@ -71,9 +71,9 @@ Gfx gam_win1_moji2_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx gam_win1_moji3_model[] = {
+GFX_ARR_BEGIN(gam_win1_moji3_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 90, 90, 155, 255),
@@ -88,9 +88,9 @@ Gfx gam_win1_moji3_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx gam_win1_winT_model[] = {
+GFX_ARR_BEGIN(gam_win1_winT_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 225, 255, 255, 255),
@@ -171,4 +171,4 @@ Gfx gam_win1_winT_model[] = {
     0, 0, 0 // tri3
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END

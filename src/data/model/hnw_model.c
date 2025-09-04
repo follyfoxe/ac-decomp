@@ -8,7 +8,7 @@ Vtx hnw_v[] = {
 #include "assets/hnw_v.inc"
 };
 
-Gfx head_hnw_model[] = {
+GFX_ARR_BEGIN(head_hnw_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPVertex(hnw_v, 12, 0),
@@ -106,9 +106,9 @@ Gfx head_hnw_model[] = {
     gsSPNTrianglesInit_5b(4, 16, 17, 18, 19, 17, 20, 17, 16, 20),
     gsSPNTriangles_5b(18, 21, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx handR_hnw_model[] = {
+GFX_ARR_BEGIN(handR_hnw_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -126,9 +126,9 @@ Gfx handR_hnw_model[] = {
     gsSPNTriangles_5b(16, 10, 12, 11, 10, 7, 7, 8, 5, 7, 10, 16),
     gsSPNTriangles_5b(12, 8, 13, 13, 8, 7, 16, 17, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx handL_hnw_model[] = {
+GFX_ARR_BEGIN(handL_hnw_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -146,9 +146,9 @@ Gfx handL_hnw_model[] = {
     gsSPNTriangles_5b(12, 11, 16, 5, 11, 10, 7, 9, 5, 16, 11, 5),
     gsSPNTriangles_5b(14, 9, 12, 5, 9, 14, 5, 17, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx body_hnw_model[] = {
+GFX_ARR_BEGIN(body_hnw_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -184,7 +184,7 @@ Gfx body_hnw_model[] = {
     gsSPNTriangles_5b(19, 21, 11, 17, 20, 15, 15, 9, 8, 17, 22, 19),
     gsSPNTriangles_5b(10, 12, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_hnw_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 419, 0 } },
                                      { body_hnw_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

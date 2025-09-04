@@ -17,7 +17,7 @@ Vtx obj_s_dump_v[] = {
 #include "assets/obj_s_dump_v.inc"
 };
 
-Gfx obj_s_dump_t1T_model[] = {
+GFX_ARR_BEGIN(obj_s_dump_t1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -36,9 +36,9 @@ Gfx obj_s_dump_t1T_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_dump_t2T_model[] = {
+GFX_ARR_BEGIN(obj_s_dump_t2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -53,13 +53,13 @@ Gfx obj_s_dump_t2T_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dump_s_DL_model[] = {
+GFX_ARR_BEGIN(dump_s_DL_model)
     gsSPDisplayList(obj_s_dump_t1T_model),
     gsSPDisplayList(obj_s_dump_t2T_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_w_dump_t1_tex[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_w_dump_t1_tex.inc"
@@ -73,7 +73,7 @@ Vtx obj_w_dump_v[] = {
 #include "assets/obj_w_dump_v.inc"
 };
 
-Gfx obj_w_dump_t1T_model[] = {
+GFX_ARR_BEGIN(obj_w_dump_t1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -92,9 +92,9 @@ Gfx obj_w_dump_t1T_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_dump_t2T_model[] = {
+GFX_ARR_BEGIN(obj_w_dump_t2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -109,10 +109,10 @@ Gfx obj_w_dump_t2T_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx dump_w_DL_model[] = {
+GFX_ARR_BEGIN(dump_w_DL_model)
     gsSPDisplayList(obj_w_dump_t1T_model),
     gsSPDisplayList(obj_w_dump_t2T_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

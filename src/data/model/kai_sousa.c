@@ -189,7 +189,7 @@ Vtx kai_sousa_v[] = {
 #include "assets/kai_sousa_v.inc"
 };
 
-Gfx kai_sousa_mode[] = {
+GFX_ARR_BEGIN(kai_sousa_mode)
     gsDPPipeSync(),
     gsSPLoadGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
@@ -197,18 +197,18 @@ Gfx kai_sousa_mode[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_CLD_SURF | G_RM_CLD_SURF2),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_lwaku_model[] = {
+GFX_ARR_BEGIN(kai_sousa_lwaku_model)
     gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, kai_sousa_lwaku_tex_rgb_i4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(kai_sousa_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_kirikae_model[] = {
+GFX_ARR_BEGIN(kai_sousa_kirikae_model)
     gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 50, 50, 70, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 32, kai_sousa_kirikae_tex),
@@ -216,9 +216,9 @@ Gfx kai_sousa_kirikae_model[] = {
     gsSPVertex(&kai_sousa_v[4], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_henkan_model[] = {
+GFX_ARR_BEGIN(kai_sousa_henkan_model)
     gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 70, 70, 30, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, kai_sousa_lwaku_tex),
@@ -226,44 +226,44 @@ Gfx kai_sousa_henkan_model[] = {
     gsSPVertex(&kai_sousa_v[8], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_letter_model[] = {
+GFX_ARR_BEGIN(kai_sousa_letter_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, kai_sousa_letters_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&kai_sousa_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_sign_model[] = {
+GFX_ARR_BEGIN(kai_sousa_sign_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, kai_sousa_punct_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&kai_sousa_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_mark_model[] = {
+GFX_ARR_BEGIN(kai_sousa_mark_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 64, 16, kai_sousa_icons_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPVertex(&kai_sousa_v[20], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_yajirushi_model[] = {
+GFX_ARR_BEGIN(kai_sousa_yajirushi_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 215, 195, 40, 255),
     gsSPVertex(&kai_sousa_v[24], 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_lmoji_model[] = {
+GFX_ARR_BEGIN(kai_sousa_lmoji_model)
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 48, 16, anime_1_txt),
@@ -271,9 +271,9 @@ Gfx kai_sousa_lmoji_model[] = {
     gsSPVertex(&kai_sousa_v[31], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_lbuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_lbuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 225, 225, 225, 255),
@@ -283,9 +283,9 @@ Gfx kai_sousa_lbuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[35], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_rbuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_rbuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 225, 225, 225, 255),
@@ -295,9 +295,9 @@ Gfx kai_sousa_rbuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[39], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_controllerT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_controllerT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 215, 215, 215, 255),
@@ -316,9 +316,9 @@ Gfx kai_sousa_controllerT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 12, 13, 14, 13, 15, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_shitaT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_shitaT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -328,9 +328,9 @@ Gfx kai_sousa_shitaT_model[] = {
     gsSPVertex(&kai_sousa_v[59], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_controller2T_model[] = {
+GFX_ARR_BEGIN(kai_sousa_controller2T_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 65, 95, 165, 255),
@@ -340,9 +340,9 @@ Gfx kai_sousa_controller2T_model[] = {
     gsSPVertex(&kai_sousa_v[63], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_mojibanT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_mojibanT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 225, 205, 225, 255),
@@ -357,9 +357,9 @@ Gfx kai_sousa_mojibanT_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(13, 15, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_controllpadT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_controllpadT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 40, 40, 40, 255),
@@ -369,9 +369,9 @@ Gfx kai_sousa_controllpadT_model[] = {
     gsSPVertex(&kai_sousa_v[83], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_ybuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_ybuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -381,9 +381,9 @@ Gfx kai_sousa_ybuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[87], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_xbuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_xbuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -393,9 +393,9 @@ Gfx kai_sousa_xbuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[91], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_3DT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_3DT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 130, 80, 200, 255),
@@ -405,9 +405,9 @@ Gfx kai_sousa_3DT_model[] = {
     gsSPVertex(&kai_sousa_v[95], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_3DstT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_3DstT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 215, 215, 235, 255),
@@ -417,9 +417,9 @@ Gfx kai_sousa_3DstT_model[] = {
     gsSPVertex(&kai_sousa_v[99], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_bbuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_bbuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 155, 165, 255),
@@ -429,9 +429,9 @@ Gfx kai_sousa_bbuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[103], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_abuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_abuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 155, 255, 155, 255),
@@ -441,9 +441,9 @@ Gfx kai_sousa_abuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[107], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_startbuttonT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_startbuttonT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 215, 215, 215, 255),
@@ -453,9 +453,9 @@ Gfx kai_sousa_startbuttonT_model[] = {
     gsSPVertex(&kai_sousa_v[111], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_endT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_endT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 195, 255, 255),
@@ -465,9 +465,9 @@ Gfx kai_sousa_endT_model[] = {
     gsSPVertex(&kai_sousa_v[115], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_cancelT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_cancelT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 255, 215, 215, 255),
@@ -477,9 +477,9 @@ Gfx kai_sousa_cancelT_model[] = {
     gsSPVertex(&kai_sousa_v[119], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_cursorT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_cursorT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 215, 215, 165, 255),
@@ -489,9 +489,9 @@ Gfx kai_sousa_cursorT_model[] = {
     gsSPVertex(&kai_sousa_v[123], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_spaceT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_spaceT_model)
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
     gsDPSetPrimColor(0, 255, 215, 255, 215, 255),
@@ -501,4 +501,4 @@ Gfx kai_sousa_spaceT_model[] = {
     gsSPVertex(&kai_sousa_v[127], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

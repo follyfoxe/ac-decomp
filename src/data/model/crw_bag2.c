@@ -17,7 +17,7 @@ Vtx crw_bag2_v[] = {
 #include "assets/crw_bag2_v.inc"
 };
 
-Gfx crw_bag2_body_model[] = {
+GFX_ARR_BEGIN(crw_bag2_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -37,4 +37,4 @@ Gfx crw_bag2_body_model[] = {
     gsSPNTriangles_5b(19, 10, 7, 20, 16, 14, 5, 16, 21, 22, 23, 24),
     gsSPNTriangles_5b(5, 25, 3, 19, 26, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

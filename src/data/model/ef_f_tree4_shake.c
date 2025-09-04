@@ -10,7 +10,7 @@ Vtx ef_f_tree4_shake_v[] = {
 #include "assets/ef_f_tree4_shake_v.inc"
 };
 
-Gfx ef_f_tree4_shake_leaf_model[] = {
+GFX_ARR_BEGIN(ef_f_tree4_shake_leaf_model)
     gsSPDisplayList(ef_f_tree_leaf_modeset),
     gsSPVertex(ef_f_tree4_shake_v, 10, 0),
     gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
@@ -18,7 +18,7 @@ Gfx ef_f_tree4_shake_leaf_model[] = {
     gsSP2Triangles(5, 6, 7, 0, 6, 8, 7, 0),
     gsSP2Triangles(5, 7, 9, 0, 8, 9, 7, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_ef_f_tree4_shake_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 6000, 0 } },

@@ -13,7 +13,7 @@ Vtx ef_w_palm4_cutL_v[] = {
 #include "assets/ef_w_palm4_cutL_v.inc"
 };
 
-Gfx ef_w_palm4_cutL_leaf_model[] = {
+GFX_ARR_BEGIN(ef_w_palm4_cutL_leaf_model)
     gsSPDisplayList(ef_w_palm_leaf_modeset),
     gsSPVertex(ef_w_palm4_cutL_v, 32, 0),
     gsSPNTrianglesInit_5b(16, 0, 1, 2, 0, 2, 3, 4, 5, 6),
@@ -22,9 +22,9 @@ Gfx ef_w_palm4_cutL_leaf_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 29, 30),
     gsSPNTriangles_5b(28, 30, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx ef_w_palm4_cutL_trunk_model[] = {
+GFX_ARR_BEGIN(ef_w_palm4_cutL_trunk_model)
     gsSPDisplayList(ef_w_palm_trunk_modeset),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 48, obj_w_palm_cutL_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_CLAMP, 0, 0),
@@ -32,7 +32,7 @@ Gfx ef_w_palm4_cutL_trunk_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 1, 4, 5),
     gsSPNTriangles_5b(1, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_ef_w_palm4_cutL_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 64786, 0, 0 } },

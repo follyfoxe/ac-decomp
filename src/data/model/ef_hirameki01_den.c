@@ -13,7 +13,7 @@ Vtx ef_hirameki01_den_v[] = {
 #include "assets/ef_hirameki01_den_v.inc"
 };
 
-Gfx ef_hirameki01_den_modelT[] = {
+GFX_ARR_BEGIN(ef_hirameki01_den_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -24,7 +24,7 @@ Gfx ef_hirameki01_den_modelT[] = {
     gsSPVertex(ef_hirameki01_den_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 ef_hirameki01_1[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/ef_hirameki01_1.inc"
@@ -34,7 +34,7 @@ Vtx ef_hirameki01_hikari_v[] = {
 #include "assets/ef_hirameki01_hikari_v.inc"
 };
 
-Gfx ef_hirameki01_hikari_modelT[] = {
+GFX_ARR_BEGIN(ef_hirameki01_hikari_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -46,4 +46,4 @@ Gfx ef_hirameki01_hikari_modelT[] = {
     gsSPVertex(ef_hirameki01_hikari_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

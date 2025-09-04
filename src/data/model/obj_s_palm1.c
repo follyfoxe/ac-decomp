@@ -11,15 +11,15 @@ Vtx obj_w_palm1_v[] = {
 #include "assets/obj_w_palm1_v.inc"
 };
 
-Gfx obj_s_palm1T_mat_model[] = {
+GFX_ARR_BEGIN(obj_s_palm1T_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 24, obj_s_palm_baby_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 7, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_palm1T_gfx_model[] = {
+GFX_ARR_BEGIN(obj_s_palm1T_gfx_model)
     gsSPVertex(obj_w_palm1_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

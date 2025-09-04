@@ -30,7 +30,7 @@ Vtx int_sum_fruittable01_v[] = {
 #include "assets/int_sum_fruittable01_v.inc"
 };
 
-Gfx int_sum_fruittable01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_fruittable01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -66,4 +66,4 @@ Gfx int_sum_fruittable01_on_model[] = {
     gsSPNTrianglesInit_5b(4, 11, 12, 13, 14, 15, 13, 13, 15, 11),
     gsSPNTriangles_5b(13, 12, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

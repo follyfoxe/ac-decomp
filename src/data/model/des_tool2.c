@@ -29,7 +29,7 @@ Vtx des_tool2_v[] = {
 #include "assets/des_tool2_v.inc"
 };
 
-Gfx des_tool_kao1T_model[] = {
+GFX_ARR_BEGIN(des_tool_kao1T_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -40,9 +40,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(des_tool2_v, 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_tool_kao2T_model[] = {
+GFX_ARR_BEGIN(des_tool_kao2T_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -53,9 +53,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_tool2_v[4], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_tool_kao3T_model[] = {
+GFX_ARR_BEGIN(des_tool_kao3T_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -66,9 +66,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_tool2_v[8], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_tool_kao4T_model[] = {
+GFX_ARR_BEGIN(des_tool_kao4T_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -79,9 +79,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_tool2_v[12], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_tool_kao5T_model[] = {
+GFX_ARR_BEGIN(des_tool_kao5T_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -92,14 +92,14 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_tool2_v[16], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_tool_kao_all_model[] = {
+GFX_ARR_BEGIN(des_tool_kao_all_model)
 gsSPDisplayList(des_tool_kao1T_model),
 gsSPDisplayList(des_tool_kao2T_model),
 gsSPDisplayList(des_tool_kao3T_model),
 gsSPDisplayList(des_tool_kao4T_model),
 gsSPDisplayList(des_tool_kao5T_model),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

@@ -50,7 +50,7 @@ Vtx int_ike_prores_sandbag01_v[] = {
 #include "assets/int_ike_prores_sandbag01_v.inc"
 };
 
-Gfx int_ike_prores_sandbag_chain_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_sandbag_chain_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -72,9 +72,9 @@ Gfx int_ike_prores_sandbag_chain_model[] = {
     gsSPNTriangles_5b(12, 11, 13, 14, 15, 16, 17, 15, 14, 18, 19, 20),
     gsSPNTriangles_5b(20, 19, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_prores_sandbag_body_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_sandbag_body_model)
     gsSPTexture(4000, 5000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -100,9 +100,9 @@ Gfx int_ike_prores_sandbag_body_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 4, 0, 2, 5),
     gsSPNTriangles_5b(4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_prores_sandbag_base_model[] = {
+GFX_ARR_BEGIN(int_ike_prores_sandbag_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -141,7 +141,7 @@ Gfx int_ike_prores_sandbag_base_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 12, 15, 13, 16, 17, 18),
     gsSPNTriangles_5b(16, 19, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_prores_sandbag01_tbl[] = { 56, 7, 0 };
 

@@ -25,15 +25,15 @@ Vtx sousa_ink_v[] = {
 #include "assets/sousa_ink_v.inc"
 };
 
-Gfx kai_sousa_ink_mode[] = {
+GFX_ARR_BEGIN(kai_sousa_ink_mode)
 gsDPPipeSync(),
 gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
 gsDPSetOtherMode(G_AD_DISABLE | G_CD_DISABLE | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE | G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE, G_AC_NONE | G_ZS_PIXEL | G_RM_CLD_SURF | G_RM_CLD_SURF2),
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_ink_model[] = {
+GFX_ARR_BEGIN(kai_sousa_ink_model)
 gsDPSetCycleType(G_CYC_2CYCLE),
 gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_CLD_SURF2),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, COMBINED, 0, TEXEL0, 0),
@@ -48,9 +48,9 @@ gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsDPSetCycleType(G_CYC_1CYCLE),
 gsDPSetRenderMode(G_RM_CLD_SURF, G_RM_CLD_SURF2),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_inktuboT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_inktuboT_model)
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 255, 235, 235, 255),
 gsDPSetEnvColor(40, 50, 50, 255),
@@ -59,9 +59,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&sousa_ink_v[4], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kai_sousa_inkmojiT_model[] = {
+GFX_ARR_BEGIN(kai_sousa_inkmojiT_model)
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 255, 215, 255, 255),
 gsDPSetEnvColor(70, 0, 155, 255),
@@ -70,5 +70,5 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&sousa_ink_v[8], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

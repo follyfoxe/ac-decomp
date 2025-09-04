@@ -13,7 +13,7 @@ static Vtx kan_hyouji_v[] = {
 #include "assets/kan_hyouji/kan_hyouji_v.inc"
 };
 
-Gfx kan_win_cursorT_model[] = {
+GFX_ARR_BEGIN(kan_win_cursorT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0),
     gsDPSetPrimColor(0, 255, 255, 0, 255, 255),
@@ -22,4 +22,4 @@ Gfx kan_win_cursorT_model[] = {
     gsSPVertex(kan_hyouji_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

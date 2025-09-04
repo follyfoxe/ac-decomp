@@ -13,7 +13,7 @@ Vtx obj_station1_shadow_v[] = {
 #include "assets/obj_station1_shadow_v.inc"
 };
 
-Gfx obj_station1_shadow_hiT_model[] = {
+GFX_ARR_BEGIN(obj_station1_shadow_hiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -25,9 +25,9 @@ Gfx obj_station1_shadow_hiT_model[] = {
     gsSPNTriangles_5b(12, 13, 6, 14, 13, 15, 14, 16, 13, 4, 17, 18),
     gsSPNTriangles_5b(9, 11, 8, 10, 9, 8, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_station1_shadow_lowT_model[] = {
+GFX_ARR_BEGIN(obj_station1_shadow_lowT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -39,7 +39,7 @@ Gfx obj_station1_shadow_lowT_model[] = {
     gsSPNTriangles_5b(5, 6, 7, 5, 8, 6, 8, 9, 6, 10, 11, 9),
     gsSPNTriangles_5b(11, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_station2_shadow_tex_txt[] = {
 #include "assets/obj_station2_shadow_tex_txt.inc"
@@ -49,7 +49,7 @@ Vtx obj_station2_shadow_v[] = {
 #include "assets/obj_station2_shadow_v.inc"
 };
 
-Gfx obj_station2_shadow_low_model[] = {
+GFX_ARR_BEGIN(obj_station2_shadow_low_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -61,9 +61,9 @@ Gfx obj_station2_shadow_low_model[] = {
     gsSPNTriangles_5b(7, 8, 0, 7, 0, 9, 10, 11, 12, 10, 12, 13),
     gsSPNTriangles_5b(14, 15, 16, 14, 16, 17, 18, 15, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_station2_shadow_hi_model[] = {
+GFX_ARR_BEGIN(obj_station2_shadow_hi_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -79,7 +79,7 @@ Gfx obj_station2_shadow_hi_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 obj_station3_shadow_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/obj_station3_shadow_tex_txt.inc"
@@ -89,7 +89,7 @@ Vtx obj_station3_shadow_v[] = {
 #include "assets/obj_station3_shadow_v.inc"
 };
 
-Gfx obj_station3_shadow_low_model[] = {
+GFX_ARR_BEGIN(obj_station3_shadow_low_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -101,9 +101,9 @@ Gfx obj_station3_shadow_low_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 6, 8, 7, 9, 10, 11, 9, 11, 12),
     gsSPNTriangles_5b(13, 14, 15, 14, 16, 15, 14, 17, 16, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_station3_shadow_hi_model[] = {
+GFX_ARR_BEGIN(obj_station3_shadow_hi_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -118,4 +118,4 @@ Gfx obj_station3_shadow_hi_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

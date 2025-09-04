@@ -102,7 +102,7 @@ Vtx rom_shop2w_v[] = {
 #include "assets/rom_shop2w_v.inc"
 };
 
-Gfx rom_shop2w_modelT[] = {
+GFX_ARR_BEGIN(rom_shop2w_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 0, 0, 0, 65),
@@ -116,9 +116,9 @@ Gfx rom_shop2w_modelT[] = {
     gsSPNTriangles_5b(12, 13, 10, 14, 15, 16, 14, 17, 15, 15, 18, 16),
     gsSPNTriangles_5b(18, 19, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx rom_shop2w_model[] = {
+GFX_ARR_BEGIN(rom_shop2w_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -259,4 +259,4 @@ Gfx rom_shop2w_model[] = {
     gsSPNTriangles_5b(16, 18, 17, 17, 4, 15, 18, 5, 17, 18, 6, 5),
     gsSPNTriangles_5b(5, 4, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

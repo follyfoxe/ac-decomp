@@ -21,7 +21,7 @@ static u8 obj_s_boat_water2_pic_i4[256];
 
 static Vtx obj_e_boat_v[156];
 
-static Gfx obj_e_boat_boat1_model[] = {
+static GFX_ARR_BEGIN(obj_e_boat_boat1_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -130,9 +130,9 @@ static Gfx obj_e_boat_boat1_model[] = {
                       0, 0, 0  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx obj_e_boat_water1_model[] = {
+static GFX_ARR_BEGIN(obj_e_boat_water1_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -164,9 +164,9 @@ static Gfx obj_e_boat_water1_model[] = {
                       0, 0, 0    // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx obj_e_boat_water2_model[] = {
+static GFX_ARR_BEGIN(obj_e_boat_water2_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -196,9 +196,9 @@ static Gfx obj_e_boat_water2_model[] = {
                       0, 0, 0   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx obj_e_boat_water3_model[] = {
+static GFX_ARR_BEGIN(obj_e_boat_water3_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED,
                        COMBINED, 0, TEXEL0, 0),
@@ -243,9 +243,9 @@ static Gfx obj_e_boat_water3_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx obj_e_boat_oar1_model[] = {
+static GFX_ARR_BEGIN(obj_e_boat_oar1_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -289,7 +289,7 @@ static Gfx obj_e_boat_oar1_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 extern cKF_Joint_R_c cKF_je_r_obj_e_boat_tbl[] = {
     /* joint 0 */ obj_e_boat_boat1_model,

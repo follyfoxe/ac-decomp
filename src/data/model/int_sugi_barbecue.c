@@ -26,7 +26,7 @@ Vtx int_sugi_barbecue_v[] = {
 #include "assets/int_sugi_barbecue_v.inc"
 };
 
-Gfx sugi_barbecue_b_model[] = {
+GFX_ARR_BEGIN(sugi_barbecue_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -39,9 +39,9 @@ Gfx sugi_barbecue_b_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 1, 3, 2, 4, 0, 2),
     gsSPNTriangles_5b(3, 5, 2, 5, 6, 2, 6, 4, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx sugi_barbecue_model[] = {
+GFX_ARR_BEGIN(sugi_barbecue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -95,4 +95,4 @@ Gfx sugi_barbecue_model[] = {
     gsSPNTrianglesInit_5b(4, 12, 13, 14, 15, 16, 17, 15, 17, 18),
     gsSPNTriangles_5b(12, 19, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

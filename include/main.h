@@ -20,7 +20,7 @@ extern int ScreenHeight;
 extern OSThread graphThread;
 extern u8 SegmentBaseAddress[0x40];
 
-void main();
+void main2();
 extern void mainproc(void* val);
 
 #ifdef __cplusplus

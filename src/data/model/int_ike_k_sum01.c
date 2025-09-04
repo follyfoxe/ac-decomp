@@ -22,7 +22,7 @@ Vtx int_ike_k_sum01_v[] = {
 #include "assets/int_ike_k_sum01_v.inc"
 };
 
-Gfx int_ike_k_sum01_body_model[] = {
+GFX_ARR_BEGIN(int_ike_k_sum01_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -62,4 +62,4 @@ Gfx int_ike_k_sum01_body_model[] = {
     gsSPNTriangles_5b(15, 18, 16, 11, 6, 9, 11, 9, 12, 9, 8, 19),
     gsSPNTriangles_5b(9, 19, 14, 14, 19, 17, 14, 17, 15, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

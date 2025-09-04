@@ -13,7 +13,7 @@ Vtx ef_warau01_00_v[] = {
 #include "assets/ef_warau01_00_v.inc"
 };
 
-Gfx ef_warau01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_warau01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -27,13 +27,13 @@ Gfx ef_warau01_00_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_warau01_01_v[] = {
 #include "assets/ef_warau01_01_v.inc"
 };
 
-Gfx ef_warau01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_warau01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -47,13 +47,13 @@ Gfx ef_warau01_01_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_warau01_02_v[] = {
 #include "assets/ef_warau01_02_v.inc"
 };
 
-Gfx ef_warau01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_warau01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -67,13 +67,13 @@ Gfx ef_warau01_02_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 1, 3, 2, 4, 5, 6),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_warau01_03_v[] = {
 #include "assets/ef_warau01_03_v.inc"
 };
 
-Gfx ef_warau01_03_modelT[] = {
+GFX_ARR_BEGIN(ef_warau01_03_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -87,4 +87,4 @@ Gfx ef_warau01_03_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

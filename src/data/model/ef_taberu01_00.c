@@ -13,7 +13,7 @@ Vtx ef_taberu01_00_v[] = {
 #include "assets/ef_taberu01_00_v.inc"
 };
 
-Gfx ef_taberu01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_taberu01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE,
                        COMBINED, 0, 0, 0, COMBINED),
@@ -28,13 +28,13 @@ Gfx ef_taberu01_00_modelT[] = {
     gsSPNTriangles_5b(7, 4, 6, 8, 9, 10, 11, 8, 10, 12, 13, 14),
     gsSPNTriangles_5b(15, 12, 14, 16, 17, 18, 19, 16, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_taberu01_01_v[] = {
 #include "assets/ef_taberu01_01_v.inc"
 };
 
-Gfx ef_taberu01_01_modelT[] = {
+GFX_ARR_BEGIN(ef_taberu01_01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE,
                        COMBINED, 0, 0, 0, COMBINED),
@@ -49,13 +49,13 @@ Gfx ef_taberu01_01_modelT[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_taberu01_02_v[] = {
 #include "assets/ef_taberu01_02_v.inc"
 };
 
-Gfx ef_taberu01_02_modelT[] = {
+GFX_ARR_BEGIN(ef_taberu01_02_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE,
                        COMBINED, 0, 0, 0, COMBINED),
@@ -70,13 +70,13 @@ Gfx ef_taberu01_02_modelT[] = {
     gsSPNTriangles_5b(4, 7, 5, 8, 9, 10, 8, 11, 9, 12, 13, 14),
     gsSPNTriangles_5b(12, 15, 13, 16, 17, 18, 16, 19, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 Vtx ef_taberu01_03_v[] = {
 #include "assets/ef_taberu01_03_v.inc"
 };
 
-Gfx ef_taberu01_03_modelT[] = {
+GFX_ARR_BEGIN(ef_taberu01_03_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE,
                        COMBINED, 0, 0, 0, COMBINED),
@@ -91,4 +91,4 @@ Gfx ef_taberu01_03_modelT[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(13, 15, 14, 16, 17, 18, 17, 19, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

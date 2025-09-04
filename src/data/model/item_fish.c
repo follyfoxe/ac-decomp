@@ -17,7 +17,7 @@ Vtx item_fish_v[] = {
 #include "assets/item_fish_v.inc"
 };
 
-Gfx item_fish_modelT[] = {
+GFX_ARR_BEGIN(item_fish_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -44,4 +44,4 @@ Gfx item_fish_modelT[] = {
     gsSPVertex(item_fish_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

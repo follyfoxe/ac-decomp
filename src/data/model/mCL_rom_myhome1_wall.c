@@ -9,7 +9,7 @@ Vtx mCL_rom_myhome1_wall_v[] = {
 #include "assets/mCL_rom_myhome1_wall_v.inc"
 };
 
-Gfx mCL_rom_myhome1_wall_model[] = {
+GFX_ARR_BEGIN(mCL_rom_myhome1_wall_model)
 gsDPPipeSync(),
 gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
 gsDPSetRenderMode(G_RM_NOOP, G_RM_AA_TEX_EDGE2),
@@ -26,5 +26,5 @@ gsSPVertex(&mCL_rom_myhome1_wall_v[8], 8, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

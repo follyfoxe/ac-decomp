@@ -34,7 +34,7 @@ Vtx int_sum_liccasofa_v[] = {
 #include "assets/int_sum_liccasofa_v.inc"
 };
 
-Gfx int_sum_liccasofa_on_model[] = {
+GFX_ARR_BEGIN(int_sum_liccasofa_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -68,4 +68,4 @@ Gfx int_sum_liccasofa_on_model[] = {
     gsSPNTriangles_5b(2, 5, 3, 6, 7, 8, 6, 8, 9, 5, 4, 7),
     gsSPNTriangles_5b(5, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

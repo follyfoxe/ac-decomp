@@ -69,33 +69,33 @@ u8 des_win_before[] = {
 #include "assets/des_win_before.inc"
 };
 
-Gfx des_win_area1_model[] = {
+GFX_ARR_BEGIN(des_win_area1_model)
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsSPVertex(des_win_v, 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_area2_model[] = {
+GFX_ARR_BEGIN(des_win_area2_model)
 gsSPVertex(&des_win_v[4], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_area3_model[] = {
+GFX_ARR_BEGIN(des_win_area3_model)
 gsSPVertex(&des_win_v[8], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_area4_model[] = {
+GFX_ARR_BEGIN(des_win_area4_model)
 gsSPVertex(&des_win_v[12], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_waku_model[] = {
+GFX_ARR_BEGIN(des_win_waku_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 60, 60, 60, 255),
@@ -104,9 +104,9 @@ gsSPVertex(&des_win_v[16], 8, 0),
 gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
 gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_toubai_model[] = {
+GFX_ARR_BEGIN(des_win_toubai_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -114,9 +114,9 @@ gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
 gsSPVertex(&des_win_v[24], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_main_model[] = {
+GFX_ARR_BEGIN(des_win_main_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -124,9 +124,9 @@ gsDPSetPrimColor(0, 128, 255, 255, 255, 255),
 gsSPVertex(&des_win_v[28], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_grid_model[] = {
+GFX_ARR_BEGIN(des_win_grid_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 0, 0, 0, 100),
@@ -136,23 +136,23 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&des_win_v[32], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_color_before_model[] = {
+GFX_ARR_BEGIN(des_win_color_before_model)
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
 gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, des_win_color_tex),
 gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_color_model[] = {
+GFX_ARR_BEGIN(des_win_color_model)
 gsSPVertex(&des_win_v[36], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_waku2_model[] = {
+GFX_ARR_BEGIN(des_win_waku2_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 60, 60, 60, 255),
@@ -162,18 +162,18 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0,
 gsSPVertex(&des_win_v[96], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_shikiri_model[] = {
+GFX_ARR_BEGIN(des_win_shikiri_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsSPVertex(&des_win_v[100], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_grid2_model[] = {
+GFX_ARR_BEGIN(des_win_grid2_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 60, 85, 70, 120),
@@ -183,9 +183,9 @@ gsSPNTrianglesInit_5b(8, 0, 1, 2, 0, 3, 1, 4, 5, 6),
 gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 8, 11, 9, 12, 13, 14),
 gsSPNTriangles_5b(13, 15, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_shitaT_model[] = {
+GFX_ARR_BEGIN(des_win_shitaT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 85, 55, 55, 255),
@@ -230,9 +230,9 @@ gsSPNTrianglesInit_5b(8, 0, 1, 2, 3, 4, 5, 6, 7, 8),
 gsSPNTriangles_5b(7, 9, 8, 10, 3, 5, 11, 12, 13, 12, 14, 13),
 gsSPNTriangles_5b(1, 15, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_kirikaeT_model[] = {
+GFX_ARR_BEGIN(des_win_kirikaeT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 80, 80, 60, 255),
@@ -243,9 +243,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_win_v[204], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_startT_model[] = {
+GFX_ARR_BEGIN(des_win_startT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 225, 225, 205, 255),
@@ -256,9 +256,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(&des_win_v[208], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_owariT_model[] = {
+GFX_ARR_BEGIN(des_win_owariT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 225, 205, 225, 255),
@@ -269,18 +269,18 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&des_win_v[212], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_before_model[] = {
+GFX_ARR_BEGIN(des_win_before_model)
 gsSPDisplayList(des_win_before),
 gsSPDisplayList(des_win_shitaT_model),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx des_win_before_model_2[] = {
+GFX_ARR_BEGIN(des_win_before_model_2)
 gsSPDisplayList(des_win_startT_model),
 gsSPDisplayList(des_win_owariT_model),
 gsSPDisplayList(des_win_kirikaeT_model),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

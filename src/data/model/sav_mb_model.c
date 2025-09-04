@@ -13,7 +13,7 @@ Vtx sav_v[] = {
 #include "assets/sav_v.inc"
 };
 
-Gfx sav_mb_model[] = {
+GFX_ARR_BEGIN(sav_mb_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_AA_TEX_EDGE2),
@@ -23,4 +23,4 @@ Gfx sav_mb_model[] = {
     gsSPVertex(sav_v, 4, 0),
     gsSPNTriangles(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

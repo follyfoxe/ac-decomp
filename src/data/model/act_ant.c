@@ -9,7 +9,7 @@ Vtx act_ant_v[] = {
 #include "assets/act_ant_v.inc"
 };
 
-Gfx act_antT_model[] = {
+GFX_ARR_BEGIN(act_antT_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 1, 0, TEXEL0, TEXEL1, 0, 0, 0, COMBINED, COMBINED, 0, PRIMITIVE, 0),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -26,4 +26,4 @@ Gfx act_antT_model[] = {
     gsSPNTriangles_5b(8, 9, 7, 8, 5, 9, 5, 10, 9, 2, 3, 5),
     gsSPNTriangles_5b(2, 5, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

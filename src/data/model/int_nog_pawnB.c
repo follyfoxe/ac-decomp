@@ -26,7 +26,7 @@ Vtx int_nog_pawnB_v[] = {
 #include "assets/int_nog_pawnB_v.inc"
 };
 
-Gfx int_nog_pawnB_base_model[] = {
+GFX_ARR_BEGIN(int_nog_pawnB_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -45,9 +45,9 @@ Gfx int_nog_pawnB_base_model[] = {
     gsSPNTriangles_5b(20, 26, 27, 13, 27, 18, 25, 16, 15, 23, 13, 12),
     gsSPNTriangles_5b(5, 11, 26, 9, 24, 7, 6, 5, 22, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_pawnB_top_model[] = {
+GFX_ARR_BEGIN(int_nog_pawnB_top_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -60,7 +60,7 @@ Gfx int_nog_pawnB_top_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPNTriangles_5b(4, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_nog_pawnB_tbl[] = { 0, 0, 0 };
 

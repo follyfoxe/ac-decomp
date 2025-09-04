@@ -17,7 +17,7 @@ static u8 act_m_maimai_tex[] = {
 #include "assets/act_m_maimai2/act_m_maimai_tex.inc"
 };
 
-Gfx act_m_mu_maimaiT_model[] = {
+GFX_ARR_BEGIN(act_m_mu_maimaiT_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -51,4 +51,4 @@ Gfx act_m_mu_maimaiT_model[] = {
     gsSP2Triangles(12, 13, 10, 0, 13, 14, 10, 0),
     gsSP2Triangles(14, 15, 10, 0, 15, 11, 10, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

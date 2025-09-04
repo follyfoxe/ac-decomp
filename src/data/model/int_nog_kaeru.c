@@ -46,7 +46,7 @@ Vtx int_nog_kaeru_v[] = {
 #include "assets/int_nog_kaeru_v.inc"
 };
 
-Gfx int_sum_kaeru_hara_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_hara_model)
     gsSPMatrix(&anime_6_mdl[4], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -66,9 +66,9 @@ Gfx int_sum_kaeru_hara_model[] = {
     gsSPVertex(&int_nog_kaeru_v[30], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 0, 2, 3, 4, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_foot_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_foot_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -80,9 +80,9 @@ Gfx int_sum_kaeru_foot_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 1, 4, 5, 6, 7),
     gsSPNTriangles_5b(8, 9, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_body_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -109,9 +109,9 @@ Gfx int_sum_kaeru_body_model[] = {
     gsSPNTriangles_5b(17, 18, 19, 9, 19, 18, 9, 18, 7, 7, 18, 11),
     gsSPNTriangles_5b(11, 18, 17, 16, 10, 11, 16, 11, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_top_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_top_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -124,9 +124,9 @@ Gfx int_sum_kaeru_top_model[] = {
     gsSPVertex(&int_nog_kaeru_v[109], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_leg_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_leg_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -138,9 +138,9 @@ Gfx int_sum_kaeru_leg_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(9, 10, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_evw_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_evw_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 80),
@@ -154,9 +154,9 @@ Gfx int_sum_kaeru_evw_model[] = {
     gsSPNTriangles_5b(3, 4, 5, 5, 4, 6, 5, 6, 7, 7, 6, 8),
     gsSPNTriangles_5b(7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_kaeru_base_model[] = {
+GFX_ARR_BEGIN(int_sum_kaeru_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -181,7 +181,7 @@ Gfx int_sum_kaeru_base_model[] = {
     gsSPNTrianglesInit_5b(4, 15, 16, 17, 15, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 23, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_nog_kaeru_tbl[] = { 0, 0, 0, 0, 0, 0, 0, 1 };
 

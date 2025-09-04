@@ -6,7 +6,7 @@
 #include "ef_effect_control.h"
 
 extern Vtx act_m_genji2_v[];
-static Vtx act_m_genji2_v[] = {
+Vtx act_m_genji2_v[] = {
 #include "assets/act_m_genji22/act_m_genji2_v.inc"
 };
 
@@ -14,7 +14,7 @@ static u8 act_m_genji_h1_txt[] = {
 #include "assets/act_m_genji22/act_m_genji_h1_txt.inc"
 };
 
-Gfx act_m_mu_genji2_d_model[] = {
+GFX_ARR_BEGIN(act_m_mu_genji2_d_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
@@ -37,9 +37,9 @@ Gfx act_m_mu_genji2_d_model[] = {
     gsSPVertex(act_m_genji2_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_genji2_c_model[] = {
+GFX_ARR_BEGIN(act_m_mu_genji2_c_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
@@ -62,9 +62,9 @@ Gfx act_m_mu_genji2_c_model[] = {
     gsSPVertex(&act_m_genji2_v[4], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_genji2_b_model[] = {
+GFX_ARR_BEGIN(act_m_mu_genji2_b_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
@@ -87,9 +87,9 @@ Gfx act_m_mu_genji2_b_model[] = {
     gsSPVertex(&act_m_genji2_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_genji2_a_model[] = {
+GFX_ARR_BEGIN(act_m_mu_genji2_a_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
@@ -112,4 +112,4 @@ Gfx act_m_mu_genji2_a_model[] = {
     gsSPVertex(&act_m_genji2_v[12], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

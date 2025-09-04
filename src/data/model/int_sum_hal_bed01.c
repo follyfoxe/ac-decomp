@@ -38,7 +38,7 @@ Vtx int_sum_hal_bed01_v[] = {
 #include "assets/int_sum_hal_bed01_v.inc"
 };
 
-Gfx int_sum_hal_bed01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_bed01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -66,9 +66,9 @@ Gfx int_sum_hal_bed01_on_model[] = {
     gsSPNTriangles_5b(7, 1, 0, 7, 0, 8, 1, 3, 2, 3, 6, 2),
     gsSPNTriangles_5b(6, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_hal_bed01_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_hal_bed01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -88,4 +88,4 @@ Gfx int_sum_hal_bed01_onT_model[] = {
     gsSPNTriangles_5b(7, 8, 9, 8, 10, 9, 8, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 0, 16, 1, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

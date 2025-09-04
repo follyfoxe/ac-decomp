@@ -17,7 +17,7 @@ Vtx tol_rope_1_v[] = {
 #include "assets/tol_rope_1_v.inc"
 };
 
-Gfx tol_rope_1T_model[] = {
+GFX_ARR_BEGIN(tol_rope_1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -40,4 +40,4 @@ Gfx tol_rope_1T_model[] = {
     gsSPNTriangles_5b(18, 20, 21, 22, 23, 24, 22, 24, 20, 25, 26, 27),
     gsSPNTriangles_5b(25, 27, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

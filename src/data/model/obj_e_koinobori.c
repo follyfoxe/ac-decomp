@@ -17,7 +17,7 @@ Vtx obj_e_koinobori_v[] = {
 #include "assets/obj_e_koinobori_v.inc"
 };
 
-Gfx obj_e_koinobori_pole_1_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_pole_1_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_koinobori_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -28,9 +28,9 @@ Gfx obj_e_koinobori_pole_1_model[] = {
     gsSPNTriangles_5b(12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19),
     gsSPNTriangles_5b(20, 21, 22, 20, 22, 23, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_rope_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_rope_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -42,9 +42,9 @@ Gfx obj_e_koinobori_rope_model[] = {
     gsSPVertex(&obj_e_koinobori_v[174], 3, 2),
     gsSPNTrianglesInit_5b(2, 1, 2, 3, 1, 4, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_magoiA_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_magoiA_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_2_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_koinobori_t1_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_REPEAT, 0, 0),
@@ -54,9 +54,9 @@ Gfx obj_e_koinobori_magoiA_model[] = {
     gsSPNTriangles_5b(3, 6, 5, 3, 4, 6, 6, 7, 5, 5, 7, 8),
     gsSPNTriangles_5b(8, 4, 9, 5, 8, 9, 1, 5, 9, 4, 0, 9),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_magoiB_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_magoiB_model)
     gsSPMatrix(&anime_6_mdl[9], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -71,9 +71,9 @@ Gfx obj_e_koinobori_magoiB_model[] = {
     gsSPNTriangles_5b(0, 8, 9, 0, 10, 11, 3, 12, 0, 2, 13, 14),
     gsSPNTriangles_5b(2, 15, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_magoiC_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_magoiC_model)
     gsSPMatrix(&anime_6_mdl[10], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -91,9 +91,9 @@ Gfx obj_e_koinobori_magoiC_model[] = {
     gsSPNTriangles_5b(20, 21, 16, 22, 21, 20, 22, 20, 23, 22, 23, 18),
     gsSPNTriangles_5b(18, 17, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_higoiA_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_higoiA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -107,9 +107,9 @@ Gfx obj_e_koinobori_higoiA_model[] = {
     gsSPNTriangles_5b(3, 6, 5, 3, 4, 6, 6, 7, 5, 5, 7, 8),
     gsSPNTriangles_5b(8, 4, 9, 5, 8, 9, 1, 5, 9, 4, 0, 9),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_higoiB_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_higoiB_model)
     gsSPMatrix(&anime_6_mdl[6], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -125,9 +125,9 @@ Gfx obj_e_koinobori_higoiB_model[] = {
     gsSPNTriangles_5b(0, 8, 9, 0, 10, 11, 3, 12, 0, 2, 13, 14),
     gsSPNTriangles_5b(2, 15, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_higoiC_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_higoiC_model)
     gsSPMatrix(&anime_6_mdl[7], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -145,9 +145,9 @@ Gfx obj_e_koinobori_higoiC_model[] = {
     gsSPNTriangles_5b(20, 21, 16, 22, 21, 20, 22, 20, 23, 22, 23, 18),
     gsSPNTriangles_5b(18, 17, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_fukiA_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_fukiA_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_koinobori_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_REPEAT, 0, 0),
@@ -157,9 +157,9 @@ Gfx obj_e_koinobori_fukiA_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 4, 7, 5, 6, 8, 9, 6, 9, 7),
     gsSPNTriangles_5b(8, 10, 11, 8, 11, 9, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_fukiB_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_fukiB_model)
     gsSPMatrix(&anime_6_mdl[3], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -174,9 +174,9 @@ Gfx obj_e_koinobori_fukiB_model[] = {
     gsSPNTriangles_5b(3, 2, 10, 3, 12, 11, 1, 14, 13, 1, 4, 15),
     gsSPNTriangles_5b(4, 3, 16, 4, 18, 17, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_fukiC_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_fukiC_model)
     gsSPMatrix(&anime_6_mdl[4], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -195,9 +195,9 @@ Gfx obj_e_koinobori_fukiC_model[] = {
     gsSPNTriangles_5b(4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14),
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_e_koinobori_yaguruma_model[] = {
+GFX_ARR_BEGIN(obj_e_koinobori_yaguruma_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_1_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 128, 32, obj_e_koinobori_t3_tex_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
@@ -206,7 +206,7 @@ Gfx obj_e_koinobori_yaguruma_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_e_koinobori_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 64536, 63536, 1000 } },

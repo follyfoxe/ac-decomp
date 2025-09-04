@@ -237,7 +237,7 @@ Vtx cal_win_v[] = {
 #include "assets/cal_win_v.inc"
 };
 
-Gfx cal_win_tuki_model[] = {
+GFX_ARR_BEGIN(cal_win_tuki_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(TEXEL0, PRIMITIVE, ENVIRONMENT, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -262,9 +262,9 @@ gsSPNTriangles_5b(22, 23, 18, 24, 22, 18, 18, 12, 0, 0, 24, 18),
 gsSPNTriangles_5b(25, 26, 27, 28, 25, 27, 27, 29, 30, 30, 31, 22),
 gsSPNTriangles_5b(27, 30, 22, 0, 3, 28, 28, 22, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_shita_model[] = {
+GFX_ARR_BEGIN(cal_win_shita_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, PRIMITIVE, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 80, 50, 50, 255),
@@ -272,9 +272,9 @@ gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsSPVertex(&cal_win_v[64], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_futi_model[] = {
+GFX_ARR_BEGIN(cal_win_futi_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 40, 40, 205, 255),
@@ -302,36 +302,36 @@ gsSPNTrianglesInit_5b(8, 0, 1, 2, 3, 0, 2, 4, 5, 6),
 gsSPNTriangles_5b(7, 8, 9, 8, 10, 9, 11, 12, 13, 12, 14, 13),
 gsSPNTriangles_5b(15, 4, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_suuji_model[] = {
+GFX_ARR_BEGIN(cal_win_suuji_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
 gsSPVertex(&cal_win_v[120], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_eventT_model[] = {
+GFX_ARR_BEGIN(cal_win_eventT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
 gsSPVertex(&cal_win_v[124], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_boxT_model[] = {
+GFX_ARR_BEGIN(cal_win_boxT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetRenderMode(G_RM_PASS, G_RM_AA_XLU_SURF2),
 gsSPVertex(&cal_win_v[128], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 2, 3, 0, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_hijituT_model[] = {
+GFX_ARR_BEGIN(cal_win_hijituT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 205, 205, 60, 255),
@@ -352,9 +352,9 @@ gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 16, 16, cal_win_m_tex),
 gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0),
 gsSPNTrianglesInit_5b(2, 16, 17, 18, 17, 19, 18, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_doyouT_model[] = {
+GFX_ARR_BEGIN(cal_win_doyouT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 155, 155, 255, 255),
@@ -365,9 +365,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&cal_win_v[152], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_nitiyouT_model[] = {
+GFX_ARR_BEGIN(cal_win_nitiyouT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 185, 100, 100, 255),
@@ -378,9 +378,9 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_CLAMP, GX_CLAMP, 0, 0)
 gsSPVertex(&cal_win_v[156], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 3, 0, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cal_win_monthT_model[] = {
+GFX_ARR_BEGIN(cal_win_monthT_model)
 gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
 gsDPSetPrimColor(0, 255, 20, 20, 50, 255),
@@ -389,5 +389,5 @@ gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
 gsSPVertex(&cal_win_v[160], 4, 0),
 gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

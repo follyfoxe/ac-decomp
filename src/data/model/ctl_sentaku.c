@@ -13,7 +13,7 @@ Vtx ctl_sentaku_v[] = {
 #include "assets/ctl_sentaku_v.inc"
 };
 
-Gfx ctl_sentaku_taguT_model[] = {
+GFX_ARR_BEGIN(ctl_sentaku_taguT_model)
 gsDPPipeSync(),
 gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0),
 gsSPDisplayList(anime_1_txt + 0x30),
@@ -23,5 +23,5 @@ gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_MIRROR, GX_MIRROR, 0, 
 gsSPVertex(ctl_sentaku_v, 4, 0),
 gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 gsSPEndDisplayList(),
-};
+GFX_ARR_END
 

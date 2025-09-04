@@ -6,7 +6,7 @@
 #include "ef_effect_control.h"
 
 extern Vtx act_m_kamakiri_v[];
-static Vtx act_m_kamakiri_v[] = {
+Vtx act_m_kamakiri_v[] = {
 #include "assets/act_m_kamakiri2/act_m_kamakiri_v.inc"
 };
 
@@ -18,7 +18,7 @@ static u8 act_m_kamakiri[] = {
 #include "assets/act_m_kamakiri2/act_m_kamakiri.inc"
 };
 
-Gfx act_m_mu_kamakiri1T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_kamakiri1T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -55,9 +55,9 @@ Gfx act_m_mu_kamakiri1T_model[] = {
     gsSP2Triangles(9, 4, 1, 0, 10, 1, 11, 0),
     gsSP2Triangles(12, 1, 13, 0, 13, 1, 8, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx act_m_mu_kamakiri2_2T_model[] = {
+GFX_ARR_BEGIN(act_m_mu_kamakiri2_2T_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
@@ -86,4 +86,4 @@ Gfx act_m_mu_kamakiri2_2T_model[] = {
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSP2Triangles(0, 2, 1, 0, 0, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

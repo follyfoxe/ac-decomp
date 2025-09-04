@@ -30,7 +30,7 @@ Vtx crw_biscus4_v[] = {
 #include "assets/crw_biscus4_v.inc"
 };
 
-Gfx crw_biscus4_body_model[] = {
+GFX_ARR_BEGIN(crw_biscus4_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -70,4 +70,4 @@ Gfx crw_biscus4_body_model[] = {
     gsSPNTrianglesInit_5b(4, 24, 25, 26, 26, 25, 27, 27, 25, 28),
     gsSPNTriangles_5b(27, 29, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

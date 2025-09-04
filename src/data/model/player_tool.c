@@ -23,7 +23,7 @@ Vtx tol_axe_1_v[] = {
 #include "assets/tol_axe_1_v.inc"
 };
 
-Gfx tol_axe_1_model[] = {
+GFX_ARR_BEGIN(tol_axe_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -51,7 +51,7 @@ Gfx tol_axe_1_model[] = {
     gsSPNTriangles_5b(3, 4, 10, 0, 2, 11, 7, 0, 11, 7, 11, 8),
     gsSPNTriangles_5b(6, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 tol_axe_1_b_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/tol_axe_1_b_pal.inc"
@@ -73,7 +73,7 @@ Vtx tol_axe_1_b_v[] = {
 #include "assets/tol_axe_1_b_v.inc"
 };
 
-Gfx tol_axe_1_b_model[] = {
+GFX_ARR_BEGIN(tol_axe_1_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -101,7 +101,7 @@ Gfx tol_axe_1_b_model[] = {
     gsSPNTriangles_5b(3, 4, 10, 0, 2, 11, 7, 0, 11, 7, 11, 8),
     gsSPNTriangles_5b(6, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 tol_axe_1_c_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/tol_axe_1_c_pal.inc"
@@ -123,7 +123,7 @@ Vtx tol_axe_1_c_v[] = {
 #include "assets/tol_axe_1_c_v.inc"
 };
 
-Gfx tol_axe_1_c_model[] = {
+GFX_ARR_BEGIN(tol_axe_1_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -150,7 +150,7 @@ Gfx tol_axe_1_c_model[] = {
     gsSPNTriangles_5b(3, 4, 10, 0, 2, 11, 7, 0, 11, 7, 11, 8),
     gsSPNTriangles_5b(6, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 tol_axe_2_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/tol_axe_2_pal.inc"
@@ -172,7 +172,7 @@ Vtx tol_axe_2_v[] = {
 #include "assets/tol_axe_2_v.inc"
 };
 
-Gfx tol_axe_2_model[] = {
+GFX_ARR_BEGIN(tol_axe_2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -200,7 +200,7 @@ Gfx tol_axe_2_model[] = {
     gsSPNTriangles_5b(3, 4, 10, 0, 2, 11, 7, 0, 11, 7, 11, 8),
     gsSPNTriangles_5b(6, 10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 act_m_net1_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/act_m_net1_pal.inc"
@@ -222,7 +222,7 @@ Vtx tol_net_1_v[] = {
 #include "assets/tol_net_1_v.inc"
 };
 
-Gfx main_net_model[] = {
+GFX_ARR_BEGIN(main_net_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -243,9 +243,9 @@ Gfx main_net_model[] = {
     gsSPNTriangles_5b(0, 18, 19, 3, 20, 21, 3, 5, 22, 5, 6, 23),
     gsSPNTriangles_5b(6, 2, 24, 4, 7, 25, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main2_net_model[] = {
+GFX_ARR_BEGIN(main2_net_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -265,9 +265,9 @@ Gfx main2_net_model[] = {
     gsSPNTriangles_5b(3, 10, 11, 2, 6, 12, 5, 4, 13, 6, 1, 14),
     gsSPNTriangles_5b(2, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx e_net_model[] = {
+GFX_ARR_BEGIN(e_net_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -293,7 +293,7 @@ Gfx e_net_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 0, 2, 1, 4, 2),
     gsSPNTriangles_5b(5, 3, 2, 6, 5, 2, 4, 6, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_net_1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -326,7 +326,7 @@ Vtx tol_net_2_v[] = {
 #include "assets/tol_net_2_v.inc"
 };
 
-Gfx main_netB_model[] = {
+GFX_ARR_BEGIN(main_netB_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -347,9 +347,9 @@ Gfx main_netB_model[] = {
     gsSPNTriangles_5b(1, 19, 20, 3, 21, 22, 3, 5, 23, 5, 6, 24),
     gsSPNTriangles_5b(6, 2, 25, 4, 0, 26, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main2_netB_model[] = {
+GFX_ARR_BEGIN(main2_netB_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -369,9 +369,9 @@ Gfx main2_netB_model[] = {
     gsSPNTriangles_5b(3, 10, 11, 2, 6, 12, 5, 4, 13, 6, 1, 14),
     gsSPNTriangles_5b(2, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx e_netB_model[] = {
+GFX_ARR_BEGIN(e_netB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -397,7 +397,7 @@ Gfx e_netB_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 0, 2, 1, 4, 2),
     gsSPNTriangles_5b(5, 3, 2, 6, 5, 2, 4, 6, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_net_2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 100, 0, 4000 } },
@@ -569,7 +569,7 @@ Vtx tol_sao_1_v[] = {
 #include "assets/tol_sao_1_v.inc"
 };
 
-Gfx main1_sao_model[] = {
+GFX_ARR_BEGIN(main1_sao_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -582,9 +582,9 @@ Gfx main1_sao_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 2, 1, 3, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 4, 5, 1, 0, 5, 1, 5, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main2_sao_model[] = {
+GFX_ARR_BEGIN(main2_sao_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -603,9 +603,9 @@ Gfx main2_sao_model[] = {
     gsSPNTrianglesInit_5b(6, 12, 13, 14, 12, 14, 15, 13, 16, 17),
     gsSPNTriangles_5b(13, 17, 14, 16, 12, 15, 16, 15, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main3_sao_model[] = {
+GFX_ARR_BEGIN(main3_sao_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -624,9 +624,9 @@ Gfx main3_sao_model[] = {
     gsSPNTrianglesInit_5b(6, 12, 13, 14, 12, 14, 15, 16, 12, 15),
     gsSPNTriangles_5b(16, 15, 17, 13, 16, 17, 13, 17, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main4_sao_model[] = {
+GFX_ARR_BEGIN(main4_sao_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -644,7 +644,7 @@ Gfx main4_sao_model[] = {
     gsSPNTriangles_5b(1, 7, 8, 0, 1, 9, 0, 10, 11, 0, 0, 0),
     gsSPNTrianglesInit_5b(3, 12, 13, 14, 13, 15, 14, 15, 12, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_sao_1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { main1_sao_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -666,7 +666,7 @@ Vtx tol_sao_2_v[] = {
 #include "assets/tol_sao_2_v.inc"
 };
 
-Gfx main1_saoB_model[] = {
+GFX_ARR_BEGIN(main1_saoB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -679,9 +679,9 @@ Gfx main1_saoB_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 2, 1, 3, 2, 3, 4),
     gsSPNTriangles_5b(0, 2, 4, 0, 4, 5, 1, 0, 5, 1, 5, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main2_saoB_model[] = {
+GFX_ARR_BEGIN(main2_saoB_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -700,9 +700,9 @@ Gfx main2_saoB_model[] = {
     gsSPNTrianglesInit_5b(6, 12, 13, 14, 12, 14, 15, 13, 16, 17),
     gsSPNTriangles_5b(13, 17, 14, 16, 12, 15, 16, 15, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main3_saoB_model[] = {
+GFX_ARR_BEGIN(main3_saoB_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -721,9 +721,9 @@ Gfx main3_saoB_model[] = {
     gsSPNTrianglesInit_5b(6, 12, 13, 14, 12, 14, 15, 16, 12, 15),
     gsSPNTriangles_5b(16, 15, 17, 13, 16, 17, 13, 17, 14, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx main4_saoB_model[] = {
+GFX_ARR_BEGIN(main4_saoB_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -741,7 +741,7 @@ Gfx main4_saoB_model[] = {
     gsSPNTriangles_5b(1, 7, 8, 0, 1, 9, 0, 10, 11, 0, 0, 0),
     gsSPNTrianglesInit_5b(3, 12, 13, 14, 13, 15, 14, 15, 12, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_sao_2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { main1_saoB_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -906,7 +906,7 @@ Vtx tol_scoop_1_v[] = {
 #include "assets/tol_scoop_1_v.inc"
 };
 
-Gfx tol_scoop_1_model[] = {
+GFX_ARR_BEGIN(tol_scoop_1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -950,7 +950,7 @@ Gfx tol_scoop_1_model[] = {
     gsSPNTriangles_5b(9, 18, 19, 9, 19, 10, 19, 13, 10, 14, 16, 11),
     gsSPNTriangles_5b(14, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u16 tol_scoop_2_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/tol_scoop_2_pal.inc"
@@ -980,7 +980,7 @@ Vtx tol_scoop_2_v[] = {
 #include "assets/tol_scoop_2_v.inc"
 };
 
-Gfx tol_scoop_2_model[] = {
+GFX_ARR_BEGIN(tol_scoop_2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -1024,7 +1024,7 @@ Gfx tol_scoop_2_model[] = {
     gsSPNTriangles_5b(9, 18, 19, 9, 19, 10, 19, 13, 10, 14, 16, 11),
     gsSPNTriangles_5b(14, 11, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u8 tol_balloon1_wire_tex_txt[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_balloon1_wire_tex_txt.inc"
@@ -1038,7 +1038,7 @@ Vtx tol_balloon1_v[] = {
 #include "assets/tol_balloon1_v.inc"
 };
 
-Gfx tol_balloonA_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonA_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1050,9 +1050,9 @@ Gfx tol_balloonA_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonA_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonA_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1072,9 +1072,9 @@ Gfx tol_balloonA_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonA_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonA_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1094,9 +1094,9 @@ Gfx tol_balloonA_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonA_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonA_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1118,7 +1118,7 @@ Gfx tol_balloonA_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonA_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1142,7 +1142,7 @@ Vtx tol_balloon2_v[] = {
 #include "assets/tol_balloon2_v.inc"
 };
 
-Gfx tol_balloonB_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonB_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1154,9 +1154,9 @@ Gfx tol_balloonB_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonB_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonB_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1176,9 +1176,9 @@ Gfx tol_balloonB_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonB_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonB_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1198,9 +1198,9 @@ Gfx tol_balloonB_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonB_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonB_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1222,7 +1222,7 @@ Gfx tol_balloonB_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonB_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1246,7 +1246,7 @@ Vtx tol_balloon3_v[] = {
 #include "assets/tol_balloon3_v.inc"
 };
 
-Gfx tol_balloonC_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonC_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1258,9 +1258,9 @@ Gfx tol_balloonC_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonC_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonC_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1280,9 +1280,9 @@ Gfx tol_balloonC_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonC_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonC_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1302,9 +1302,9 @@ Gfx tol_balloonC_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonC_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonC_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1326,7 +1326,7 @@ Gfx tol_balloonC_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon3_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1352,7 +1352,7 @@ Vtx tol_balloon4_v[] = {
 #include "assets/tol_balloon4_v.inc"
 };
 
-Gfx tol_balloonD_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonD_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1364,9 +1364,9 @@ Gfx tol_balloonD_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonD_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonD_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1386,9 +1386,9 @@ Gfx tol_balloonD_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonD_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonD_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1408,9 +1408,9 @@ Gfx tol_balloonD_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonD_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonD_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1432,7 +1432,7 @@ Gfx tol_balloonD_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon4_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonD_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1456,7 +1456,7 @@ Vtx tol_balloon5_v[] = {
 #include "assets/tol_balloon5_v.inc"
 };
 
-Gfx tol_balloonE_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonE_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1468,9 +1468,9 @@ Gfx tol_balloonE_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonE_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonE_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1490,9 +1490,9 @@ Gfx tol_balloonE_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonE_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonE_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1512,9 +1512,9 @@ Gfx tol_balloonE_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonE_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonE_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1536,7 +1536,7 @@ Gfx tol_balloonE_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon5_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonE_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1560,7 +1560,7 @@ Vtx tol_balloon6_v[] = {
 #include "assets/tol_balloon6_v.inc"
 };
 
-Gfx tol_balloonF_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonF_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1572,9 +1572,9 @@ Gfx tol_balloonF_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonF_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonF_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1594,9 +1594,9 @@ Gfx tol_balloonF_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonF_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonF_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1616,9 +1616,9 @@ Gfx tol_balloonF_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonF_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonF_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1665,7 +1665,7 @@ Gfx tol_balloonF_head_model[] = {
     gsSPNTriangles_5b(23, 20, 8, 23, 8, 7, 24, 5, 25, 24, 22, 5),
     gsSPNTriangles_5b(24, 19, 22, 18, 19, 24, 18, 24, 0, 18, 0, 15),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon6_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonF_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1689,7 +1689,7 @@ Vtx tol_balloon7_v[] = {
 #include "assets/tol_balloon7_v.inc"
 };
 
-Gfx tol_balloonG_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonG_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1701,9 +1701,9 @@ Gfx tol_balloonG_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonG_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonG_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1723,9 +1723,9 @@ Gfx tol_balloonG_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonG_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonG_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1745,9 +1745,9 @@ Gfx tol_balloonG_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonG_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonG_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1794,7 +1794,7 @@ Gfx tol_balloonG_head_model[] = {
     gsSPNTriangles_5b(23, 20, 8, 23, 8, 7, 24, 5, 25, 24, 22, 5),
     gsSPNTriangles_5b(24, 19, 22, 18, 19, 24, 18, 24, 0, 18, 0, 15),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon7_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonG_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -1818,7 +1818,7 @@ Vtx tol_balloon8_v[] = {
 #include "assets/tol_balloon8_v.inc"
 };
 
-Gfx tol_balloonH_a_model[] = {
+GFX_ARR_BEGIN(tol_balloonH_a_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1830,9 +1830,9 @@ Gfx tol_balloonH_a_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 5, 6, 3),
     gsSPNTriangles_5b(2, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonH_b_model[] = {
+GFX_ARR_BEGIN(tol_balloonH_b_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1852,9 +1852,9 @@ Gfx tol_balloonH_b_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonH_c_model[] = {
+GFX_ARR_BEGIN(tol_balloonH_c_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -1874,9 +1874,9 @@ Gfx tol_balloonH_c_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 13, 14, 15, 12, 16, 10),
     gsSPNTriangles_5b(15, 17, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_balloonH_head_model[] = {
+GFX_ARR_BEGIN(tol_balloonH_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -1923,7 +1923,7 @@ Gfx tol_balloonH_head_model[] = {
     gsSPNTriangles_5b(23, 20, 8, 23, 8, 7, 24, 5, 25, 24, 22, 5),
     gsSPNTriangles_5b(24, 19, 22, 18, 19, 24, 18, 24, 0, 18, 0, 15),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_balloon8_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                               { tol_balloonH_a_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2031,7 +2031,7 @@ Vtx tol_kaza1_v[] = {
 #include "assets/tol_kaza1_v.inc"
 };
 
-Gfx tol_kaza1_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza1_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2044,9 +2044,9 @@ Gfx tol_kaza1_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza1_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza1_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2069,7 +2069,7 @@ Gfx tol_kaza1_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza1_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza1_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2097,7 +2097,7 @@ Vtx tol_kaza2_v[] = {
 #include "assets/tol_kaza2_v.inc"
 };
 
-Gfx tol_kaza2_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza2_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2110,9 +2110,9 @@ Gfx tol_kaza2_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza2_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza2_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2135,7 +2135,7 @@ Gfx tol_kaza2_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza2_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza2_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2163,7 +2163,7 @@ Vtx tol_kaza3_v[] = {
 #include "assets/tol_kaza3_v.inc"
 };
 
-Gfx tol_kaza3_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza3_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2176,9 +2176,9 @@ Gfx tol_kaza3_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza3_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza3_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2201,7 +2201,7 @@ Gfx tol_kaza3_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza3_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza3_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2229,7 +2229,7 @@ Vtx tol_kaza4_v[] = {
 #include "assets/tol_kaza4_v.inc"
 };
 
-Gfx tol_kaza4_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza4_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2242,9 +2242,9 @@ Gfx tol_kaza4_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza4_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza4_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2267,7 +2267,7 @@ Gfx tol_kaza4_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza4_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza4_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2295,7 +2295,7 @@ Vtx tol_kaza5_v[] = {
 #include "assets/tol_kaza5_v.inc"
 };
 
-Gfx tol_kaza5_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza5_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2308,9 +2308,9 @@ Gfx tol_kaza5_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza5_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza5_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2333,7 +2333,7 @@ Gfx tol_kaza5_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza5_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza5_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2361,7 +2361,7 @@ Vtx tol_kaza6_v[] = {
 #include "assets/tol_kaza6_v.inc"
 };
 
-Gfx tol_kaza6_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza6_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2374,9 +2374,9 @@ Gfx tol_kaza6_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza6_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza6_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2399,7 +2399,7 @@ Gfx tol_kaza6_fan_model[] = {
     gsSPNTriangles_5b(12, 13, 11, 13, 14, 11, 13, 15, 14, 16, 17, 18),
     gsSPNTriangles_5b(16, 18, 10, 19, 16, 10, 11, 19, 10, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza6_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza6_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2431,7 +2431,7 @@ Vtx tol_kaza7_v[] = {
 #include "assets/tol_kaza7_v.inc"
 };
 
-Gfx tol_kaza7_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza7_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2444,9 +2444,9 @@ Gfx tol_kaza7_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza7_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza7_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2509,7 +2509,7 @@ Gfx tol_kaza7_fan_model[] = {
     gsSPNTrianglesInit_5b(2, 16, 17, 18, 16, 19, 17, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 20, 21, 22, 20, 23, 21, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza7_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza7_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2545,7 +2545,7 @@ Vtx tol_kaza8_v[] = {
 #include "assets/tol_kaza8_v.inc"
 };
 
-Gfx tol_kaza8_base_model[] = {
+GFX_ARR_BEGIN(tol_kaza8_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2558,9 +2558,9 @@ Gfx tol_kaza8_base_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 3, 0, 2, 1, 3),
     gsSPNTriangles_5b(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tol_kaza8_fan_model[] = {
+GFX_ARR_BEGIN(tol_kaza8_fan_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2620,7 +2620,7 @@ Gfx tol_kaza8_fan_model[] = {
     gsSPVertex(&tol_kaza8_v[112], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 1, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_tol_kaza8_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
                                            { tol_kaza8_base_model, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -2657,7 +2657,7 @@ Vtx tol_fan1_v[] = {
 #include "assets/tol_fan1_v.inc"
 };
 
-Gfx tol_fan1_model[] = {
+GFX_ARR_BEGIN(tol_fan1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2670,7 +2670,7 @@ Gfx tol_fan1_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan2_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan2_pal.inc"
@@ -2684,7 +2684,7 @@ Vtx tol_fan2_v[] = {
 #include "assets/tol_fan2_v.inc"
 };
 
-Gfx tol_fan2_model[] = {
+GFX_ARR_BEGIN(tol_fan2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2697,7 +2697,7 @@ Gfx tol_fan2_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan3_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan3_pal.inc"
@@ -2711,7 +2711,7 @@ Vtx tol_fan3_v[] = {
 #include "assets/tol_fan3_v.inc"
 };
 
-Gfx tol_fan3_model[] = {
+GFX_ARR_BEGIN(tol_fan3_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2724,7 +2724,7 @@ Gfx tol_fan3_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan4_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan4_pal.inc"
@@ -2738,7 +2738,7 @@ Vtx tol_fan4_v[] = {
 #include "assets/tol_fan4_v.inc"
 };
 
-Gfx tol_fan4_model[] = {
+GFX_ARR_BEGIN(tol_fan4_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2751,7 +2751,7 @@ Gfx tol_fan4_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan5_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan5_pal.inc"
@@ -2765,7 +2765,7 @@ Vtx tol_fan5_v[] = {
 #include "assets/tol_fan5_v.inc"
 };
 
-Gfx tol_fan5_model[] = {
+GFX_ARR_BEGIN(tol_fan5_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2778,7 +2778,7 @@ Gfx tol_fan5_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan6_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan6_pal.inc"
@@ -2792,7 +2792,7 @@ Vtx tol_fan6_v[] = {
 #include "assets/tol_fan6_v.inc"
 };
 
-Gfx tol_fan6_model[] = {
+GFX_ARR_BEGIN(tol_fan6_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2810,7 +2810,7 @@ Gfx tol_fan6_model[] = {
     gsSPNTriangles_5b(9, 10, 11, 12, 13, 14, 15, 16, 17, 2, 18, 0),
     gsSPNTriangles_5b(5, 19, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan7_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan7_pal.inc"
@@ -2824,7 +2824,7 @@ Vtx tol_fan7_v[] = {
 #include "assets/tol_fan7_v.inc"
 };
 
-Gfx tol_fan7_model[] = {
+GFX_ARR_BEGIN(tol_fan7_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2837,7 +2837,7 @@ Gfx tol_fan7_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 static u16 tol_fan8_pal[] ATTRIBUTE_ALIGN(32) = {
 #include "assets/player_tool/tol_fan8_pal.inc"
@@ -2851,7 +2851,7 @@ Vtx tol_fan8_v[] = {
 #include "assets/tol_fan8_v.inc"
 };
 
-Gfx tol_fan8_model[] = {
+GFX_ARR_BEGIN(tol_fan8_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -2864,4 +2864,4 @@ Gfx tol_fan8_model[] = {
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 5, 6, 4, 6, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

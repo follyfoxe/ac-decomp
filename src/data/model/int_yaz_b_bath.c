@@ -34,7 +34,7 @@ Vtx int_yaz_b_bath_v[] = {
 #include "assets/int_yaz_b_bath_v.inc"
 };
 
-Gfx int_yaz_b_bath_water_model[] = {
+GFX_ARR_BEGIN(int_yaz_b_bath_water_model)
     gsSPTexture(4500, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0,
                        SHADE, 0, 0, 0, 0, COMBINED),
@@ -49,9 +49,9 @@ Gfx int_yaz_b_bath_water_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 2, 3, 0),
     gsSPNTriangles_5b(5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_yaz_b_bath_body_model[] = {
+GFX_ARR_BEGIN(int_yaz_b_bath_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -86,4 +86,4 @@ Gfx int_yaz_b_bath_body_model[] = {
     gsSPNTriangles_5b(11, 13, 14, 11, 14, 12, 13, 7, 9, 13, 9, 14),
     gsSPNTriangles_5b(7, 10, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

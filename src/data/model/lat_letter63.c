@@ -20,7 +20,7 @@ Vtx lat_letter63_v[] = {
 #include "assets/lat_letter63_v.inc"
 };
 
-Gfx lat_letter63_win_model[] = {
+GFX_ARR_BEGIN(lat_letter63_win_model)
     gsDPSetRenderMode(G_RM_OPA_SURF, G_RM_OPA_SURF2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter63_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 16, lat_letter63_cloth9_tex),
@@ -68,13 +68,13 @@ Gfx lat_letter63_win_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 3, 1, 4, 5, 6),
     gsSPNTriangles_5b(4, 7, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter63_senT_model[] = {
+GFX_ARR_BEGIN(lat_letter63_senT_model)
     gsDPSetPrimColor(0, 255, 200, 0, 0, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 16, 16, lat_letter63_fusen_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPVertex(&lat_letter63_v[96], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

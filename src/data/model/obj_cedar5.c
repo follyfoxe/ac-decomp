@@ -11,14 +11,14 @@ Vtx obj_cedar5_shadow_v[] = {
 #include "assets/obj_cedar5_shadow_v.inc"
 };
 
-Gfx obj_cedar5_shadowT_mat_model[] = {
+GFX_ARR_BEGIN(obj_cedar5_shadowT_mat_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_4b, 32, 32, obj_cedar_shadow_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_CLAMP, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_cedar5_shadowT_gfx_model[] = {
+GFX_ARR_BEGIN(obj_cedar5_shadowT_gfx_model)
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

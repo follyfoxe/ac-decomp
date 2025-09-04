@@ -17,7 +17,7 @@ Vtx act_darumaB_v[] = {
 #include "assets/act_darumaB_v.inc"
 };
 
-Gfx act_darumaB_model[] = {
+GFX_ARR_BEGIN(act_darumaB_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -60,4 +60,4 @@ Gfx act_darumaB_model[] = {
     gsSP2Triangles(27, 5, 4, 0, 27, 4, 2, 0),
     gsSP2Triangles(23, 27, 2, 0, 2, 1, 23, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

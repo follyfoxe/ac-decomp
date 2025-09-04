@@ -33,7 +33,7 @@ Vtx hnd_v[] = {
 #include "assets/hnd_v.inc"
 };
 
-Gfx ko_hnd_model[] = {
+GFX_ARR_BEGIN(ko_hnd_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -49,9 +49,9 @@ Gfx ko_hnd_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 5, 16, 1, 6, 17, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx koT_hnd_model[] = {
+GFX_ARR_BEGIN(koT_hnd_model)
     gsSPMatrix(&anime_6_mdl[10], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -67,9 +67,9 @@ Gfx koT_hnd_model[] = {
     gsSPNTrianglesInit_5b(6, 16, 17, 18, 18, 17, 19, 19, 20, 21),
     gsSPNTriangles_5b(16, 19, 17, 20, 19, 16, 19, 21, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kusuri_hnd_model[] = {
+GFX_ARR_BEGIN(kusuri_hnd_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -85,9 +85,9 @@ Gfx kusuri_hnd_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 5, 16, 2, 6, 17, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx kusuriT_hnd_model[] = {
+GFX_ARR_BEGIN(kusuriT_hnd_model)
     gsSPMatrix(&anime_6_mdl[8], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -103,9 +103,9 @@ Gfx kusuriT_hnd_model[] = {
     gsSPNTrianglesInit_5b(6, 16, 17, 18, 19, 20, 21, 18, 17, 19),
     gsSPNTriangles_5b(19, 17, 16, 16, 20, 19, 18, 19, 21, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx naka_hnd_model[] = {
+GFX_ARR_BEGIN(naka_hnd_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -121,9 +121,9 @@ Gfx naka_hnd_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 3, 4, 15, 3, 16, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx nakaT_hnd_model[] = {
+GFX_ARR_BEGIN(nakaT_hnd_model)
     gsSPMatrix(&anime_6_mdl[6], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -139,9 +139,9 @@ Gfx nakaT_hnd_model[] = {
     gsSPNTrianglesInit_5b(6, 16, 17, 18, 19, 20, 21, 17, 16, 20),
     gsSPNTriangles_5b(18, 17, 21, 21, 17, 19, 20, 19, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hito_hnd_model[] = {
+GFX_ARR_BEGIN(hito_hnd_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -157,9 +157,9 @@ Gfx hito_hnd_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(2, 4, 0, 15, 4, 16, 17, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx hitoT_hnd_model[] = {
+GFX_ARR_BEGIN(hitoT_hnd_model)
     gsSPMatrix(&anime_6_mdl[4], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -175,9 +175,9 @@ Gfx hitoT_hnd_model[] = {
     gsSPNTrianglesInit_5b(6, 16, 17, 18, 18, 17, 19, 20, 18, 21),
     gsSPNTriangles_5b(20, 16, 18, 19, 17, 16, 21, 18, 19, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx oya_hnd_model[] = {
+GFX_ARR_BEGIN(oya_hnd_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -201,9 +201,9 @@ Gfx oya_hnd_model[] = {
     gsSPNTriangles_5b(5, 4, 3, 6, 5, 7, 8, 2, 1, 4, 5, 9),
     gsSPNTriangles_5b(9, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx oyaT_hnd_model[] = {
+GFX_ARR_BEGIN(oyaT_hnd_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -219,9 +219,9 @@ Gfx oyaT_hnd_model[] = {
     gsSPNTrianglesInit_5b(5, 20, 21, 22, 21, 20, 23, 22, 21, 24),
     gsSPNTriangles_5b(21, 23, 25, 21, 25, 24, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx body_hnd_model[] = {
+GFX_ARR_BEGIN(body_hnd_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, hnd_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 8, 8, hnd_white_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
@@ -255,7 +255,7 @@ Gfx body_hnd_model[] = {
     gsSPNTriangles_5b(20, 19, 23, 21, 12, 15, 21, 23, 12, 14, 22, 15),
     gsSPNTriangles_5b(16, 22, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_hnd_sasu_tbl[] = { 0, 7, 0, 0, 7, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 

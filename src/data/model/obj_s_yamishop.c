@@ -25,7 +25,7 @@ Vtx obj_s_yamishop_v[] = {
 #include "assets/obj_s_yamishop_v.inc"
 };
 
-Gfx obj_s_yamishop_window_model[] = {
+GFX_ARR_BEGIN(obj_s_yamishop_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -36,9 +36,9 @@ Gfx obj_s_yamishop_window_model[] = {
     gsSPVertex(&obj_s_yamishop_v[62], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_yamishop_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_yamishop_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -56,9 +56,9 @@ Gfx obj_s_yamishop_t1_model[] = {
     gsSPNTriangles_5b(26, 0, 3, 26, 27, 0, 27, 24, 0, 16, 20, 28),
     gsSPNTriangles_5b(22, 16, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_yamishop_light_model[] = {
+GFX_ARR_BEGIN(obj_s_yamishop_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -70,9 +70,9 @@ Gfx obj_s_yamishop_light_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_yamishop_door1_model[] = {
+GFX_ARR_BEGIN(obj_s_yamishop_door1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -89,9 +89,9 @@ Gfx obj_s_yamishop_door1_model[] = {
     gsSPVertex(&obj_s_yamishop_v[22], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 3, 0, 1, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_yamishop_door2_model[] = {
+GFX_ARR_BEGIN(obj_s_yamishop_door2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -106,7 +106,7 @@ Gfx obj_s_yamishop_door2_model[] = {
     gsSPNTriangles_5b(10, 13, 14, 10, 14, 11, 13, 15, 16, 13, 16, 14),
     gsSPNTriangles_5b(15, 17, 18, 15, 18, 16, 0, 19, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_yamishop_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 4000, 60036 } },
@@ -151,7 +151,7 @@ Vtx obj_w_yamishop_v[] = {
 #include "assets/obj_w_yamishop_v.inc"
 };
 
-Gfx obj_w_yamishop_window_model[] = {
+GFX_ARR_BEGIN(obj_w_yamishop_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -162,9 +162,9 @@ Gfx obj_w_yamishop_window_model[] = {
     gsSPVertex(&obj_w_yamishop_v[62], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_yamishop_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_yamishop_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -182,9 +182,9 @@ Gfx obj_w_yamishop_t1_model[] = {
     gsSPNTriangles_5b(26, 0, 3, 26, 27, 0, 27, 24, 0, 16, 20, 28),
     gsSPNTriangles_5b(22, 16, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_yamishop_light_model[] = {
+GFX_ARR_BEGIN(obj_w_yamishop_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
@@ -196,9 +196,9 @@ Gfx obj_w_yamishop_light_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_yamishop_door1_model[] = {
+GFX_ARR_BEGIN(obj_w_yamishop_door1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -215,9 +215,9 @@ Gfx obj_w_yamishop_door1_model[] = {
     gsSPVertex(&obj_w_yamishop_v[22], 3, 2),
     gsSPNTrianglesInit_5b(2, 0, 2, 3, 0, 1, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_yamishop_door2_model[] = {
+GFX_ARR_BEGIN(obj_w_yamishop_door2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -232,7 +232,7 @@ Gfx obj_w_yamishop_door2_model[] = {
     gsSPNTriangles_5b(10, 13, 14, 10, 14, 11, 13, 15, 16, 13, 16, 14),
     gsSPNTriangles_5b(15, 17, 18, 15, 18, 16, 0, 19, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_yamishop_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 4000, 60036 } },

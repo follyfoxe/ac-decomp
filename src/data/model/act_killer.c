@@ -17,7 +17,7 @@ Vtx act_killer_v[] = {
 #include "assets/act_killer_v.inc"
 };
 
-Gfx act_killer_model[] = {
+GFX_ARR_BEGIN(act_killer_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -37,4 +37,4 @@ Gfx act_killer_model[] = {
     gsSPNTriangles_5b(15, 19, 20, 12, 11, 14, 12, 14, 15, 7, 5, 11),
     gsSPNTriangles_5b(7, 11, 12, 9, 6, 5, 9, 5, 7, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

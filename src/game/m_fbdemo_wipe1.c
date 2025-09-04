@@ -13,7 +13,7 @@ u8 g_wipe1_txt[] = {
 #include "assets/g_wipe1_txt.inc"
 };
 
-Gfx wipe1_modelT[] = {
+GFX_ARR_BEGIN(wipe1_modelT)
     gsDPPipeSync(),
     gsSPClearGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BOTH | G_FOG |
                           G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
@@ -44,7 +44,7 @@ Gfx wipe1_modelT[] = {
     gsSP2Triangles(16, 18, 19, 0, 18, 20, 21, 0),
     gsSP2Triangles(20, 22, 23, 0, 22, 0, 24, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 fbdemo_wipe1* fbdemo_wipe1_init(fbdemo_wipe1* this) {
   bzero(this, sizeof(fbdemo_wipe1));

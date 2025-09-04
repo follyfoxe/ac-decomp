@@ -20,7 +20,7 @@ Vtx lat_letter26_v[] = {
 #include "assets/lat_letter26_v.inc"
 };
 
-Gfx lat_letter26_win_model[] = {
+GFX_ARR_BEGIN(lat_letter26_win_model)
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsDPSetRenderMode(G_RM_AA_TEX_EDGE, G_RM_AA_TEX_EDGE2),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter26_pal),
@@ -74,9 +74,9 @@ Gfx lat_letter26_win_model[] = {
     gsSPVertex(&lat_letter26_v[104], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter26_model[] = {
+GFX_ARR_BEGIN(lat_letter26_model)
     gsSPDisplayList(lat_letter26_win_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

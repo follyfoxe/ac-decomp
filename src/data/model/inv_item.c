@@ -9,7 +9,7 @@ Vtx inv_item_v[] = {
 #include "assets/inv_item_v.inc"
 };
 
-Gfx inv_item_mode[] = {
+GFX_ARR_BEGIN(inv_item_mode)
     gsSPSetGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPClearGeometryMode(G_ZBUFFER | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
                           G_DECAL_LEQUAL),
@@ -18,9 +18,9 @@ Gfx inv_item_mode[] = {
                      G_AC_NONE | G_ZS_PIXEL | G_RM_XLU_SURF | G_RM_XLU_SURF2),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_item_shadow_mode[] = {
+GFX_ARR_BEGIN(inv_item_shadow_mode)
     gsSPSetGeometryMode(G_SHADE | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPClearGeometryMode(G_ZBUFFER | G_CULL_BOTH | G_FOG | G_LIGHTING | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR |
                           G_DECAL_LEQUAL),
@@ -31,13 +31,13 @@ Gfx inv_item_shadow_mode[] = {
     gsDPSetCombineLERP(0, 0, 0, 0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, 0, TEXEL0, 0, ENVIRONMENT, 0),
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx inv_item_model[] = {
+GFX_ARR_BEGIN(inv_item_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, anime_2_txt),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 32, 32, anime_3_txt),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPVertex(inv_item_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -13,7 +13,7 @@ Vtx ef_circle_light_v[] = {
 #include "assets/ef_circle_light_v.inc"
 };
 
-Gfx ef_circle_light_model[] = {
+GFX_ARR_BEGIN(ef_circle_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, PRIMITIVE, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
@@ -23,4 +23,4 @@ Gfx ef_circle_light_model[] = {
     gsSPVertex(ef_circle_light_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

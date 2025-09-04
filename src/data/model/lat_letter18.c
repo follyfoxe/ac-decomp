@@ -13,16 +13,16 @@ Vtx lat_letter18_v[] = {
 #include "assets/lat_letter18_v.inc"
 };
 
-Gfx lat_letter18_win_model[] = {
+GFX_ARR_BEGIN(lat_letter18_win_model)
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter18_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 64, 32, lat_letter18_4),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_REPEAT, GX_REPEAT, 0, 0),
     gsSPVertex(lat_letter18_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter18_winT_model[] = {
+GFX_ARR_BEGIN(lat_letter18_winT_model)
     gsDPSetCombineLERP(TEXEL0, 0, TEXEL0_ALPHA, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, TEXEL0_ALPHA, 0, 0, 0, 0, TEXEL0),
     gsDPLoadTLUT_Dolphin(15, 16, 1, lat_letter18_pal),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_CI, G_IM_SIZ_4b, 16, 32, lat_letter18_5),
@@ -33,9 +33,9 @@ Gfx lat_letter18_winT_model[] = {
     gsSP2Triangles(8, 9, 10, 0, 8, 10, 11, 0),
     gsSP2Triangles(12, 13, 14, 0, 12, 14, 15, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter18_sen_model[] = {
+GFX_ARR_BEGIN(lat_letter18_sen_model)
     gsDPSetCombineLERP(TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0),
     gsDPSetEnvColor(159, 68, 0, 255),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 16, 16, lat_letter18_sen),
@@ -47,10 +47,10 @@ Gfx lat_letter18_sen_model[] = {
     gsSP2Triangles(12, 13, 14, 0, 12, 14, 15, 0),
     gsSP2Triangles(16, 17, 18, 0, 17, 19, 18, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx lat_letter18_model[] = {
+GFX_ARR_BEGIN(lat_letter18_model)
     gsSPDisplayList(lat_letter18_win_model),
     gsSPDisplayList(lat_letter18_winT_model),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

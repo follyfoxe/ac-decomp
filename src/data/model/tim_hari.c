@@ -33,7 +33,7 @@ Vtx tim_hari_v[] = {
 #include "assets/tim_hari_v.inc"
 };
 
-Gfx tim_hari_mode[] = {
+GFX_ARR_BEGIN(tim_hari_mode)
     gsDPPipeSync(),
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_RGBA16 | G_TL_TILE |
@@ -42,9 +42,9 @@ Gfx tim_hari_mode[] = {
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tim_hari_b1T_model[] = {
+GFX_ARR_BEGIN(tim_hari_b1T_model)
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, tim_hari_h2_pal),
     gsDPTileSync(),
@@ -65,9 +65,9 @@ Gfx tim_hari_b1T_model[] = {
     gsSPVertex(tim_hari_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tim_hari_b2T_model[] = {
+GFX_ARR_BEGIN(tim_hari_b2T_model)
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, tim_hari_h1_pal),
     gsDPTileSync(),
@@ -88,9 +88,9 @@ Gfx tim_hari_b2T_model[] = {
     gsSPVertex(&tim_hari_v[4], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx tim_hari_b3T_model[] = {
+GFX_ARR_BEGIN(tim_hari_b3T_model)
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, tim_hari_maru_pal),
     gsDPTileSync(),
@@ -111,4 +111,4 @@ Gfx tim_hari_b3T_model[] = {
     gsSPVertex(&tim_hari_v[8], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

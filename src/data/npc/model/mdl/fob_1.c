@@ -5,7 +5,7 @@ static Vtx fob_1_v[] = {
 #include "assets/npc/mdl/fob_1_v.inc"
 };
 
-static Gfx head_fob_model[] = {
+static GFX_ARR_BEGIN(head_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -170,9 +170,9 @@ static Gfx head_fob_model[] = {
                       3, 13, 0   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx mouth_fob_model[] = {
+static GFX_ARR_BEGIN(mouth_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -206,9 +206,9 @@ static Gfx mouth_fob_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm2_fob_model[] = {
+static GFX_ARR_BEGIN(Rarm2_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -241,9 +241,9 @@ static Gfx Rarm2_fob_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rarm1_fob_model[] = {
+static GFX_ARR_BEGIN(Rarm1_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -268,9 +268,9 @@ static Gfx Rarm1_fob_model[] = {
                       0, 2, 13   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm2_fob_model[] = {
+static GFX_ARR_BEGIN(Larm2_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -303,9 +303,9 @@ static Gfx Larm2_fob_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Larm1_fob_model[] = {
+static GFX_ARR_BEGIN(Larm1_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -329,9 +329,9 @@ static Gfx Larm1_fob_model[] = {
                       2, 0, 13   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx chest_fob_model[] = {
+static GFX_ARR_BEGIN(chest_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -411,9 +411,9 @@ static Gfx chest_fob_model[] = {
                           0, 0, 0     // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail1_fob_model[] = {
+static GFX_ARR_BEGIN(tail1_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -436,9 +436,9 @@ static Gfx tail1_fob_model[] = {
                       0, 2, 13   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx tail2_fob_model[] = {
+static GFX_ARR_BEGIN(tail2_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -497,9 +497,9 @@ static Gfx tail2_fob_model[] = {
                       0, 0, 0   // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot2_fob_model[] = {
+static GFX_ARR_BEGIN(Rfoot2_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -527,9 +527,9 @@ static Gfx Rfoot2_fob_model[] = {
                           17, 16, 15  // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Rfoot1_fob_model[] = {
+static GFX_ARR_BEGIN(Rfoot1_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -548,9 +548,9 @@ static Gfx Rfoot1_fob_model[] = {
                       4, 5, 1  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot2_fob_model[] = {
+static GFX_ARR_BEGIN(Lfoot2_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -578,9 +578,9 @@ static Gfx Lfoot2_fob_model[] = {
                           15, 14, 17  // tri2
                           ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx Lfoot1_fob_model[] = {
+static GFX_ARR_BEGIN(Lfoot1_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -599,9 +599,9 @@ static Gfx Lfoot1_fob_model[] = {
                       1, 5, 3  // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-static Gfx base_fob_model[] = {
+static GFX_ARR_BEGIN(base_fob_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineMode(G_CC_MODULATEIDECALA, G_CC_PASS2),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -689,7 +689,7 @@ static Gfx base_fob_model[] = {
                       0, 0, 0     // tri3
                       ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format off
 static cKF_Joint_R_c cKF_je_r_fob_1_tbl[] = {

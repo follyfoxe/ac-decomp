@@ -13,7 +13,7 @@ Vtx obj_shrine_shadow_v[] = {
 #include "assets/obj_shrine_shadow_v.inc"
 };
 
-Gfx obj_shrine_shadow_model[] = {
+GFX_ARR_BEGIN(obj_shrine_shadow_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -26,4 +26,4 @@ Gfx obj_shrine_shadow_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 13, 8, 11, 13, 11, 14, 9, 4, 7),
     gsSPNTriangles_5b(9, 7, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

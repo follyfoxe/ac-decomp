@@ -8,7 +8,7 @@ static Vtx gam_win3_v[] = {
 #include "assets/bootdata/win3/gam_win3_v.inc"
 };
 
-Gfx gam_win3_moji_model[] = {
+GFX_ARR_BEGIN(gam_win3_moji_model)
   gsSPTexture(0, 0, 0, 0, G_ON),
   gsDPSetCombineMode(G_CC_BLENDPRIMDECALA, G_CC_PASS2),
   gsDPSetPrimColor(0, 255, 50, 50, 60, 255),
@@ -30,4 +30,4 @@ Gfx gam_win3_moji_model[] = {
     0, 0, 0 // tri2
   ),
   gsSPEndDisplayList(),
-};
+GFX_ARR_END

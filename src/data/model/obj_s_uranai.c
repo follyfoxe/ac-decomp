@@ -21,7 +21,7 @@ Vtx obj_s_uranai_v[] = {
 #include "assets/obj_s_uranai_v.inc"
 };
 
-Gfx obj_s_uranai_window_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -31,9 +31,9 @@ Gfx obj_s_uranai_window_model[] = {
     gsSPVertex(&obj_s_uranai_v[10], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_uranai_t2_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -45,9 +45,9 @@ Gfx obj_s_uranai_t2_model[] = {
     gsSPVertex(&obj_s_uranai_v[48], 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_uranai_t1_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -64,9 +64,9 @@ Gfx obj_s_uranai_t1_model[] = {
     gsSPNTriangles_5b(23, 21, 20, 22, 24, 20, 20, 24, 25, 20, 26, 27),
     gsSPNTriangles_5b(28, 26, 20, 20, 29, 28, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_uranai_light_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -77,9 +77,9 @@ Gfx obj_s_uranai_light_model[] = {
     gsSPVertex(&obj_s_uranai_v[14], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_uranai_doorA_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_doorA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 150),
@@ -91,9 +91,9 @@ Gfx obj_s_uranai_doorA_model[] = {
     gsSPVertex(obj_s_uranai_v, 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_uranai_doorB_model[] = {
+GFX_ARR_BEGIN(obj_s_uranai_doorB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 150),
@@ -105,7 +105,7 @@ Gfx obj_s_uranai_doorB_model[] = {
     gsSPVertex(&obj_s_uranai_v[5], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_uranai_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 64536 } },
                                               { obj_s_uranai_light_model, 5, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },
@@ -149,7 +149,7 @@ Vtx obj_w_uranai_v[] = {
 #include "assets/obj_w_uranai_v.inc"
 };
 
-Gfx obj_w_uranai_window_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_window_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_XLU_DECAL2),
@@ -159,9 +159,9 @@ Gfx obj_w_uranai_window_model[] = {
     gsSPVertex(&obj_w_uranai_v[10], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_uranai_t2_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_t2_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -173,9 +173,9 @@ Gfx obj_w_uranai_t2_model[] = {
     gsSPVertex(&obj_w_uranai_v[48], 7, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_uranai_t1_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_t1_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -192,9 +192,9 @@ Gfx obj_w_uranai_t1_model[] = {
     gsSPNTriangles_5b(23, 21, 20, 22, 24, 20, 20, 24, 25, 20, 26, 27),
     gsSPNTriangles_5b(28, 26, 20, 20, 29, 28, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_uranai_light_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_light_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, TEXEL0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -205,9 +205,9 @@ Gfx obj_w_uranai_light_model[] = {
     gsSPVertex(&obj_w_uranai_v[14], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_uranai_doorA_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_doorA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 150),
@@ -219,9 +219,9 @@ Gfx obj_w_uranai_doorA_model[] = {
     gsSPVertex(obj_w_uranai_v, 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 1, 4, 3),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_uranai_doorB_model[] = {
+GFX_ARR_BEGIN(obj_w_uranai_doorB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIMITIVE, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 150),
@@ -233,7 +233,7 @@ Gfx obj_w_uranai_doorB_model[] = {
     gsSPVertex(&obj_w_uranai_v[5], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 0, 3, 1, 3, 4, 1),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_uranai_tbl[] = { { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 64536 } },
                                               { obj_w_uranai_light_model, 5, cKF_JOINT_FLAG_DISP_OPA, { 0, 0, 0 } },

@@ -26,7 +26,7 @@ Vtx int_nog_uranai_v[] = {
 #include "assets/int_nog_uranai_v.inc"
 };
 
-Gfx int_nog_uranai_on_model[] = {
+GFX_ARR_BEGIN(int_nog_uranai_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -43,9 +43,9 @@ Gfx int_nog_uranai_on_model[] = {
     gsSPNTriangles_5b(11, 12, 13, 11, 13, 14, 15, 8, 7, 10, 9, 16),
     gsSPNTriangles_5b(17, 8, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_uranai_off_model[] = {
+GFX_ARR_BEGIN(int_nog_uranai_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -57,9 +57,9 @@ Gfx int_nog_uranai_off_model[] = {
     gsSPVertex(&int_nog_uranai_v[18], 5, 0),
     gsSPNTrianglesInit_5b(3, 0, 1, 2, 1, 3, 2, 0, 4, 1),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_uranai_onT_model[] = {
+GFX_ARR_BEGIN(int_nog_uranai_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -74,4 +74,4 @@ Gfx int_nog_uranai_onT_model[] = {
     gsSPNTriangles_5b(9, 8, 5, 10, 11, 12, 12, 13, 10, 11, 10, 3),
     gsSPNTriangles_5b(3, 2, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

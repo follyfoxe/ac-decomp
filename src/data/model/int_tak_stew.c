@@ -34,7 +34,7 @@ Vtx int_tak_stew_v[] = {
 #include "assets/int_tak_stew_v.inc"
 };
 
-Gfx int_tak_stew_nabe_on_model[] = {
+GFX_ARR_BEGIN(int_tak_stew_nabe_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -50,9 +50,9 @@ Gfx int_tak_stew_nabe_on_model[] = {
     gsSPNTriangles_5b(0, 2, 13, 10, 12, 14, 14, 15, 16, 14, 12, 15),
     gsSPNTriangles_5b(16, 15, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_stew_nabe_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_stew_nabe_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -74,9 +74,9 @@ Gfx int_tak_stew_nabe_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 0, 2, 3, 4, 3, 2),
     gsSPNTriangles_5b(4, 2, 5, 6, 7, 8, 6, 8, 9, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_stew_a1T_model[] = {
+GFX_ARR_BEGIN(int_tak_stew_a1T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -88,4 +88,4 @@ Gfx int_tak_stew_a1T_model[] = {
     gsSPVertex(&int_tak_stew_v[60], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

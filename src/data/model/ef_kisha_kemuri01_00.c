@@ -17,7 +17,7 @@ Vtx ef_kisha_kemuri01_00_v[] = {
 #include "assets/ef_kisha_kemuri01_00_v.inc"
 };
 
-Gfx ef_kisha_kemuri01_modelT[] = {
+GFX_ARR_BEGIN(ef_kisha_kemuri01_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_CLD_SURF2),
@@ -31,4 +31,4 @@ Gfx ef_kisha_kemuri01_modelT[] = {
     gsSPVertex(ef_kisha_kemuri01_00_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

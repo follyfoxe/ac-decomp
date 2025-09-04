@@ -21,7 +21,7 @@ Vtx obj_s_bridgeA_v[] = {
 #include "assets/obj_s_bridgeA_v.inc"
 };
 
-Gfx obj_s_bridgeA_base_model[] = {
+GFX_ARR_BEGIN(obj_s_bridgeA_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -44,9 +44,9 @@ Gfx obj_s_bridgeA_base_model[] = {
     gsSPNTriangles_5b(23, 24, 25, 23, 25, 26, 27, 23, 26, 27, 26, 28),
     gsSPNTriangles_5b(29, 27, 28, 29, 28, 30, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_bridgeA_step2_model[] = {
+GFX_ARR_BEGIN(obj_s_bridgeA_step2_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -67,9 +67,9 @@ Gfx obj_s_bridgeA_step2_model[] = {
     gsSPNTrianglesInit_5b(4, 5, 4, 19, 4, 21, 20, 1, 0, 22),
     gsSPNTriangles_5b(0, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_bridgeA_step3_model[] = {
+GFX_ARR_BEGIN(obj_s_bridgeA_step3_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -90,9 +90,9 @@ Gfx obj_s_bridgeA_step3_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 7, 19, 7, 21, 20, 9, 6, 22),
     gsSPNTriangles_5b(6, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_s_bridgeA_step4_model[] = {
+GFX_ARR_BEGIN(obj_s_bridgeA_step4_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -113,7 +113,7 @@ Gfx obj_s_bridgeA_step4_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 19, 20, 8, 7, 21, 9, 22, 23),
     gsSPNTriangles_5b(9, 6, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_s_bridgeA_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 6000, 4000, 59536 } },
@@ -157,7 +157,7 @@ Vtx obj_w_bridgeA_v[] = {
 #include "assets/obj_w_bridgeA_v.inc"
 };
 
-Gfx obj_w_bridgeA_base_model[] = {
+GFX_ARR_BEGIN(obj_w_bridgeA_base_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -180,9 +180,9 @@ Gfx obj_w_bridgeA_base_model[] = {
     gsSPNTriangles_5b(23, 24, 25, 23, 25, 26, 27, 23, 26, 27, 26, 28),
     gsSPNTriangles_5b(29, 27, 28, 29, 28, 30, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_bridgeA_step2_model[] = {
+GFX_ARR_BEGIN(obj_w_bridgeA_step2_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -203,9 +203,9 @@ Gfx obj_w_bridgeA_step2_model[] = {
     gsSPNTrianglesInit_5b(4, 5, 4, 19, 4, 21, 20, 1, 0, 22),
     gsSPNTriangles_5b(0, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_bridgeA_step3_model[] = {
+GFX_ARR_BEGIN(obj_w_bridgeA_step3_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -226,9 +226,9 @@ Gfx obj_w_bridgeA_step3_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 7, 19, 7, 21, 20, 9, 6, 22),
     gsSPNTriangles_5b(6, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_w_bridgeA_step4_model[] = {
+GFX_ARR_BEGIN(obj_w_bridgeA_step4_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
@@ -249,7 +249,7 @@ Gfx obj_w_bridgeA_step4_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 19, 20, 8, 7, 21, 9, 22, 23),
     gsSPNTriangles_5b(9, 6, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_obj_w_bridgeA_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 6000, 4000, 59536 } },

@@ -34,7 +34,7 @@ Vtx int_iku_turkey_lamp_v[] = {
 #include "assets/int_iku_turkey_lamp_v.inc"
 };
 
-Gfx int_iku_turkey_lamp_model[] = {
+GFX_ARR_BEGIN(int_iku_turkey_lamp_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -74,4 +74,4 @@ Gfx int_iku_turkey_lamp_model[] = {
     gsSPNTriangles_5b(12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22),
     gsSPNTriangles_5b(20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

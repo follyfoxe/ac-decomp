@@ -58,7 +58,7 @@ Vtx int_kon_snowtv_v[] = {
 #include "assets/int_kon_snowtv_v.inc"
 };
 
-Gfx int_kon_snowtv_face_model[] = {
+GFX_ARR_BEGIN(int_kon_snowtv_face_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -70,9 +70,9 @@ Gfx int_kon_snowtv_face_model[] = {
     gsSPVertex(int_kon_snowtv_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_snowtv_body_model[] = {
+GFX_ARR_BEGIN(int_kon_snowtv_body_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -114,4 +114,4 @@ Gfx int_kon_snowtv_body_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(3, 8, 9, 10, 8, 11, 12, 8, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

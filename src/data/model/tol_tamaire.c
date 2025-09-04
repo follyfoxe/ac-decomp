@@ -37,7 +37,7 @@ Vtx tol_tamaire_v[] = {
 #include "assets/tol_tamaire_v.inc"
 };
 
-Gfx tol_tamaire_model[] = {
+GFX_ARR_BEGIN(tol_tamaire_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -49,4 +49,4 @@ Gfx tol_tamaire_model[] = {
     gsSPVertex(tol_tamaire_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

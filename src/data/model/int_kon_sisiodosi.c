@@ -38,7 +38,7 @@ Vtx int_kon_sisiodosi_v[] = {
 #include "assets/int_kon_sisiodosi_v.inc"
 };
 
-Gfx int_kon_sisiodisi_ue_model[] = {
+GFX_ARR_BEGIN(int_kon_sisiodisi_ue_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -59,9 +59,9 @@ Gfx int_kon_sisiodisi_ue_model[] = {
     gsSPNTrianglesInit_5b(5, 17, 18, 19, 20, 21, 19, 19, 18, 20),
     gsSPNTriangles_5b(19, 21, 22, 19, 22, 17, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kon_sisiodosi_sita_model[] = {
+GFX_ARR_BEGIN(int_kon_sisiodosi_sita_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -108,7 +108,7 @@ Gfx int_kon_sisiodosi_sita_model[] = {
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH | G_DECAL_LEQUAL),
     gsSPNTrianglesInit_5b(1, 6, 7, 8, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_kon_sisiodosi_tbl[] = { 0, 0, 1 };
 

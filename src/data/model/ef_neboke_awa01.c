@@ -13,7 +13,7 @@ Vtx ef_neboke_awa01_v[] = {
 #include "assets/ef_neboke_awa01_v.inc"
 };
 
-Gfx ef_neboke_awa01_modelT[] = {
+GFX_ARR_BEGIN(ef_neboke_awa01_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, 0,
                        0, COMBINED),
@@ -26,4 +26,4 @@ Gfx ef_neboke_awa01_modelT[] = {
     gsSPVertex(ef_neboke_awa01_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -21,7 +21,7 @@ Vtx int_kon_isi05_v[] = {
 #include "assets/int_kon_isi05_v.inc"
 };
 
-Gfx int_kon_isi05_on_model[] = {
+GFX_ARR_BEGIN(int_kon_isi05_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -41,4 +41,4 @@ Gfx int_kon_isi05_on_model[] = {
     gsSPNTriangles_5b(15, 20, 16, 21, 16, 20, 21, 13, 16, 21, 20, 22),
     gsSPNTriangles_5b(10, 21, 22, 10, 22, 11, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

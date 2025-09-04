@@ -42,7 +42,7 @@ Vtx cam_win_v[] = {
 #include "assets/cam_win_v.inc"
 };
 
-Gfx cam_win_yajirushi_model[] = {
+GFX_ARR_BEGIN(cam_win_yajirushi_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -54,9 +54,9 @@ Gfx cam_win_yajirushi_model[] = {
     gsSPNTriangles_5b(5, 7, 6, 8, 9, 10, 9, 11, 10, 12, 13, 14),
     gsSPNTriangles_5b(12, 15, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx elc_win_moji_model[] = {
+GFX_ARR_BEGIN(elc_win_moji_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -66,9 +66,9 @@ Gfx elc_win_moji_model[] = {
     gsSPVertex(&cam_win_v[16], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cam_win_winT_model[] = {
+GFX_ARR_BEGIN(cam_win_winT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -83,9 +83,9 @@ Gfx cam_win_winT_model[] = {
     gsSPNTrianglesInit_5b(4, 7, 8, 9, 8, 10, 9, 11, 12, 13),
     gsSPNTriangles_5b(12, 7, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cam_win_cT_model[] = {
+GFX_ARR_BEGIN(cam_win_cT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -95,9 +95,9 @@ Gfx cam_win_cT_model[] = {
     gsSPVertex(&cam_win_v[34], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx cam_win_mojiT_model[] = {
+GFX_ARR_BEGIN(cam_win_mojiT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -108,9 +108,9 @@ Gfx cam_win_mojiT_model[] = {
     gsSPVertex(&cam_win_v[38], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx elc_win_winT_model[] = {
+GFX_ARR_BEGIN(elc_win_winT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_PASS, G_RM_XLU_SURF2),
@@ -124,9 +124,9 @@ Gfx elc_win_winT_model[] = {
     gsSPNTrianglesInit_5b(4, 7, 8, 9, 8, 10, 9, 11, 12, 13),
     gsSPNTriangles_5b(12, 7, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx elc_win_zT_model[] = {
+GFX_ARR_BEGIN(elc_win_zT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -138,9 +138,9 @@ Gfx elc_win_zT_model[] = {
     gsSPVertex(&cam_win_v[56], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx elc_win_moji2T_model[] = {
+GFX_ARR_BEGIN(elc_win_moji2T_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, COMBINED, 0, 0, 0,
                        COMBINED),
@@ -151,4 +151,4 @@ Gfx elc_win_moji2T_model[] = {
     gsSPVertex(&cam_win_v[60], 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

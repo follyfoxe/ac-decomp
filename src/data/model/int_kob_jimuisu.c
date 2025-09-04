@@ -46,7 +46,7 @@ Vtx int_kob_jimuisu_v[] = {
 #include "assets/int_kob_jimuisu_v.inc"
 };
 
-Gfx int_kob_jimuisu_on_model[] = {
+GFX_ARR_BEGIN(int_kob_jimuisu_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -59,9 +59,9 @@ Gfx int_kob_jimuisu_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_kob_jimuisu_onT_model[] = {
+GFX_ARR_BEGIN(int_kob_jimuisu_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -100,4 +100,4 @@ Gfx int_kob_jimuisu_onT_model[] = {
     gsSPNTriangles_5b(19, 21, 16, 21, 22, 17, 21, 17, 16, 20, 23, 22),
     gsSPNTriangles_5b(20, 22, 21, 19, 18, 23, 19, 23, 20, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

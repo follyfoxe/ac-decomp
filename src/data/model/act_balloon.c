@@ -15,7 +15,7 @@ Vtx act_balloon_v[] = {
 #include "assets/act_balloon_v.inc"
 };
 
-Gfx act_balloon_head_model[] = {
+GFX_ARR_BEGIN(act_balloon_head_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -35,9 +35,9 @@ Gfx act_balloon_head_model[] = {
     gsSPNTriangles_5b(25, 23, 6, 25, 21, 23, 20, 21, 25, 20, 25, 1),
     gsSPNTriangles_5b(20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
-Gfx act_balloon_wireB_model[] = {
+GFX_ARR_BEGIN(act_balloon_wireB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -57,9 +57,9 @@ Gfx act_balloon_wireB_model[] = {
     gsSPNTrianglesInit_5b(4, 10, 11, 12, 10, 12, 13, 14, 15, 16),
     gsSPNTriangles_5b(14, 16, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
-Gfx act_balloon_wireA_model[] = {
+GFX_ARR_BEGIN(act_balloon_wireA_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, 0, SHADE, 0, TEXEL0, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 100),
@@ -71,7 +71,7 @@ Gfx act_balloon_wireA_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 0, 2, 3, 4, 5, 6),
     gsSPNTriangles_5b(4, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList()
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_act_balloon_tbl[] = { 0, 3, 3, 3 };
 

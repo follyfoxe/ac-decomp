@@ -10,13 +10,13 @@ static Vtx obj_flower_leaf_v[] = {
 #include "assets/flower/obj_flower_leaf_v.inc"
 };
 
-extern Gfx obj_flower_leafT_mat_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_leafT_mat_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPLoadTextureBlock_4b_Dolphin(obj_flower_tex, G_IM_FMT_CI, 128, 32, 0, GX_CLAMP, GX_REPEAT, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-extern Gfx obj_flower_leafT_gfx_model[] = {
+extern GFX_ARR_BEGIN(obj_flower_leafT_gfx_model)
     gsSPVertex(&obj_flower_leaf_v[0], 4, 0),
     gsSPNTrianglesInit_5b(
     2, // tri count
@@ -25,6 +25,6 @@ extern Gfx obj_flower_leafT_gfx_model[] = {
     0, 0, 0 // tri2
     ),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 // clang-format on

@@ -25,7 +25,7 @@ Vtx obj_museum1_shine_v[] = {
 #include "assets/obj_museum1_shine_v.inc"
 };
 
-Gfx obj_museum1_shine_modelT[] = {
+GFX_ARR_BEGIN(obj_museum1_shine_modelT)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -52,9 +52,9 @@ Gfx obj_museum1_shine_modelT[] = {
     gsSPVertex(&obj_museum1_shine_v[16], 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx obj_museum1_shine_model[] = {
+GFX_ARR_BEGIN(obj_museum1_shine_model)
     gsSPTexture(65535, 65535, 0, G_TX_RENDERTILE, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, ENV_ALPHA, 0, TEXEL0, 0, TEXEL1, 0, PRIMITIVE, 0, PRIMITIVE_ALPHA, COMBINED, COMBINED,
@@ -90,4 +90,4 @@ Gfx obj_museum1_shine_model[] = {
     gsSP2Triangles(11, 10, 12, 0, 11, 12, 13, 0),
     gsSP2Triangles(14, 13, 12, 0, 14, 12, 15, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

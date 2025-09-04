@@ -13,7 +13,7 @@ Vtx ef_kikuzu01_00_v[] = {
 #include "assets/ef_kikuzu01_00_v.inc"
 };
 
-Gfx ef_kikuzu01_00_modelT[] = {
+GFX_ARR_BEGIN(ef_kikuzu01_00_modelT)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -26,4 +26,4 @@ Gfx ef_kikuzu01_00_modelT[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 6, 7, 8),
     gsSPNTriangles_5b(9, 10, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

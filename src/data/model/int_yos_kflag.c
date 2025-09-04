@@ -22,7 +22,7 @@ Vtx int_yos_kflag_v[] = {
 #include "assets/int_yos_kflag_v.inc"
 };
 
-Gfx int_yos_kflag_obj_model[] = {
+GFX_ARR_BEGIN(int_yos_kflag_obj_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -49,4 +49,4 @@ Gfx int_yos_kflag_obj_model[] = {
     gsSPNTriangles_5b(6, 4, 0, 6, 0, 3, 7, 8, 9, 8, 10, 9),
     gsSPNTriangles_5b(11, 10, 8, 7, 12, 8, 12, 13, 8, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

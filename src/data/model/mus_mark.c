@@ -13,7 +13,7 @@ Vtx mus_mark_v[] = {
 #include "assets/mus_mark_v.inc"
 };
 
-Gfx mus_mark_before[] = {
+GFX_ARR_BEGIN(mus_mark_before)
     gsDPPipeSync(),
     gsDPSetOtherMode(G_AD_NOTPATTERN | G_CD_MAGICSQ | G_CK_NONE | G_TC_FILT | G_TF_BILERP | G_TT_NONE | G_TL_TILE |
                          G_TD_CLAMP | G_TP_PERSP | G_CYC_1CYCLE | G_PM_NPRIMITIVE,
@@ -33,10 +33,10 @@ Gfx mus_mark_before[] = {
                 G_TX_MIRROR | G_TX_WRAP, 4, G_TX_NOLOD),
     gsDPSetTileSize(G_TX_RENDERTILE, 0, 0, 60, 60),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx mus_mark_model[] = {
+GFX_ARR_BEGIN(mus_mark_model)
     gsSPVertex(mus_mark_v, 4, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

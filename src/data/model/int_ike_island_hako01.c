@@ -70,7 +70,7 @@ Vtx int_ike_island_hako01_v[] = {
 #include "assets/int_ike_island_hako01_v.inc"
 };
 
-Gfx int_ike_island_hako01_on_model[] = {
+GFX_ARR_BEGIN(int_ike_island_hako01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -117,9 +117,9 @@ Gfx int_ike_island_hako01_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 2, 2, 4, 0),
     gsSPNTriangles_5b(2, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_island_hako01_in3_off_model[] = {
+GFX_ARR_BEGIN(int_ike_island_hako01_in3_off_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 255, 255, 255, 255),
@@ -138,9 +138,9 @@ Gfx int_ike_island_hako01_in3_off_model[] = {
     gsSPNTrianglesInit_5b(6, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(7, 8, 9, 7, 9, 10, 11, 12, 13, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_island_hako01_in2_off_model[] = {
+GFX_ARR_BEGIN(int_ike_island_hako01_in2_off_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 178, 178, 178, 255),
@@ -158,9 +158,9 @@ Gfx int_ike_island_hako01_in2_off_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 8, 11),
     gsSPNTriangles_5b(28, 11, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_island_hako01_in1_off_model[] = {
+GFX_ARR_BEGIN(int_ike_island_hako01_in1_off_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 178, 178, 178, 255),
@@ -184,9 +184,9 @@ Gfx int_ike_island_hako01_in1_off_model[] = {
     gsSPNTriangles_5b(20, 22, 23, 24, 25, 26, 24, 26, 27, 28, 8, 11),
     gsSPNTriangles_5b(28, 11, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_island_hako01_top_model[] = {
+GFX_ARR_BEGIN(int_ike_island_hako01_top_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -214,7 +214,7 @@ Gfx int_ike_island_hako01_top_model[] = {
     gsSPNTriangles_5b(2, 3, 6, 2, 6, 0, 7, 8, 9, 7, 9, 10),
     gsSPNTriangles_5b(11, 7, 10, 11, 10, 12, 12, 13, 11, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_ike_island_hako01_tbl[] = { 0, 0, 1, 0, 0, 0 };
 

@@ -34,7 +34,7 @@ Vtx int_sum_bla_lanp_v[] = {
 #include "assets/int_sum_bla_lanp_v.inc"
 };
 
-Gfx int_sum_bla_lanp_on_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_lanp_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -46,9 +46,9 @@ Gfx int_sum_bla_lanp_on_model[] = {
     gsSPVertex(int_sum_bla_lanp_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 2, 3, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bla_lanp_off_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_lanp_off_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -64,9 +64,9 @@ Gfx int_sum_bla_lanp_off_model[] = {
     gsSPNTriangles_5b(10, 14, 11, 13, 12, 16, 17, 13, 16, 6, 17, 16),
     gsSPNTriangles_5b(6, 16, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bla_lanp_onT_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_lanp_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -85,9 +85,9 @@ Gfx int_sum_bla_lanp_onT_model[] = {
     gsSPNTriangles_5b(21, 19, 22, 14, 24, 25, 14, 25, 26, 25, 27, 26),
     gsSPNTriangles_5b(28, 12, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_sum_bla_lanp_offT_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_lanp_offT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -99,4 +99,4 @@ Gfx int_sum_bla_lanp_offT_model[] = {
     gsSPVertex(&int_sum_bla_lanp_v[51], 5, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 0, 3, 4, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

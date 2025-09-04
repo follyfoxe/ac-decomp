@@ -31,7 +31,7 @@ Vtx grl_1_v[] = {
 #include "assets/grl_1_v.inc"
 };
 
-Gfx head_grl_model[] = {
+GFX_ARR_BEGIN(head_grl_model)
     gsSPMatrix(&anime_6_mdl[7], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -86,9 +86,9 @@ Gfx head_grl_model[] = {
     gsSPNTriangles_5b(10, 11, 12, 9, 11, 10, 9, 10, 7, 13, 12, 14),
     gsSPNTriangles_5b(1, 6, 4, 12, 11, 14, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Rarm2_grl_model[] = {
+GFX_ARR_BEGIN(Rarm2_grl_model)
     gsSPMatrix(&anime_6_mdl[10], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -110,9 +110,9 @@ Gfx Rarm2_grl_model[] = {
     gsSPNTriangles_5b(23, 27, 26, 27, 16, 21, 21, 16, 19, 25, 13, 22),
     gsSPNTriangles_5b(23, 17, 16, 21, 28, 27, 17, 13, 18, 24, 28, 21),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Rarm1_grl_model[] = {
+GFX_ARR_BEGIN(Rarm1_grl_model)
     gsSPMatrix(&anime_6_mdl[7], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -140,9 +140,9 @@ Gfx Rarm1_grl_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 1, 0, 2, 4, 0),
     gsSPNTriangles_5b(2, 5, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Larm2_grl_model[] = {
+GFX_ARR_BEGIN(Larm2_grl_model)
     gsSPMatrix(&anime_6_mdl[8], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -164,9 +164,9 @@ Gfx Larm2_grl_model[] = {
     gsSPNTriangles_5b(28, 27, 23, 19, 18, 27, 21, 18, 19, 22, 15, 25),
     gsSPNTriangles_5b(18, 17, 23, 27, 26, 19, 16, 15, 17, 19, 26, 24),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Larm1_grl_model[] = {
+GFX_ARR_BEGIN(Larm1_grl_model)
     gsSPMatrix(&anime_6_mdl[7], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -194,9 +194,9 @@ Gfx Larm1_grl_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 2, 1, 3, 2, 4, 0),
     gsSPNTriangles_5b(4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx chest_grl_model[] = {
+GFX_ARR_BEGIN(chest_grl_model)
     gsSPMatrix(anime_6_mdl, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -216,9 +216,9 @@ Gfx chest_grl_model[] = {
     gsSPNTriangles_5b(2, 18, 19, 5, 20, 21, 0, 2, 22, 4, 23, 24),
     gsSPNTriangles_5b(3, 1, 25, 5, 26, 6, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Rfoot3_grl_model[] = {
+GFX_ARR_BEGIN(Rfoot3_grl_model)
     gsSPMatrix(&anime_6_mdl[5], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -240,9 +240,9 @@ Gfx Rfoot3_grl_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(3, 22, 23, 24, 24, 25, 22, 23, 26, 24),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Rffot2_grl_model[] = {
+GFX_ARR_BEGIN(Rffot2_grl_model)
     gsSPMatrix(&anime_6_mdl[4], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -259,9 +259,9 @@ Gfx Rffot2_grl_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 4, 5, 0, 3, 6, 1, 7, 8),
     gsSPNTriangles_5b(2, 1, 9, 3, 2, 10, 3, 11, 12, 2, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Rfoot1_grl_model[] = {
+GFX_ARR_BEGIN(Rfoot1_grl_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -274,9 +274,9 @@ Gfx Rfoot1_grl_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 6, 3, 5),
     gsSPNTriangles_5b(5, 1, 6, 7, 4, 8, 4, 3, 8, 0, 6, 1),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Lfoot3_grl_model[] = {
+GFX_ARR_BEGIN(Lfoot3_grl_model)
     gsSPMatrix(&anime_6_mdl[2], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -298,9 +298,9 @@ Gfx Lfoot3_grl_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_CLAMP, GX_CLAMP, 0, 0),
     gsSPNTrianglesInit_5b(3, 22, 23, 24, 24, 25, 22, 22, 26, 23),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Lfoot2_grl_model[] = {
+GFX_ARR_BEGIN(Lfoot2_grl_model)
     gsSPMatrix(&anime_6_mdl[1], G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW),
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -317,9 +317,9 @@ Gfx Lfoot2_grl_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 4, 5, 3, 0, 6, 1, 7, 8),
     gsSPNTriangles_5b(1, 2, 9, 2, 3, 10, 3, 11, 12, 2, 13, 14),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx Lfoot1_grl_model[] = {
+GFX_ARR_BEGIN(Lfoot1_grl_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -332,9 +332,9 @@ Gfx Lfoot1_grl_model[] = {
     gsSPNTrianglesInit_5b(7, 0, 1, 2, 3, 4, 5, 3, 5, 6),
     gsSPNTriangles_5b(6, 1, 3, 7, 4, 8, 7, 5, 4, 1, 6, 2),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx bace_grl_model[] = {
+GFX_ARR_BEGIN(bace_grl_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -358,7 +358,7 @@ Gfx bace_grl_model[] = {
     gsSPNTrianglesInit_5b(6, 20, 21, 22, 23, 24, 25, 22, 24, 20),
     gsSPNTriangles_5b(25, 26, 23, 24, 27, 25, 22, 27, 24, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 cKF_Joint_R_c cKF_je_r_grl_1_tbl[] = {
     { NULL, 1, cKF_JOINT_FLAG_DISP_OPA, { 0, 1000, 0 } },

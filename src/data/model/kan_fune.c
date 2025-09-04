@@ -13,7 +13,7 @@ Vtx kan_fune_v[] = {
 #include "assets/kan_fune_v.inc"
 };
 
-Gfx kan_win_funeT_model[] = {
+GFX_ARR_BEGIN(kan_win_funeT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, TEXEL0, PRIMITIVE, ENVIRONMENT, TEXEL0,
                        ENVIRONMENT, 0, 0, 0, TEXEL0),
@@ -24,4 +24,4 @@ Gfx kan_win_funeT_model[] = {
     gsSPVertex(kan_fune_v, 4, 0),
     gsSPNTrianglesInit_5b(2, 0, 1, 2, 1, 3, 2, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

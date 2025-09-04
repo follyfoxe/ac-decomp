@@ -34,7 +34,7 @@ Vtx int_tak_yoroi_v[] = {
 #include "assets/int_tak_yoroi_v.inc"
 };
 
-Gfx int_tak_yoroi_on_model[] = {
+GFX_ARR_BEGIN(int_tak_yoroi_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -81,9 +81,9 @@ Gfx int_tak_yoroi_on_model[] = {
     gsSPNTriangles_5b(19, 20, 16, 20, 21, 16, 21, 15, 16, 22, 15, 21),
     gsSPNTriangles_5b(2, 15, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_yoroi_onT_model[] = {
+GFX_ARR_BEGIN(int_tak_yoroi_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -110,4 +110,4 @@ Gfx int_tak_yoroi_onT_model[] = {
     gsSPNTrianglesInit_5b(6, 19, 20, 21, 22, 23, 24, 22, 24, 25),
     gsSPNTriangles_5b(23, 20, 24, 26, 19, 21, 26, 21, 27, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

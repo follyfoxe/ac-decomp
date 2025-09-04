@@ -26,7 +26,7 @@ Vtx int_nog_kingB_v[] = {
 #include "assets/int_nog_kingB_v.inc"
 };
 
-Gfx int_nog_kingB_model[] = {
+GFX_ARR_BEGIN(int_nog_kingB_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -42,9 +42,9 @@ Gfx int_nog_kingB_model[] = {
     gsSPNTriangles_5b(16, 22, 23, 9, 23, 14, 21, 12, 11, 19, 9, 8),
     gsSPNTriangles_5b(1, 7, 22, 5, 20, 3, 2, 1, 18, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_nog_kingBT_model[] = {
+GFX_ARR_BEGIN(int_nog_kingBT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -65,4 +65,4 @@ Gfx int_nog_kingBT_model[] = {
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 15, GX_MIRROR, GX_MIRROR, 0, 0),
     gsSPNTrianglesInit_5b(2, 3, 4, 5, 3, 5, 6, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

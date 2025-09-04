@@ -46,7 +46,7 @@ Vtx int_ike_pst_pig01_v[] = {
 #include "assets/int_ike_pst_pig01_v.inc"
 };
 
-Gfx int_ike_pst_pig01_on_model[] = {
+GFX_ARR_BEGIN(int_ike_pst_pig01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -83,9 +83,9 @@ Gfx int_ike_pst_pig01_on_model[] = {
     gsSPNTriangles_5b(5, 4, 8, 9, 10, 11, 12, 13, 10, 9, 12, 10),
     gsSPNTriangles_5b(14, 15, 16, 14, 17, 15, 18, 14, 16, 4, 0, 8),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_ike_pst_pig01_onT_model[] = {
+GFX_ARR_BEGIN(int_ike_pst_pig01_onT_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -102,4 +102,4 @@ Gfx int_ike_pst_pig01_onT_model[] = {
     gsSPNTrianglesInit_5b(4, 8, 9, 10, 11, 12, 13, 8, 14, 15),
     gsSPNTriangles_5b(16, 17, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

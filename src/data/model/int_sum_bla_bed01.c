@@ -34,7 +34,7 @@ Vtx int_sum_bla_bed01_v[] = {
 #include "assets/int_sum_bla_bed01_v.inc"
 };
 
-Gfx int_sum_bla_bed01_on_model[] = {
+GFX_ARR_BEGIN(int_sum_bla_bed01_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
@@ -67,4 +67,4 @@ Gfx int_sum_bla_bed01_on_model[] = {
     gsSPNTriangles_5b(25, 26, 21, 26, 22, 21, 23, 27, 24, 27, 28, 24),
     gsSPNTriangles_5b(24, 21, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END

@@ -38,7 +38,7 @@ Vtx int_tak_barber_v[] = {
 #include "assets/int_tak_barber_v.inc"
 };
 
-Gfx int_tak_barber_pole_on_model[] = {
+GFX_ARR_BEGIN(int_tak_barber_pole_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -54,9 +54,9 @@ Gfx int_tak_barber_pole_on_model[] = {
     gsSPNTriangles_5b(10, 3, 11, 11, 12, 13, 11, 13, 10, 7, 2, 1),
     gsSPNTriangles_5b(7, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_barber_glass_env_model[] = {
+GFX_ARR_BEGIN(int_tak_barber_glass_env_model)
     gsSPTexture(4000, 4000, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, PRIMITIVE, 0, TEXEL0, 0, PRIM_LOD_FRAC, PRIMITIVE, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -72,9 +72,9 @@ Gfx int_tak_barber_glass_env_model[] = {
     gsSPNTriangles_5b(10, 3, 11, 11, 9, 8, 11, 8, 10, 7, 2, 1),
     gsSPNTriangles_5b(7, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
-Gfx int_tak_barber_body_on_model[] = {
+GFX_ARR_BEGIN(int_tak_barber_body_on_model)
     gsSPTexture(0, 0, 0, G_TX_RENDERTILE, G_ON),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),
@@ -97,7 +97,7 @@ Gfx int_tak_barber_body_on_model[] = {
     gsSPNTrianglesInit_5b(4, 0, 1, 2, 3, 4, 5, 2, 6, 7),
     gsSPNTriangles_5b(2, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0),
     gsSPEndDisplayList(),
-};
+GFX_ARR_END
 
 u8 cKF_ckcb_r_int_tak_barber_tbl[] = { 0, 0, 0, 4 };
 
