@@ -14,7 +14,7 @@ typedef float  f32;
 typedef double f64;
 
 typedef char *Ptr;
-typedef unsigned int uintptr_t; // Manually added
+//typedef unsigned int uintptr_t; // Manually added
 
 typedef int BOOL;
 
@@ -43,10 +43,10 @@ typedef int BOOL;
 #endif
 #endif
 
-#include "libc/stdio.h"
-#include "libc/stdarg.h"
-#include "libc/string.h"
-#include "libc/ctype.h"
+#include "stdio.h"
+#include "stdarg.h"
+#include "string.h"
+#include "ctype.h"
 
 #include "cmath.h"
 #include "pc/macros.h"

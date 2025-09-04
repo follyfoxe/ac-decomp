@@ -1,18 +1,9 @@
 #ifndef SLEEP_H
 #define SLEEP_H
 
+#include <unistd.h>
 #include "types.h"
-#include <dolphin/os.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-void csleep(OSTime c);
-void msleep(u32);
-
-#ifdef __cplusplus
-}
-#endif
+#define msleep(ms) usleep(ms * 1000)
 
 #endif

@@ -1,7 +1,7 @@
 #include "libu64/gfxprint.h"
 
 #include "libultra/libultra.h"
-#include "libc64/aprintf.h"
+//#include "libc64/aprintf.h"
 
 u8 __gfxprint_default_flags;
 
@@ -222,7 +222,7 @@ extern Gfx* gfxprint_close(gfxprint_t* this) {
 }
 
 extern int gfxprint_vprintf(gfxprint_t* this, const char* fmt, va_list ap) {
-  return vaprintf((aprout_func_t*)&this->prout_func, fmt, ap);
+  return vprintf(fmt, ap); //vprintf((aprout_func_t*)&this->prout_func, fmt, ap);
 }
 
 extern int gfxprint_printf(gfxprint_t* this, const char* fmt, ...) {

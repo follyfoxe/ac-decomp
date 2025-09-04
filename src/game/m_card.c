@@ -33,7 +33,11 @@
 #include "m_house.h"
 #include "m_cockroach.h"
 #include "m_start_data_init.h"
+
+#include <stddef.h>
 #include <string.h>
+
+#define membersize(type, member) (sizeof(((type*)0)->member))
 
 typedef struct card_bg_info {
     CARDFileInfo fileInfo;

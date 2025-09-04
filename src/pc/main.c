@@ -1,7 +1,7 @@
-//#include "main.h"
+#include "main.h"
 
 int main()
 {
-    //mainproc(NULL);
+    mainproc(NULL);
     return 0;
 }

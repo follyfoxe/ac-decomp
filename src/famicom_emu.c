@@ -5,7 +5,7 @@
 #include "_mem.h"
 #include "dolphin/gx.h"
 #include "jsyswrap.h"
-#include "libc64/sprintf.h"
+//#include "libc64/sprintf.h"
 #include "m_common_data.h"
 #include "m_debug.h"
 #include "m_malloc.h"

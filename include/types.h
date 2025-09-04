@@ -29,7 +29,7 @@ typedef unsigned short u16;
 typedef unsigned long u32;
 #ifndef _SIZE_T_DEF
 #define _SIZE_T_DEF
-typedef unsigned long size_t;
+//typedef unsigned long size_t;
 #endif
 typedef unsigned long long u64;
 typedef unsigned int uint;

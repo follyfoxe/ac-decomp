@@ -15,10 +15,13 @@
 // Find: Gfx (\w+)\[] = \{([^}]*)(};)
 // Replace: GFX_ARR_BEGIN($1)$2GFX_ARR_END
 
+#define CONCAT1(a, b) a##b
+#define CONCAT2(a, b) CONCAT1(a, b)
+
 #define LAZY_ARR_BEGIN(type, name, ...) \
     type name[] __VA_ARGS__; \
     __attribute__((constructor)) \
-    void name##_INIT() { \
+    void CONCAT2(name##_INIT, __COUNTER__)() { \
         type* target = name; \
         type temp[] = {
 #define LAZY_ARR_END }; \
