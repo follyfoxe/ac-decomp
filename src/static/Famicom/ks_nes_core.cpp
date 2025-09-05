@@ -3276,6 +3276,7 @@ extern "C" void _restgpr_14(void);
 
 // TODO: use ksNesStateObj members instead of hardcoded offsets
 asm void ksNesEmuFrameAsm(register ksNesCommonWorkObj* work_arg, register ksNesStateObj* state_arg) {
+#ifdef ENABLE_ASM
     register int local_25;
     register int local_26;
     register int local_27;
@@ -3287,7 +3288,7 @@ asm void ksNesEmuFrameAsm(register ksNesCommonWorkObj* work_arg, register ksNesS
     register void* state_load_func;
     register void* instr_jump_tbl;      // r30
     register ksNesStateObj* state_temp; // r31
-    
+
     nofralloc
     stwu r1, -0x140(r1)
     mflr r0
@@ -4146,7 +4147,7 @@ entry ksNesInst_lda_a1
     mr REGISTER_A, r4
     b ksNesLinecntIrqDefault
 
-// LDX zeropage,Y	LDX oper,Y	B6	2	4  
+// LDX zeropage,Y	LDX oper,Y	B6	2	4
 entry ksNesInst_ldx_b6
     add r7, r4, REGISTER_Y
     andi. r7, r7, 0xff
@@ -4160,71 +4161,71 @@ entry ksNesInst_ldx_a2
     mr REGISTER_X, r4
     b ksNesLinecntIrqDefault
 
-// LDY immediate	LDY #oper	A0	2	2  
+// LDY immediate	LDY #oper	A0	2	2
 entry ksNesInst_ldy_a0
     mr REGISTER_FLAG_ZERO, r4
     andi. REGISTER_FLAG_NEGATIVE, r4, 0x80
     mr REGISTER_Y, r4
     b ksNesLinecntIrqDefault
 
-// STA zeropage	    STA oper	85	2	3  
+// STA zeropage	    STA oper	85	2	3
 entry ksNesInst_sta_85
     stbx REGISTER_A, WRAM, r4
     b ksNesLinecntIrqDefault
 
-// STX zeropage	    STX oper	86	2	3  
+// STX zeropage	    STX oper	86	2	3
 entry ksNesInst_stx_86
     stbx REGISTER_X, WRAM, r4
     b ksNesLinecntIrqDefault
 
-// STY zeropage	    STY oper	84	2	3  
+// STY zeropage	    STY oper	84	2	3
 entry ksNesInst_sty_84
     stbx REGISTER_Y, WRAM, r4
     b ksNesLinecntIrqDefault
 
-// STA zeropage,X	STA oper,X	95	2	4  
+// STA zeropage,X	STA oper,X	95	2	4
 entry ksNesInst_sta_95
     add r7, r4, REGISTER_X
     andi. r7, r7, 0xff
     stbx REGISTER_A, WRAM, r7
     b ksNesLinecntIrqDefault
 
-// STX zeropage,Y	STX oper,Y	96	2	4  
+// STX zeropage,Y	STX oper,Y	96	2	4
 entry ksNesInst_stx_96
     add r7, r4, REGISTER_Y
     andi. r7, r7, 0xff
     stbx REGISTER_X, WRAM, r7
     b ksNesLinecntIrqDefault
 
-// STY zeropage,X	STY oper,X	94	2	4  
+// STY zeropage,X	STY oper,X	94	2	4
 entry ksNesInst_sty_94
     add r7, r4, REGISTER_X
     andi. r7, r7, 0xff
     stbx REGISTER_Y, WRAM, r7
     b ksNesLinecntIrqDefault
 
-//STA absolute	    STA oper	8D	3	4  
+//STA absolute	    STA oper	8D	3	4
 entry ksNesInst_sta_8d
     lwzx r8, r28, r26
     mr r4, REGISTER_A
     mtctr r8
     bctr
 
-//STX absolute	    STX oper	8E	3	4  
+//STX absolute	    STX oper	8E	3	4
 entry ksNesInst_stx_8e
     lwzx r8, r28, r26
     mr r4, REGISTER_X
     mtctr r8
     bctr
 
-// STY absolute     STY oper	8C	3	4  
+// STY absolute     STY oper	8C	3	4
 entry ksNesInst_sty_8c
     lwzx r8, r28, r26
     mr r4, REGISTER_Y
     mtctr r8
     bctr
 
-// STA  absolute,X	STA oper,X	9D	3	5  
+// STA  absolute,X	STA oper,X	9D	3	5
 entry ksNesInst_sta_9d
     add r3, r3, REGISTER_X
     mr r4, REGISTER_A
@@ -4233,7 +4234,7 @@ entry ksNesInst_sta_9d
     mtctr r8
     bctr
 
-// STA  absolute,Y	STA oper,Y	99	3	5  
+// STA  absolute,Y	STA oper,Y	99	3	5
 entry ksNesInst_sta_99
     add r3, r3, REGISTER_Y
     mr r4, REGISTER_A
@@ -4242,7 +4243,7 @@ entry ksNesInst_sta_99
     mtctr r8
     bctr
 
-// STA  (indirect,X)    STA (oper,X)	81	2	6  
+// STA  (indirect,X)    STA (oper,X)	81	2	6
 entry ksNesInst_sta_81
     addi r8, r3, 0x1
     andi. r8, r8, 0xff
@@ -4255,7 +4256,7 @@ entry ksNesInst_sta_81
     mr r4, REGISTER_A
     bctr
 
-//STA   (indirect),Y	STA (oper),Y	91	2	6  
+//STA   (indirect),Y	STA (oper),Y	91	2	6
 entry ksNesInst_sta_91
     lbzx r3, WRAM, r4
     addi r8, r4, 0x1
@@ -4282,35 +4283,35 @@ entry ksNesInst_sec_38
     li REGISTER_FLAG_CARRY, 0x1
     b ksNesLinecntIrqDefault
 
-// DEX  implied	DEX	CA	1	2  
+// DEX  implied	DEX	CA	1	2
 entry ksNesInst_dex_ca
     subi REGISTER_FLAG_ZERO, REGISTER_X, 0x1
     andi. REGISTER_FLAG_NEGATIVE, REGISTER_FLAG_ZERO, 0x80
     andi. REGISTER_X, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// INX  implied	INX	E8	1	2  
+// INX  implied	INX	E8	1	2
 entry ksNesInst_inx_e8
     addi REGISTER_FLAG_ZERO, REGISTER_X, 0x1
     andi. REGISTER_FLAG_NEGATIVE, REGISTER_FLAG_ZERO, 0x80
     andi. REGISTER_X, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// DEY  implied	DEY	88	1	2  
+// DEY  implied	DEY	88	1	2
 entry ksNesInst_dey_88
     subi REGISTER_FLAG_ZERO, REGISTER_Y, 0x1
     andi. REGISTER_FLAG_NEGATIVE, REGISTER_FLAG_ZERO, 0x80
     andi. REGISTER_Y, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// INY  implied	INY	C8	1	2  
+// INY  implied	INY	C8	1	2
 entry ksNesInst_iny_c8
     addi REGISTER_FLAG_ZERO, REGISTER_Y, 0x1
     andi. REGISTER_FLAG_NEGATIVE, REGISTER_FLAG_ZERO, 0x80
     andi. REGISTER_Y, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// TXA  implied	TXA	8A	1	2  
+// TXA  implied	TXA	8A	1	2
 // Transfer Index X to Accumulator
 entry ksNesInst_txa_8a
     mr REGISTER_FLAG_ZERO, REGISTER_X
@@ -4318,7 +4319,7 @@ entry ksNesInst_txa_8a
     mr REGISTER_A, REGISTER_X
     b ksNesLinecntIrqDefault
 
-// TYA  implied	TYA	98	1	2  
+// TYA  implied	TYA	98	1	2
 // Transfer Index Y to Accumulator
 entry ksNesInst_tya_98
     mr REGISTER_FLAG_ZERO, REGISTER_Y
@@ -4326,7 +4327,7 @@ entry ksNesInst_tya_98
     mr REGISTER_A, REGISTER_Y
     b ksNesLinecntIrqDefault
 
-// TAX  implied	TAX	AA	1	2  
+// TAX  implied	TAX	AA	1	2
 // Transfer Accumulator to Index X
 entry ksNesInst_tax_aa
     mr REGISTER_FLAG_ZERO, REGISTER_A
@@ -4334,7 +4335,7 @@ entry ksNesInst_tax_aa
     mr REGISTER_X, REGISTER_A
     b ksNesLinecntIrqDefault
 
-// TAY  implied	TAY	A8	1	2  
+// TAY  implied	TAY	A8	1	2
 // Transfer Accumulator to Index Y
 entry ksNesInst_tay_a8
     mr REGISTER_FLAG_ZERO, REGISTER_A
@@ -4342,7 +4343,7 @@ entry ksNesInst_tay_a8
     mr REGISTER_Y, REGISTER_A
     b ksNesLinecntIrqDefault
 
-// CMP  (indirect,X)	CMP (oper,X)	C1	2	6  
+// CMP  (indirect,X)	CMP (oper,X)	C1	2	6
 // Compare Memory with Accumulator
 entry ksNesInst_cmp_c1
     subf REGISTER_FLAG_ZERO, r4, REGISTER_A
@@ -4351,7 +4352,7 @@ entry ksNesInst_cmp_c1
     xori REGISTER_FLAG_CARRY, REGISTER_FLAG_CARRY, 0x1
     b ksNesLinecntIrqDefault
 
-// CPX  immediate	CPX #oper	E0	2	2  
+// CPX  immediate	CPX #oper	E0	2	2
 // Compare Memory with Index X
 entry ksNesInst_cpx_e0
     subf REGISTER_FLAG_ZERO, r4, REGISTER_X
@@ -4359,7 +4360,7 @@ entry ksNesInst_cpx_e0
     srwi REGISTER_FLAG_CARRY, REGISTER_FLAG_ZERO, 31
     xori REGISTER_FLAG_CARRY, REGISTER_FLAG_CARRY, 0x1
     b ksNesLinecntIrqDefault
-// CPY  immediate	CPY #oper	C0	2	2  
+// CPY  immediate	CPY #oper	C0	2	2
 // Compare Memory and Index Y
 entry ksNesInst_cpy_c0
     subf REGISTER_FLAG_ZERO, r4, REGISTER_Y
@@ -4368,7 +4369,7 @@ entry ksNesInst_cpy_c0
     xori REGISTER_FLAG_CARRY, REGISTER_FLAG_CARRY, 0x1
     b ksNesLinecntIrqDefault
 
-// ADC (indirect,X)	ADC (oper,X)	61	2	6  
+// ADC (indirect,X)	ADC (oper,X)	61	2	6
 // Add Memory to Accumulator with Carry
 entry ksNesInst_adc_61
     extsb r7, REGISTER_A
@@ -4384,7 +4385,7 @@ entry ksNesInst_adc_61
     srwi REGISTER_FLAG_OVERFLOW, r7, 8
     b ksNesLinecntIrqDefault
 
-// SBC  (indirect,X)	SBC (oper,X)	E1	2	6  
+// SBC  (indirect,X)	SBC (oper,X)	E1	2	6
 // Subtract Memory from Accumulator with Borrow
 entry ksNesInst_sbc_e1
     extsb r7, REGISTER_A
@@ -4402,7 +4403,7 @@ entry ksNesInst_sbc_e1
     xori REGISTER_FLAG_CARRY, REGISTER_FLAG_CARRY, 0x1
     b ksNesLinecntIrqDefault
 
-// ora  (indirect,X)	ORA (oper,X)	01	2	6  
+// ora  (indirect,X)	ORA (oper,X)	01	2	6
 // OR Memory with Accumulator
 entry ksNesInst_ora_01
     // bitwise or A with some value
@@ -4414,7 +4415,7 @@ entry ksNesInst_ora_01
     andi. REGISTER_A, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// AND  (indirect,X)	AND (oper,X)	21	2	6  
+// AND  (indirect,X)	AND (oper,X)	21	2	6
 // AND Memory with Accumulator
 entry ksNesInst_and_21
     and REGISTER_FLAG_ZERO, REGISTER_A, r4
@@ -4422,7 +4423,7 @@ entry ksNesInst_and_21
     andi. REGISTER_A, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// BIT  zeropage	BIT oper	24	2	3  
+// BIT  zeropage	BIT oper	24	2	3
 // Test Bits in Memory with Accumulator
 // https://www.masswerk.at/6502/6502_instruction_set.html#bitcompare
 entry ksNesInst_bit_24
@@ -4431,7 +4432,7 @@ entry ksNesInst_bit_24
     andi. REGISTER_FLAG_OVERFLOW, r4, 0x40
     b ksNesLinecntIrqDefault
 
-// EOR  (indirect,X)	EOR (oper,X)	41	2	6  
+// EOR  (indirect,X)	EOR (oper,X)	41	2	6
 // Exclusive-OR Memory with Accumulator
 entry ksNesInst_eor_41
     xor REGISTER_FLAG_ZERO, REGISTER_A, r4
@@ -4439,7 +4440,7 @@ entry ksNesInst_eor_41
     andi. REGISTER_A, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// INC  zeropage	INC oper	E6	2	5  
+// INC  zeropage	INC oper	E6	2	5
 // Increment Memory by One
 entry ksNesInst_inc_e6
     lwzx r7, r28, r26
@@ -4449,7 +4450,7 @@ entry ksNesInst_inc_e6
     andi. r4, REGISTER_FLAG_ZERO, 0xff
     bctr
 
-// DEC  zeropage	DEC oper	C6	2	5  
+// DEC  zeropage	DEC oper	C6	2	5
 // Decrement Memory by One
 entry ksNesInst_dec_c6
     lwzx r7, r28, r26
@@ -4459,7 +4460,7 @@ entry ksNesInst_dec_c6
     andi. r4, REGISTER_FLAG_ZERO, 0xff
     bctr
 
-// ASL  accumulator	ASL A	0A	1	2  
+// ASL  accumulator	ASL A	0A	1	2
 // Shift Left One Bit (Memory or Accumulator)
 entry ksNesInst_asl_0a
     slwi REGISTER_FLAG_ZERO, REGISTER_A, 1
@@ -4468,7 +4469,7 @@ entry ksNesInst_asl_0a
     andi. REGISTER_A, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// ASL  zeropage	ASL oper	06	2	5  
+// ASL  zeropage	ASL oper	06	2	5
 // Shift Left One Bit (Memory or Accumulator)
 entry ksNesInst_asl_06
     lwzx r7, r28, r26
@@ -4479,7 +4480,7 @@ entry ksNesInst_asl_06
     andi. r4, REGISTER_FLAG_ZERO, 0xff
     bctr
 
-// LSR  accumulator	LSR A	4A	1	2  
+// LSR  accumulator	LSR A	4A	1	2
 // Shift One Bit Right (Memory or Accumulator)
 entry ksNesInst_lsr_4a
 andi. REGISTER_FLAG_CARRY, REGISTER_A, 0x1
@@ -4488,7 +4489,7 @@ li REGISTER_FLAG_NEGATIVE, 0x0
 srwi REGISTER_A, REGISTER_A, 1
 b ksNesLinecntIrqDefault
 
-// LSR  zeropage	LSR oper	46	2	5  
+// LSR  zeropage	LSR oper	46	2	5
 // Shift One Bit Right (Memory or Accumulator)
 entry ksNesInst_lsr_46
     lwzx r7, r28, r26
@@ -4499,7 +4500,7 @@ entry ksNesInst_lsr_46
     srwi r4, r4, 1
     bctr
 
-// ROL  accumulator	ROL A	2A	1	2  
+// ROL  accumulator	ROL A	2A	1	2
 // Rotate One Bit Left (Memory or Accumulator)
 entry ksNesInst_rol_2a
     slwi REGISTER_FLAG_ZERO, REGISTER_A, 1
@@ -4509,7 +4510,7 @@ entry ksNesInst_rol_2a
     andi. REGISTER_A, REGISTER_FLAG_ZERO, 0xff
     b ksNesLinecntIrqDefault
 
-// ROL  zeropage	ROL oper	26	2	5  
+// ROL  zeropage	ROL oper	26	2	5
 // Rotate One Bit Left (Memory or Accumulator)
 entry ksNesInst_rol_26
     lwzx r7, r28, r26
@@ -4521,20 +4522,20 @@ entry ksNesInst_rol_26
     andi. r4, REGISTER_FLAG_ZERO, 0xff
     bctr
 
-// ROR  accumulator	ROR A	6A	1	2  
+// ROR  accumulator	ROR A	6A	1	2
 // Rotate One Bit Right (Memory or Accumulator)
 entry ksNesInst_ror_6a
     slwi REGISTER_FLAG_ZERO, REGISTER_FLAG_CARRY, 7
     andi. REGISTER_FLAG_CARRY, REGISTER_A, 0x1
     mr REGISTER_FLAG_NEGATIVE, REGISTER_FLAG_ZERO
-    
-    rlwimi REGISTER_FLAG_ZERO, REGISTER_A, 31, 25, 31 
+
+    rlwimi REGISTER_FLAG_ZERO, REGISTER_A, 31, 25, 31
     // REGISTER_FLAG_ZERO = ((REGISTER_A>>1) & 0x7F) | (REGISTER_FLAG_ZERO & ~0x7F)
-    
+
     mr REGISTER_A, REGISTER_FLAG_ZERO
     b ksNesLinecntIrqDefault
 
-// ROR  zeropage	ROR oper	66	2	5  
+// ROR  zeropage	ROR oper	66	2	5
 // Rotate One Bit Right (Memory or Accumulator)
 entry ksNesInst_ror_66
     lwzx r7, r28, r26
@@ -4592,7 +4593,7 @@ entry ksNesInst_bvs_70
     subf REGISTER_PC, r8, REGISTER_PC
     subi REGISTER_CYCLE_COUNT, REGISTER_CYCLE_COUNT, 0x100
     b ksNesLinecntIrqDefault
-    
+
 // BCC  relative	BCC oper	90	2	2**
 // Branch on Carry Clear
 entry ksNesInst_bcc_90
@@ -4637,7 +4638,7 @@ entry ksNesInst_beq_f0
     subi REGISTER_CYCLE_COUNT, REGISTER_CYCLE_COUNT, 0x100
     b ksNesLinecntIrqDefault
 
-// JSR absolute	JSR oper	20	3	6  
+// JSR absolute	JSR oper	20	3	6
 // Jump to New Location Saving Return Address
 entry ksNesInst_jsr_20
     subi r4, REGISTER_PC, 0x1
@@ -4655,7 +4656,7 @@ entry ksNesPush16_a1
     andi. REGISTER_STACK, REGISTER_STACK, 0xff
     blr
 
-// PHA  implied	PHA	48	1	3  
+// PHA  implied	PHA	48	1	3
 // Push Accumulator on Stack
 entry ksNesInst_pha_48
     addi r7, REGISTER_STACK, 0x100
@@ -4664,7 +4665,7 @@ entry ksNesInst_pha_48
     andi. REGISTER_STACK, REGISTER_STACK, 0xff
     b ksNesLinecntIrqDefault
 
-// PLA  implied	PLA	68	1	4  
+// PLA  implied	PLA	68	1	4
 // Pull Accumulator from Stack
 entry ksNesInst_pla_68
     addi REGISTER_STACK, REGISTER_STACK, 0x1
@@ -4674,8 +4675,8 @@ entry ksNesInst_pla_68
     mr REGISTER_FLAG_ZERO, REGISTER_A
     andi. REGISTER_FLAG_NEGATIVE, REGISTER_A, 0x80
     b ksNesLinecntIrqDefault
-    
-// RTS  implied	RTS	60	1	6  
+
+// RTS  implied	RTS	60	1	6
 // Return from Subroutine
 entry ksNesInst_rts_60
     li r4, 0x1
@@ -4695,13 +4696,13 @@ entry ksNesPopPC
     andi. REGISTER_PC, r3, 0xffff
     blr
 
-// JMP  absolute	JMP oper	4C	3	3  
-// Jump to New Location  
+// JMP  absolute	JMP oper	4C	3	3
+// Jump to New Location
 entry ksNesInst_jmp_4c
     mr REGISTER_PC, r3
     b ksNesLinecntIrqDefault
 
-// JMP  indirect	JMP (oper)	6C	3	5  
+// JMP  indirect	JMP (oper)	6C	3	5
 // Jump to New Location
 entry ksNesInst_jmp_6c
     lwzx r9, r27, r26
@@ -4716,7 +4717,7 @@ entry ksNesInst_jmp_6c
     rlwimi REGISTER_PC, r4, 8, 16, 23
     b ksNesLinecntIrqDefault
 
-// BRK  implied	BRK	00	1	7  
+// BRK  implied	BRK	00	1	7
 // Force Break
 entry ksNesInst_brk_00
     li r9, 0x14
@@ -4762,13 +4763,13 @@ L_8003BC98:
     b ksNesLinecntIrqDefault
 
 
-// PHP  implied	PHP	08	1	3  
+// PHP  implied	PHP	08	1	3
 // Push Processor Status on Stack
 entry ksNesInst_php_08
     li r9, 0x0
     b L_8003BC7C
 
-// PLP  implied	PLP	28	1	4  
+// PLP  implied	PLP	28	1	4
 // Pull Processor Status from Stack
 entry ksNesInst_plp_28
     addi REGISTER_STACK, REGISTER_STACK, 0x1
@@ -4792,7 +4793,7 @@ entry ksNesInst_plp_28
     stb r8, state_temp->cpu_state.irq_pending_flag
     bctr
 
-// RTI  implied	RTI	40	1	6  
+// RTI  implied	RTI	40	1	6
 // Return from Interrupt
 entry ksNesInst_rti_40
     bl ksNesInst_plp_28
@@ -4805,7 +4806,7 @@ entry ksNesInst_rti_40_2
     bl ksNesPopPC
     b ksNesActivateIntrIRQ
 
-// CLI  implied	CLI	58	1	2  
+// CLI  implied	CLI	58	1	2
 // Clear Interrupt Disable Bit
 entry ksNesInst_cli_58
     lbz r7, state_temp->cpu_state.P
@@ -4818,7 +4819,7 @@ entry ksNesInst_cli_58
     stb r8, state_temp->cpu_state.irq_pending_flag
     b ksNesActivateIntrIRQ
 
-// SEI  implied	SEI	78	1	2  
+// SEI  implied	SEI	78	1	2
 // Set Interrupt Disable Status
 entry ksNesInst_sei_78
     lbz r7, state_temp->cpu_state.P
@@ -4826,13 +4827,13 @@ entry ksNesInst_sei_78
     stb r7, state_temp->cpu_state.P
     b ksNesLinecntIrqDefault
 
-// TXS  implied	TXS	9A	1	2  
+// TXS  implied	TXS	9A	1	2
 // Transfer Index X to Stack Register
 entry ksNesInst_txs_9a
     mr REGISTER_STACK, REGISTER_X
     b ksNesLinecntIrqDefault
 
-// TSX  implied	TSX	BA	1	2  
+// TSX  implied	TSX	BA	1	2
 // Transfer Stack Pointer to Index X
 entry ksNesInst_tsx_ba
     mr REGISTER_FLAG_ZERO, REGISTER_STACK
@@ -4848,7 +4849,7 @@ entry ksNesInst_cld_d8
     stb r7, state_temp->cpu_state.P
     b ksNesLinecntIrqDefault
 
-// SED  implied	SED	F8	1	2  
+// SED  implied	SED	F8	1	2
 // Set Decimal Flag
 entry ksNesInst_sed_f8
     lbz r7, state_temp->cpu_state.P
@@ -4856,7 +4857,7 @@ entry ksNesInst_sed_f8
     stb r7, state_temp->cpu_state.P
     b ksNesLinecntIrqDefault
 
-// CLV implied	CLV	B8	1	2  
+// CLV implied	CLV	B8	1	2
 // Clear Overflow Flag
 entry ksNesInst_clv_b8
     li REGISTER_FLAG_OVERFLOW, 0x0
@@ -4986,7 +4987,7 @@ entry ksNesLoad4015
 	andi. r7, r4, 0x3f
 	stb r7, state_temp->cpu_state.irq_status_flags
 	bctr
-    
+
 entry ksNesLoad4017
     lwz r0, state_temp->io_shift_registers[6]
     li r4, 0x40
@@ -5869,7 +5870,7 @@ L_8003CADC:
     add r9, r9, r7
     stw r9, state_temp->cpu_a000_bfff
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore04_a000
     andi. r7, r3, 0x1
     bne ksNesLinecntIrqDefault
@@ -5908,7 +5909,7 @@ L_8003CB50:
     bgt L_8003CB48
     addi r8, r8, 0x1
     b L_8003CB44
-    
+
 entry ksNesStore04_e000
     andi. r7, r3, 0x1
     stb r7, state_temp->cpu_state.mapper_irq_enable
@@ -6404,7 +6405,7 @@ L_8003D19C:
     cmpw r7, r0
     bne L_8003D19C
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore0a_8000
     b ksNesLinecntIrqDefault
 
@@ -6480,7 +6481,7 @@ L_8003D294:
     and r8, r8, r10
     stbx r8, r7, r0
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore12_e000
     andi. r7, r3, 0x1000
     bne L_8003D2CC
@@ -6532,7 +6533,7 @@ L_8003D354:
     bne ksNesLinecntIrqDefault
     bl Sound_PlayMENUPCM
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore13_4000
     cmpwi r3, 0x4800
     blt ksNesStoreIO
@@ -6564,7 +6565,7 @@ L_8003D3B4:
     ori r8, r8, 0x80
     stb r8, 0x17ea(state_temp)
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesLoad13_4000
     cmpwi r3, 0x4800
     blt ksNesLoadIO
@@ -6710,7 +6711,7 @@ L_8003D5A0:
     andi. r8, r3, 0x5
     bne L_8003D814
     b L_8003D820
-    
+
 entry ksNesStore17_e000
     andi. r8, r3, 0x1000
     beq ksNesStore17_b000
@@ -6810,7 +6811,7 @@ L_8003D6EC:
     add r8, r8, state_temp
     stb r4, (ksNesStateObj.ppu_chr_banks)(r8)
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore18_e000
     andi. r7, r3, 0x1000
     beq L_8003D6D4
@@ -6843,7 +6844,7 @@ entry ksNesLinecntIrq19
     cmpwi r7, 0x0
     bne SUB_8003b3a0
     b ksNesMainLoop2
-    
+
 entry ksNesStore19_8000
     lbz r8, 0x17c9(state_temp)
     andi. r7, r3, 0x1000
@@ -6879,7 +6880,7 @@ L_8003D7DC:
     subi r7, r7, 0x4000
     stw r7, state_temp->cpu_c000_dfff
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore19_a000
     lbz r8, state_temp->prg_banks
     andi. r7, r3, 0x1000
@@ -6975,7 +6976,7 @@ entry ksNesStore42_8000
     stw r8, state_temp->cpu_c000_dfff
     stw r8, state_temp->cpu_e000_ffff
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesLinecntIrq43
     addi REGISTER_CYCLE_COUNT, REGISTER_CYCLE_COUNT, 0x4000
     li r8, 0x7fff
@@ -6983,7 +6984,7 @@ entry ksNesLinecntIrq43
     cmpwi r7, 0x0
     bne SUB_8003b3a0
     b ksNesMainLoop2
-    
+
 entry ksNesStore43_c000
     andi. r7, r3, 0x1000
     bne L_8003D960
@@ -7064,7 +7065,7 @@ L_8003DA3C:
     stw r8, state_temp->ppu_nametable_pointers[2]
     stw r8, state_temp->ppu_nametable_pointers[3]
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore44_e000
     andi. r7, r3, 0x1000
     beq L_8003DA80
@@ -7081,7 +7082,7 @@ entry ksNesStore44_e000
 L_8003DA80:
     stb r4, 0x17ed(state_temp)
     b L_8003D9A4
-    
+
 // Sunsoft FME-7
 entry ksNesStore45_8000
     stb r4, 0x17ee(state_temp)
@@ -7190,7 +7191,7 @@ L_8003DBE8:
     add r8, r8, state_temp
     stb r7, 0x17cb(r8)
     b ksNesLinecntIrqDefault
-    
+
 entry ksNesStore49_c000
     lbz r8, 0x17cb(state_temp)
     andi. r7, r4, 0x2
@@ -7368,7 +7369,7 @@ L_8003DE3C:
     cmpw r7, r0
     bne L_8003DE3C
     b ksNesLinecntIrqDefault
-   
+
 entry ksNesStore5d_6000
     lbz r8, state_temp->prg_banks
     slwi r7, r4, 1
@@ -7398,6 +7399,7 @@ L_8003DE94:
     cmpw r9, r0
     bne L_8003DE94
     b ksNesLinecntIrqDefault
+#endif
 }
 
 // clang-format on

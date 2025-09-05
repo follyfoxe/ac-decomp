@@ -147,7 +147,8 @@ static BOOL Relocate(OSModuleHeader* newModule, OSModuleHeader* module) {
 Found:
     siFlush = 0;
     for (rel = (OSRel*)imp->offset; rel->type != R_DOLPHIN_END; rel++) {
-        (u8*)p += rel->offset;
+        p = (u8*)p + rel->offset;
+        //(u8*)p += rel->offset;
         if (idNew) {
             si = &OSGetSectionInfo(newModule)[rel->section];
             offset = OS_SECTIONINFO_OFFSET(si->offset);
@@ -304,7 +305,8 @@ static BOOL Undo(OSModuleHeader* newModule, OSModuleHeader* module) {
 Found:
     siFlush = 0;
     for (rel = (OSRel*)imp->offset; rel->type != R_DOLPHIN_END; rel++) {
-        (u8*)p += rel->offset;
+        //(u8*)p += rel->offset;
+        p = (u8*)p + rel->offset;
         si = &OSGetSectionInfo(newModule)[rel->section];
         offset = OS_SECTIONINFO_OFFSET(si->offset);
         x = 0;

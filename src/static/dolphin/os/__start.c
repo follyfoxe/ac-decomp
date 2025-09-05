@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 __declspec(section ".init") void __init_registers(void);
-__declspec(section ".init") void __init_data(void);
+__declspec(section ".init") static void __init_data(void);
 
 int main(int argc, char** argv);
 

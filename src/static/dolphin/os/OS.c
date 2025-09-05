@@ -6,6 +6,10 @@
 #include <macros.h>
 #include "../src/static/dolphin/os/__os.h"
 
+OSThread *__gUnkThread1;
+OSThreadQueue __OSActiveThreadQueue;
+OSThread *__gCurrentThread;
+
 void EnableMetroTRKInterrupts(void);
 
 #define OS_CURRENTCONTEXT_PADDR 0x00C0

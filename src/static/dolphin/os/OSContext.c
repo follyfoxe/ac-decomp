@@ -7,10 +7,11 @@ extern void OSReport(char* msg, ...);
 #define OS_CACHED_REGION_PREFIX 0x8000
 #define OS_BASE_CACHED (OS_CACHED_REGION_PREFIX << 16)
 
-volatile OSContext* __OSCurrentContext : (OS_BASE_CACHED | 0x00D4);
-volatile OSContext* __OSFPUContext : (OS_BASE_CACHED | 0x00D8);
+volatile static OSContext* __OSCurrentContext;// : (OS_BASE_CACHED | 0x00D4);
+volatile static OSContext* __OSFPUContext;// : (OS_BASE_CACHED | 0x00D8);
 
 static asm void __OSLoadFPUContext(register u32, register OSContext* fpuContext) {
+#ifdef ENABLE_ASM
     // clang-format off
   nofralloc
   lhz r5, fpuContext->state;
@@ -22,7 +23,7 @@ static asm void __OSLoadFPUContext(register u32, register OSContext* fpuContext)
   mfspr r5, HID2
   rlwinm. r5, r5, 3, 31, 31
   beq _regular_FPRs
-  
+
   psq_l fp0, OS_CONTEXT_PSF0(fpuContext), 0, 0
   psq_l fp1, OS_CONTEXT_PSF1(fpuContext), 0, 0
   psq_l fp2, OS_CONTEXT_PSF2(fpuContext), 0, 0
@@ -92,9 +93,11 @@ _regular_FPRs:
 _return:
   blr
     // clang-format on
+#endif
 }
 
 static asm void __OSSaveFPUContext(register u32, register u32, register OSContext* fpuContext) {
+#ifdef ENABLE_ASM
     // clang-format off
   nofralloc
 
@@ -180,6 +183,7 @@ static asm void __OSSaveFPUContext(register u32, register u32, register OSContex
 _return:
     blr
     // clang-format on
+#endif
 }
 
 asm void OSSetCurrentContext(register OSContext* context){
@@ -225,6 +229,7 @@ OSContext* OSGetCurrentContext(void) {
 }
 
 asm u32 OSSaveContext(register OSContext* context) {
+#ifdef ENABLE_ASM
     // clang-format off
   nofralloc
   stmw    r13, context->gpr[13]
@@ -260,12 +265,14 @@ asm u32 OSSaveContext(register OSContext* context) {
   li      r3, 0
   blr
     // clang-format on
+#endif
 }
 
 extern void __RAS_OSDisableInterrupts_begin();
 extern void __RAS_OSDisableInterrupts_end();
 
 asm void OSLoadContext(register OSContext* context) {
+#ifdef ENABLE_ASM
     // clang-format off
   nofralloc
 
@@ -336,14 +343,17 @@ misc:
 
   rfi
     // clang-format on
+#endif
 }
 
 asm u32 OSGetStackPointer() {
+#ifdef ENABLE_ASM
     // clang-format off
-  nofralloc 
-  mr r3, r1 
+  nofralloc
+  mr r3, r1
   blr
     // clang-format on
+#endif
 }
 
 void OSClearContext(register OSContext* context) {
@@ -354,6 +364,7 @@ void OSClearContext(register OSContext* context) {
 }
 
 asm void OSInitContext(register OSContext* context, register u32 pc, register u32 newsp) {
+#ifdef ENABLE_ASM
     // clang-format off
     nofralloc
 
@@ -411,6 +422,7 @@ asm void OSInitContext(register OSContext* context, register u32 pc, register u3
 
     b       OSClearContext
     // clang-format on
+#endif
 }
 
 void OSDumpContext(OSContext* context) {
@@ -463,6 +475,7 @@ void OSDumpContext(OSContext* context) {
 }
 
 static asm void OSSwitchFPUContext(register __OSException exception, register OSContext* context) {
+#ifdef ENABLE_ASM
   // clang-format off
   nofralloc
   mfmsr   r5
@@ -473,7 +486,7 @@ static asm void OSSwitchFPUContext(register __OSException exception, register OS
   ori     r5, r5, 0x2000
   mtsrr1  r5
   addis   r3, r0, OS_CACHED_REGION_PREFIX
-  lwz     r5, 0x00D8(r3) 
+  lwz     r5, 0x00D8(r3)
   stw     context, 0x00D8(r3)
   cmpw    r5, r4
   beq     _restoreAndExit
@@ -501,6 +514,7 @@ _restoreAndExit:
   lwz     r4, OS_CONTEXT_R4(context)
   rfi
   // clang-format on
+#endif
 }
 
 extern void DBPrintf(char*, ...);
@@ -512,6 +526,7 @@ void __OSContextInit(void) {
 }
 
 asm void OSFillFPUContext(register OSContext * context) {
+#ifdef ENABLE_ASM
   // clang-format off
   nofralloc
   mfmsr   r5
@@ -597,4 +612,5 @@ asm void OSFillFPUContext(register OSContext * context) {
 _return:
     blr
   // clang-format on
+#endif
 }

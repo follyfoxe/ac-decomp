@@ -126,8 +126,15 @@ s32 __gUnknown800030C0[2] : (OS_BASE_CACHED | 0x30C0);
 u8 __gUnknown800030E3 : (OS_BASE_CACHED | 0x30E3);
 vu16 __OSDeviceCode AT_ADDRESS(OS_BASE_CACHED | 0x30E6);
 #else
+
 #define __OSBusClock  (*(u32 *)(OS_BASE_CACHED | 0x00F8))
 #define __OSCoreClock (*(u32 *)(OS_BASE_CACHED | 0x00FC))
+#define __OSPhysicalMemSize 40000000 // 40 MB
+
+extern OSThread *__gUnkThread1;
+extern OSThreadQueue __OSActiveThreadQueue;
+extern OSThread *__gCurrentThread;
+
 #endif
 #define OS_BUS_CLOCK   __OSBusClock
 #define OS_CORE_CLOCK  __OSCoreClock

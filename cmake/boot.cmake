@@ -18,7 +18,7 @@ set(AC_LIBS
         mtx
         OdemuExi2
         odenotstub
-        #os
+        os
         #pad
         #si
         #vi

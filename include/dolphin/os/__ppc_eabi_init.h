@@ -61,7 +61,7 @@ DECL_BSS_SECTION(_sbss);
 DECL_BSS_SECTION(_sbss2);
 
 void __init_hardware(void);
-void __flush_cache(void*, size_t);
+void __flush_cache(void*, u32);
 void __init_user(void);
 void _ExitProcess(void);
 

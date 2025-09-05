@@ -27,6 +27,7 @@ __declspec(section ".init") asm void __init_hardware(void) {
 }
 
 __declspec(section ".init") asm void __flush_cache(void* address, u32 size) {
+#ifdef ENABLE_ASM
 	nofralloc
 	lis r5, 0xFFFFFFF1@h
 	ori r5, r5, 0xFFFFFFF1@l
@@ -40,8 +41,9 @@ loop:
 	addic r5, r5, 8
 	addic. r4, r4, -8
 	bge loop
-	isync 
+	isync
 	blr
+#endif
 }
 /* clang-format on */
 

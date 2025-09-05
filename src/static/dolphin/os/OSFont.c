@@ -287,7 +287,8 @@ static void ReadROM(void* buf, int length, int offset)
 		}
 
 		offset += len;
-		(u8*)buf += len;
+	        buf = (u8*)buf + len;
+		//(u8*)buf += len;
 	}
 }
 

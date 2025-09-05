@@ -25,7 +25,7 @@
 
 #endif
 
-// Find: (asm \w+ \w+\([^\)]*\)\{)\s(?!#)([^}]*)(})
+// Find: (asm \w+ \w+\([^\)]*\)\s*\{)\s(?!#)([^}]*)(})
 // Replace: $1\n#ifdef ENABLE_ASM\n$2\#endif\n$3
 
 // Find: extern (\w+) (\w+)\[];\nstatic \1 \2\[]
