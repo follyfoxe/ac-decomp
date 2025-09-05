@@ -352,7 +352,7 @@ extern void emu64_texture_cache_data_entry_set(void* begin, void* end) {
 static texture_cache_t* texture_cache_select(void* addr) {
     int i;
 
-    if (aflags[AFLAGS_SKIP_TEXTURE_CONV] >= 1 || (addr >= _f_rodata && addr <= _e_data)) {
+    if (aflags[AFLAGS_SKIP_TEXTURE_CONV] >= 1/* || (addr >= _f_rodata && addr <= _e_data)*/) {
         return &texture_cache_data;
     }
 

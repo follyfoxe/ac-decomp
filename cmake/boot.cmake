@@ -49,6 +49,15 @@ foreach (LIB IN LISTS AC_LIBS)
         include("cmake/libs/${LIB}.cmake")
 endforeach ()
 
+foreach (LIB IN LISTS AC_LIBS)
+        set(TEMP ${AC_LIBS})
+        list(REMOVE_ITEM TEMP ${LIB})
+        target_link_libraries(${LIB} ${TEMP})
+endforeach ()
+
+#target_link_libraries(os db exi)
+#target_link_libraries(JKernel ar)
+
 set_source_files_properties("src/static/libforest/emu64/emu64.c" PROPERTIES LANGUAGE CXX)
 add_executable(boot
         # libc64
@@ -71,7 +80,8 @@ add_executable(boot
         "src/static/bootdata/gam_win3.c"
         "src/static/bootdata/logo_nin.c"
         "src/static/nintendo_hi_0.c"
-        "src/static/GBA2/JoyBoot.c")
+        "src/static/GBA2/JoyBoot.c"
+        "src/pc/wrapper.c")
 
 target_include_directories(boot PRIVATE ${INCLUDE})
 target_compile_definitions(boot PRIVATE ${DEFINES})

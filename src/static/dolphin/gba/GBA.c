@@ -42,7 +42,7 @@ void GBAInit(void) {
     }
 
     OSInitAlarm();
-    DSPInit();
+    //DSPInit();
 
     __GBAReset = FALSE;
     OSRegisterResetFunction(&ResetFunctionInfo);

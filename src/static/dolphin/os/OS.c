@@ -17,6 +17,15 @@ u32 __OSCoreClock = 0;
 s32 __gUnknown800030C0[2] = {};
 u8 __gUnknown800030E3 = 0;
 
+volatile u16 __VIRegs[59] = {};
+volatile u32 __PIRegs[12] = {};
+volatile u16 __MEMRegs[64] = {};
+volatile u16 __DSPRegs[30] = {}; // length estimate by use in the code
+volatile u32 __DIRegs[10] = {}; // length estimate by use in the code
+volatile u32 __SIRegs[0x100] = {};
+volatile u32 __EXIRegs[0x40] = {};
+volatile u32 __AIRegs[8] = {};
+
 void EnableMetroTRKInterrupts(void);
 
 #define OS_CURRENTCONTEXT_PADDR 0x00C0
@@ -40,16 +49,16 @@ extern char _stack_addr[];
 extern unsigned char __ArenaHi[];
 
 // dummy entry points to the OS Exception vector
-void __OSEVStart(void);
-void __OSEVEnd(void);
-void __OSEVSetNumber(void);
-void __OSExceptionVector(void);
+extern void __OSEVStart(void);
+extern void __OSEVEnd(void);
+extern void __OSEVSetNumber(void);
+extern void __OSExceptionVector(void);
 
-void __DBVECTOR(void);
-void __OSDBINTSTART(void);
-void __OSDBINTEND(void);
-void __OSDBJUMPSTART(void);
-void __OSDBJUMPEND(void);
+extern void __DBVECTOR(void);
+extern void __OSDBINTSTART(void);
+extern void __OSDBINTEND(void);
+extern void __OSDBJUMPSTART(void);
+extern void __OSDBJUMPEND(void);
 
 #define NOP 0x60000000
 
@@ -319,7 +328,7 @@ void OSInit()
 	// if location of debug flag exists, and flag is >= 2, enable
 	// MetroTRKInterrupts
 	if (BI2DebugFlag && ((*BI2DebugFlag) >= 2)) {
-		EnableMetroTRKInterrupts();
+		//EnableMetroTRKInterrupts();
 	}
 	ClearArena();
 	OSEnableInterrupts();

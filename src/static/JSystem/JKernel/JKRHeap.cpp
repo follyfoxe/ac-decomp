@@ -88,7 +88,7 @@ JKRHeap* JKRHeap::becomeCurrentHeap() {
 
 void JKRHeap::destroy(JKRHeap* heap) {
     JUT_ASSERT(heap != 0);
-    heap->destroy();
+    //heap->destroy();
 }
 
 void* JKRHeap::alloc(u32 byteCount, int padding, JKRHeap* heap) {

@@ -128,9 +128,9 @@ class JSUInputStream : public JSUIosBase {
 
 class JSUOutputStream : protected JSUIosBase {
   public:
-    virtual ~JSUOutputStream();
-    virtual int getAvailable() const = 0;
-    virtual int skip(s32 amount);
+    virtual ~JSUOutputStream() = default;
+    //virtual int getAvailable() const = 0;
+    //virtual int skip(s32 amount);
     virtual int readData(void* buf, s32 size) = 0;
 };
 

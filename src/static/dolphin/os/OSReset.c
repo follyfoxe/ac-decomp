@@ -143,7 +143,7 @@ void __OSDoHotReset(s32 arg0)
 	Reset(arg0 * 8);
 }
 
-inline BOOL __OSCallResetFunctions(BOOL arg0)
+inline static BOOL __OSCallResetFunctions(BOOL arg0)
 {
 	OSResetFunctionInfo* iter;
 	s32 retCode = 0;

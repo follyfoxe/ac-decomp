@@ -241,7 +241,7 @@ void audioFatalCallback() {
  * 
  */
 void sound_initial() {
-  Na_InitAudio(audioFatalCallback, nullptr, 0, nintendo_hi_0, 0x66a0, FALSE);
+  //Na_InitAudio(audioFatalCallback, nullptr, 0, nintendo_hi_0, 0x66a0, FALSE);
   OSReport("sizeof(nintendo_hi_0)=%08x\n", 0x9900);
   OSReport("実際のnintendo_hi_0.awのサイズ=%08x \n", 0x66a0); /* Real nintendo_hi_0.aw size=%08x */
   OSReport("ニンテンドー発生タイムラグまで寝てます(%dms)" VT_RST "\n", 2500); /* Sleeping until Nintendo latency time (%dms) occurs */
@@ -253,10 +253,10 @@ void sound_initial() {
  * 
  */
 void sound_initial2() {
-  while (!Na_CheckNeosBoot()) {
+  /*while (!Na_CheckNeosBoot()) {
     VIWaitForRetrace();
     Na_GameFrame();
-  }
+  }*/
 
   bzero(&nintendo_hi_0, sizeof(nintendo_hi_0));
 }

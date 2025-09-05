@@ -140,7 +140,7 @@ static void F29(s32 chan, s32 ret) {
     GBABootInfo* bootInfo = &__GBA[chan].bootInfo; // r28
 
     if (ret == GBA_READY) {
-        __GBAX02(chan, bootInfo->readbuf);
+        //__GBAX02(chan, bootInfo->readbuf);
     }
     else {
         F104(chan, ret);

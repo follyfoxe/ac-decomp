@@ -24,7 +24,7 @@ void osShutdownStart(int val) {
     }
     osIsEnableShutdown();
     PADRecalibrate(0xF0000000);
-    Na_Reset();
+    //Na_Reset();
 
     gthread = GXGetCurrentGXThread();
     enable = OSDisableInterrupts();

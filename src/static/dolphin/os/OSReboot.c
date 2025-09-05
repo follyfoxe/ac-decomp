@@ -40,7 +40,7 @@ static asm void Run(register void (*addr)())
 #endif // clang-format on
 }
 
-inline void ReadApploader(DVDCommandBlock* dvdCmd, void* addr, u32 offset,
+inline static void ReadApploader(DVDCommandBlock* dvdCmd, void* addr, u32 offset,
                           u32 numBytes)
 {
 	/* Not sure if this inline is correct - might need to call other inlines */

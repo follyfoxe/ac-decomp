@@ -84,7 +84,7 @@ void* JKRTask::run() {
 }
 
 bool JKRTask::request(RequestCallback callback, void* arg, void* msg) {
-    Request* req = searchBlank();
+    Request* req = nullptr; //searchBlank();
     if (req == nullptr) {
         return false;
     }
