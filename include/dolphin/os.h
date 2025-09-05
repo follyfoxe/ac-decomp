@@ -127,13 +127,20 @@ u8 __gUnknown800030E3 : (OS_BASE_CACHED | 0x30E3);
 vu16 __OSDeviceCode AT_ADDRESS(OS_BASE_CACHED | 0x30E6);
 #else
 
-#define __OSBusClock  (*(u32 *)(OS_BASE_CACHED | 0x00F8))
-#define __OSCoreClock (*(u32 *)(OS_BASE_CACHED | 0x00FC))
+//#define __OSBusClock  (*(u32 *)(OS_BASE_CACHED | 0x00F8))
+//#define __OSCoreClock (*(u32 *)(OS_BASE_CACHED | 0x00FC))
 #define __OSPhysicalMemSize 40000000 // 40 MB
 
+extern volatile int __OSTVMode;
 extern OSThread *__gUnkThread1;
 extern OSThreadQueue __OSActiveThreadQueue;
 extern OSThread *__gCurrentThread;
+
+extern u32 __OSBusClock;
+extern u32 __OSCoreClock;
+extern s32 __gUnknown800030C0[2];
+extern u8 __gUnknown800030E3;
+extern volatile vu16 __OSDeviceCode;
 
 #endif
 #define OS_BUS_CLOCK   __OSBusClock

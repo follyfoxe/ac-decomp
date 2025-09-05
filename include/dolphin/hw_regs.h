@@ -10,7 +10,7 @@ volatile u32 __DIRegs[]       : 0xCC006000;
 volatile u32 __SIRegs[0x100]  : 0xCC006400;
 volatile u32 __EXIRegs[0x40]  : 0xCC006800;
 volatile u32 __AIRegs[8]      : 0xCC006C00;
-#else
+#else // TODO
 #define __VIRegs         ((volatile u16 *)0xCC002000)
 #define __PIRegs         ((volatile u32 *)0xCC003000)
 #define __MEMRegs        ((volatile u16 *)0xCC004000)

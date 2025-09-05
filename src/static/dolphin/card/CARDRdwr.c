@@ -16,7 +16,7 @@ static void BlockReadCallback(long chan, long result) {
     if ((result >= 0)) {
         card->xferred += 0x200;
         card->addr += 0x200;
-        ((u8*)card->buffer) += 0x200;
+        *((u8*)card->buffer) += 0x200;
 
         if (--card->repeat > 0) {
             result = __CARDReadSegment(chan, BlockReadCallback);
@@ -59,7 +59,7 @@ static void BlockWriteCallback(long chan, long result) {
     if (result >= 0) {
         card->xferred += 0x80;
         card->addr += 0x80;
-        ((u8*)card->buffer) += 0x80;
+        *((u8*)card->buffer) += 0x80;
 
         if (--card->repeat > 0) {
             result = __CARDWritePage(chan, BlockWriteCallback);

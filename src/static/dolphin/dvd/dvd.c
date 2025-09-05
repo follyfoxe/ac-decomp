@@ -44,8 +44,8 @@ static void cbForStateGettingError(unsigned long intType);
 static void stateGoToRetry();
 static void cbForStateGoToRetry(unsigned long intType);
 static void stateCheckID();
-static void stateCheckID3();
-static void stateCheckID2();
+static void stateCheckID3(DVDCommandBlock* block);
+static void stateCheckID2(DVDCommandBlock* block);
 static void cbForStateCheckID1(unsigned long intType);
 static void cbForStateCheckID2(unsigned long intType);
 static void cbForStateCheckID3(unsigned long intType);
@@ -399,11 +399,11 @@ static void stateCheckID() {
     }
 }
 
-static void stateCheckID3() {
+static void stateCheckID3(DVDCommandBlock* block) {
     DVDLowAudioBufferConfig(currID->streaming, 0xAU, cbForStateCheckID3);
 }
 
-static void stateCheckID2() {
+static void stateCheckID2(DVDCommandBlock* block) {
     DVDLowRead(&tmpBuffer, 0x20U, 0x420, cbForStateCheckID2);
 }
 

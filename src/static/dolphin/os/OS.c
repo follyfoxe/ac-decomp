@@ -6,9 +6,16 @@
 #include <macros.h>
 #include "../src/static/dolphin/os/__os.h"
 
-OSThread *__gUnkThread1;
-OSThreadQueue __OSActiveThreadQueue;
-OSThread *__gCurrentThread;
+// TODO: Emulate these?
+volatile int __OSTVMode = 0;
+OSThread *__gUnkThread1 = NULL;
+OSThreadQueue __OSActiveThreadQueue = {};
+OSThread *__gCurrentThread = NULL;
+
+u32 __OSBusClock = 0;
+u32 __OSCoreClock = 0;
+s32 __gUnknown800030C0[2] = {};
+u8 __gUnknown800030E3 = 0;
 
 void EnableMetroTRKInterrupts(void);
 

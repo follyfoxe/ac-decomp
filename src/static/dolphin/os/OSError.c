@@ -6,20 +6,22 @@
 #include "dolphin/hw_regs.h"
 // #include "va_args.h"
 
+//#define WEAK __declspec(weak)
+#define WEAK __attribute__((weak))
 OSErrorHandler __OSErrorTable[OS_ERROR_MAX];
 
 extern volatile __OSInterrupt __OSLastInterrupt;
 extern volatile u32 __OSLastInterruptSrr0;
 extern volatile OSTime __OSLastInterruptTime;
 
-__declspec(weak) void OSReport(char* msg, ...) {
+WEAK void OSReport(char* msg, ...) {
     va_list marker;
     va_start(marker, msg);
     vprintf(msg, marker);
     va_end(marker);
 }
 
-__declspec(weak) void OSPanic(char* file, int line, char* msg, ...) {
+WEAK void OSPanic(char* file, int line, char* msg, ...) {
     va_list marker;
     u32 i;
     u32* p;

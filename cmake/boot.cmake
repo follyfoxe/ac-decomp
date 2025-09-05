@@ -8,20 +8,20 @@ set(AC_LIBS
         ar
         amcstubs
         base
-        #card
+        card
         db
         dsp
-        #dvd
-        #exi
+        dvd
+        exi
         gba
-        #gx
+        gx
         mtx
         OdemuExi2
         odenotstub
         os
-        #pad
-        #si
-        #vi
+        pad
+        si
+        vi
         J2DGraph
         JFramework
         JGadget

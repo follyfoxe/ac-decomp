@@ -64,7 +64,8 @@ static u32 CompleteTransfer() {
         input = Si.input;
         rLen = Si.inputBytes / sizeof(u32);
         for(i = 0; i < rLen; i++) {
-            *((u32*)input)++ = __SIRegs[i+0x20];
+            *((u32*)input) = __SIRegs[i+0x20];
+            input = (u32*)input + 1;
         }
         
         rLen = Si.inputBytes & 3;

@@ -164,7 +164,7 @@ void MWTRACE(u8, char*, ...);
 ////////////////////////////////////
 
 //////// SUPPORT FUNCTIONS /////////
-DSError TRKRequestSend();
+DSError TRKRequestSend(TRKBuffer*, int*, u32, u32, int);
 u32 TRKAccessFile(u32, u32, u32*, u8*);
 ////////////////////////////////////
 

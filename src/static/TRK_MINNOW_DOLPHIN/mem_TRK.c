@@ -31,10 +31,10 @@ static void TRK_fill_mem(void* dest, int value, size_t length)
 #define lDest ((u32*)dest)
 	u32 val = (u8)value;
 	u32 i;
-	lDest = (u32*)dest;
-	cDest = (u8*)dest;
+	//lDest = (u32*)dest;
+	//cDest = (u8*)dest;
 
-	cDest--;
+	dest = cDest - 1;
 
 	if (length >= 32) {
 		i = ~(u32)dest & 3;
@@ -42,7 +42,8 @@ static void TRK_fill_mem(void* dest, int value, size_t length)
 		if (i) {
 			length -= i;
 			do {
-				*++cDest = val;
+			        dest = cDest + 1;
+				*cDest = val;
 			} while (--i);
 		}
 
@@ -50,19 +51,27 @@ static void TRK_fill_mem(void* dest, int value, size_t length)
 			val |= val << 24 | val << 16 | val << 8;
 		}
 
-		lDest = (u32*)(cDest + 1) - 1;
+		dest = (u32*)(cDest + 1) - 1;
 
 		i = length >> 5;
 		if (i) {
 			do {
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
-				*++lDest = val;
+			        dest = lDest + 1;
+				*lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
+			        dest = lDest + 1;
+			        *lDest = val;
 			} while (--i);
 		}
 
@@ -70,18 +79,20 @@ static void TRK_fill_mem(void* dest, int value, size_t length)
 
 		if (i) {
 			do {
-				*++lDest = val;
+			        dest = lDest + 1;
+				*lDest = val;
 			} while (--i);
 		}
 
-		cDest = (u8*)(lDest + 1) - 1;
+		dest = (u8*)(lDest + 1) - 1;
 
 		length &= 3;
 	}
 
 	if (length) {
 		do {
-			*++cDest = val;
+		        dest = cDest + 1;
+			*cDest = val;
 		} while (--length);
 	}
 
