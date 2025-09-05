@@ -1,7 +1,7 @@
 set(AC_LIBS
         libforest
         libu64
-        #libc64
+        libc64
         libultra
         libjsys
         ai
@@ -55,21 +55,8 @@ foreach (LIB IN LISTS AC_LIBS)
         target_link_libraries(${LIB} ${TEMP})
 endforeach ()
 
-#target_link_libraries(os db exi)
-#target_link_libraries(JKernel ar)
-
 set_source_files_properties("src/static/libforest/emu64/emu64.c" PROPERTIES LANGUAGE CXX)
 add_executable(boot
-        # libc64
-        "src/static/libc64/qrand.c"
-        "src/static/libc64/__osMalloc.c"
-        "src/static/libc64/malloc.c"
-
-        # libultra
-        "src/static/libultra/gu/sins.c"
-        "src/static/libultra/gu/coss.c"
-
-        # boot
         "src/static/boot.c"
         "src/static/jsyswrap.cpp"
         "src/static/version.c"

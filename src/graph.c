@@ -308,7 +308,7 @@ extern void graph_proc(void* arg) {
 
     while (dlftbl != NULL) {
         size_t size = dlftbl->alloc_size;
-        GAME* game = (GAME*)malloc(size);
+        GAME* game = (GAME*)osmalloc(size);
         game_class_p = game;
         bzero(game, size);
         GRAPH_SET_DOING_POINT(__graph, GAME_CT);
@@ -327,7 +327,7 @@ extern void graph_proc(void* arg) {
         GRAPH_SET_DOING_POINT(__graph, GAME_DT);
         game_dt(game);
         GRAPH_SET_DOING_POINT(__graph, GAME_DT_FINISHED);
-        free(game);
+        osfree(game);
         game_class_p = NULL;
     }
 

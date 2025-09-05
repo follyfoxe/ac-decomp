@@ -30,10 +30,8 @@ char _stack_addr = {};
 unsigned char __ArenaHi = {};
 
 void __OSSystemCallVectorStart() {
-
 }
 void __OSSystemCallVectorEnd() {
-
 }
 
 void __OSEVStart(void) {

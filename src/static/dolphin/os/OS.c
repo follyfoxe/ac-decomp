@@ -10,7 +10,9 @@
 volatile int __OSTVMode = 0;
 OSThread *__gUnkThread1 = NULL;
 OSThreadQueue __OSActiveThreadQueue = {};
-OSThread *__gCurrentThread = NULL;
+
+static OSThread currentThread = {};
+OSThread *__gCurrentThread = &currentThread;
 
 u32 __OSBusClock = 0;
 u32 __OSCoreClock = 0;

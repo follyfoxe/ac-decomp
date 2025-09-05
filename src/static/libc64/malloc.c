@@ -3,11 +3,11 @@
 
 OSArena malloc_arena;
 
-extern void* malloc(size_t size) {
+extern void* osmalloc(size_t size) {
     return __osMalloc(&malloc_arena, size);
 }
 
-extern void free(void* ptr) {
+extern void osfree(void* ptr) {
     __osFree(&malloc_arena, ptr);
 }
 

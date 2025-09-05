@@ -7,8 +7,8 @@
 extern "C" {
 #endif
 
-    extern void* malloc(size_t size);
-    extern void free(void* ptr);
+    extern void* osmalloc(size_t size);
+    extern void osfree(void* ptr);
 
     extern void MallocInit(void* base, u32 len);
     extern void MallocCleanup();
