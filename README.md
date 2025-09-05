@@ -1,3 +1,12 @@
+# This fork
+It's a personal project to try and get the animal crossing decompilation running natively on my computer (at the very least).
+But most importantly I've been learning a lot and been having fun.
+
+Don't take this project too seriously.
+
+## Current status
+Compiles and links under my machine, doesn't do anything yet though.
+
 Animal Crossing  
 [![Build Status]][actions] [![DOL Progress]][Progress] [![REL Progress]][Progress] [![Discord Badge]][discord]
 =============
