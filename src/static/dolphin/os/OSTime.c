@@ -48,7 +48,7 @@ long long __OSGetSystemTime()
 	timeAdjustAddr = (long long*)0x800030D8;
 	enabled        = OSDisableInterrupts();
 
-	result = OSGetTime() + *timeAdjustAddr;
+	result = OSGetTime();// + *timeAdjustAddr;
 	OSRestoreInterrupts(enabled);
 	return result;
 }

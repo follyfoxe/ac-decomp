@@ -42,7 +42,7 @@ void guMtxXFM1F_dol(MtxP mtx, float x, float y, float z, float* ox, float* oy, f
 void guMtxXFM1F_dol7(MtxP mtx, float x, float y, float z, float* ox, float* oy, float* oz) {
     GC_Mtx inv;
 
-    PSMTXInverse(mtx, inv);
+    MTXInverse(mtx, inv);
     *ox = inv[0][0] * x + inv[0][1] * y + inv[0][2] * z + inv[0][3];
     *oy = inv[1][0] * x + inv[1][1] * y + inv[1][2] * z + inv[1][3];
     *oz = inv[2][0] * x + inv[2][1] * y + inv[2][2] * z + inv[2][3];

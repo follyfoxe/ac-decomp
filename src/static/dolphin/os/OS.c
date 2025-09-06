@@ -45,7 +45,7 @@ void EnableMetroTRKInterrupts(void);
 #define DB_EXCEPTIONDEST_OFFSET 0x8
 
 extern unsigned long __DVDLongFileNameFlag;
-extern unsigned long __PADSpec;
+//extern unsigned long __PADSpec;
 extern unsigned char __ArenaLo[];
 extern char _stack_addr[];
 extern unsigned char __ArenaHi[];
@@ -249,16 +249,16 @@ void OSInit()
 	BootInfo              = (struct OSBootInfo_s*)OSPhysicalToCached(0);
 	BI2DebugFlag          = NULL;
 	__DVDLongFileNameFlag = 0;
-	bi2DebugInfo          = (BI2Debug*)*(BI2Debug**)OS_BI2_DEBUG_ADDRESS;
+	bi2DebugInfo          = NULL;//(BI2Debug*)*(BI2Debug**)OS_BI2_DEBUG_ADDRESS;
 	if (bi2DebugInfo != NULL) {
 		BI2DebugFlag               = &bi2DebugInfo->debugFlag;
-		__PADSpec                  = bi2DebugInfo->padSpec;
+		//__PADSpec                  = bi2DebugInfo->padSpec;
 		*((u8*)DEBUGFLAG_ADDR)     = (u8)*BI2DebugFlag;
-		*((u8*)OS_DEBUG_ADDRESS_2) = (u8)__PADSpec;
+		//*((u8*)OS_DEBUG_ADDRESS_2) = (u8)__PADSpec;
 	} else if (BootInfo->arenaHi) {
 		BI2DebugFlagHolder = (u32*)*((u8*)DEBUGFLAG_ADDR);
 		BI2DebugFlag       = (u32*)&BI2DebugFlagHolder;
-		__PADSpec          = (u32) * ((u8*)OS_DEBUG_ADDRESS_2);
+		//__PADSpec          = (u32) * ((u8*)OS_DEBUG_ADDRESS_2);
 	}
 
 	__DVDLongFileNameFlag = 1;
@@ -277,7 +277,7 @@ void OSInit()
 	__OSContextInit();
 	__OSCacheInit();
 	EXIInit();
-	SIInit();
+	//SIInit();
 	__OSInitSram();
 	__OSThreadInit();
 	__OSInitAudioSystem();
@@ -387,7 +387,7 @@ static void OSExceptionInit(void)
 	}
 
 	// Copy the right vector into the table
-	for (exception = 0; exception < __OS_EXCEPTION_MAX; exception++) {
+	/*for (exception = 0; exception < __OS_EXCEPTION_MAX; exception++) {
 		if (BI2DebugFlag && (*BI2DebugFlag >= 2)
 		    && __DBIsExceptionMarked(exception)) {
 			// this DBPrintf is suspicious.
@@ -424,7 +424,7 @@ static void OSExceptionInit(void)
 		DCFlushRangeNoSync(destAddr, handlerSize);
 		__sync();
 		ICInvalidateRange(destAddr, handlerSize);
-	}
+	}*/
 	// initialize pointer to exception table
 	OSExceptionTable = (void*)OSPhysicalToCached(OS_EXCEPTIONTABLE_ADDR);
 
@@ -435,7 +435,7 @@ static void OSExceptionInit(void)
 
 	// restore the old opcode, so that we can re-start an application without
 	// downloading the text segments
-	*opCodeAddr = oldOpCode;
+	//opCodeAddr = oldOpCode;
 
 	DBPrintf("Exceptions initialized...\n");
 }

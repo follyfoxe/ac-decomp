@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-#define MTX_PS
+//#define MTX_PS
 
 /////////////// TYPE DEFINES ///////////////
 #define MTXDegToRad(a) ((a) * 0.01745329252f)
@@ -69,6 +69,17 @@ void C_MTXOrtho(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f);
 ////////////////////////////////////////////
 
 ///////// CODED C MATRIX FUNCTIONS /////////
+void C_MTXIdentity(GC_Mtx mtx);
+void C_MTXCopy(const GC_Mtx src, GC_Mtx dest);
+void C_MTXConcat(const GC_Mtx A, const GC_Mtx B, GC_Mtx concat);
+u32 C_MTXInverse(const GC_Mtx src, GC_Mtx inv);
+
+void C_MTXTrans(GC_Mtx mtx, f32 xT, f32 yT, f32 zT);
+void C_MTXScale(GC_Mtx mtx, f32 xS, f32 yS, f32 zS);
+
+void C_VECNormalize(const Vec* src, Vec* dst);
+void C_MTXMultVec(const GC_Mtx m, const Vec* src, Vec* dst);
+
 void C_MTXLookAt(GC_Mtx, const Vec*, const Vec*, const Vec*);
 void C_MTXLightPerspective(GC_Mtx mtx, f32 fovY, f32 aspect, f32 scaleS, f32 scaleT, f32 transS, f32 transT);
 void C_MTXLightOrtho(GC_Mtx mtx, f32 t, f32 b, f32 l, f32 r, f32 scaleS, f32 scaleT, f32 transS, f32 transT);

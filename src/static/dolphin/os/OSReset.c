@@ -189,8 +189,8 @@ void OSResetSystem(int reset, unsigned long resetCode, int forceMenu)
 	OSDisableScheduler();
 	__OSStopAudioSystem();
 
-	if (reset == OS_RESET_SHUTDOWN)
-		padThing = __PADDisableRecalibration(1);
+	//if (reset == OS_RESET_SHUTDOWN)
+	//	padThing = __PADDisableRecalibration(1);
 
 	do {
 	} while (CallResetFunctions(0) == 0);
@@ -227,7 +227,7 @@ void OSResetSystem(int reset, unsigned long resetCode, int forceMenu)
 	memset(OSPhysicalToCached(0x3000), 0, 0xC0);
 	memset(OSPhysicalToCached(0x30C8), 0, 0xD4 - 0xC8);
 	memset(&OS_REBOOT_BOOL, 0, 1);
-	__PADDisableRecalibration(padThing);
+	//__PADDisableRecalibration(padThing);
 }
 
 u32 OSGetResetCode(void)

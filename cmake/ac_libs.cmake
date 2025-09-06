@@ -15,14 +15,14 @@ set(AC_LIBS
         dvd
         exi
         gba
-        gx
-        mtx
+        #gx
+        #mtx
         OdemuExi2
         odenotstub
         os
-        pad
-        si
-        vi
+        #pad
+        #si
+        #vi
         J2DGraph
         JFramework
         JGadget
@@ -54,9 +54,9 @@ foreach (LIB IN LISTS AC_LIBS)
         include("cmake/libs/${LIB}.cmake")
 endforeach ()
 
-# Link all
-foreach (LIB IN LISTS AC_LIBS)
-        set(TEMP ${AC_LIBS})
-        list(REMOVE_ITEM TEMP ${LIB})
-        target_link_libraries(${LIB} ${TEMP})
-endforeach ()
+# Link
+#foreach (LIB IN LISTS AC_LIBS)
+#        set(TEMP ${AC_LIBS})
+#        list(REMOVE_ITEM TEMP ${LIB})
+#        target_link_libraries(${LIB} ${TEMP})
+#endforeach ()

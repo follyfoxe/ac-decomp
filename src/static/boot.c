@@ -399,9 +399,9 @@ void fault_callback_scroll() {
         down_speed = 0;
       }
       if (update_console == TRUE) {
-        retrace_cnt = VIGetRetraceCount();
+        /*retrace_cnt = VIGetRetraceCount();
         do {
-        } while (retrace_cnt == VIGetRetraceCount());
+        } while (retrace_cnt == VIGetRetraceCount());*/
         JC_JUTConsoleManager_drawDirect(JC_JUTConsoleManager_getManager(), 1);
       }
       JC_JUTException_waitTime(30);
@@ -474,7 +474,9 @@ void adjustOSArena() {
  * @param argv unused
  * @return int exitCode
  */
-int main(int argc, const char** argv) {
+int bootmain(int argc, const char** argv) {
+    customInit();
+
   static fault_client
     my_fault_client1,
     my_fault_client2,
@@ -499,6 +501,7 @@ int main(int argc, const char** argv) {
 
   ReconfigBATs();
   if (fakemain_check) {
+    customShutdown();
     return -1;
   }
 
@@ -668,5 +671,6 @@ int main(int argc, const char** argv) {
 
   OSReport("どうぶつの森ブートローダ終了\n"); /* Animal Crossing bootloader end */
   JW_Cleanup();
+  customShutdown();
   return 0;
 }

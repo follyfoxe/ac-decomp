@@ -20,6 +20,7 @@ orig/*/*
 
 # Build files
 build/
+cmake-build-debug/
 .ninja_*
 build.ninja
 

@@ -94,12 +94,15 @@ typedef struct OSBootInfo_s {
     unsigned long FSTMaxLength; // offset 0x3C, size 0x4
 } OSBootInfo;
 
-#define OS_CACHED_REGION_PREFIX 0x8000
-#define OS_UNCACHED_REGION_PREFIX 0xC000
-#define OS_PHYSICAL_MASK 0x3FFF
+//#define OS_CACHED_REGION_PREFIX 0x8000
+//#define OS_UNCACHED_REGION_PREFIX 0xC000
+//#define OS_PHYSICAL_MASK 0x3FFF
 
-#define OS_BASE_CACHED (OS_CACHED_REGION_PREFIX << 16)
-#define OS_BASE_UNCACHED (OS_UNCACHED_REGION_PREFIX << 16)
+#define OS_BASE_CACHED ((int)cachedMemory)//(OS_CACHED_REGION_PREFIX << 16)
+#define OS_BASE_UNCACHED ((int)uncachedMemory)//(OS_UNCACHED_REGION_PREFIX << 16)
+
+extern void* cachedMemory;
+extern void* uncachedMemory;
 
 typedef struct BI2Debug {
 	/* 0x00 */ s32 debugMonSize;
@@ -129,7 +132,7 @@ vu16 __OSDeviceCode AT_ADDRESS(OS_BASE_CACHED | 0x30E6);
 
 //#define __OSBusClock  (*(u32 *)(OS_BASE_CACHED | 0x00F8))
 //#define __OSCoreClock (*(u32 *)(OS_BASE_CACHED | 0x00FC))
-#define __OSPhysicalMemSize 40000000 // 40 MB
+#define __OSPhysicalMemSize (40 * 1024 * 1024)
 
 extern volatile int __OSTVMode;
 extern OSThread *__gUnkThread1;

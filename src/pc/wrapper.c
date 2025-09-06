@@ -1,5 +1,8 @@
 #include "dolphin/PPCArch.h"
 #include "os/OSLink.h"
+#include "boot.h"
+
+#include <stdlib.h>
 
 void* BOOT_REGION_START = NULL;
 void* BOOT_REGION_END = NULL;
@@ -12,6 +15,21 @@ u32 UNK_817FFFF8 = 0;
 u32 UNK_817FFFFC = 0;
 
 u8 _stack_end[] = {};
+
+void* cachedMemory = NULL;
+void* uncachedMemory = NULL;
+
+void customInit() {
+    cachedMemory = malloc(24 * 1024 * 1024);
+    uncachedMemory = malloc(24 * 1024 * 1024);
+}
+
+void customShutdown() {
+    if (cachedMemory != NULL)
+        free(cachedMemory);
+    if (uncachedMemory != NULL)
+        free(uncachedMemory);
+}
 
 u32 PPCMfwpar() {
 }

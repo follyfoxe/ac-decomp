@@ -1,0 +1,3 @@
+[submodule "pc/aurora"]
+	path = pc/aurora
+	url = https://github.com/encounter/aurora.git

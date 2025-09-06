@@ -26,14 +26,14 @@ void osShutdownStart(int val) {
     PADRecalibrate(0xF0000000);
     //Na_Reset();
 
-    gthread = GXGetCurrentGXThread();
+    //gthread = GXGetCurrentGXThread();
     enable = OSDisableInterrupts();
     cthread = OSGetCurrentThread();
 
-    if (gthread != cthread) {
+    /*if (gthread != cthread) {
         OSCancelThread(gthread);
         GXSetCurrentGXThread();
-    }
+    }*/
     GXFlush();
     GXAbortFrame();
     GXDrawDone();

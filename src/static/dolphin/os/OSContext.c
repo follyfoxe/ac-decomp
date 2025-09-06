@@ -4,8 +4,8 @@
 extern void OSReport(char* msg, ...);
 
 #define HID2 920
-#define OS_CACHED_REGION_PREFIX 0x8000
-#define OS_BASE_CACHED (OS_CACHED_REGION_PREFIX << 16)
+//#define OS_CACHED_REGION_PREFIX 0x8000
+//#define OS_BASE_CACHED (OS_CACHED_REGION_PREFIX << 16)
 
 volatile static OSContext* __OSCurrentContext;// : (OS_BASE_CACHED | 0x00D4);
 volatile static OSContext* __OSFPUContext;// : (OS_BASE_CACHED | 0x00D8);
