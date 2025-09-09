@@ -508,15 +508,15 @@ extern void JW_Init2() {
     if (forest_arc_aram_p == nullptr) {
         forest_arc_aram_p = JC_JKRAramArchive_new();
 
-        if (forest_arc_aram_p == nullptr ||
+        /*if (forest_arc_aram_p == nullptr ||
             JC__JKRMountFixedAramArchive(forest_arc_aram_p, "forest_1st.arc") == FALSE) {
             OSDVDFatalError();
-        }
+        }*/
     }
 
-    gameheap_len = JC_JKRHeap_getFreeSize(JC_JFWSystem_getSystemHeap()) - 0x10000;
+    /*gameheap_len = JC_JKRHeap_getFreeSize(JC_JFWSystem_getSystemHeap()) - 0x10000;
     gameheap_base = JC_JKRHeap_alloc(JC_JFWSystem_getSystemHeap(), gameheap_len, 32);
-    MallocInit(gameheap_base, gameheap_len);
+    MallocInit(gameheap_base, gameheap_len);*/
     JC_JKRExpHeap_changeGroupID(JC_JFWSystem_getSystemHeap(), 4);
 }
 

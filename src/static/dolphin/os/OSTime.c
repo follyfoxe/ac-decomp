@@ -13,6 +13,7 @@ static int LeapYearDays[MONTH_MAX]
 
 asm long long OSGetTime(void)
 {
+    return clock();
 #ifdef __MWERKS__ // clang-format off
 jump:
 	nofralloc

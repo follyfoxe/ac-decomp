@@ -104,7 +104,7 @@ extern u32 __OSGetDIConfig(void);
 // ppc_eabi_init.c
 __declspec(section ".init") asm void __init_hardware(void);
 __declspec(section ".init") asm void __flush_cache(void* address,
-                                                   unsigned int size);
+                                                   u32 size);
 void __init_user(void);
 void __init_cpp(void);
 void __fini_cpp(void);

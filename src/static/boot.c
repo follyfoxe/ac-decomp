@@ -28,6 +28,7 @@
 #include "libforest/batconfig.h"
 #include "dolphin/os/OSAlarm.h"
 #include "dvderr.h"
+#include "main.h"
 #include "libforest/osreport.h"
 
 static OSModuleHeader* moduleA;
@@ -169,6 +170,7 @@ extern void UnLink(OSModuleHeader* module) {
  * @return OSModuleHeader* loadedModule
  */
 OSModuleHeader* LoadLink(const char* module_name) {
+    return nullptr;
   int result;
   size_t length;
   void* bss;
@@ -640,15 +642,17 @@ int main(int argc, const char** argv) {
     OSReportDisable();
   }
 
-  OSReport("Loging COPYDATE\n");
+  /*OSReport("Loging COPYDATE\n");
   boot_copyDate = JC__JKRDvdToMainRam_byName("/COPYDATE", nullptr, EXPAND_SWITCH_DECOMPRESS);
   if (boot_copyDate == nullptr) {
     OSDVDFatalError();
   }
 
-  LoadStringTable("/static.str");
+  LoadStringTable("/static.str");*/
 
   moduleA = LoadLink("/foresta.rel.szs");
+    main2();
+
   JW_Init2();
   initial_menu_cleanup();
   if (moduleA == nullptr) {

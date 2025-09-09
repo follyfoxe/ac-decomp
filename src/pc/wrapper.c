@@ -1,8 +1,21 @@
 #include "dolphin/PPCArch.h"
 #include "os/OSLink.h"
 #include "boot.h"
+#include "JSystem/JUtility/JUTFont.h"
 
 #include <stdlib.h>
+
+// big endian :(
+const u8 Ascfont_fix12_data[] = {
+#embed "../../build/GAFE01_00/bin/assets/JSystem/JUtility/FontData/Ascfont_fix12.bfn"
+};
+
+void* cachedMemory = NULL;
+void* uncachedMemory = NULL;
+
+u8* __ArenaLo = NULL;
+u8* __ArenaHi = NULL;
+char _stack_addr = {};
 
 void* BOOT_REGION_START = NULL;
 void* BOOT_REGION_END = NULL;
@@ -26,11 +39,6 @@ int __OSReadROM(void* buffer, long length, long offset) {
 }
 
 OSModuleHeader* BaseModule = NULL;
-
-// TODO: Estimate size
-unsigned char __ArenaLo[] = {};
-char _stack_addr = {};
-unsigned char __ArenaHi = {};
 
 void __OSSystemCallVectorStart() {
 }

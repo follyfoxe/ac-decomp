@@ -1,6 +1,7 @@
 #ifndef _DOLPHIN_OS
 #define _DOLPHIN_OS
 
+#include <time.h>
 #include "../types.h"
 #include "types.h"
 #include "dolphin/os/OSAlloc.h"
@@ -147,13 +148,13 @@ extern u8 __gUnknown800030E3;
 extern volatile vu16 __OSDeviceCode;
 
 #endif
-#define OS_BUS_CLOCK   __OSBusClock
-#define OS_CORE_CLOCK  __OSCoreClock
-#define OS_TIMER_CLOCK (OS_BUS_CLOCK/4)
+#define OS_TIMER_CLOCK CLOCKS_PER_SEC
+#define OS_BUS_CLOCK (OS_TIMER_CLOCK * 4)
+//#define OS_CORE_CLOCK  __OSCoreClock
 
 #define OSTicksToSeconds(ticks)      ((ticks)   / (OS_TIMER_CLOCK))
 #define OSTicksToMilliseconds(ticks) ((ticks)   / (OS_TIMER_CLOCK/1000))
-#define OSTicksToMicroseconds(ticks) ((ticks)*8 / (OS_TIMER_CLOCK/125000))
+#define OSTicksToMicroseconds(ticks) (u32)(((ticks)*8 / ((f32)OS_TIMER_CLOCK/125000)))
 #define OSSecondsToTicks(sec) ((sec) * (OS_TIMER_CLOCK))
 #define OSMillisecondsToTicks(msec) ((msec) * (OS_TIMER_CLOCK / 1000))
 #define OSNanosecondsToTicks(nsec) (((nsec) * (OS_TIMER_CLOCK / 125000)) / 8000)

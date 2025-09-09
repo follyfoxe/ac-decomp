@@ -31,8 +31,8 @@ extern u8 _db_stack_addr[];
 extern u8 _db_stack_end[];
 
 // Program arena
-extern u8 __ArenaLo[];
-extern u8 __ArenaHi[];
+extern u8* __ArenaLo;
+extern u8* __ArenaHi;
 
 // Program stack
 extern u8 _stack_addr[];

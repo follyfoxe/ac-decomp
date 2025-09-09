@@ -8,6 +8,7 @@
 
 #include "dolphin/os.h"
 #include "boot.h"
+#include "os/__ppc_eabi_init.h"
 
 static void log_callback(AuroraLogLevel level, const char* module, const char* message, unsigned int len) {
     const char* levelStr;
@@ -38,23 +39,25 @@ static void log_callback(AuroraLogLevel level, const char* module, const char* m
     }
 }
 
-void* cachedMemory = NULL;
-void* uncachedMemory = NULL;
-
 void customInit(const int argc, char** argv) {
     printf("hi");
-    cachedMemory = malloc(24 * 1024 * 1024);
-    uncachedMemory = malloc(24 * 1024 * 1024);
 
-    const AuroraConfig config = {
+    const int size = 24 * 1024 * 1024;
+    cachedMemory = malloc(size);
+    uncachedMemory = malloc(size);
+
+    __ArenaLo = cachedMemory;
+    __ArenaHi = __ArenaLo + size;
+
+    /*const AuroraConfig config = {
         .appName = "ac",
         .logCallback = &log_callback,
     };
-    aurora_initialize(argc, argv, &config);
+    aurora_initialize(argc, argv, &config);*/
 }
 
 void customShutdown() {
-    aurora_shutdown();
+    //aurora_shutdown();
 
     if (cachedMemory != NULL)
         free(cachedMemory);

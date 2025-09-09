@@ -110,6 +110,7 @@ extern u32 JC__JKRGetMemBlockSize(void* heap, void* ptr) {
 }
 
 extern u8 JC_JKRExpHeap_changeGroupID(void* expheap, u8 groupId) {
+    return 0;
     return reinterpret_cast<JKRExpHeap*>(expheap)->changeGroupID((u8)groupId);
 }
 

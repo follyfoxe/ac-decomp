@@ -114,6 +114,7 @@ void __OSInterruptInit(void)
 
 u32 SetInterruptMask(OSInterruptMask mask, OSInterruptMask current)
 {
+        return 0;
 	u32 reg;
 
 	switch (__cntlzw(mask)) {

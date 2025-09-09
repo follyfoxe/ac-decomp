@@ -217,8 +217,8 @@ static void __ARChecksize(void)
 	u32 ARAM_size;
 	u32 i;
 
-	do {
-	} while (!(__DSPRegs[DSP_ARAM_MODE] & 1));
+	//do {
+	//} while (!(__DSPRegs[DSP_ARAM_MODE] & 1));
 
 	ARAM_mode = 3;
 	ARAM_size = __AR_InternalSize = 0x1000000;

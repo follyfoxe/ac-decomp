@@ -16,8 +16,7 @@
 #include "JSystem/JUtility/JUTVideo.h"
 #include "JSystem/JFramework/JFWSystem.h"
 
-// TODO
-const ResFONT JUTResFONT_Ascfont_fix12 = {};
+//const ResFONT JUTResFONT_Ascfont_fix12 = *(ResFONT*)&Ascfont_fix12_data;
 
 int JFWSystem::CSetUpParam::maxStdHeaps = 2;
 u32 JFWSystem::CSetUpParam::sysHeapSize = 0x400000;
@@ -27,7 +26,7 @@ u32 JFWSystem::CSetUpParam::aramGraphBufSize = 0x600000;
 s32 JFWSystem::CSetUpParam::streamPriority = 8;
 s32 JFWSystem::CSetUpParam::decompPriority = 7;
 s32 JFWSystem::CSetUpParam::aPiecePriority = 6;
-const ResFONT* JFWSystem::CSetUpParam::systemFontRes = &JUTResFONT_Ascfont_fix12;
+const ResFONT* JFWSystem::CSetUpParam::systemFontRes = (ResFONT*)&Ascfont_fix12_data;
 const _GXRenderModeObj* JFWSystem::CSetUpParam::renderMode = &GXNtsc480IntDf;
 u32 JFWSystem::CSetUpParam::exConsoleBufferSize = 0x24F8;
 
@@ -65,12 +64,12 @@ void JFWSystem::init() {
     JUTDirectPrint* directPrint = JUTDirectPrint::start();
     JUTAssertion::create();
     JUTException::create(directPrint);
-    systemFont = new JUTResFont(CSetUpParam::systemFontRes, nullptr);
+    //systemFont = new JUTResFont(CSetUpParam::systemFontRes, nullptr);
     debugPrint = JUTDbPrint::start(nullptr, nullptr);
-    debugPrint->changeFont(systemFont);
+    //debugPrint->changeFont(systemFont);
     systemConsoleManager = JUTConsoleManager::createManager(nullptr);
     systemConsole = JUTConsole::create(60, 200, nullptr);
-    systemConsole->setFont(systemFont);
+    /*systemConsole->setFont(systemFont);
 
     if (CSetUpParam::renderMode->efbHeight < 300) {
         systemConsole->setFontSize(systemFont->getWidth() * 0.85f, systemFont->getHeight() * 0.5f);
@@ -78,7 +77,7 @@ void JFWSystem::init() {
     } else {
         systemConsole->setFontSize(systemFont->getWidth() * 0.85f, systemFont->getHeight());
         systemConsole->setPosition(20, 50);
-    }
+    }*/
     systemConsole->setHeight(25);
     systemConsole->setVisible(false);
     systemConsole->setOutput(JUTConsole::OUTPUT_OSREPORT | JUTConsole::OUTPUT_CONSOLE);

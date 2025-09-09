@@ -208,7 +208,7 @@ int EXISync(long chan) {
     exi = &Ecb[chan];
     rc = 0;
     ASSERTLINE(498, 0 <= chan && chan < MAX_CHAN);
-    while ((exi->state & 4)) {
+    /*while ((exi->state & 4)) {
         if (!(__EXIRegs[(chan * 5) + 3] & 1)) {
             enabled = OSDisableInterrupts();
             if (exi->state & 4) {
@@ -222,7 +222,7 @@ int EXISync(long chan) {
             OSRestoreInterrupts(enabled);
             break;
         }
-    }
+    }*/
     ASSERTLINE(526, !(exi->state & STATE_BUSY));
     return rc;
 }

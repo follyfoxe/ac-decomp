@@ -94,16 +94,17 @@ void JKRHeap::destroy(JKRHeap* heap) {
 void* JKRHeap::alloc(u32 byteCount, int padding, JKRHeap* heap) {
     void* memory = nullptr;
     if (heap) {
-        memory = heap->do_alloc(byteCount, padding);
+        memory = heap->alloc(byteCount, padding);
     } else if (sCurrentHeap) {
-        memory = sCurrentHeap->do_alloc(byteCount, padding);
+        memory = sCurrentHeap->alloc(byteCount, padding);
     }
     return memory;
 }
 
 void* JKRHeap::alloc(u32 byteCount, int padding) {
     JUT_WARNING_F(!mInitFlag, "alloc %x byte in heap %x", byteCount, this);
-    return do_alloc(byteCount, padding);
+    return malloc(byteCount);
+    //return do_alloc(byteCount, padding);
 }
 
 void JKRHeap::free(void* memory, JKRHeap* heap) {
@@ -114,7 +115,8 @@ void JKRHeap::free(void* memory, JKRHeap* heap) {
 
 void JKRHeap::free(void* memory) {
     JUT_WARNING_F(!mInitFlag, "free %x in heap %x", memory, this);
-    do_free(memory);
+    ::free(memory);
+    //do_free(memory);
 }
 
 void JKRHeap::callAllDisposer() {
@@ -124,7 +126,7 @@ void JKRHeap::callAllDisposer() {
     }
 }
 
-void JKRHeap::freeAll() {
+/*void JKRHeap::freeAll() {
     JUT_WARNING_F(!mInitFlag, "freeAll in heap %x", this);
     do_freeAll();
 }
@@ -132,7 +134,7 @@ void JKRHeap::freeAll() {
 void JKRHeap::freeTail() {
     JUT_WARNING_F(!mInitFlag, "freeTail in heap %x", this);
     do_freeTail();
-}
+}*/
 
 s32 JKRHeap::resize(void* memoryBlock, u32 newSize) {
     JUT_WARNING_F(!mInitFlag, "resize block %x into %x in heap %x", memoryBlock, newSize, this);
@@ -303,7 +305,8 @@ void* operator new(size_t byteCount, int alignment) {
     return JKRHeap::alloc(byteCount, alignment, nullptr);
 }*/
 void* operator new(size_t byteCount, JKRHeap* heap, int alignment) {
-    return JKRHeap::alloc(byteCount, alignment, heap);
+    return operator new(byteCount);
+    //return JKRHeap::alloc(byteCount, alignment, heap);
 }
 
 /*void* operator new[](size_t byteCount) {
@@ -313,7 +316,8 @@ void* operator new[](size_t byteCount, int alignment) {
     return JKRHeap::alloc(byteCount, alignment, nullptr);
 }*/
 void* operator new[](size_t byteCount, JKRHeap* heap, int alignment) {
-    return JKRHeap::alloc(byteCount, alignment, heap);
+    return operator new[](byteCount);
+    //return JKRHeap::alloc(byteCount, alignment, heap);
 }
 
 // this is not needed without the other pragma and asm bs

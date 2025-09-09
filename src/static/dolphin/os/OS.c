@@ -5,6 +5,7 @@
 #include <string.h>
 #include <macros.h>
 #include "../src/static/dolphin/os/__os.h"
+#include "os/__ppc_eabi_init.h"
 
 // TODO: Emulate these?
 volatile int __OSTVMode = 0;
@@ -46,9 +47,9 @@ void EnableMetroTRKInterrupts(void);
 
 extern unsigned long __DVDLongFileNameFlag;
 //extern unsigned long __PADSpec;
-extern unsigned char __ArenaLo[];
-extern char _stack_addr[];
-extern unsigned char __ArenaHi[];
+//extern unsigned char __ArenaLo[];
+//extern char _stack_addr[];
+//extern unsigned char __ArenaHi[];
 
 // dummy entry points to the OS Exception vector
 extern void __OSEVStart(void);
@@ -263,11 +264,11 @@ void OSInit()
 
 	__DVDLongFileNameFlag = 1;
 
-	OSSetArenaLo((!BootInfo->arenaLo) ? &__ArenaLo : BootInfo->arenaLo);
-	if ((!BootInfo->arenaLo) && (BI2DebugFlag) && (*(u32*)BI2DebugFlag < 2)) {
+	OSSetArenaLo((!BootInfo->arenaLo) ? __ArenaLo : BootInfo->arenaLo);
+	/*if ((!BootInfo->arenaLo) && (BI2DebugFlag) && (*(u32*)BI2DebugFlag < 2)) {
 		OSSetArenaLo((void*)(((u32)(char*)&_stack_addr + 0x1F) & 0xFFFFFFE0));
-	}
-	OSSetArenaHi((!BootInfo->arenaHi) ? &__ArenaHi : BootInfo->arenaHi);
+	}*/
+	OSSetArenaHi((!BootInfo->arenaHi) ? __ArenaHi : BootInfo->arenaHi);
 	OSExceptionInit();
 	__OSInitSystemCall();
 	OSInitAlarm();
@@ -280,7 +281,7 @@ void OSInit()
 	//SIInit();
 	__OSInitSram();
 	__OSThreadInit();
-	__OSInitAudioSystem();
+	//__OSInitAudioSystem();
 	PPCMthid2(PPCMfhid2() & 0xbfffffff);
 	if ((BootInfo->consoleType & OS_CONSOLE_DEVELOPMENT) != 0) {
 		BootInfo->consoleType = OS_CONSOLE_DEVHW1;
