@@ -11,6 +11,8 @@
 #include "JSystem/JUtility/JUTDirectPrint.h"
 #include "JSystem/JUtility/JUTDirectFile.h"
 
+#include <new>
+
 struct CallbackObject {
     JUTErrorHandler callback;
     u16 error;

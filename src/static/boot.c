@@ -474,8 +474,8 @@ void adjustOSArena() {
  * @param argv unused
  * @return int exitCode
  */
-int bootmain(int argc, const char** argv) {
-    customInit();
+int main(int argc, const char** argv) {
+    customInit(argc, argv);
 
   static fault_client
     my_fault_client1,

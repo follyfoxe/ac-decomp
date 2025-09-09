@@ -6,6 +6,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "dolphin/os.h"
+#include "boot.h"
+
 static void log_callback(AuroraLogLevel level, const char* module, const char* message, unsigned int len) {
     const char* levelStr;
     FILE* out = stdout;
@@ -35,7 +38,31 @@ static void log_callback(AuroraLogLevel level, const char* module, const char* m
     }
 }
 
-int main(int argc, char* argv[]) {
+void* cachedMemory = NULL;
+void* uncachedMemory = NULL;
+
+void customInit(const int argc, char** argv) {
+    printf("hi");
+    cachedMemory = malloc(24 * 1024 * 1024);
+    uncachedMemory = malloc(24 * 1024 * 1024);
+
+    const AuroraConfig config = {
+        .appName = "ac",
+        .logCallback = &log_callback,
+    };
+    aurora_initialize(argc, argv, &config);
+}
+
+void customShutdown() {
+    aurora_shutdown();
+
+    if (cachedMemory != NULL)
+        free(cachedMemory);
+    if (uncachedMemory != NULL)
+        free(uncachedMemory);
+}
+
+/*int main(int argc, char* argv[]) {
     const AuroraConfig config = {
         .appName = "ac",
         .logCallback = &log_callback,
@@ -67,18 +94,9 @@ int main(int argc, char* argv[]) {
         }
         if (exiting || paused || !aurora_begin_frame())
             continue;
-        //draw();
-        GXSetCopyClear(
-      (GXColor){
-          .r = 0,
-          .g = 0,
-          .b = 100,
-          .a = 255,
-      },
-      GX_MAX_Z24);
         aurora_end_frame();
     }
 
     aurora_shutdown();
     return 0;
-}
+}*/

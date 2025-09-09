@@ -6,6 +6,7 @@
 #include "types.h"
 #include "libultra/os_pfs.h"
 #include "dolphin/os/OSMessage.h"
+#undef errno
 
 #ifdef __cplusplus
 extern "C" {

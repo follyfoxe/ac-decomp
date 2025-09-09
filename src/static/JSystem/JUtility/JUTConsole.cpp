@@ -8,6 +8,8 @@
 #include "JSystem/JUtility/JUTDirectPrint.h"
 #include "JSystem/JUtility/JUTVideo.h"
 
+#include <new>
+
 #define OUTPUT_NONE 0
 #define OUTPUT_CONSOLE 1
 #define OUTPUT_OSREPORT 2

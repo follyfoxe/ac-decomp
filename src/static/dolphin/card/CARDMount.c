@@ -4,6 +4,7 @@
 
 #include "os/__os.h"
 #include "card/__card.h"
+#include "jaudio_NES/dsp_cardunlock.h"
 
 typedef void (*EXICallback)(s32 chan, OSContext *context);
 

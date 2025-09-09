@@ -1,4 +1,7 @@
 #include "dolphin/os/OSError.h"
+
+#include "__os.h"
+#include "os.h"
 #include "dolphin/os/OSException.h"
 #include "dolphin/os/OSInterrupt.h"
 #include "dolphin/os/OSTime.h"
@@ -14,14 +17,14 @@ extern volatile __OSInterrupt __OSLastInterrupt;
 extern volatile u32 __OSLastInterruptSrr0;
 extern volatile OSTime __OSLastInterruptTime;
 
-WEAK void OSReport(char* msg, ...) {
+WEAK void OSReport(const char* msg, ...) {
     va_list marker;
     va_start(marker, msg);
     vprintf(msg, marker);
     va_end(marker);
 }
 
-WEAK void OSPanic(char* file, int line, char* msg, ...) {
+WEAK void OSPanic(const char* file, int line, const char* msg, ...) {
     va_list marker;
     u32 i;
     u32* p;
@@ -48,13 +51,13 @@ OSErrorHandler OSSetErrorHandler(OSError error, OSErrorHandler handler) {
     return oldHandler;
 }
 
-void __OSUnhandledException(u8 error, OSContext* context, s32 dsisr, s32 dar) {
+void __OSUnhandledException(u8 error, OSContext* context, u32 dsisr, u32 dar) {
     if (!(context->srr1 & MSR_RI)) {
         OSReport("Non-recoverable Exception %d", error);
     } else {
         if (__OSErrorTable[error]) {
             OSDisableScheduler();
-            __OSErrorTable[error](error, context, dsisr, dar);
+            __OSErrorTable[error](error, context, (s32)dsisr, (s32)dar);
             OSEnableScheduler();
             __OSReschedule();
             OSLoadContext(context);

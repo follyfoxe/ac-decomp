@@ -27,7 +27,8 @@ typedef int BOOL;
 //#define AT_ADDRESS(addr) __attribute__((address((addr))))
 #define AT_ADDRESS(addr)  // was removed in GCC. define in linker script instead.
 #else
-#error unknown compiler
+//#error unknown compiler
+#define AT_ADDRESS(addr)
 #endif
 
 #define ATTRIBUTE_ALIGN(num) __attribute__((aligned(num)))

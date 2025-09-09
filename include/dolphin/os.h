@@ -1,6 +1,7 @@
 #ifndef _DOLPHIN_OS
 #define _DOLPHIN_OS
 
+#include "../types.h"
 #include "types.h"
 #include "dolphin/os/OSAlloc.h"
 #include "dolphin/os/OSArena.h"

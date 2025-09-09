@@ -16,7 +16,7 @@ typedef struct boot_tbl_s {
   u16 param_lower;
 } boot_tbl_t;
 
-extern void customInit();
+extern void customInit(int argc, char** argv);
 extern void customShutdown();
 
 extern u32 convert_partial_address(u32 partial_addr);

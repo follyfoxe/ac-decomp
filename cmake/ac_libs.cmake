@@ -54,9 +54,7 @@ foreach (LIB IN LISTS AC_LIBS)
         include("cmake/libs/${LIB}.cmake")
 endforeach ()
 
-# Link
-#foreach (LIB IN LISTS AC_LIBS)
-#        set(TEMP ${AC_LIBS})
-#        list(REMOVE_ITEM TEMP ${LIB})
-#        target_link_libraries(${LIB} ${TEMP})
-#endforeach ()
+# Linking
+#target_link_libraries(os exi db)
+#target_link_libraries(JKernel ar os)
+#target_link_libraries(JUtility JGadget)

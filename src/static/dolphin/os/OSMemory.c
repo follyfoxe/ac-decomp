@@ -1,5 +1,7 @@
 #include <dolphin/os.h>
 #include "dolphin/os/OSMemory.h"
+
+#include "__os.h"
 #include "dolphin/os/OSError.h"
 #include "dolphin/os/OSInterrupt.h"
 #include "dolphin/hw_regs.h"

@@ -159,6 +159,27 @@ BOOL DVDCancelAllAsync(DVDCBCallback callback);
 s32 DVDCancelAll();
 void DVDDumpWaitingQueue();
 
+int DVDReadAbsAsyncForBS(DVDCommandBlock * block, void * addr, long length, long offset, void (* callback)(long, DVDCommandBlock *));
+int DVDReadDiskID(DVDCommandBlock * block, DVDDiskID * diskID, void (* callback)(long, DVDCommandBlock *));
+int DVDReadAbsAsyncPrio(DVDCommandBlock * block, void * addr, long length, long offset, void (* callback)(long, DVDCommandBlock *), long prio);
+int DVDSeekAbsAsyncPrio(DVDCommandBlock * block, long offset, void (* callback)(long, DVDCommandBlock *), long prio);
+int DVDPrepareStreamAbsAsync(DVDCommandBlock * block, unsigned long length, unsigned long offset, void (* callback)(long, DVDCommandBlock *));
+int DVDInquiryAsync(DVDCommandBlock * block, DVDDriveInfo * info, void (* callback)(long, DVDCommandBlock *));
+
+// DVDLow
+BOOL DVDLowSeek(u32 offset, DVDLowCallback callback);
+BOOL DVDLowRead(void* addr, u32 length, u32 offset, DVDLowCallback callback);
+BOOL DVDLowStopMotor(DVDLowCallback callback);
+BOOL DVDLowRequestError(DVDLowCallback callback);
+BOOL DVDLowAudioBufferConfig(BOOL enable, u32 size, DVDLowCallback callback);
+BOOL DVDLowReadDiskID(DVDDiskID* diskID, DVDLowCallback callback);
+BOOL DVDLowWaitCoverClose(DVDLowCallback callback);
+BOOL DVDLowRequestAudioStatus(u32 subcmd, DVDLowCallback callback);
+BOOL DVDLowAudioStream(u32 subcmd, u32 length, u32 offset, DVDLowCallback callback);
+BOOL DVDLowInquiry(DVDDriveInfo* info, DVDLowCallback callback);
+void DVDLowReset();
+BOOL DVDLowBreak();
+
 //////////////////////////////////
 
 ////// USEFUL DVD DEFINES ////////

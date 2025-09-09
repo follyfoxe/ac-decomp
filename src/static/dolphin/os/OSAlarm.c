@@ -1,8 +1,12 @@
 #include "dolphin/os/OSAlarm.h"
+
+#include "__os.h"
+#include "base/PPCArch.h"
 #include "dolphin/os/OSTime.h"
 #include "dolphin/os/OSContext.h"
 #include "dolphin/os/OSInterrupt.h"
 #include "dolphin/os/OSException.h"
+#include "os/OSThread.h"
 
 struct OSAlarmQueue {
     struct OSAlarm* head;

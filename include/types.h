@@ -1,9 +1,16 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#include <stdlib.h>
+#include <malloc.h>
+
 #include "MSL_C/w_math.h"
 #include <dolphin/types.h>
 #include "macros.h"
+
+#ifdef __cplusplus
+#include <new>
+#endif
 
 #define VER_GAFE01_00 0
 #define VER_GAFU01_00 1

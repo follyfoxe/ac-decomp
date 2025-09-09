@@ -4,6 +4,7 @@
 #define __sync(...)
 #define __declspec(...)
 #define __cntlzw
+#define __alloca(x) alloca(x)
 #define asm
 #define nofralloc
 
