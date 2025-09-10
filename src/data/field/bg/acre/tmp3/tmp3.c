@@ -12,11 +12,11 @@ static Vtx tmp3_v[] = {
 #include "assets/field/bg/tmp3_v.inc"
 };
 
-extern GFX_ARR_BEGIN(tmp3_modelT)
+GFX_ARR_BEGIN(tmp3_modelT)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(tmp3_model)
+GFX_ARR_BEGIN(tmp3_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_TEX_EDGE2),

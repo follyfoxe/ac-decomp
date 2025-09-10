@@ -258,5 +258,5 @@ extern void game_goto_next_game_play(GAME* this) {
 
 /* @fabricated */
 MATCH_FORCESTRIP extern void game_goto_next_game_famicom_emu(GAME* this) {
-    GAME_GOTO_NEXT(this, famicom_emu, FAMICOM_EMU);
+    //GAME_GOTO_NEXT(this, famicom_emu, FAMICOM_EMU);
 }

@@ -61,7 +61,7 @@ extern void mainproc(void* val) {
     JW_Init3();
     mMsg_aram_init2();
     mLd_StartFlagOn();
-    famicom_mount_archive();
+    //famicom_mount_archive();
 
     JC_JKRAramHeap_dump(JC_JKRAram_getAramHeap());
     osSetThreadPri(NULL, 13);

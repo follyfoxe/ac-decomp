@@ -3614,13 +3614,13 @@ static int mCD_SaveHome_ChangeErrCode(int err_code) {
 
 static void mCD_create_famicom_file(int chan) {
     if (mLd_PlayerManKindCheck() == FALSE) {
-        famicom_internal_data_save();
+        //famicom_internal_data_save();
     }
 }
 
 static void mCD_load_famicom_file(void) {
     if (mLd_PlayerManKindCheck() == FALSE) {
-        famicom_internal_data_load();
+        //famicom_internal_data_load();
     }
 }
 

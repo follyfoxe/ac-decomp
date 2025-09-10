@@ -3,7 +3,7 @@
 extern Actor_data EVENT_NOTIFICATION_player_data[];
 extern s16 EVENT_NOTIFICATION_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, event_notification_info)
+LAZY_ARR_BEGIN(Scene_Word_u, event_notification_info)
     mSc_DATA_SOUND(0, 0),                                         // Sound data
     mSc_DATA_PLAYER(EVENT_NOTIFICATION_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(12, EVENT_NOTIFICATION_ctrl_actor_data), // Control actors

@@ -1,6 +1,6 @@
 #include <dolphin/os.h>
 
-//#include "MSL_C/printf.h"
+#include "MSL_C/printf.h"
 #include "JSystem/JUtility/JUTDirectPrint.h"
 
 JUTDirectPrint* JUTDirectPrint::sDirectPrint;

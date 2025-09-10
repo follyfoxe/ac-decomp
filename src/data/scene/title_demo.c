@@ -5,7 +5,7 @@ extern s16 TITLE_DEMO_ctrl_actor_data[];
 extern Actor_data TITLE_DEMO_actor_data[];
 extern s16 TITLE_DEMO_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, title_demo_info)
+LAZY_ARR_BEGIN(Scene_Word_u, title_demo_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_PLAYER(TITLE_DEMO_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(10, TITLE_DEMO_ctrl_actor_data), // Control actors

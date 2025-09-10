@@ -21,7 +21,7 @@ static Vtx grd_s_m_r1_4_v[] = {
 #include "assets/field/bg/grd_s_m_r1_4_v.inc"
 };
 
-extern GFX_ARR_BEGIN(grd_s_m_r1_4_model)
+GFX_ARR_BEGIN(grd_s_m_r1_4_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, SHADE, 0, 0, 0, 0,
                        COMBINED),
@@ -294,7 +294,7 @@ extern GFX_ARR_BEGIN(grd_s_m_r1_4_model)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(grd_s_m_r1_4_modelT)
+GFX_ARR_BEGIN(grd_s_m_r1_4_modelT)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(TEXEL1, 0, TEXEL0, TEXEL0, TEXEL1, 0, TEXEL0, 0, PRIMITIVE, 0, SHADE, COMBINED, 0, 0, 0,
                        COMBINED),

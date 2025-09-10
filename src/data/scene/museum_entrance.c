@@ -6,7 +6,7 @@ extern s16 MUSEUM_ENTRANCE_ctrl_actor_data[];
 extern Actor_data MUSEUM_ENTRANCE_actor_data[];
 extern s16 MUSEUM_ENTRANCE_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, museum_entrance_info)
+LAZY_ARR_BEGIN(Scene_Word_u, museum_entrance_info)
     mSc_DATA_SOUND(0, 1),                                      // Sound data
     mSc_DATA_DOOR_DATA(4, MUSEUM_ENTRANCE_door_data),          // Door data
     mSc_DATA_PLAYER(MUSEUM_ENTRANCE_player_data),              // Player Data

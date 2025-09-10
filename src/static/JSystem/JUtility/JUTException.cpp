@@ -4,7 +4,7 @@
 #include <dolphin/gx.h>
 #include <dolphin/os.h>
 
-//#include "MSL_C/printf.h"
+#include "MSL_C/printf.h"
 //#include "libc/string.h"
 
 #include "JSystem/JUtility/JUTException.h"

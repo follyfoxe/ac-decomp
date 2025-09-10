@@ -1,4 +1,4 @@
-//#include "MSL_C/printf.h"
+#include "MSL_C/printf.h"
 #include "JSystem/JUtility/JUTDbPrint.h"
 #include "JSystem/J2D/J2DGrafContext.h"
 #include "JSystem/JKernel/JKRHeap.h"

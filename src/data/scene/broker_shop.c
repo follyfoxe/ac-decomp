@@ -4,7 +4,7 @@ extern Door_data_c BROKER_SHOP_door_data[];
 extern Actor_data BROKER_SHOP_player_data[];
 extern s16 BROKER_SHOP_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, broker_shop_info)
+LAZY_ARR_BEGIN(Scene_Word_u, broker_shop_info)
     mSc_DATA_SOUND(0, 0),                                  // Sound data
     mSc_DATA_DOOR_DATA(1, BROKER_SHOP_door_data),          // Door data
     mSc_DATA_PLAYER(BROKER_SHOP_player_data),              // Player Data

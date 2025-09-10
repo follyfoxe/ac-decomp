@@ -9,7 +9,7 @@
 #include "Famicom/famicom.h"
 
 static void exit_game(GAME* game) {
-  famicom_setCallback_getSaveChan(&mCD_GetThisLandSlotNo_code);
+  //famicom_setCallback_getSaveChan(&mCD_GetThisLandSlotNo_code);
   mBGM_ct();
   mVibctl_ct();
   common_data_init();

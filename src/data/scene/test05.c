@@ -3,7 +3,7 @@
 extern Actor_data TEST05_player_data[];
 extern s16 TEST05_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, test05_info)
+LAZY_ARR_BEGIN(Scene_Word_u, test05_info)
     mSc_DATA_SOUND(0, 0),                            // Sound data
     mSc_DATA_PLAYER(TEST05_player_data),             // Player Data
     mSc_DATA_CTRL_ACTORS(5, TEST05_ctrl_actor_data), // Control actors

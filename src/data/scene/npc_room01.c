@@ -6,7 +6,7 @@ extern s16 NPC_ROOM01_ctrl_actor_data[];
 extern Actor_data NPC_ROOM01_actor_data[];
 extern s16 NPC_ROOM01_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, npc_room01_info)
+LAZY_ARR_BEGIN(Scene_Word_u, npc_room01_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_DOOR_DATA(1, NPC_ROOM01_door_data),          // Door data
     mSc_DATA_PLAYER(NPC_ROOM01_player_data),              // Player Data

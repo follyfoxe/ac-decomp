@@ -6,7 +6,7 @@ add_library(foresta STATIC
 		"src/evw_anime.c"
 		"src/executor.c"
 		"src/f_furniture.c"
-		"src/famicom_emu.c"
+		#"src/famicom_emu.c"
 		"src/first_game.c"
 		"src/game.c"
 		"src/gamealloc.c"

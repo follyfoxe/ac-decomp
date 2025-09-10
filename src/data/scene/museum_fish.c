@@ -6,7 +6,7 @@ extern s16 MUSEUM_FISH_ctrl_actor_data[];
 extern Actor_data MUSEUM_FISH_actor_data[];
 extern s16 MUSEUM_FISH_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, museum_fish_info)
+LAZY_ARR_BEGIN(Scene_Word_u, museum_fish_info)
     mSc_DATA_SOUND(0, 1),                                  // Sound data
     mSc_DATA_DOOR_DATA(1, MUSEUM_FISH_door_data),          // Door data
     mSc_DATA_PLAYER(MUSEUM_FISH_player_data),              // Player Data

@@ -6,7 +6,7 @@ extern s16 NEEDLEWORK_ctrl_actor_data[];
 extern Actor_data NEEDLEWORK_actor_data[];
 extern s16 NEEDLEWORK_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, NEEDLEWORK_info)
+LAZY_ARR_BEGIN(Scene_Word_u, NEEDLEWORK_info)
     mSc_DATA_SOUND(0, 1),                                 // Sound data
     mSc_DATA_DOOR_DATA(1, NEEDLEWORK_door_data),          // Door data
     mSc_DATA_PLAYER(NEEDLEWORK_player_data),              // Player Data

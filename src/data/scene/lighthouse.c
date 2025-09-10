@@ -4,7 +4,7 @@ extern Door_data_c LIGHTHOUSE_door_data[];
 extern Actor_data LIGHTHOUSE_player_data[];
 extern s16 LIGHTHOUSE_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, lighthouse_info)
+LAZY_ARR_BEGIN(Scene_Word_u, lighthouse_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_DOOR_DATA(1, LIGHTHOUSE_door_data),          // Door data
     mSc_DATA_PLAYER(LIGHTHOUSE_player_data),              // Player Data

@@ -6,7 +6,7 @@ extern s16 PLAYER_ROOM_ISLAND_ctrl_actor_data[];
 extern Actor_data PLAYER_ROOM_ISLAND_actor_data[];
 extern s16 PLAYER_ROOM_ISLAND_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, player_room_island_info)
+LAZY_ARR_BEGIN(Scene_Word_u, player_room_island_info)
     mSc_DATA_SOUND(0, 1),                                         // Sound data
     mSc_DATA_DOOR_DATA(1, PLAYER_ROOM_ISLAND_door_data),          // Door data
     mSc_DATA_PLAYER(PLAYER_ROOM_ISLAND_player_data),              // Player Data

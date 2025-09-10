@@ -82,8 +82,8 @@ static DLFTBL_GAME* game_get_next_game_dlftbl(GAME* game) {
         return &game_dlftbls[6];
     } else if (ARE_INIT_PROCS_EQUAL(next_game_init_proc, save_menu_init)) {
         return &game_dlftbls[7];
-    } else if (ARE_INIT_PROCS_EQUAL(next_game_init_proc, famicom_emu_init)) {
-        return &game_dlftbls[8];
+    /*} else if (ARE_INIT_PROCS_EQUAL(next_game_init_proc, famicom_emu_init)) {
+        return &game_dlftbls[8];*/
     } else if (ARE_INIT_PROCS_EQUAL(next_game_init_proc, prenmi_init)) {
         return &game_dlftbls[9];
     }

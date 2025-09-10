@@ -6,7 +6,7 @@ extern s16 POLICE_BOX_ctrl_actor_data[];
 extern Actor_data POLICE_BOX_actor_data[];
 extern s16 POLICE_BOX_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, police_box_info)
+LAZY_ARR_BEGIN(Scene_Word_u, police_box_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_DOOR_DATA(1, POLICE_BOX_door_data),          // Door data
     mSc_DATA_PLAYER(POLICE_BOX_player_data),              // Player Data

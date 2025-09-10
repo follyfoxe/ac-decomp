@@ -4,7 +4,7 @@ extern Door_data_c START_DEMO2_door_data[];
 extern Actor_data START_DEMO2_player_data[];
 extern s16 START_DEMO2_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, start_demo2_info)
+LAZY_ARR_BEGIN(Scene_Word_u, start_demo2_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_DOOR_DATA(1, START_DEMO2_door_data),         // Door data
     mSc_DATA_PLAYER(START_DEMO2_player_data),             // Player Data

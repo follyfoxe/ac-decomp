@@ -2068,11 +2068,11 @@ static void aMR_RequestStartEmu_MemoryC(MY_ROOM_ACTOR* my_room, FTR_ACTOR* ftr_a
             if (my_room->emu_info.famicom_names_p != NULL) {
                 int n_games = 0;
 
-                if (famicom_get_disksystem_titles(&n_games, my_room->emu_info.famicom_names_p, namebuf_size) == FALSE) {
+                /*if (famicom_get_disksystem_titles(&n_games, my_room->emu_info.famicom_names_p, namebuf_size) == FALSE) {
                     my_room->requested_msg_type = aMR_MSG_STATE_NO_PACK_NO_DATA;
                     my_room->room_msg_flag = TRUE;
                     return;
-                }
+                }*/
             }
 
             if (card_count == 1) {

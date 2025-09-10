@@ -1,17 +1,17 @@
 static void aMR_SetSlotString(void) {
-    u8 str[mMsg_FREE_STRING_LEN];
+    /*u8 str[mMsg_FREE_STRING_LEN];
     int slot = famicom_getErrorChan();
 
     mString_Load_StringFromRom(str, mMsg_FREE_STRING_LEN, 0x6CD + (slot & 1));
-    mMsg_Set_free_str(mMsg_Get_base_window_p(), mMsg_FREE_STR4, str, mMsg_FREE_STRING_LEN);
+    mMsg_Set_free_str(mMsg_Get_base_window_p(), mMsg_FREE_STR4, str, mMsg_FREE_STRING_LEN);*/
 }
 
 static int aMR_GetCardFamicomCount(void) {
     int count = 0;
 
-    if (famicom_get_disksystem_titles(&count, NULL, 0) != FALSE) {
+    /*if (famicom_get_disksystem_titles(&count, NULL, 0) != FALSE) {
         return count;
-    }
+    }*/
 
     return 0;
 }
@@ -92,7 +92,7 @@ static void aMR_SetEmulatorStartMessage(ACTOR* actorx, int internal_rom) {
     Common_Get(my_room_message_control_flags) |= (1 << 2);
 
     if (internal_rom == TRUE) {
-        res = famicom_internal_data_load();
+        //res = famicom_internal_data_load();
     } else {
         if (Common_Get(player_no) < PLAYER_NUM) {
             aMR_SetEmulatorMessage_CanSave(actorx);
@@ -100,7 +100,7 @@ static void aMR_SetEmulatorStartMessage(ACTOR* actorx, int internal_rom) {
             return;
         }
 
-        res = famicom_external_data_save_check();
+        //res = famicom_external_data_save_check();
     }
 
     aMR_SetSlotString();
@@ -920,7 +920,7 @@ static void aMR_MsgControlDeleteAgbProgramQ(ACTOR* actorx, GAME* game) {
 static void aMR_MsgInitStartEmuDownLoad(ACTOR* actorx) {
     MY_ROOM_ACTOR* my_room = (MY_ROOM_ACTOR*)actorx;
 
-    my_room->famicom_agb_image_p = famicom_gba_getImage(my_room->emu_info.agb_rom_no, &my_room->agb_game_size);
+    //my_room->famicom_agb_image_p = famicom_gba_getImage(my_room->emu_info.agb_rom_no, &my_room->agb_game_size);
     mGcgba_InitVar();
     mMsg_SET_LOCKCONTINUE();
     sAdo_SysLevStart(0x47);
@@ -932,7 +932,7 @@ static void aMR_MsgControlStartEmuDownLoad(ACTOR* actorx, GAME* game) {
     switch (mGcgba_Boot((u8*)my_room->famicom_agb_image_p, my_room->agb_game_size)) {
         case GBA2_GBA_STATE_SUCCESS:
             sAdo_SysLevStop(0x47);
-            famicom_gba_removeImage(my_room->famicom_agb_image_p);
+            //famicom_gba_removeImage(my_room->famicom_agb_image_p);
             mGcgba_InitVar();
             mGcgba_EndComm();
             my_room->requested_msg_type = aMR_MSG_STATE_NOT_CONNECT_AGB;
@@ -946,7 +946,7 @@ static void aMR_MsgControlStartEmuDownLoad(ACTOR* actorx, GAME* game) {
 
         default:
             sAdo_SysLevStop(0x47);
-            famicom_gba_removeImage(my_room->famicom_agb_image_p);
+            //famicom_gba_removeImage(my_room->famicom_agb_image_p);
             mGcgba_InitVar();
             mGcgba_EndComm();
             my_room->requested_msg_type = aMR_MSG_STATE_NOT_CONNECT_AGB;
@@ -1411,9 +1411,9 @@ static void aMR_MsgControlSaveFamicom(ACTOR* actorx, GAME* game) {
         int save_res;
 
         if (my_room->emu_info.external_rom == FALSE) {
-            save_res = famicom_internal_data_save();
+            //save_res = famicom_internal_data_save();
         } else {
-            save_res = famicom_external_data_save();
+            //save_res = famicom_external_data_save();
         }
 
         aMR_SetSlotString();

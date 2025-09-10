@@ -5,7 +5,7 @@ extern Actor_data P_ROOM_BM_M_player_data[];
 extern s16 P_ROOM_BM_M_ctrl_actor_data[];
 extern s16 P_ROOM_BM_M_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, p_room_bm_m_info)
+LAZY_ARR_BEGIN(Scene_Word_u, p_room_bm_m_info)
     mSc_DATA_SOUND(0, 1),                                  // Sound data
     mSc_DATA_DOOR_DATA(1, P_ROOM_BM_M_door_data),          // Door data
     mSc_DATA_PLAYER(P_ROOM_BM_M_player_data),              // Player Data

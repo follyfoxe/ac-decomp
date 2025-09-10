@@ -218,9 +218,9 @@ static void aAL_back_fadein(ANIMAL_LOGO_ACTOR* actor, GAME* game) {
 }
 
 static void aAL_start_key_chk_start_wait(ANIMAL_LOGO_ACTOR* actor, GAME* game) {
-  if (padmgr_isConnectedController(PAD0) && actor->title_timer <= 0 && famicom_mount_archive_end_check()) {
+  /*if (padmgr_isConnectedController(PAD0) && actor->title_timer <= 0 && famicom_mount_archive_end_check()) {
     aAL_setupAction(actor, game, aAL_ACTION_GAME_START);
-  }
+  }*/
 }
 
 static void aAL_game_start_wait(ANIMAL_LOGO_ACTOR* actor, GAME* game) {

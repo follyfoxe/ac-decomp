@@ -5,7 +5,7 @@ extern s16 FIELD_TOOL_FIELD_ctrl_actor_data[];
 extern Actor_data FIELD_TOOL_FIELD_actor_data[];
 extern s16 FIELD_TOOL_FIELD_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, field_tool_field_info)
+LAZY_ARR_BEGIN(Scene_Word_u, field_tool_field_info)
     mSc_DATA_SOUND(0, 0),                                      // Sound data
     mSc_DATA_PLAYER(FIELD_TOOL_FIELD_player_data),             // Player Data
     mSc_DATA_CTRL_ACTORS(9, FIELD_TOOL_FIELD_ctrl_actor_data), // Control actors

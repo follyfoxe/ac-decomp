@@ -3,7 +3,7 @@
 extern Actor_data PLAYER_SELECT_player_data[];
 extern s16 PLAYER_SELECT_ctrl_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, player_select_info)
+LAZY_ARR_BEGIN(Scene_Word_u, player_select_info)
     mSc_DATA_SOUND(0, 0),                                   // Sound data
     mSc_DATA_PLAYER(PLAYER_SELECT_player_data),             // Player Data
     mSc_DATA_ARRANGE_ROOM_CT(),                             // Arrange_room construct

@@ -6,11 +6,11 @@ static Vtx tmp_v[] = {
 #include "assets/field/bg/tmp_v.inc"
 };
 
-extern GFX_ARR_BEGIN(tmp_modelT)
+GFX_ARR_BEGIN(tmp_modelT)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(tmp_model)
+GFX_ARR_BEGIN(tmp_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),

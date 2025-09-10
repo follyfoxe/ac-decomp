@@ -25,6 +25,6 @@ DLFTBL_GAME game_dlftbls[] = {
   DLFTBL_MAKE(trademark, TRADEMARK),
   DLFTBL_MAKE(player_select, PLAYER_SELECT),
   DLFTBL_MAKE(save_menu, SAVE_MENU),
-  DLFTBL_MAKE(famicom_emu, FAMICOM_EMU),
+  DLFTBL_NULL(), //DLFTBL_MAKE(famicom_emu, FAMICOM_EMU),
   DLFTBL_MAKE(prenmi, PRENMI)
 };

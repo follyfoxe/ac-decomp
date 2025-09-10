@@ -65,7 +65,7 @@ static GFX_ARR_BEGIN(myr_koteiT_model)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(myr_etc_model)
+GFX_ARR_BEGIN(myr_etc_model)
     gsDPPipeSync(),
     gsSPDisplayList(myr_kotei_model),
     gsSPDisplayList(myr_koteiT_model),

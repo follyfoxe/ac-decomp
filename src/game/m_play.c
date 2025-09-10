@@ -193,7 +193,7 @@ static void Game_play_fbdemo_fade_in_move_end(GAME_PLAY* play) {
 }
 
 static void Game_play_fbdemo_fade_out_start_emu_move_end(GAME_PLAY* play) {
-    GAME_GOTO_NEXT(&play->game, famicom_emu, FAMICOM_EMU);
+    //GAME_GOTO_NEXT(&play->game, famicom_emu, FAMICOM_EMU);
 }
 
 static void Game_play_fbdemo_fade_out_game_end_move_end(GAME_PLAY* play) {

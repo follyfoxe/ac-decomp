@@ -29,7 +29,7 @@ set(AC_LIBS
         JKernel
         JSupport
         JUtility
-        #jaudio_NES_game
+        jaudio_NES_game
         #jaudio_NES_internal
         #Famicom
         #MSL_C.PPCEABI.bare.H

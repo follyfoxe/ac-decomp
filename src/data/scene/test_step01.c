@@ -2,7 +2,7 @@
 
 extern Actor_data TEST_STEP01_player_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, test_step01_info)
+LAZY_ARR_BEGIN(Scene_Word_u, test_step01_info)
     mSc_DATA_SOUND(0, 0),                     // Sound data
     mSc_DATA_PLAYER(TEST_STEP01_player_data), // Player Data
     mSc_DATA_FIELDCT(mSc_ITEM_TYPE_BGITEM, 4, 0x5000, mSc_ROOM_TYPE_OUTDOORS,

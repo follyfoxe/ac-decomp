@@ -5,7 +5,7 @@ extern Actor_data SHOP04_2F_player_data[];
 extern s16 SHOP04_2F_ctrl_actor_data[];
 extern s16 SHOP04_2F_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, shop04_2f_info)
+LAZY_ARR_BEGIN(Scene_Word_u, shop04_2f_info)
     mSc_DATA_SOUND(0, 0),                                // Sound data
     mSc_DATA_DOOR_DATA(1, SHOP04_2F_door_data),          // Door data
     mSc_DATA_PLAYER(SHOP04_2F_player_data),              // Player Data

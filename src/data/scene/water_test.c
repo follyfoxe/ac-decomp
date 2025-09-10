@@ -4,7 +4,7 @@ extern Actor_data WATER_TEST_player_data[];
 extern s16 WATER_TEST_ctrl_actor_data[];
 extern Actor_data WATER_TEST_actor_data[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, water_test_info)
+LAZY_ARR_BEGIN(Scene_Word_u, water_test_info)
     mSc_DATA_SOUND(0, 0),                                 // Sound data
     mSc_DATA_PLAYER(WATER_TEST_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(14, WATER_TEST_ctrl_actor_data), // Control actors

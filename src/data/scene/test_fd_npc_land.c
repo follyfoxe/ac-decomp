@@ -5,7 +5,7 @@ extern s16 TEST_FD_NPC_LAND_ctrl_actor_data[];
 extern Actor_data TEST_FD_NPC_LAND_actor_data[];
 extern s16 TEST_FD_NPC_LAND_object_bank[];
 
-extern LAZY_ARR_BEGIN(Scene_Word_u, test_fd_npc_land_info)
+LAZY_ARR_BEGIN(Scene_Word_u, test_fd_npc_land_info)
     mSc_DATA_SOUND(0, 0),                                       // Sound data
     mSc_DATA_PLAYER(TEST_FD_NPC_LAND_player_data),              // Player Data
     mSc_DATA_CTRL_ACTORS(17, TEST_FD_NPC_LAND_ctrl_actor_data), // Control actors

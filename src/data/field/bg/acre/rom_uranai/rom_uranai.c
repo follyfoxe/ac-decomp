@@ -120,7 +120,7 @@ static Vtx rom_uranai_v[] = {
 #include "assets/field/bg/rom_uranai_v.inc"
 };
 
-extern GFX_ARR_BEGIN(rom_uranai_modelT)
+GFX_ARR_BEGIN(rom_uranai_modelT)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(0, 0, 0, PRIMITIVE, TEXEL0, 0, PRIM_LOD_FRAC, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
@@ -240,7 +240,7 @@ extern GFX_ARR_BEGIN(rom_uranai_modelT)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(rom_uranai_model)
+GFX_ARR_BEGIN(rom_uranai_model)
     gsSPTexture(65535, 65535, 0, 0, G_ON),
     gsDPPipeSync(),
     gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, PRIMITIVE, 0, COMBINED, 0, 0, 0, 0, COMBINED),

@@ -4,7 +4,7 @@
 #include "types.h"
 // #include "va_args.h"
 // #include <libc/stdarg.h>
-// #include "MSL_C/printf.h"
+#include "MSL_C/printf.h"
 #include "libforest/gbi_extensions.h"
 #include "libforest/emu64/texture_cache.h"
 #include "dolphin/os/__ppc_eabi_init.h"

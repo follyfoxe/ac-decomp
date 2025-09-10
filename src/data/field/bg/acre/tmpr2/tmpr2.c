@@ -88,12 +88,12 @@ static GFX_ARR_BEGIN(tmpr2_grp_grd_s_r1_1_waterT)
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(tmpr2_modelT)
+GFX_ARR_BEGIN(tmpr2_modelT)
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_waterT),
     gsSPEndDisplayList(),
 GFX_ARR_END
 
-extern GFX_ARR_BEGIN(tmpr2_model)
+GFX_ARR_BEGIN(tmpr2_model)
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_grass),
     gsSPDisplayList(tmpr2_grp_grd_s_r1_1_river),
     gsSPEndDisplayList(),
