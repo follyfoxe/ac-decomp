@@ -75,9 +75,9 @@ void TypeAndStatusCallback(s32 chan, u32 type) {
     if ((type & 0xFF) != 0 || (type & 0xffff0000) != 0x40000) {
         gba->ret = GBA_NOT_READY;
     } else {
-        if (SITransfer(chan, gba->output, gba->outputBytes, gba->input, gba->inputBytes, __GBAHandler, gba->delay)) {
+        /*if (SITransfer(chan, gba->output, gba->outputBytes, gba->input, gba->inputBytes, __GBAHandler, gba->delay)) {
             return;
-        }
+        }*/
         gba->ret = GBA_BUSY;
     }
 
@@ -108,7 +108,7 @@ s32 __GBATransfer(s32 chan, u32 w1, u32 w2, GBATransferCallback callback) {
     gba->proc = callback;
     gba->outputBytes = w1;
     gba->inputBytes = w2;
-    SIGetTypeAsync(chan, TypeAndStatusCallback);
+    //SIGetTypeAsync(chan, TypeAndStatusCallback);
     OSRestoreInterrupts(enabled);
 
     return GBA_READY;

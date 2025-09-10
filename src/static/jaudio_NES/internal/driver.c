@@ -170,7 +170,7 @@ extern Acmd* Nas_smzAudioFrame(Acmd* cmdStart, s32* cmdCount, s16* aiStart, s32 
             }
         }
 
-        cmdP = Nas_DriveRsp(aiBufP, chunkLen, cmdP, AG.audio_params.updates_per_frame - i);
+        //cmdP = Nas_DriveRsp(aiBufP, chunkLen, cmdP, AG.audio_params.updates_per_frame - i);
         aiBufLen -= chunkLen;
         aiBufP += (JAC_FRAMESAMPLES >> 1) & ~1;
     }

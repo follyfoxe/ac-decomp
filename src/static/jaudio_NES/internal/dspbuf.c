@@ -36,7 +36,7 @@ extern s16* DspbufProcess(DSPBUF_EVENTS event) {
 
             dspstatus = 0;
             break;
-        case DSPBUF_EVENT_FRAME_END:
+        case DSPBUF_EVENT_FRAME_END: {
             DspExtraTaskCheck();
             u8 write = write_buffer + 1;
 
@@ -55,7 +55,8 @@ extern s16* DspbufProcess(DSPBUF_EVENTS event) {
                 UpdateDSP();
             }
             break;
-        case DSPBUF_EVENT_MIX:
+        }
+        case DSPBUF_EVENT_MIX: {
             u8 read = read_buffer + 1;
             if (read == DSPBUF_NUM) {
                 read = 0;
@@ -85,6 +86,7 @@ extern s16* DspbufProcess(DSPBUF_EVENTS event) {
             }
 
             return dsp_buf[read_buffer];
+        }
     }
 
     return nullptr;

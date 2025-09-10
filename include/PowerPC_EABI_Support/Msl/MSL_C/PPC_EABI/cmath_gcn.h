@@ -7,7 +7,7 @@
 namespace std {
 #endif
 
-    float sqrtf(float);
+    /*float sqrtf(float);
     float sinf(float);
 
     inline float sinf(float x) {
@@ -29,7 +29,7 @@ namespace std {
         }
 
         return x;
-    }
+    }*/
 
 #ifdef __cplusplus
 }

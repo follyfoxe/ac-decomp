@@ -388,9 +388,9 @@ extern void play_cleanup(GAME* game) {
     mCD_toNextLand();
     mEA_CleanCardDLProgram();
 
-    if (my_malloc_current == &my_malloc_func) {
+    /*if (my_malloc_current == &my_malloc_func) {
         my_malloc_current = NULL;
-    }
+    }*/
 
     zelda_CleanupArena();
 }
@@ -477,9 +477,9 @@ extern void play_init(GAME* game) {
 
     zelda_InitArena((void*)aligned, freebytes - size);
 
-    if (my_malloc_current == NULL) {
+    /*if (my_malloc_current == NULL) {
         my_malloc_current = &my_malloc_func;
-    }
+    }*/
 
     mFM_FieldInit(play);
     VR_Box_ct(play);

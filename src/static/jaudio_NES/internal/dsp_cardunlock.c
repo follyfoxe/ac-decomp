@@ -3,7 +3,7 @@
 
 #include "jaudio_NES/dsp_cardunlock.h"
 
-#include "MSL_C/rand.h"
+//#include "MSL_C/rand.h"
 #include "jaudio_NES/ipldec.h"
 #include "_mem.h"
 #include "dolphin/os.h"

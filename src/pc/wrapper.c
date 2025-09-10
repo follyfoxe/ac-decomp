@@ -64,3 +64,6 @@ void __OSDBJUMPSTART(void) {
 }
 void __OSDBJUMPEND(void) {
 }
+
+int __CARDUnlock(int chan, u8 flashID[12]) {
+}

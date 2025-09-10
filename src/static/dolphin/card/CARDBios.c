@@ -601,7 +601,7 @@ void CARDInit(void) {
     int chan;
 
     if (!__CARDBlock[0].diskID || !__CARDBlock[1].diskID) {
-        DSPInit();
+        //DSPInit();
         OSInitAlarm();
 
         for (chan = 0; chan < 2; ++chan)
