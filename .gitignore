@@ -35,6 +35,7 @@ compile_commands.json
 # Miscellaneous
 /*.txt
 !requirements.txt
+!CMakeLists.txt
 *.exe
 
 # For saving work files into (like IDB)

@@ -13,23 +13,9 @@
 
 #define CONSTRUCTOR __attribute__((constructor))
 
-#define LAZY_ARR_BEGIN(type, name, ...) \
-    type name[] __VA_ARGS__; \
-    CONSTRUCTOR void CONCAT2(name##_INIT, __LINE__)() { \
-        type* target = name; \
-        type temp[] = {
-#define LAZY_ARR_END }; \
-        memcpy(target, temp, sizeof(temp)); \
-    }
-
-/*#define LAZY_ARR_BEGIN(type, name, ...) \
-    type name[] __VA_ARGS__; \
-    void CONCAT2(name##_INIT, __LINE__)() { \
-        type* target = name; \
-        type temp[] = {
-#define LAZY_ARR_END }; \
-        memcpy(target, temp, sizeof(temp)); \
-    }*/
+// TODO: Remove
+#define LAZY_ARR_BEGIN(type, name, ...) type name[] __VA_ARGS__ = {
+#define LAZY_ARR_END };
 
 #define GFX_ARR_BEGIN(name, ...) LAZY_ARR_BEGIN(Gfx, name, __VA_ARGS__)
 #define GFX_ARR_END LAZY_ARR_END
