@@ -24,7 +24,7 @@ JKRAramBlock* JKRDvdAramRipper::loadToAram(s32 entrynum, u32 p2, JKRExpandSwitch
 
 JKRAramBlock* JKRDvdAramRipper::loadToAram(JKRDvdFile* dvdFile, u32 p1, JKRExpandSwitch p2, u32 p3, u32 p4) {
     JKRADCommand* command = loadToAram_Async(dvdFile, p1, p2, nullptr, p3, p4);
-    syncAram(command, 0);
+    //syncAram(command, 0);
 
     if (p1) {
         delete command;

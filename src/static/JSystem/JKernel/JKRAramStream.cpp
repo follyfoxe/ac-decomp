@@ -149,8 +149,10 @@ JKRAramStreamCommand* JKRAramStream::write_StreamToAram_Async(JSUFileInputStream
     command->mHeap = transHeap;
     command->mTransferBufferSize = transSize;
 
-    OSInitMessageQueue(&command->mMessageQueue, &command->mMessage, 1);
-    OSSendMessage(&sMessageQueue, command, OS_MESSAGE_BLOCK);
+    stream->seekPos(offset, SEEK_SET);
+    stream->readData((void*)addr, size);
+    //OSInitMessageQueue(&command->mMessageQueue, &command->mMessage, 1);
+    //OSSendMessage(&sMessageQueue, command, OS_MESSAGE_BLOCK);
     return command;
 }
 

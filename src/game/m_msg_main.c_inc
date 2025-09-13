@@ -287,6 +287,11 @@ extern void mMsg_Get_BodyParam(u32 table_addr, u32 data_addr, int index, u32* ad
     int ofs = first_entry ? 0 : (index - 1) & 7;
 
     _JW_GetResourceAram(table_addr + aligned_ofs, (u8*)tmp_buff, sizeof(tmp_buff));
+    for (int i = 0; i < 16; i++) {
+        u32 a = tmp_buff[i];
+        BE32(a);
+        tmp_buff[i] = a;
+    }
 
     if (first_entry) {
         *addr = data_addr;

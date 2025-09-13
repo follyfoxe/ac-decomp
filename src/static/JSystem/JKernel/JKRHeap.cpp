@@ -92,13 +92,14 @@ void JKRHeap::destroy(JKRHeap* heap) {
 }
 
 void* JKRHeap::alloc(u32 byteCount, int padding, JKRHeap* heap) {
-    void* memory = nullptr;
+    return malloc(byteCount);
+    /*void* memory = nullptr;
     if (heap) {
         memory = heap->alloc(byteCount, padding);
     } else if (sCurrentHeap) {
         memory = sCurrentHeap->alloc(byteCount, padding);
     }
-    return memory;
+    return memory;*/
 }
 
 void* JKRHeap::alloc(u32 byteCount, int padding) {
@@ -108,9 +109,10 @@ void* JKRHeap::alloc(u32 byteCount, int padding) {
 }
 
 void JKRHeap::free(void* memory, JKRHeap* heap) {
-    if ((heap) || (heap = findFromRoot(memory), heap)) {
+    ::free(memory);
+    /*if ((heap) || (heap = findFromRoot(memory), heap)) {
         heap->free(memory);
-    }
+    }*/
 }
 
 void JKRHeap::free(void* memory) {

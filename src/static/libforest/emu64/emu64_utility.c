@@ -21,8 +21,8 @@ u32 emu64::seg2k0(u32 segadr) {
     }
 
     if ((k0 >> 31) == 0 || k0 < 0x80000000 || k0 >= 0x83000000) {
-        this->Printf0("異常なアドレスです。%08x -> %08x\n", segadr, k0);
-        this->panic("異常なアドレスです。", __FILE__, 77);
+        //this->Printf0("異常なアドレスです。%08x -> %08x\n", segadr, k0);
+        //this->panic("異常なアドレスです。", __FILE__, 77);
         this->abnormal_addresses++;
     }
 

@@ -5,6 +5,7 @@
 #include "JSystem/JKernel/JKRFileLoader.h"
 #include "JSystem/JKernel/JKRHeap.h"
 #include "types.h"
+#include "pc/big_endian.h"
 
 #ifdef __cplusplus
 // NOTE: Vtable offsets are off
@@ -112,6 +113,14 @@ class JKRArchive : public JKRFileLoader {
         u32 mDataOffset; // _08
         u32 mSize;       // _0C
         void* mData;     // _10
+
+        void flip_be() {
+            BE16(mFileID);
+            BE16(mHash);
+            BE32(mFlag);
+            BE32(mDataOffset);
+            BE32(mSize);
+        }
     };
 
     struct SDirEntry {
@@ -127,6 +136,14 @@ class JKRArchive : public JKRFileLoader {
         u16 _08;       // _08
         u16 mNum;      // _0A
         u32 mFirstIdx; // _0C
+
+        void flip_be() {
+            BE32(mType);
+            BE32(mOffset);
+            BE16(_08);
+            BE16(mNum);
+            BE32(mFirstIdx);
+        }
     };
 
     // NB: Fabricated name
@@ -140,6 +157,16 @@ class JKRArchive : public JKRFileLoader {
         u16 nextFreeFileID;      // _18
         bool isSyncIDs;          // _1A
         u8 _1B[5];               // _1B, unknown
+
+        void flip_be() {
+            BE32(num_nodes);
+            BE32(node_offset);
+            BE32(num_file_entries);
+            BE32(file_entry_offset);
+            BE32(string_table_length);
+            BE32(string_table_offset);
+            BE16(nextFreeFileID);
+        }
     };
 
     // NB: Fabricated name - need to check size
@@ -152,6 +179,17 @@ class JKRArchive : public JKRFileLoader {
         u32 _14;              // _14
         u32 _18;              // _18
         u32 _1C;              // _1C
+
+        void flip_be() {
+            BE32(signature);
+            BE32(file_length);
+            BE32(header_length);
+            BE32(file_data_offset);
+            BE32(file_data_length);
+            BE32(_14);
+            BE32(_18);
+            BE32(_1C);
+        }
     };
 
   public:

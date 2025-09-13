@@ -41,6 +41,7 @@ extern s32 Z_osSendMesg(OSMesgQueue* mq, OSMesg msg, s32 flags) {
 }
 
 extern s32 Z_osRecvMesg(OSMesgQueue* mq, OSMesg* msg, s32 flags) {
+    return -1;
     if (flags == OS_MESG_BLOCK) {
         while (!mq->validCount) {};
     }

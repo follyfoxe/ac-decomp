@@ -32,6 +32,7 @@ jump:
 
 asm unsigned long OSGetTick(void)
 {
+    return clock();
 #ifdef __MWERKS__ // clang-format off
 	nofralloc
 

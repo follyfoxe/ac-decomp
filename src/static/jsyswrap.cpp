@@ -325,7 +325,9 @@ extern void JW_BeginFrame() {
     FrameDrawing = true;
     void* displayManager = JC_JFWDisplay_getManager();
     JC_JFWDisplay_endFrame(displayManager);
+    customEndFrame();
     JC_JFWDisplay_beginRender(displayManager);
+    customBeginFrame();
     JC_J2DOrthoGraph_setOrtho(jc_gport, 0, 0, JC_JFWDisplay_getEfbWidth(displayManager),
                               JC_JFWDisplay_getEfbHeight(displayManager));
     JC_J2DOrthoGraph_setPort(jc_gport);
@@ -333,6 +335,7 @@ extern void JW_BeginFrame() {
 
 extern void JW_EndFrame() {
     JC_JFWDisplay_endRender(JC_JFWDisplay_getManager());
+    customEndFrame();
     FrameDrawing = false;
 }
 
@@ -508,10 +511,10 @@ extern void JW_Init2() {
     if (forest_arc_aram_p == nullptr) {
         forest_arc_aram_p = JC_JKRAramArchive_new();
 
-        /*if (forest_arc_aram_p == nullptr ||
+        if (forest_arc_aram_p == nullptr ||
             JC__JKRMountFixedAramArchive(forest_arc_aram_p, "forest_1st.arc") == FALSE) {
             OSDVDFatalError();
-        }*/
+        }
     }
 
     /*gameheap_len = JC_JKRHeap_getFreeSize(JC_JFWSystem_getSystemHeap()) - 0x10000;

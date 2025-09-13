@@ -39,6 +39,11 @@ static void log_callback(AuroraLogLevel level, const char* module, const char* m
     }
 }
 
+bool exiting = false;
+bool paused = false;
+bool drawing = false;
+int test = 0;
+
 void customInit(const int argc, char** argv) {
     printf("hi");
 
@@ -49,15 +54,72 @@ void customInit(const int argc, char** argv) {
     __ArenaLo = cachedMemory;
     __ArenaHi = __ArenaLo + size;
 
-    /*const AuroraConfig config = {
+    OSBootInfo* bootInfo = OSPhysicalToCached(0);
+    bootInfo->memorySize = size * 2;
+
+    const AuroraConfig config = {
         .appName = "ac",
         .logCallback = &log_callback,
     };
-    aurora_initialize(argc, argv, &config);*/
+    aurora_initialize(argc, argv, &config);
+
+    exiting = false;
+    paused = false;
+    drawing = false;
+}
+
+bool customBeginFrame() {
+    if (drawing)
+        return false;
+    const AuroraEvent* event = aurora_update();
+    while (event != NULL && event->type != AURORA_NONE) {
+        switch (event->type) {
+            case AURORA_EXIT:
+                exiting = true;
+                break;
+            case AURORA_PAUSED:
+                paused = true;
+                break;
+            case AURORA_UNPAUSED:
+                paused = false;
+                break;
+            /*case AURORA_WINDOW_RESIZED:
+                initInfo.windowSize = event->windowSize;
+                break;*/
+            default:
+                break;
+        }
+        ++event;
+    }
+    //if (exiting || paused || !aurora_begin_frame())
+    //    return false;
+    if (!aurora_begin_frame())
+        printf("Couldn't begin frame\n");
+    test++;
+    if (test > 255)
+        test = 0;
+    GXSetCopyClear(
+      (GXColor){
+          .r = test,
+          .g = 0,
+          .b = 100,
+          .a = 255,
+      },
+      GX_MAX_Z24);
+    drawing = true;
+    return true;
+}
+
+void customEndFrame() {
+    if (drawing) {
+        aurora_end_frame();
+        drawing = false;
+    }
 }
 
 void customShutdown() {
-    //aurora_shutdown();
+    customEndFrame();
+    aurora_shutdown();
 
     if (cachedMemory != NULL)
         free(cachedMemory);

@@ -140,6 +140,7 @@ bool JKRAramArchive::open(long entryNum) {
     } else {
         JKRDvdToMainRam(entryNum, (u8*)mem, EXPAND_SWITCH_DECOMPRESS, 32, nullptr, JKRDvdRipper::ALLOC_DIR_TOP, 0,
                         &mCompression);
+        mem->flip_be();
         int alignment = mMountDirection == MOUNT_DIRECTION_HEAD ? 32 : -32;
         u32 alignedSize = ALIGN_NEXT(mem->file_data_offset, 32);
         mArcInfoBlock = (SArcDataInfo*)JKRAllocFromHeap(mHeap, alignedSize, alignment);
@@ -148,9 +149,16 @@ bool JKRAramArchive::open(long entryNum) {
         } else {
             JKRDvdToMainRam(entryNum, (u8*)mArcInfoBlock, EXPAND_SWITCH_DECOMPRESS, alignedSize, nullptr,
                             JKRDvdRipper::ALLOC_DIR_TOP, 32, nullptr);
+            mArcInfoBlock->flip_be();
 
             mDirectories = (SDIDirEntry*)((u8*)mArcInfoBlock + mArcInfoBlock->node_offset);
+            for (int i = 0; i < mArcInfoBlock->num_nodes; i++)
+                (mDirectories + i)->flip_be();
+
             mFileEntries = (SDIFileEntry*)((u8*)mArcInfoBlock + mArcInfoBlock->file_entry_offset);
+            for (int i = 0; i < mArcInfoBlock->num_file_entries; i++)
+                (mFileEntries + i)->flip_be();
+
             mStrTable = (const char*)((u8*)mArcInfoBlock + mArcInfoBlock->string_table_offset);
 
             u32 aramSize = ALIGN_NEXT(mem->file_data_length, 32);

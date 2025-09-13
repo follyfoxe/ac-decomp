@@ -22,7 +22,7 @@ static void second_game_main(GAME* game) {
     Na_RestartPrepare();
   }
 
-  if (Na_CheckRestartReady() == TRUE) {
+  if (/*Na_CheckRestartReady() ==*/ TRUE) {
     sound_ok = 2;
   }
 

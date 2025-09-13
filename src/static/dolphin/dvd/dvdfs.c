@@ -9,6 +9,13 @@ struct FSTEntry {
     /* 0x08 */ u32 nextEntryOrLength;
 };
 
+constexpr int FileEntryCount = 2;
+const char* FileEntries[FileEntryCount] = {
+    "forest_1st.arc",
+    "forest_2nd.arc"
+};
+constexpr bool IsEntryDir[FileEntryCount] = {};
+
 // .sbss
 static struct OSBootInfo_s * BootInfo; // size: 0x4, address: 0x0
 static struct FSTEntry * FstStart; // size: 0x4, address: 0x4
@@ -32,20 +39,22 @@ static void cbForPrepareStreamSync(u32 intType);
 
 void __DVDFSInit() {
     BootInfo = (void*)OSPhysicalToCached(0);
-    FstStart = BootInfo->FSTLocation;
+    /*FstStart = BootInfo->FSTLocation;
     if (FstStart) {
         MaxEntryNum = FstStart->nextEntryOrLength;
         FstStringStart = (char*)FstStart + (MaxEntryNum * 0xC);
-    }
+    }*/
+    MaxEntryNum = FileEntryCount;
+    FstStringStart = NULL;
 }
 
 /* For convenience */
-#define entryIsDir(i) (((FstStart[i].isDirAndStringOff & 0xff000000) == 0) ? FALSE : TRUE)
-#define stringOff(i) (FstStart[i].isDirAndStringOff & ~0xff000000)
-#define parentDir(i) (FstStart[i].parentOrPosition)
-#define nextDir(i) (FstStart[i].nextEntryOrLength)
-#define filePosition(i) (FstStart[i].parentOrPosition)
-#define fileLength(i) (FstStart[i].nextEntryOrLength)
+#define entryIsDir(i) IsEntryDir[i]
+#define stringOff(i) FileEntries[i]
+//#define parentDir(i) (FstStart[i].parentOrPosition)
+//#define nextDir(i) (FstStart[i].nextEntryOrLength)
+//#define filePosition(i) (FstStart[i].parentOrPosition)
+//#define fileLength(i) (FstStart[i].nextEntryOrLength)
 
 static BOOL isSame(const char* path, const char* string) {
     while (*string != '\0') {
@@ -62,7 +71,12 @@ static BOOL isSame(const char* path, const char* string) {
 }
 
 s32 DVDConvertPathToEntrynum(char* pathPtr) {
-    const char* ptr;
+    for (int i = 0; i < FileEntryCount; i++) {
+        if (isSame(pathPtr, FileEntries[i]))
+            return i;
+    }
+    return -1;
+    /*const char* ptr;
     char* stringPtr;
     BOOL isDir;
     u32 length;
@@ -158,7 +172,17 @@ next_hier:
         
         dirLookAt = i;
         pathPtr += length + 1;
-    }
+    }*/
+}
+
+u32 getFileLength(s32 entry) {
+    FILE* file = fopen(FileEntries[entry], "rb");
+    if (file == NULL)
+        return 0;
+    fseek(file, 0, SEEK_END);
+    const u32 len = ftell(file);
+    fclose(file);
+    return len;
 }
 
 BOOL DVDFastOpen(s32 entrynum, DVDFileInfo* fileInfo) {
@@ -169,9 +193,9 @@ BOOL DVDFastOpen(s32 entrynum, DVDFileInfo* fileInfo) {
     if ((entrynum < 0) || (entrynum >= MaxEntryNum) || entryIsDir(entrynum)) {
         return FALSE;
     }
-    
-    fileInfo->startAddr = filePosition(entrynum);
-    fileInfo->length = fileLength(entrynum);
+
+    fileInfo->startAddr = entrynum; //filePosition(entrynum);
+    fileInfo->length = getFileLength(entrynum); //fileLength(entrynum);
     fileInfo->callback = (DVDCallback)NULL;
     fileInfo->cb.state = DVD_STATE_END;
     
@@ -188,8 +212,8 @@ BOOL DVDOpen(char* fileName, DVDFileInfo* fileInfo) {
     entry = DVDConvertPathToEntrynum(fileName);
     
     if (0 > entry) {
-        DVDGetCurrentDir(currentDir, 128);
-        OSReport("Warning: DVDOpen(): file '%s' was not found under %s.\n", fileName, currentDir);
+        //DVDGetCurrentDir(currentDir, 128);
+        //OSReport("Warning: DVDOpen(): file '%s' was not found under %s.\n", fileName, currentDir);
         return FALSE;
     }
     
@@ -197,9 +221,9 @@ BOOL DVDOpen(char* fileName, DVDFileInfo* fileInfo) {
         ASSERTMSG1LINE(0x1EF, !entryIsDir(entry), "DVDOpen(): directory '%s' is specified as a filename  ", fileName);
         return FALSE;
     }
-    
-    fileInfo->startAddr = filePosition(entry);
-    fileInfo->length = fileLength(entry);
+
+    fileInfo->startAddr = entry; //filePosition(entry);
+    fileInfo->length = getFileLength(entry); //fileLength(entry);
     fileInfo->callback = (DVDCallback)NULL;
     fileInfo->cb.state = DVD_STATE_END;
     
@@ -224,7 +248,7 @@ static u32 myStrncpy(char* dest, char* src, u32 maxlen) {
 }
 
 static u32 entryToPath(u32 entry, char* path, u32 maxlen) {
-    char* name;
+    /*char* name;
     u32 loc;
     
     if (entry == 0) {
@@ -243,7 +267,7 @@ static u32 entryToPath(u32 entry, char* path, u32 maxlen) {
     
     loc += myStrncpy(path + loc, name, maxlen - loc);
     
-    return loc;
+    return loc;*/
 }
 
 static BOOL DVDConvertEntrynumToPath(s32 entrynum, char* path, u32 maxlen) {
@@ -346,7 +370,14 @@ long DVDReadPrio(struct DVDFileInfo * fileInfo, void * addr, long length, long o
     ASSERTMSGLINE(0x322, !(length & 0x1F), "DVDRead(): length must be  multiple of 32 byte  ");
     ASSERTMSGLINE(0x324, !(offset & 3), "DVDRead(): offset must be multiple of 4 byte  ");
 
-    if (!((0 <= offset) && (offset < fileInfo->length))) {
+    FILE* file = fopen(FileEntries[fileInfo->startAddr], "rb");
+    if (file == NULL)
+        return -1;
+    fseek(file, offset, SEEK_SET);
+    retVal = fread(addr, 1, length, file);
+    fclose(file);
+    return retVal;
+    /*if (!((0 <= offset) && (offset < fileInfo->length))) {
         OSPanic(__FILE__, 0x329, "DVDRead(): specified area is out of the file  ");
     }
 
@@ -376,7 +407,7 @@ long DVDReadPrio(struct DVDFileInfo * fileInfo, void * addr, long length, long o
         OSSleepThread(&__DVDThreadQueue);
     }
     OSRestoreInterrupts(enabled);
-    return retVal;
+    return retVal;*/
 }
 
 static void cbForReadSync() {
@@ -466,7 +497,7 @@ BOOL DVDFastOpenDir(s32 entrynum, DVDDir * dir) {
 }
 
 BOOL DVDOpenDir(char* dirName, DVDDir* dir) {
-    long entry;
+    /*long entry;
     char currentDir[128];
 
     ASSERTMSGLINE(0x430, dirName, "DVDOpendir(): null pointer is specified to directory name  ");
@@ -486,11 +517,11 @@ BOOL DVDOpenDir(char* dirName, DVDDir* dir) {
     dir->entryNum = entry;
     dir->location = entry + 1;
     dir->next = nextDir(entry);    
-    return TRUE;
+    return TRUE;*/
 }
 
 int DVDReadDir(DVDDir * dir, DVDDirEntry* dirent) {
-    unsigned long loc;
+    /*unsigned long loc;
 
     loc = dir->location;
     if ((loc <= (u32) dir->entryNum) || ((u32) dir->next <= loc)) {
@@ -500,7 +531,7 @@ int DVDReadDir(DVDDir * dir, DVDDirEntry* dirent) {
     dirent->isDir = entryIsDir(loc);
     dirent->name = FstStringStart + stringOff(loc);
     dir->location = entryIsDir(loc) ? nextDir(loc) : loc + 1;
-    return 1;
+    return 1;*/
 }
 
 int DVDCloseDir(DVDDir* dir) {

@@ -4,11 +4,11 @@
 OSArena malloc_arena;
 
 extern void* osmalloc(size_t size) {
-    return __osMalloc(&malloc_arena, size);
+    return malloc(size); //__osMalloc(&malloc_arena, size);
 }
 
 extern void osfree(void* ptr) {
-    __osFree(&malloc_arena, ptr);
+    free(ptr); //__osFree(&malloc_arena, ptr);
 }
 
 extern void DisplayArena(void) {

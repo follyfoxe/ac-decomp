@@ -12,6 +12,7 @@
 // #include "va_args.h"
 #include "jsyswrap.h"
 #include "dolphin/PPCArch.h"
+#include "pc/big_endian.h"
 
 // this pragma may be unnecessary
 #pragma inline_depth(1024)
@@ -538,7 +539,7 @@ static void emu64_init2(GXRenderModeObj* render_mode) {
     GXLoadPosMtxImm(m, GX_PNMTX0);
     GXLoadNrmMtxImm(m, GX_PNMTX0);
     GXSetCurrentMtx(GX_PNMTX0);
-    GXLoadTexMtxImm(m, GX_IDENTITY, GX_MTX3x4);
+    //GXLoadTexMtxImm(m, GX_IDENTITY, GX_MTX3x4);
 
     GXSetViewport(0.0f, 0.0f, render_mode->fbWidth, render_mode->xfbHeight, 0.0f, 1.0f);
     GXSetCoPlanar(GX_FALSE);
@@ -3330,14 +3331,15 @@ void emu64::dl_G_SPNOOP() {
 void emu64::dl_G_DL(void) {
     static char s[256];
     Gfx* gfx = this->gfx_p;
+    auto dma = get<Gdma>(*gfx);
 
-    this->work_ptr = (void*)this->seg2k0(gfx->dma.addr);
+    this->work_ptr = (void*)this->seg2k0(dma.addr);
 
-    switch (gfx->dma.par) {
+    switch (dma.par) {
         case G_DL_PUSH:
             if (this->segment_set != false) {
                 this->segment_set = false;
-                sprintf(s, "%s", this->segchk(gfx->dma.addr));
+                sprintf(s, "%s", this->segchk(dma.addr));
                 this->Printf0(VT_COL(RED, WHITE) "gsSPDisplayList(%s),\n" VT_RST, s);
                 emu64::warningString[EMU64_WARN_IDX_DL] = s;
                 emu64::warningTime[EMU64_WARN_IDX_DL] = EMU64_WARN_TIME;
@@ -3358,7 +3360,7 @@ void emu64::dl_G_DL(void) {
             break;
         default:
             if (this->disable_polygons == false) {
-                GXCallDisplayList(this->work_ptr, gfx->dma.len);
+                GXCallDisplayList(this->work_ptr, dma.len);
             }
             break;
     }
@@ -3369,7 +3371,8 @@ void emu64::dl_G_RDPHALF_1(void) {
 }
 
 void emu64::dl_G_TEXRECT() {
-    Gtexrect2* texrect_p = (Gtexrect2*)this->gfx_p;
+    auto texrect = get<Gtexrect2>(*this->gfx_p);
+    Gtexrect2* texrect_p = &texrect;
 
 #ifdef EMU64_DEBUG
     if (this->print_commands != false) {
@@ -3431,7 +3434,8 @@ void emu64::dl_G_ENDDL() {
 }
 
 void emu64::dl_G_SETTILE() {
-    Gsettile* settile = (Gsettile*)this->gfx_p;
+    auto settileval = get<Gsettile>(*this->gfx_p);
+    Gsettile* settile = &settileval;
 
 #ifdef EMU64_DEBUG
     if (this->print_commands != false) {
@@ -3498,7 +3502,8 @@ void emu64::dl_G_SETTILE() {
 }
 
 void emu64::dl_G_SETTILE_DOLPHIN() {
-    Gsettile_dolphin* settile_dolphin = (Gsettile_dolphin*)this->gfx_p;
+    auto val = get<Gsettile_dolphin>(*this->gfx_p);
+    Gsettile_dolphin* settile_dolphin = &val;
 
 #ifdef EMU64_DEBUG
     if (this->print_commands != false) {
@@ -3531,12 +3536,12 @@ void emu64::dl_G_SETTILE_DOLPHIN() {
 }
 
 void emu64::dl_G_LOADTILE() {
-    Gloadtile& loadtile = this->gfx_p->loadtile;
+    Gloadtile loadtile = get<Gloadtile>(*this->gfx_p);
 
 #ifdef EMU64_DEBUG
     if (this->print_commands) {
-        this->Printf2("gsDPLoadTile(%d,%d,%d,%d,%d),", loadtile->tile, loadtile->sl, loadtile->tl, loadtile->sh,
-                      loadtile->th);
+        this->Printf2("gsDPLoadTile(%d,%d,%d,%d,%d),", loadtile.tile, loadtile.sl, loadtile.tl, loadtile.sh,
+                      loadtile.th);
     }
 #endif
 
@@ -3572,7 +3577,8 @@ void emu64::dl_G_LOADTILE() {
 
 void emu64::dl_G_LOADBLOCK() {
     int tmem_idx;
-    Gloadblock* loadblock = (Gloadblock*)this->gfx_p;
+    auto val = get<Gloadblock>(*this->gfx_p);
+    Gloadblock* loadblock = &val;
     u32 addr;
     int i;
 
@@ -3603,8 +3609,10 @@ void emu64::dl_G_LOADBLOCK() {
 }
 
 void emu64::dl_G_SETTILESIZE() {
-    Gsettilesize* settilesize = (Gsettilesize*)this->gfx_p;
-    Gsettilesize_Dolphin* settilesize_dolphin = (Gsettilesize_Dolphin*)this->gfx_p;
+    auto val = get<Gsettilesize>(*this->gfx_p);
+    Gsettilesize* settilesize = &val;
+    auto val2 = get<Gsettilesize_Dolphin>(*this->gfx_p);
+    Gsettilesize_Dolphin* settilesize_dolphin = &val2;
 
     if (settilesize_dolphin->isDolphin) {
 #ifdef EMU64_DEBUG
@@ -3616,7 +3624,7 @@ void emu64::dl_G_SETTILESIZE() {
         }
 #endif
 
-        this->settilesize_dolphin_cmds[settilesize_dolphin->tile] = *(Gsettilesize_Dolphin*)this->gfx_p;
+        this->settilesize_dolphin_cmds[settilesize_dolphin->tile] = get<Gsettilesize_Dolphin>(*this->gfx_p);
     } else { /* Gsettilesize */
         u16 s_len = (((settilesize->sh) - (settilesize->sl)) >> 2) + 1;
         u16 t_len = ((settilesize->th - (settilesize->tl)) >> 2) + 1;
@@ -3647,7 +3655,7 @@ void emu64::dl_G_SETTILESIZE() {
 }
 
 void emu64::dl_G_LOADTLUT() {
-    Gloadtlut_dolphin* loadtlut_dol = (Gloadtlut_dolphin*)this->gfx_p;
+    auto loadtlut_dol = get<Gloadtlut_dolphin>(*this->gfx_p);
     u16 count;
     void* tlut_addr;
     u32 tlut_name;
@@ -3655,14 +3663,14 @@ void emu64::dl_G_LOADTLUT() {
 
     EMU64_TIMED_SEGMENT_BEGIN();
 
-    if (loadtlut_dol->type == 2) {
-        EMU64_LOGF("gsDPLoadTLUT_Dolphin(%d, %d, %s),", loadtlut_dol->tlut_name, loadtlut_dol->count,
-                   this->segchk(loadtlut_dol->tlut_addr));
+    if (loadtlut_dol.type == 2) {
+        EMU64_LOGF("gsDPLoadTLUT_Dolphin(%d, %d, %s),", loadtlut_dol.tlut_name, loadtlut_dol.count,
+                   this->segchk(loadtlut_dol.tlut_addr));
 
         if (this->disable_polygons == false) {
-            count = loadtlut_dol->count & 0x3FFF;
-            tlut_name = loadtlut_dol->tlut_name;
-            tlut_addr = (void*)this->seg2k0(loadtlut_dol->tlut_addr);
+            count = loadtlut_dol.count & 0x3FFF;
+            tlut_name = loadtlut_dol.tlut_name;
+            tlut_addr = (void*)this->seg2k0(loadtlut_dol.tlut_addr);
 
             if (tlut_addr == this->tlut_addresses[tlut_name]) {
                 /* Translation: ### Same TLUT address */
@@ -3742,7 +3750,9 @@ void emu64::dl_G_SETCOMBINE_NOTEV() {
     }
 
     /* Update combiner settings only if it changed */
-    ((Gsetcombine_new*)combine)->cmd = G_SETCOMBINE;
+    auto combineNew = get<Gsetcombine_new>(this->gfx);
+    combineNew.cmd = G_SETCOMBINE;
+    set(this->gfx, combineNew);
     if (*(u64*)&this->combine_gfx != *combine) {
         *(u64*)&this->combine_gfx = *combine;
         this->dirty_flags[EMU64_DIRTY_FLAG_COMBINE] = true;
@@ -3785,14 +3795,14 @@ void emu64::dl_G_SETCOMBINE_TEV() {
 }
 
 void emu64::dl_G_SETOTHERMODE_H() {
-    Gsetothermode_dolphin* othermodeH = (Gsetothermode_dolphin*)&this->gfx.setothermodeH;
+    auto othermodeH = get<Gsetothermode_dolphin>(this->gfx);
     u32 sft;
     u32 len;
     u32 data;
 
-    len = othermodeH->len + 1;
-    sft = (32 - othermodeH->sft) - len;
-    data = othermodeH->data;
+    len = othermodeH.len + 1;
+    sft = (32 - othermodeH.sft) - len;
+    data = othermodeH.data;
 
     if ((this->print_commands & EMU64_PRINTF2_FLAG) != 0) {
         for (int i = 0; i < ARRAY_COUNT(h_tbl); i++) {
@@ -3826,9 +3836,9 @@ void emu64::dl_G_SETOTHERMODE_L() {
     u32 len;
     u32 data;
 
-    len = ((Gsetothermode_dolphin*)&this->gfx)->len + 1;
-    sft = (32 - ((Gsetothermode_dolphin*)&this->gfx)->sft) - len;
-    data = this->gfx.setothermodeL.data;
+    len = get<Gsetothermode_dolphin>(this->gfx).len + 1;
+    sft = (32 - get<Gsetothermode_dolphin>(this->gfx).sft) - len;
+    data = get<GsetothermodeL>(this->gfx).data;
 
     if ((this->print_commands & EMU64_PRINTF2_FLAG) != 0) {
         if ((int)sft == G_MDSFT_RENDERMODE) {
@@ -3924,7 +3934,8 @@ void emu64::dl_G_RDPSETOTHERMODE() {
 
 void emu64::dl_G_SETSCISSOR() {
     u8 print_commands = this->print_commands;
-    Gscissor* scissor = (Gscissor*)this->gfx_p;
+    auto val = get<Gscissor>(*this->gfx_p);
+    Gscissor* scissor = &val;
 
 #ifdef EMU64_DEBUG
 
@@ -3965,7 +3976,8 @@ void emu64::dl_G_SETSCISSOR() {
 }
 
 void emu64::dl_G_FILLRECT() {
-    Gfillrect2* fillrect = (Gfillrect2*)this->gfx_p;
+    auto val = get<Gfillrect2>(*this->gfx_p);
+    Gfillrect2* fillrect = &val;
 
     EMU64_LOGF("gsDPFillRectangle(%d, %d, %d, %d),", fillrect->x1, fillrect->y1, fillrect->x0, fillrect->y0);
 
@@ -4015,11 +4027,11 @@ void emu64::dl_G_SETCIMG() {
 }
 
 void emu64::dl_G_SETZIMG() {
-    EMU64_WARNF("gsDPSetDepthImage(%s),", this->segchk(this->gfx.setimg.dram));
+    EMU64_WARNF("gsDPSetDepthImage(%s),", this->segchk(get<Gsetimg>(this->gfx).dram));
 }
 
 void emu64::dl_G_SETTIMG() {
-    Gsetimg2* setimg2 = (Gsetimg2*)this->gfx_p;
+    Gsetimg2 setimg2 = get<Gsetimg2>(*this->gfx_p);
 
 #ifdef EMU64_DEBUG
     if (this->print_commands & EMU64_PRINT_FLAG_ENABLE) {
@@ -4078,50 +4090,54 @@ void emu64::dl_G_SETTIMG() {
     }
 #endif
 
-    this->now_setimg.setimg2 = *setimg2;
-    this->now_setimg.setimg2.imgaddr = (u32)this->seg2k0(setimg2->imgaddr);
+    this->now_setimg.setimg2 = setimg2;
+    this->now_setimg.setimg2.imgaddr = (u32)this->seg2k0(setimg2.imgaddr);
 }
 
 void emu64::dl_G_SETENVCOLOR() {
-    EMU64_LOGF("gsDPSetEnvColor(%d, %d, %d, %d),", (this->gfx.setcolor.color >> 24) & 0xFF,
-               (this->gfx.setcolor.color >> 16) & 0xFF, (this->gfx.setcolor.color >> 8) & 0xFF,
-               (this->gfx.setcolor.color >> 0) & 0xFF);
+    auto setcolor = get<Gsetcolor>(this->gfx);
+    EMU64_LOGF("gsDPSetEnvColor(%d, %d, %d, %d),", (setcolor.color >> 24) & 0xFF,
+               (setcolor.color >> 16) & 0xFF, (setcolor.color >> 8) & 0xFF,
+               (setcolor.color >> 0) & 0xFF);
 
-    if (this->environment_color.raw != this->gfx.setcolor.color) {
-        this->environment_color.raw = this->gfx.setcolor.color;
+    if (this->environment_color.raw != setcolor.color) {
+        this->environment_color.raw = setcolor.color;
         this->dirty_flags[EMU64_DIRTY_FLAG_ENV_COLOR] = true;
     }
 }
 
 void emu64::dl_G_SETBLENDCOLOR() {
-    EMU64_LOGF("gsDPSetBlendColor(%d, %d, %d, %d),", (this->gfx.setcolor.color >> 24) & 0xFF,
-               (this->gfx.setcolor.color >> 16) & 0xFF, (this->gfx.setcolor.color >> 8) & 0xFF,
-               (this->gfx.setcolor.color >> 0) & 0xFF);
+    auto setcolor = get<Gsetcolor>(this->gfx);
+    EMU64_LOGF("gsDPSetBlendColor(%d, %d, %d, %d),", (setcolor.color >> 24) & 0xFF,
+               (setcolor.color >> 16) & 0xFF, (setcolor.color >> 8) & 0xFF,
+               (setcolor.color >> 0) & 0xFF);
 
-    if (this->blend_color.raw != this->gfx.setcolor.color) {
-        this->blend_color.raw = this->gfx.setcolor.color;
+    if (this->blend_color.raw != setcolor.color) {
+        this->blend_color.raw = setcolor.color;
         this->dirty_flags[EMU64_DIRTY_FLAG_BLEND_COLOR] = true;
     }
 }
 
 void emu64::dl_G_SETFOGCOLOR() {
-    EMU64_LOGF("gsDPSetFogColor(%d, %d, %d, %d),", (this->gfx.setcolor.color >> 24) & 0xFF,
-               (this->gfx.setcolor.color >> 16) & 0xFF, (this->gfx.setcolor.color >> 8) & 0xFF,
-               (this->gfx.setcolor.color >> 0) & 0xFF);
+    auto setcolor = get<Gsetcolor>(this->gfx);
+    EMU64_LOGF("gsDPSetFogColor(%d, %d, %d, %d),", (setcolor.color >> 24) & 0xFF,
+               (setcolor.color >> 16) & 0xFF, (setcolor.color >> 8) & 0xFF,
+               (setcolor.color >> 0) & 0xFF);
 
-    if (this->fog_color.raw != this->gfx.setcolor.color) {
-        this->fog_color.raw = this->gfx.setcolor.color;
+    if (this->fog_color.raw != setcolor.color) {
+        this->fog_color.raw = setcolor.color;
         this->dirty_flags[EMU64_DIRTY_FLAG_FOG] = true;
     }
 }
 
 void emu64::dl_G_SETFILLCOLOR() {
-    EMU64_LOGF("gsDPSetFillColor(0x%08x),", this->gfx.setcolor.color);
+    auto setcolor = get<Gsetcolor>(this->gfx);
+    EMU64_LOGF("gsDPSetFillColor(0x%08x),", setcolor.color);
 
-    if (this->fill_color.raw != this->gfx.setcolor.color) {
-        this->fill_color.raw = this->gfx.setcolor.color;
+    if (this->fill_color.raw != setcolor.color) {
+        this->fill_color.raw = setcolor.color;
 
-        u16* color = (u16*)&this->gfx.setcolor.color;
+        u16* color = (u16*)&setcolor.color;
         this->fill_tev_color.color.r = (*color >> 8) & 0xF8;
         this->fill_tev_color.color.g = (*color >> 3) & 0xF8;
         this->fill_tev_color.color.b = (*color << 2) & 0xF8;
@@ -4132,9 +4148,7 @@ void emu64::dl_G_SETFILLCOLOR() {
 }
 
 void emu64::dl_G_SETTEXEDGEALPHA(void) {
-    Gsettexedgealpha* gfx = (Gsettexedgealpha*)&this->gfx;
-
-    this->tex_edge_alpha = gfx->tex_edge_alpha;
+    this->tex_edge_alpha = get<Gsettexedgealpha>(this->gfx).tex_edge_alpha;
     this->dirty_flags[EMU64_DIRTY_FLAG_OTHERMODE_LOW] = TRUE;
 }
 
@@ -4145,18 +4159,19 @@ void emu64::dl_G_SETPRIMDEPTH() {
 }
 
 void emu64::dl_G_SETPRIMCOLOR() {
-    EMU64_LOGF("gsDPSetPrimColor(%d, %d, %d, %d, %d, %d),", this->gfx.setcolor.prim_min_level,
-               this->gfx.setcolor.prim_level, (this->gfx.setcolor.color >> 24) & 0xFF,
-               (this->gfx.setcolor.color >> 16) & 0xFF, (this->gfx.setcolor.color >> 8) & 0xFF,
-               (this->gfx.setcolor.color >> 0) & 0xFF);
+    auto setcolor = get<Gsetcolor>(this->gfx);
+    EMU64_LOGF("gsDPSetPrimColor(%d, %d, %d, %d, %d, %d),", setcolor.prim_min_level,
+               setcolor.prim_level, (setcolor.color >> 24) & 0xFF,
+               (setcolor.color >> 16) & 0xFF, (setcolor.color >> 8) & 0xFF,
+               (setcolor.color >> 0) & 0xFF);
 
-    if (this->primitive_color.raw != this->gfx.setcolor.color) {
-        this->primitive_color.raw = this->gfx.setcolor.color;
+    if (this->primitive_color.raw != setcolor.color) {
+        this->primitive_color.raw = setcolor.color;
         this->dirty_flags[EMU64_DIRTY_FLAG_PRIM_COLOR] = true;
     }
 
-    if (this->fill_tev_color.color.a != this->gfx.setcolor.prim_level) {
-        this->fill_tev_color.color.a = this->gfx.setcolor.prim_level;
+    if (this->fill_tev_color.color.a != setcolor.prim_level) {
+        this->fill_tev_color.color.a = setcolor.prim_level;
         this->dirty_flags[EMU64_DIRTY_FLAG_FILL_TEV_COLOR] = true;
     }
 }
@@ -4182,7 +4197,8 @@ void emu64::dl_G_RDPLOADSYNC() {
 }
 
 void emu64::dl_G_NOOP() {
-    Gnoop* noop = (Gnoop*)&this->gfx;
+    auto noopVal = get<Gnoop>(this->gfx);
+    auto noop = &noopVal;
 
     switch (noop->tag) {
         case G_TAG_NONE:
@@ -4243,7 +4259,7 @@ void emu64::dl_G_MTX() {
         EMU64_LOGF("gsSPMatrix(%s, 0", this->segchk(gfx_copy.w1));
 
         for (int i = 0; i < ARRAY_COUNT(gmtxtbl); i++) {
-            EMU64_LOGF("|%s", ((((Gmtx*)this->gfx_p)->type ^ G_MTX_PUSH) & gmtxtbl[i].mask) == 0 ? gmtxtbl[i].disabled
+            EMU64_LOGF("|%s", (((get<Gmtx>(this->gfx_p))->type ^ G_MTX_PUSH) & gmtxtbl[i].mask) == 0 ? gmtxtbl[i].disabled
                                                                                                  : gmtxtbl[i].enabled);
         }
 
@@ -4258,9 +4274,9 @@ void emu64::dl_G_MTX() {
     if (this->disable_polygons == false) {
         EMU64_TIMED_SEGMENT_BEGIN();
 
-        Gmtx* mtx_gfx = (Gmtx*)this->gfx_p;
+        Gmtx mtx_gfx = get<Gmtx>(*this->gfx_p);
         Mtx_t* mtx =
-            (Mtx_t*)this->seg2k0(mtx_gfx->addr); /* Matrix is in N64 s16.16 format. (First 8 elements are s16 integer
+            (Mtx_t*)this->seg2k0(mtx_gfx.addr); /* Matrix is in N64 s16.16 format. (First 8 elements are s16 integer
                                                     components, second 8 elements are s16 fractional components) */
         GC_Mtx mtx34;
         Mtx44 mtx44; /* float-based matrix */
@@ -4268,9 +4284,9 @@ void emu64::dl_G_MTX() {
         /* Convert our s16.u16 matrix into a f32 matrix. */
         N64Mtx_to_DOLMtx((Mtx*)mtx, mtx34);
 
-        if ((mtx_gfx->type & G_MTX_PROJECTION) != G_MTX_MODELVIEW) { /* Projection */
+        if ((mtx_gfx.type & G_MTX_PROJECTION) != G_MTX_MODELVIEW) { /* Projection */
             N64Mtx_to_DOLMtx((Mtx*)mtx, mtx44);
-            if ((mtx_gfx->type & G_MTX_LOAD) != G_MTX_MUL) {
+            if ((mtx_gfx.type & G_MTX_LOAD) != G_MTX_MUL) {
                 if ((u16)(*mtx)[1][3] == 0) { /* If the last entry is 0, this should be a perspective projection.
                                                  Otherwise, it's likely an orthographic projection. */
                     this->near = mtx44[2][3] * ((mtx44[2][2] + 1.0f) / (mtx44[2][2] - 1.0f) - 1.0f) / 2.0f;
@@ -4300,7 +4316,7 @@ void emu64::dl_G_MTX() {
         } else { /* Modelview */
             GC_Mtx& concat_src = this->model_view_mtx_stack[this->mtx_stack_size];
 
-            if ((mtx_gfx->type & G_MTX_PUSH) == G_MTX_NOPUSH) {
+            if ((mtx_gfx.type & G_MTX_PUSH) == G_MTX_NOPUSH) {
                 if (this->mtx_stack_size < MTX_STACK_SIZE - 1) {
                     this->mtx_stack_size++;
                 } else {
@@ -4310,7 +4326,7 @@ void emu64::dl_G_MTX() {
             }
 
             GC_Mtx& model_view_src = this->model_view_mtx_stack[this->mtx_stack_size];
-            if ((mtx_gfx->type & G_MTX_LOAD) != G_MTX_MUL) {
+            if ((mtx_gfx.type & G_MTX_LOAD) != G_MTX_MUL) {
                 bcopy(mtx34, model_view_src, sizeof(GC_Mtx));
             } else {
                 MTXConcat(concat_src, mtx34, model_view_src);
@@ -4355,9 +4371,9 @@ void emu64::dl_G_MTX() {
 void emu64::dl_G_VTX() {
     EMU64_TIMED_SEGMENT_BEGIN();
 
-    Gvtx* vtx_gfx = (Gvtx*)&this->gfx;
-    u32 n = vtx_gfx->n; /* number of vertices */
-    int vn = vtx_gfx->vn;
+    Gvtx vtx_gfx = get<Gvtx>(this->gfx);
+    u32 n = vtx_gfx.n; /* number of vertices */
+    int vn = vtx_gfx.vn;
     u32 v0 = (vn >> 1) - n; /* first vertex to load */
 
     this->total_vertices += n;
@@ -4365,15 +4381,15 @@ void emu64::dl_G_VTX() {
     this->vtx_load_calls++;
 
     if ((this->print_commands & EMU64_PRINTF_ENABLED_FLAG)) {
-        EMU64_LOGF("gsSPVertex(%s, %d, %d),", this->segchk(this->gfx.dma.addr), n, v0);
+        EMU64_LOGF("gsSPVertex(%s, %d, %d),", this->segchk(get<Gdma>(this->gfx).addr), n, v0);
         if ((this->print_commands & EMU64_PRINTF3_FLAG) != 0) {
-            this->work_ptr = (void*)this->seg2k0(this->gfx.dma.addr);
+            this->work_ptr = (void*)this->seg2k0(get<Gdma>(this->gfx).addr);
             this->show_vtx((Vtx*)work_ptr, n, v0);
         }
     }
 
     if (this->disable_polygons == false) {
-        Vtx* vtx_p = (Vtx*)this->seg2k0(this->gfx.dma.addr);
+        Vtx* vtx_p = (Vtx*)this->seg2k0(get<Gdma>(this->gfx).addr);
         Vertex* emu_vtx_p = &this->vertices[v0];
 
         GC_Mtx& position_mtx = this->position_mtx_stack[this->mtx_stack_size];
@@ -4439,7 +4455,7 @@ void emu64::dl_G_VTX() {
 void emu64::dl_G_MODIFYVTX() {
 #ifdef EMU64_DEBUG
     if (this->print_commands != false) {
-        u8 where = this->gfx.dma.par;
+        u8 where = get<Gdma>(this->gfx).par;
         const char* s_where;
         if (where == G_MWO_POINT_RGBA) {
             s_where = "RGBA";
@@ -4462,7 +4478,7 @@ void emu64::dl_G_MODIFYVTX() {
 #ifdef EMU64_FIX_MODIFYVTX_LOADED_COUNT
     this->total_vertices++;
 #else
-    this->total_vertices += this->gfx.dma.par;
+    this->total_vertices += get<Gdma>(this->gfx).par;
 #endif
 
     this->vtx_load_calls++;
@@ -4470,12 +4486,12 @@ void emu64::dl_G_MODIFYVTX() {
 }
 
 void emu64::dl_G_LINE3D() {
-    Gline3D_new* line = (Gline3D_new*)&this->gfx;
+    auto line = get<Gline3D_new>(this->gfx);
 
-    if (line->wd == 0) {
-        EMU64_LOGF("gsSPLine3D(%d, %d),", line->v0, line->v1);
+    if (line.wd == 0) {
+        EMU64_LOGF("gsSPLine3D(%d, %d),", line.v0, line.v1);
     } else {
-        EMU64_LOGF("gsSPLineW3D(%d, %d, %d),", line->v0, line->v1, line->wd);
+        EMU64_LOGF("gsSPLineW3D(%d, %d, %d),", line.v0, line.v1, line.wd);
     }
 
     this->lines++;
@@ -4483,7 +4499,7 @@ void emu64::dl_G_LINE3D() {
 }
 
 void emu64::dl_G_TRI1() {
-    Gtri1 tri_gfx = *(Gtri1*)this->gfx_p;
+    Gtri1 tri_gfx = get<Gtri1>(*this->gfx_p);
     u32 v0 = tri_gfx.v0 / 2;
     u32 v1 = tri_gfx.v1 / 2;
     u32 v2 = tri_gfx.v2 / 2;
@@ -4513,16 +4529,17 @@ void emu64::dl_G_TRIN_INDEPEND() {
 }
 
 void emu64::dl_G_TRIN() {
+    Gtrin val;
     Gtrin* g;
     int n_faces;
     int first_pass = TRUE;
-    Gtrin_independ* trin_independ_gfx = (Gtrin_independ*)this->gfx_p;
+    Gtrin_independ trin_independ_gfx = get<Gtrin_independ>(*this->gfx_p);
 
     EMU64_TIMED_SEGMENT_BEGIN();
 
     this->dirty_check(this->texture_gfx.tile, this->texture_gfx.level, TRUE);
-    this->setup_1tri_2tri_1quad(trin_independ_gfx->f0v0);
-    n_faces = trin_independ_gfx->count + 1;
+    this->setup_1tri_2tri_1quad(trin_independ_gfx.f0v0);
+    n_faces = trin_independ_gfx.count + 1;
     int n_verts = n_faces * 3;
 
     EMU64_LOGF("gsSPNTriangles(%d),\n", n_faces);
@@ -4531,9 +4548,10 @@ void emu64::dl_G_TRIN() {
     }
 
     while (n_faces > 0) {
-        g = (Gtrin*)this->gfx_p;
+        val = get<Gtrin>(*this->gfx_p);
+        g = &val;
 
-        if ((((Gfx*)g)->words.w1 & POLY_BITMASK) == POLY_5b) {
+        if ((this->gfx_p->words.w1 & POLY_BITMASK) == POLY_5b) {
             this->gfx_p++;
             /* 5 bits per vertex index, first pass = 3 faces, consecutive passes = 4 faces */
             this->set_position3(g->f0v0, g->f0v1, g->f0v2);
@@ -4575,7 +4593,8 @@ void emu64::dl_G_TRIN() {
                     break;
             }
         } else {
-            Gtrin_7b* g7b = (Gtrin_7b*)g;
+            auto val2 = get<Gtrin_7b>(*this->gfx_p);
+            Gtrin_7b* g7b = &val2;
             this->gfx_p++;
 
             /* 7 bits per vertex index, max 3 faces per Gfx */
@@ -4625,16 +4644,17 @@ void emu64::dl_G_TRIN() {
 }
 
 void emu64::dl_G_QUADN() {
+    Gquad val;
     Gquad* g;
     int n_faces;
     int first_pass = TRUE;
-    Gquad_independ* quad_independ = (Gquad_independ*)this->gfx_p;
+    Gquad_independ quad_independ = get<Gquad_independ>(*this->gfx_p);
 
     EMU64_TIMED_SEGMENT_BEGIN();
 
     this->dirty_check(this->texture_gfx.tile, this->texture_gfx.level, TRUE);
-    this->setup_1tri_2tri_1quad(quad_independ->f0v0);
-    n_faces = quad_independ->count + 1;
+    this->setup_1tri_2tri_1quad(quad_independ.f0v0);
+    n_faces = quad_independ.count + 1;
     int n_verts = n_faces * 4;
 
     EMU64_LOGF("gsSPNQuadrangles(%d),\n", n_faces);
@@ -4643,8 +4663,9 @@ void emu64::dl_G_QUADN() {
     }
 
     while (n_faces > 0) {
-        g = (Gquad*)this->gfx_p;
-        if ((((Gfx*)g)->words.w1 & POLY_BITMASK) == POLY_5b) {
+        val = get<Gquad>(*this->gfx_p);
+        g = &val;
+        if ((this->gfx_p->words.w1 & POLY_BITMASK) == POLY_5b) {
             this->gfx_p++;
             /* 5 bits per vertex index, first pass = 2 faces, consecutive passes = 3 faces */
             this->set_position4(g->f0v0, g->f0v1, g->f0v2, g->f0v3);
@@ -4677,7 +4698,8 @@ void emu64::dl_G_QUADN() {
                     break;
             }
         } else {
-            Gquad_7b* g7b = (Gquad_7b*)g;
+            auto val2 = get<Gquad_7b>(*this->gfx_p);
+            Gquad_7b* g7b = &val2;
             this->gfx_p++;
             /* 7 bits per vertex index, max 2 faces per Gfx */
             this->set_position4(g7b->f0v0, g7b->f0v1, g7b->f0v2, g7b->f0v3);
@@ -4730,7 +4752,7 @@ void emu64::dl_G_TRI2() {
      */
 
     if (this->disable_polygons || aflags[AFLAGS_MAX_POLYGONS] || aflags[AFLAGS_WIREFRAME]) {
-        Gtri2 tris = *((Gtri2*)&this->gfx_p->words);
+        Gtri2 tris = get<Gtri2>(*this->gfx_p);
 
         v0 = tris.t0v0 / 2;
         v1 = tris.t0v1 / 2;
@@ -4765,9 +4787,10 @@ void emu64::dl_G_TRI2() {
 
         int i = 0;
         while (TRUE) {
-            if (this->gfx_p[i].tri.cmd == G_TRI2) {
+            auto tri = get<Gtri>(this->gfx_p[i]);
+            if (tri.cmd == G_TRI2) {
                 n_verts += 6;
-            } else if (this->gfx_p[i].tri.cmd == G_TRI1) {
+            } else if (tri.cmd == G_TRI1) {
                 n_verts += 3;
             } else {
                 break;
@@ -4791,12 +4814,12 @@ void emu64::dl_G_TRI2() {
         }
 
         for (u32 i = 0; i < commands; i++) {
-            Gtri2 g = *(Gtri2*)&this->gfx_p[i].words;
+            Gtri2 g = get<Gtri2>(this->gfx_p[i]);
             u32 v0 = g.t0v0 / 2;
             u32 v1 = g.t0v1 / 2;
             u32 v2 = g.t0v2 / 2;
             this->set_position3(v0, v1, v2);
-            if (this->gfx_p[i].tri.cmd == G_TRI2) {
+            if (get<Gtri>(this->gfx_p[i]).cmd == G_TRI2) {
                 u32 v3 = g.t1v0 / 2;
                 u32 v4 = g.t1v1 / 2;
                 u32 v5 = g.t1v2 / 2;
@@ -4817,7 +4840,7 @@ void emu64::dl_G_TRI2() {
 }
 
 void emu64::dl_G_QUAD() {
-    Gquad0 q = *(Gquad0*)&this->gfx_p->words;
+    Gquad0 q = get<Gquad0>(*this->gfx_p);
     u32 v0 = q.v0 / 2;
     u32 v1 = q.v1 / 2;
     u32 v2 = q.v2 / 2;
@@ -4845,8 +4868,8 @@ void emu64::dl_G_CULLDL() {
     f32 ox;
     f32 oy;
     f32 oz;
-    u32 vstart = ((Gculldl*)&this->gfx)->vstart / 2;
-    u32 vend = ((Gculldl*)&this->gfx)->vend / 2;
+    u32 vstart = get<Gculldl>(this->gfx).vstart / 2;
+    u32 vend = get<Gculldl>(this->gfx).vend / 2;
     u32 mask;
     u32 i;
     Vertex* vtx;
@@ -4962,7 +4985,8 @@ void emu64::dl_G_BRANCH_Z() {
 #define TEXTURE_SCALE_CONV TEXTURE_SCALE * 65536.0f
 
 void emu64::dl_G_TEXTURE() {
-    Gtexture_internal* texture = (Gtexture_internal*)&this->gfx;
+    auto textureVal = get<Gtexture_internal>(this->gfx);
+    Gtexture_internal* texture = &textureVal;
 
 #ifdef EMU64_DEBUG
     if (this->print_commands != false) {
@@ -5073,7 +5097,8 @@ void emu64::dl_G_MOVEWORD() {
     static char s1[20];
     static char s2[64];
     static char s3[64];
-    Gmoveword* moveword = (Gmoveword*)this->gfx_p;
+    Gmoveword val = get<Gmoveword>(*this->gfx_p);
+    Gmoveword* moveword = &val;
 
     switch (moveword->index) {
         case G_MW_SEGMENT: {
@@ -5127,7 +5152,8 @@ void emu64::dl_G_MOVEWORD() {
 
             this->gfx_p++; /* gsSPLightColor generates two commands */
 
-            GXColor* color = (GXColor*)&((Gmoveword*)&this->gfx)->data;
+            auto gmoveword = get<Gmoveword>(this->gfx);
+            GXColor* color = (GXColor*)&(&gmoveword)->data;
             this->lights[light].color.rgba.r = color->r;
             this->lights[light].color.rgba.g = color->g;
             this->lights[light].color.rgba.b = color->b;
@@ -5161,7 +5187,8 @@ void emu64::dl_G_MOVEWORD() {
 }
 
 void emu64::dl_G_MOVEMEM() {
-    Gmovemem* movemem = (Gmovemem*)this->gfx_p;
+    auto val = get<Gmovemem>(*this->gfx_p);
+    Gmovemem* movemem = &val;
     u8 param = movemem->index;
     switch (movemem->index) {
         case G_MV_VIEWPORT: {
@@ -5296,13 +5323,13 @@ void emu64::dl_G_S2DEX() {
 }
 
 void emu64::dl_G_SPECIAL_1() {
-    Gspecial1* special = (Gspecial1*)&this->gfx;
+    auto special = get<Gspecial1>(this->gfx);
 
-    if (special->mode == G_SPECIAL_TA_MODE) {
-        EMU64_LOGF("gsDPSetTextureAdjustMode(%s),", special->param0 == 0 ? "G_TA_N64" : "G_TA_DOLPHIN");
-        this->texture_adjust_mode = special->param0;
+    if (special.mode == G_SPECIAL_TA_MODE) {
+        EMU64_LOGF("gsDPSetTextureAdjustMode(%s),", special.param0 == 0 ? "G_TA_N64" : "G_TA_DOLPHIN");
+        this->texture_adjust_mode = special.param0;
     } else {
-        EMU64_LOGF("gsDPSpecial_1(0x%02x, 0x%04x, 0x%08x),", special->mode, special->param0, special->param1);
+        EMU64_LOGF("gsDPSpecial_1(0x%02x, 0x%04x, 0x%08x),", special.mode, special.param0, special.param1);
     }
 }
 
@@ -5386,7 +5413,7 @@ u32 emu64::emu64_taskstart_r(Gfx* dl_p) {
         this->cmds_processed++;
         EMU64_INFOF("%08x:", this->gfx_p);
         this->gfx = *this->gfx_p;
-        this->gfx_cmd = this->gfx.dma.cmd;
+        this->gfx_cmd = get<Gdma>(this->gfx).cmd;
         this->dl_history[this->dl_history_start++] = this->gfx_p;
         if (this->dl_history_start >= DL_HISTORY_COUNT) {
             this->dl_history_start = 0;

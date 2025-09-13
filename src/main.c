@@ -50,13 +50,13 @@ extern void mainproc(void* val) {
 
     padmgr_Create(&l_serialMsgQ, 7, 15, padmgrStack + PADMGR_STACK_SIZE, PADMGR_STACK_SIZE);
 
-    osCreateThread2(&graphThread, 4, graph_proc, val, graphStack + GRAPH_STACK_SIZE, GRAPH_STACK_SIZE, 8);
+    //osCreateThread2(&graphThread, 4, graph_proc, val, graphStack + GRAPH_STACK_SIZE, GRAPH_STACK_SIZE, 8);
 
     JW_BeginFrame();
     JW_EndFrame();
 
-    osStartThread(&graphThread);
-    osSetThreadPri(NULL, 5);
+    //osStartThread(&graphThread);
+    //osSetThreadPri(NULL, 5);
 
     JW_Init3();
     mMsg_aram_init2();
@@ -64,16 +64,17 @@ extern void mainproc(void* val) {
     //famicom_mount_archive();
 
     JC_JKRAramHeap_dump(JC_JKRAram_getAramHeap());
-    osSetThreadPri(NULL, 13);
+    //osSetThreadPri(NULL, 13);
 
-    do {
+    /*do {
         msg = NULL;
         while (irqMgrMsgQueue.usedCount != 0) {
             osRecvMesg(&irqMgrMsgQueue, NULL, 0);
         }
 
         osRecvMesg(&irqMgrMsgQueue, &msg, 1);
-    } while (msg != NULL);
+    } while (msg != NULL);*/
+    graph_proc(val);
 }
 
 u32 entry(void) {

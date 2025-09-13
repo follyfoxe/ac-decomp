@@ -32,14 +32,14 @@ bool JKRArcFinder::findNextFile() {
 
 // UNUSED
 JKRDvdFinder::JKRDvdFinder(const char* path) : JKRFileFinder() {
-    mIsDvdOpen = DVDOpenDir(const_cast<char*>(path), &mDir);
+    /*mIsDvdOpen = DVDOpenDir(const_cast<char*>(path), &mDir);
     mIsAvailable = mIsDvdOpen;
-    findNextFile();
+    findNextFile();*/
 }
 
 // UNUSED, not sure if it matches
 bool JKRDvdFinder::findNextFile() {
-    if (mIsAvailable) {
+    /*if (mIsAvailable) {
         DVDDirEntry entry;
         mIsAvailable = DVDReadDir(&mDir, &entry);
         if (mIsAvailable) {
@@ -51,5 +51,5 @@ bool JKRDvdFinder::findNextFile() {
             mBase.mFileTypeFlags = mIsDir ? 2 : 1;
         }
     }
-    return mIsAvailable;
+    return mIsAvailable;*/
 }

@@ -33,18 +33,23 @@ JKRAMCommand* JKRAramPiece::orderAsync(int direction, u32 source, u32 destinatio
                                        JKRAMCommand::AMCommandCallback callback) {
     JKRAramPiece::lock();
 
-    if (!JKR_ISALIGNED32(source) || !JKR_ISALIGNED32(destination)) {
+    /*if (!JKR_ISALIGNED32(source) || !JKR_ISALIGNED32(destination)) {
         JLOGF("direction = %x\n", direction);
         JLOGF("source = %x\n", source);
         JLOGF("destination = %x\n", destination);
         JLOGF("length = %x\n", length);
         JPANICLINE(102);
-    }
+    }*/
 
     JKRAramCommand* aramCmd = new (JKRGetSystemHeap(), -4) JKRAramCommand();
     JKRAMCommand* cmd = JKRAramPiece::prepareCommand(direction, source, destination, length, aramBlock, callback);
     aramCmd->setting(TRUE, cmd);
-    OSSendMessage((OSMessageQueue*)&JKRAram::sMessageQueue, (OSMessage)aramCmd, OS_MESSAGE_BLOCK);
+
+    if (direction == 1) { // read
+        memcpy((void*)destination, (void*)source, length);
+    }
+    else
+        OSSendMessage((OSMessageQueue*)&JKRAram::sMessageQueue, (OSMessage)aramCmd, OS_MESSAGE_BLOCK);
     if (cmd->mCallback != nullptr) {
         JKRAramPiece::sAramPieceCommandList.append(&cmd->mAramPieceCommandLink);
     }
@@ -79,11 +84,11 @@ bool JKRAramPiece::orderSync(int direction, u32 source, u32 destination, u32 len
     JKRAramPiece::lock();
 
     JKRAMCommand* cmd = JKRAramPiece::orderAsync(direction, source, destination, length, aramBlock, nullptr);
-    bool res = JKRAramPiece::sync(cmd, FALSE);
+    //bool res = JKRAramPiece::sync(cmd, FALSE);
     delete cmd;
 
     JKRAramPiece::unlock();
-    return res;
+    return true; //res;
 }
 
 void JKRAramPiece::startDMA(JKRAMCommand* cmd) {

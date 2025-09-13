@@ -32,6 +32,8 @@ JKRAramBlock* JKRAramHeap::alloc(u32 size, JKRAramHeap::EAllocMode mode) {
     }
 
     this->unlock();
+
+    block->mAddress = (u32)block;
     return block;
 }
 
