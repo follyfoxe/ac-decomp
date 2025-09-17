@@ -8,7 +8,7 @@
 #define	SEGMENT_ADDR_PC(num, off) ((num) | (1 << 31))
 
 // Find: gsSPDisplayList\(0x([^\)]*?)\)
-// Replace gsSPDisplayList(SEGMENT_DOL_TO_PC($1))
+// Replace gsSPDisplayList(SEGMENT_DOL_TO_PC(0x$1))
 #define SEGMENT_DOL_TO_PC(a) SEGMENT_ADDR_PC(SEGMENT_NUMBER(a), SEGMENT_OFFSET(a))
 
 #endif // ANIMAL_CROSSING_SEGMENT_H

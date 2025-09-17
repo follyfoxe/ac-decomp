@@ -27,7 +27,7 @@ GFX_ARR_BEGIN(grd_s_t_po_3_modelT)
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_ZB_XLU_SURF2),
     gsDPLoadTextureBlock_4b_Dolphin(water_1_tex_dummy, G_IM_FMT_I, 32, 32, 15, GX_REPEAT, GX_REPEAT, 0, 0),
     gsDPLoadMultiBlock_4b_Dolphin(water_2_tex_dummy, 1, G_IM_FMT_I, 32, 32, 15, GX_REPEAT, GX_REPEAT, 0, 0),
-    gsSPDisplayList(0x08000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
     gsSPVertex(&grd_s_t_po_3_v[223], 7, 0),
     gsSPNTrianglesInit_5b(5,       // tri count

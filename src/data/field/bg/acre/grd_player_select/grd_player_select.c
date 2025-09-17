@@ -34,7 +34,7 @@ GFX_ARR_BEGIN(grd_player_select_modelT)
     gsDPLoadTextureBlock_4b_Dolphin(rom_open_spot2_tex_rgb_i4, G_IM_FMT_I, 32, 32, 15, GX_REPEAT, GX_REPEAT, 15, 15),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_I, G_IM_SIZ_8b, 32, 64, rom_open_spot_tex),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 0, GX_MIRROR, GX_CLAMP, 0, 0),
-    gsSPDisplayList(0x08000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)),
     gsSPLoadGeometryMode(G_SHADE | G_CULL_BACK | G_FOG | G_SHADING_SMOOTH),
     gsSPVertex(&grd_player_select_v[12], 4, 0),
     gsSPNTrianglesInit_5b(2,       // tri count

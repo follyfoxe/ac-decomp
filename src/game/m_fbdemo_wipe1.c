@@ -35,7 +35,7 @@ GFX_ARR_BEGIN(wipe1_modelT)
                           6, 11, 1),
     gsDPSetTextureLUT(G_TT_NONE),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
-    gsSPDisplayList(0x08000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)),
     gsSPVertex(&wipe1_v[0], 25, 0),
     gsSP2Triangles(0, 1, 2, 0, 1, 3, 4, 0),
     gsSP2Triangles(5, 6, 7, 0, 6, 8, 9, 0),

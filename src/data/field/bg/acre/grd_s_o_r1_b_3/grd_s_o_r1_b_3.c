@@ -12,7 +12,7 @@ GFX_ARR_BEGIN(grd_s_o_r1_b_3_model)
     gsSPTexture(0, 0, 0, 0, G_ON),
     gsDPSetCombineLERP(PRIMITIVE, ENVIRONMENT, TEXEL0, ENVIRONMENT, 0, 0, 0, 0, COMBINED, 0, SHADE, 0, 0, 0, 0, COMBINED),
     gsDPSetPrimColor(0, 255, 32, 48, 144, 255),
-    gsSPDisplayList(0x0C000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x0C000000)),
     gsDPSetRenderMode(G_RM_FOG_SHADE_A, G_RM_AA_ZB_OPA_SURF2),
     gsDPLoadTextureBlock_4b_Dolphin(beach2_tex_dummy2, G_IM_FMT_I, 32, 16, 15, GX_REPEAT, GX_CLAMP, 0, 0),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
@@ -59,7 +59,7 @@ GFX_ARR_BEGIN(grd_s_o_r1_b_3_modelT)
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 0, 0, GX_REPEAT, GX_REPEAT, 0, 0),
     gsDPSetTextureImage_Dolphin(G_IM_FMT_IA, G_IM_SIZ_8b, 32, 32, wave3_tex_dummy),
     gsDPSetTile_Dolphin(G_DOLPHIN_TLUT_DEFAULT_MODE, 1, 0, GX_REPEAT, GX_REPEAT, 0, 0),
-    gsSPDisplayList(0x0D000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x0D000000)),
     gsSPVertex(&grd_s_o_r1_b_3_v[15], 15, 0),
     gsSPNTrianglesInit_5b(
         16, // tri count

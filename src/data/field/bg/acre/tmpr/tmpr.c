@@ -25,7 +25,7 @@ GFX_ARR_BEGIN(tmpr_modelT)
                             G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD, G_TX_NOLOD),
     gsDPLoadMultiBlock_4b(water_2_tex_dummy, 0x0040, 1, G_IM_FMT_I, 32, 32, 15, G_TX_NOMIRROR | G_TX_WRAP,
                           G_TX_NOMIRROR | G_TX_WRAP, 5, 5, G_TX_NOLOD, G_TX_NOLOD),
-    gsSPDisplayList(0x08000000),
+    gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)),
     gsSPLoadGeometryMode(G_ZBUFFER | G_SHADE | G_CULL_BACK | G_FOG | G_LIGHTING | G_SHADING_SMOOTH),
     gsSPVertex(&tmpr_v[152], 22, 0),
     gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
