@@ -117,9 +117,9 @@ static GFX_ARR_BEGIN(step1_draw_dl)
   gsSPDisplayList(gam_win1_winT_model),
   gsSPDisplayList(gam_win1_moji_model),
   gsDPSetPrimColor(0, 255, 90, 90, 155, 255),
-  gsSPDisplayList(0x08000000),
+  gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)),
   gsDPSetPrimColor(0, 255, 50, 30, 150, 255),
-  gsSPDisplayList(0x09000000),
+  gsSPDisplayList(SEGMENT_DOL_TO_PC(0x09000000)),
   gsSPDisplayList(gam_win1_cursor_setup),
   gsSPMatrix(&model_cursor, G_MTX_PUSH | G_MTX_MUL | G_MTX_MODELVIEW),
   gsSPDisplayList(gam_win1_cursor_model),
@@ -133,7 +133,7 @@ static GFX_ARR_BEGIN(step2_draw_dl)
   gsDPSetPrimColor(0, 255, 225, 255, 255, 255), /* set primitive color to off-white */
   gsSPDisplayList(gam_win2_winT_model), /* call gam_win2_winT_model */
   gsDPSetPrimColor(0, 255, 50, 50, 60, 255), /* set primitive color to dark blue-gray */
-  gsSPDisplayList(0x08000000), /* call progressive mode model set in step2_make_dl */
+  gsSPDisplayList(SEGMENT_DOL_TO_PC(0x08000000)), /* call progressive mode model set in step2_make_dl */
   gsSPEndDisplayList(),
 GFX_ARR_END
 
@@ -178,8 +178,8 @@ extern void make_dl_nintendo_logo(Gfx** gpp, u32 alpha) {
 
   gSPSegment(g++, G_MWO_SEGMENT_8, logo_initial_dl); /* segment 8 = logo_initial_dl */
   gSPSegment(g++, G_MWO_SEGMENT_9, gam_win1_moji_setup); /* segment 9 = gam_win1_moji_setup */
-  gSPDisplayList(g++, SEGMENT_ADDR(8, 0)); /* call to segment 8 (logo_initial_dl) */
-  gSPDisplayList(g++, SEGMENT_ADDR(9, 0)); /* call to segment 9 (gam_win1_moji_setup) */
+  gSPDisplayList(g++, SEGMENT_ADDR_PC(8, 0)); /* call to segment 8 (logo_initial_dl) */
+  gSPDisplayList(g++, SEGMENT_ADDR_PC(9, 0)); /* call to segment 9 (gam_win1_moji_setup) */
   gSPMatrix(g++, &logo_model_scale, G_MTX_PUSH | G_MTX_LOAD | G_MTX_MODELVIEW); /* set logo model scale */
   gDPSetCombineMode(g++, G_CC_LOGO, G_CC_LOGO); /* set color combiner for logo */
   gDPSetPrimColor(g++, 0, 255, LOGO_COLOR_R, LOGO_COLOR_G, LOGO_COLOR_B, alpha); /* set logo color */
@@ -349,7 +349,7 @@ extern void proc(void* arg) {
   int proc_done;
   OSTimer timer;
 
-  osRecvMesg(&commandQ, (OSMessage*)&msg, OS_MESSAGE_BLOCK);
+  //osRecvMesg(&commandQ, (OSMessage*)&msg, OS_MESSAGE_BLOCK);
   progressive_mode = FALSE;
   fadeout_step = 0;
   menu_step = 0;
@@ -426,8 +426,9 @@ extern void initial_menu_init() {
     osCreateMesgQueue(&commandQ, commandMsgBuf, 2);
     osCreateMesgQueue(&statusQ, statusMsgBuf, 1);
     osCreateThread2(Thread_p, 1, &proc, NULL, (void*)((int)initialMenuStack + INITIAL_MENU_STACK_SIZE), INITIAL_MENU_STACK_SIZE, 1);
-    osStartThread(Thread_p);
+    //osStartThread(Thread_p); // TODO: enable threads again
     JC_JFWDisplay_startFadeIn(JC_JFWDisplay_getManager(), 32);
+    proc(NULL);
     osSendMesg(&commandQ, (OSMessage)INITIAL_MENU_OSMESG_INIT_DONE, OS_MESSAGE_NOBLOCK);
   }
 }

@@ -31,6 +31,8 @@
 #include "main.h"
 #include "libforest/osreport.h"
 
+#include "pc/main.h"
+
 static OSModuleHeader* moduleA;
 static void* StringTable;  // swapped with fakemain_check
 static BOOL fakemain_check;
@@ -477,7 +479,7 @@ void adjustOSArena() {
  * @return int exitCode
  */
 int main(int argc, const char** argv) {
-    customInit(argc, argv);
+    pcInit(argc, argv);
 
   static fault_client
     my_fault_client1,
@@ -486,7 +488,7 @@ int main(int argc, const char** argv) {
     my_fault_client4,
     my_fault_client5,
     my_fault_client6;
-  
+
   static const boot_tbl_t tbl = {
     "L+R+X+Y+Down, START BUTTON",
     PAD_TRIGGER_L | PAD_TRIGGER_R | PAD_BUTTON_X | PAD_BUTTON_Y | PAD_BUTTON_DOWN,
@@ -503,7 +505,7 @@ int main(int argc, const char** argv) {
 
   ReconfigBATs();
   if (fakemain_check) {
-    customShutdown();
+    pcShutdown();
     return -1;
   }
 
@@ -633,8 +635,9 @@ int main(int argc, const char** argv) {
 
   OSReport("InitialStartTime=%u us\n", (u32)OSTicksToMicroseconds((u64)InitialStartTime));
   sound_initial();
-  initial_menu_init();
+  //initial_menu_init();
   dvderr_init();
+    initial_menu_init();
   sound_initial2();
 
   if ((OSGetConsoleType() & OS_CONSOLE_DEVELOPMENT) == 0) {
@@ -651,7 +654,7 @@ int main(int argc, const char** argv) {
   LoadStringTable("/static.str");*/
 
   moduleA = LoadLink("/foresta.rel.szs");
-    main2();
+  main2();
 
   JW_Init2();
   initial_menu_cleanup();
@@ -675,6 +678,6 @@ int main(int argc, const char** argv) {
 
   OSReport("どうぶつの森ブートローダ終了\n"); /* Animal Crossing bootloader end */
   JW_Cleanup();
-  customShutdown();
+  pcShutdown();
   return 0;
 }

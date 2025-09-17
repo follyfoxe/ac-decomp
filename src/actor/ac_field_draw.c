@@ -329,7 +329,7 @@ GFX_ARR_END
 
 static GFX_ARR_BEGIN(aFD_cull_set_model, ATTRIBUTE_ALIGN(32))
     gsSPDisplayList(aFD_cull_set_gfx),
-    gsSPDisplayList(SEGMENT_ADDR(G_MWO_SEGMENT_A, 0)), /* Dynamic segment 0x0A */
+    gsSPDisplayList(SEGMENT_ADDR_PC(G_MWO_SEGMENT_A, 0)), /* Dynamic segment 0x0A */
     gsSPEndDisplayList(),
 GFX_ARR_END
 

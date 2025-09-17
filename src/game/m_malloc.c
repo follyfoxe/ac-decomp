@@ -3,19 +3,23 @@
 OSArena zelda_arena;
 
 extern void* zelda_malloc_align(size_t size, u32 align) {
-  return __osMallocAlign(&zelda_arena, size, align);
+    return malloc(size);
+  //return __osMallocAlign(&zelda_arena, size, align);
 }
 
 extern void* zelda_malloc(size_t size) {
-  return __osMalloc(&zelda_arena,size);
+    return malloc(size);
+  //return __osMalloc(&zelda_arena,size);
 }
 
 extern void* zelda_malloc_r(size_t size) {
-  return __osMallocR(&zelda_arena, size);
+    return malloc(size);
+  //return __osMallocR(&zelda_arena, size);
 }
 
 extern void zelda_free(void* ptr) {
-  __osFree(&zelda_arena, ptr);
+    free(ptr);
+  //__osFree(&zelda_arena, ptr);
 }
 
 extern void zelda_GetFreeArena(size_t* max, size_t* free, size_t* alloc) {

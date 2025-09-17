@@ -10,6 +10,8 @@
 #include "boot.h"
 #include "os/__ppc_eabi_init.h"
 
+#include "pc/main.h"
+
 static void log_callback(AuroraLogLevel level, const char* module, const char* message, unsigned int len) {
     const char* levelStr;
     FILE* out = stdout;
@@ -39,14 +41,12 @@ static void log_callback(AuroraLogLevel level, const char* module, const char* m
     }
 }
 
-bool exiting = false;
-bool paused = false;
+AuroraInfo initInfo = {};
+enum PC_STATE pcState = PC_UNINITIALIZED;
 bool drawing = false;
 int test = 0;
 
-void customInit(const int argc, char** argv) {
-    printf("hi");
-
+void pcInit(const int argc, char** argv) {
     const int size = 24 * 1024 * 1024;
     cachedMemory = malloc(size);
     uncachedMemory = malloc(size);
@@ -57,35 +57,36 @@ void customInit(const int argc, char** argv) {
     OSBootInfo* bootInfo = OSPhysicalToCached(0);
     bootInfo->memorySize = size * 2;
 
-    const AuroraConfig config = {
-        .appName = "ac",
-        .logCallback = &log_callback,
-    };
-    aurora_initialize(argc, argv, &config);
-
-    exiting = false;
-    paused = false;
+    pcState = PC_UNINITIALIZED;
     drawing = false;
 }
 
-bool customBeginFrame() {
-    if (drawing)
-        return false;
+bool pcBeginFrame() {
+    if (pcState == PC_UNINITIALIZED) {
+        const AuroraConfig config = {
+            .appName = "ac",
+            .logCallback = &log_callback,
+        };
+        initInfo = aurora_initialize(0, NULL, &config);
+        pcState = PC_READY;
+    }
+
+    pcEndFrame();
     const AuroraEvent* event = aurora_update();
     while (event != NULL && event->type != AURORA_NONE) {
         switch (event->type) {
             case AURORA_EXIT:
-                exiting = true;
+                pcState = PC_EXITING;
                 break;
             case AURORA_PAUSED:
-                paused = true;
+                pcState = PC_PAUSED;
                 break;
             case AURORA_UNPAUSED:
-                paused = false;
+                pcState = PC_READY;
                 break;
-            /*case AURORA_WINDOW_RESIZED:
+            case AURORA_WINDOW_RESIZED:
                 initInfo.windowSize = event->windowSize;
-                break;*/
+                break;
             default:
                 break;
         }
@@ -110,15 +111,15 @@ bool customBeginFrame() {
     return true;
 }
 
-void customEndFrame() {
+void pcEndFrame() {
     if (drawing) {
         aurora_end_frame();
         drawing = false;
     }
 }
 
-void customShutdown() {
-    customEndFrame();
+void pcShutdown() {
+    pcEndFrame();
     aurora_shutdown();
 
     if (cachedMemory != NULL)
@@ -126,42 +127,3 @@ void customShutdown() {
     if (uncachedMemory != NULL)
         free(uncachedMemory);
 }
-
-/*int main(int argc, char* argv[]) {
-    const AuroraConfig config = {
-        .appName = "ac",
-        .logCallback = &log_callback,
-    };
-    AuroraInfo initInfo = aurora_initialize(argc, argv, &config);
-
-    bool exiting = false;
-    bool paused = false;
-    while (!exiting) {
-        const AuroraEvent* event = aurora_update();
-        while (event != NULL && event->type != AURORA_NONE) {
-            switch (event->type) {
-                case AURORA_EXIT:
-                    exiting = true;
-                    break;
-                case AURORA_PAUSED:
-                    paused = true;
-                    break;
-                case AURORA_UNPAUSED:
-                    paused = false;
-                    break;
-                case AURORA_WINDOW_RESIZED:
-                    initInfo.windowSize = event->windowSize;
-                    break;
-                default:
-                    break;
-            }
-            ++event;
-        }
-        if (exiting || paused || !aurora_begin_frame())
-            continue;
-        aurora_end_frame();
-    }
-
-    aurora_shutdown();
-    return 0;
-}*/

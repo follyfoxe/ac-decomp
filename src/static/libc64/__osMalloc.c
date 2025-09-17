@@ -29,11 +29,11 @@ static void arena_lock_init(OSArena* arena) {
 }
 
 static void arena_lock(OSArena* arena) {
-    osSendMesg(&arena->lockQueue, NULL, OS_MESG_BLOCK);
+    //osSendMesg(&arena->lockQueue, NULL, OS_MESG_BLOCK);
 }
 
 static void arena_unlock(OSArena* arena) {
-    osRecvMesg(&arena->lockQueue, NULL, OS_MESG_BLOCK);
+    //osRecvMesg(&arena->lockQueue, NULL, OS_MESG_BLOCK);
 }
 
 static OSMemBlock* get_block_next(OSMemBlock* block) {

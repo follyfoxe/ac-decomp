@@ -68,7 +68,8 @@ static TExt get(const Gfx& gfx) {
 template<typename TExt>
 static void set(Gfx& gfx, const TExt& ext) {
 #ifdef LITTLE_ENDIAN
-    gfx = swap(*(Gfx*)&ext);
+    TExt e = swap(ext);
+    gfx = swap(*(Gfx*)&e);
 #else
     gfx = *(Gfx*)&ext;
 #endif

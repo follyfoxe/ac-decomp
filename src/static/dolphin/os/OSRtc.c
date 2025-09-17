@@ -168,10 +168,11 @@ extern void OSSetSoundMode(u32 mode) {
 }
 
 extern u32 OSGetProgressiveMode() {
-  OSSram* sram = __OSLockSram();
+  /*OSSram* sram = __OSLockSram();
   u32 mode = GET_PROGMODE(sram->flags) >> 7;
   __OSUnlockSram(FALSE);
-  return mode;
+  return mode;*/
+    return 1;
 }
 
 extern void OSSetProgressiveMode(u32 on) {

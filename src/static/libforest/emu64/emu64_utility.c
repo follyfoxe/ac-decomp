@@ -5,7 +5,12 @@
 #include "MSL_C/w_math.h"
 
 u32 emu64::seg2k0(u32 segadr) {
-    u32 k0;
+    if (IS_SEGMENT_PC(segadr)) {
+        this->resolved_addresses++;
+        return this->segments[SEGMENT_NUMBER_PC(segadr)];
+    }
+    return segadr;
+    /*u32 k0;
 
     if ((segadr >> 28) == 0) {
         if (segadr < 0x03000000) {
@@ -21,12 +26,12 @@ u32 emu64::seg2k0(u32 segadr) {
     }
 
     if ((k0 >> 31) == 0 || k0 < 0x80000000 || k0 >= 0x83000000) {
-        //this->Printf0("異常なアドレスです。%08x -> %08x\n", segadr, k0);
+        this->Printf0("異常なアドレスです。%08x -> %08x\n", segadr, k0);
         //this->panic("異常なアドレスです。", __FILE__, 77);
         this->abnormal_addresses++;
     }
 
-    return k0;
+    return k0;*/
 }
 
 /* @unused void guMtxXFMWF(MtxP, float, float, float, float, float, float*, float*, float*, float*) */

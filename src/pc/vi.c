@@ -8,6 +8,7 @@ void VIConfigurePan(u16 xOrg, u16 yOrg, u16 width, u16 height) {
 }
 
 u32 VIGetDTVStatus(void) {
+    return 1;
 }
 
 void VISetBlack(BOOL black) {

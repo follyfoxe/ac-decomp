@@ -5001,7 +5001,7 @@ void emu64::dl_G_TEXTURE() {
 #endif
 
     Gfx* t = (Gfx*)&this->texture_gfx;
-    if ((*(u64*)t) != (*(u64*)&this->gfx)) {
+    if ((*(u64*)t) != (*(u64*)texture)) {
         *(u64*)&this->texture_gfx = *(u64*)texture;
         this->dirty_flags[EMU64_DIRTY_FLAG_TEX] = true;
 
@@ -5104,9 +5104,9 @@ void emu64::dl_G_MOVEWORD() {
         case G_MW_SEGMENT: {
             u32 segment = moveword->offset / 4;
             EMU64_WARNF("gsSPSegmentA(%d, 0x%08x),", segment, moveword->data);
-            this->segments[segment] = (0x80000000 + (moveword->data & 0x0FFFFFFF));
-            if (segment >= EMU64_NUM_SEGMENTS ||
-                (moveword->data != 0 && (moveword->data < 0x80000000 || moveword->data > 0x83000000))) {
+            this->segments[segment] = moveword->data; //(0x80000000 + (moveword->data & 0x0FFFFFFF));
+            if (segment >= EMU64_NUM_SEGMENTS /*||
+                (moveword->data != 0 && (moveword->data < 0x80000000 || moveword->data > 0x83000000))*/) {
                 sprintf(s1, "gsSPSegmentA no=%d", segment);
                 sprintf(s2, "base=%s", this->segchk(moveword->data));
                 sprintf(s3, "gfxp=%s", this->segchk((u32)this->gfx_p));
