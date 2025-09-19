@@ -1016,7 +1016,7 @@ int emu64::replace_combine_to_tev(Gfx* g) {
          setcombine->d1 == G_CCMUX_TEXEL1 || setcombine->c1 == G_CCMUX_TEXEL1_ALPHA) ||
         (setcombine->Aa1 == G_ACMUX_TEXEL1 || setcombine->Ab1 == G_ACMUX_TEXEL1 || setcombine->Ac1 == G_ACMUX_TEXEL1 ||
          setcombine->Ad1 == G_ACMUX_TEXEL1)) {
-        g->setcombine.cmd = G_SETCOMBINE_NOTEV;
+        ((Gsetcombine*)g)->cmd = G_SETCOMBINE_NOTEV;
         return -1;
     }
 
@@ -1053,7 +1053,7 @@ int emu64::replace_combine_to_tev(Gfx* g) {
         sc_tev.d0 = GX_CC_ZERO;
 
     } else {
-        g->setcombine.cmd = G_SETCOMBINE_NOTEV;
+        ((Gsetcombine*)g)->cmd = G_SETCOMBINE_NOTEV;
         return -1;
     }
 
@@ -1069,7 +1069,7 @@ int emu64::replace_combine_to_tev(Gfx* g) {
         sc_tev.Ac0 = c_alpha;
         sc_tev.Ad0 = TEV_ALPHA_ZERO;
     } else {
-        g->setcombine.cmd = G_SETCOMBINE_NOTEV;
+        ((Gsetcombine*)g)->cmd = G_SETCOMBINE_NOTEV;
         return -1;
     }
 
@@ -1106,7 +1106,7 @@ int emu64::replace_combine_to_tev(Gfx* g) {
         sc_tev.c1 = c_color;
         sc_tev.d1 = GX_CC_ZERO;
     } else {
-        g->setcombine.cmd = G_SETCOMBINE_NOTEV;
+        ((Gsetcombine*)g)->cmd = G_SETCOMBINE_NOTEV;
         return -1;
     }
 
@@ -1122,7 +1122,7 @@ int emu64::replace_combine_to_tev(Gfx* g) {
         sc_tev.Ac1 = c_alpha;
         sc_tev.Ad1 = TEV_ALPHA_ZERO;
     } else {
-        g->setcombine.cmd = G_SETCOMBINE_NOTEV;
+        ((Gsetcombine*)g)->cmd = G_SETCOMBINE_NOTEV;
         return -1;
     }
 
@@ -1300,7 +1300,7 @@ int emu64::combine_auto() {
 
 int emu64::combine_tev() {
     
-    if ((u8)this->combine_gfx.setcombine.cmd == G_SETCOMBINE_TEV) {
+    if ((u8)((Gsetcombine*)&this->combine_gfx)->cmd == G_SETCOMBINE_TEV) {
         int two_cycle = (this->othermode_high & G_CYC_2CYCLE) >> G_MDSFT_CYCLETYPE;
         Gsetcombine_tev combine_tev = *((Gsetcombine_tev*)&this->combine_gfx);
 
@@ -1429,6 +1429,7 @@ int emu64::combine_tev() {
             GXSetTevAlphaIn(GX_TEVSTAGE1, GX_CA_ZERO, GX_CA_ZERO, GX_CA_ZERO, GX_CA_KONST);
         }
     }
+    return 0;
 }
 
 #define NUM_COMBINER_HIGHLOW_ERRS 10
@@ -1899,7 +1900,7 @@ void emu64::combine_manual() {
 }
 
 void emu64::combine() {
-    if ((u8)this->combine_gfx.setcombine.cmd == G_SETCOMBINE_TEV) {
+    if ((u8)((Gsetcombine*)&this->combine_gfx)->cmd == G_SETCOMBINE_TEV) {
         this->combine_tev();
     } else {
         GXSetNumTexGens(2);
@@ -3693,9 +3694,9 @@ void emu64::dl_G_LOADTLUT() {
     } else {
         Gfx* loadtlut = this->gfx_p;
 
-        EMU64_LOGF("gsDPLoadTLUTCmd(%d,%d),", loadtlut->loadtlut.tile, (loadtlut->words.w1 >> 14) & 0x3FF);
+        EMU64_LOGF("gsDPLoadTLUTCmd(%d,%d),", ((Gloadtlut*)loadtlut)->tile, (loadtlut->words.w1 >> 14) & 0x3FF);
 
-        Gsettile* settile_p = &this->settile_cmds[loadtlut->loadtlut.tile];
+        Gsettile* settile_p = &this->settile_cmds[((Gloadtlut*)loadtlut)->tile];
 
         if (this->disable_polygons == false) {
             u16 count = ((loadtlut->words.w1 >> 14) & 0x3FF) + 1;
