@@ -908,4 +908,6 @@ do { \
 }
 #endif
 
+#include "pc/gbi_pc.h"
+
 #endif /* __GBI_EXTENSIONS_H__ */

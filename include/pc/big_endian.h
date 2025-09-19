@@ -45,35 +45,9 @@ static u64 swap64(u64 val) {
 }
 
 #ifdef __cplusplus
-#include "PR/gbi.h"
-
 static u16 swap(const u16 val) { return swap16(val); }
 static u32 swap(const u32 val) { return swap32(val); }
 static u64 swap(const u64 val) { return swap64(val); }
-static Gfx swap(const Gfx& val) { return {{swap32(val.words.w0), swap32(val.words.w1)}}; }
-
-#include "pc/gbi_swap.hpp"
-
-// TODO: check if value is modified in emu64
-template<typename TExt>
-static TExt get(const Gfx& gfx) {
-#ifdef LITTLE_ENDIAN
-    Gfx g = swap(gfx);
-    return swap(*(TExt*)&g);
-#else
-    return *(TExt*)&gfx;
-#endif
-}
-
-template<typename TExt>
-static void set(Gfx& gfx, const TExt& ext) {
-#ifdef LITTLE_ENDIAN
-    TExt e = swap(ext);
-    gfx = swap(*(Gfx*)&e);
-#else
-    gfx = *(Gfx*)&ext;
-#endif
-}
 #endif
 
 #endif // ANIMAL_CROSSING_BIG_ENDIAN_H
