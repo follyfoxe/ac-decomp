@@ -51,6 +51,9 @@ void pcInit(const int argc, char** argv) {
     cachedMemory = malloc(size);
     uncachedMemory = malloc(size);
 
+    memset(cachedMemory, 0, size);
+    memset(uncachedMemory, 0, size);
+
     __ArenaLo = cachedMemory;
     __ArenaHi = __ArenaLo + size;
 
@@ -66,6 +69,8 @@ bool pcBeginFrame() {
         const AuroraConfig config = {
             .appName = "ac",
             .logCallback = &log_callback,
+            .windowPosX = 32,
+            .windowPosY = 32
         };
         initInfo = aurora_initialize(0, NULL, &config);
         pcState = PC_READY;

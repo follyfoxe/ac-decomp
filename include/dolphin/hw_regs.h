@@ -1,6 +1,10 @@
 #ifndef _DOLPHIN_HW_REGS_H_
 #define _DOLPHIN_HW_REGS_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef __MWERKS__
 volatile u16 __VIRegs[59]     : 0xCC002000;
 volatile u32 __PIRegs[12]     : 0xCC003000;
@@ -118,5 +122,9 @@ extern volatile u32 __AIRegs[8];
 #define DSP_DMA_BYTES_LEFT  (29)
 
 #define DSP_DMA_START_FLAG (0x8000) // set to start DSP
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

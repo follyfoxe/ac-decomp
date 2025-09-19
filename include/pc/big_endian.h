@@ -19,7 +19,9 @@
 #endif
 
 static u16 swap16(const u16 val) {
-#ifdef __GNUC__
+#if defined(_MSC_VER)
+    return _byteswap_ushort(val);
+#elif defined(__GNUC__)
     return __builtin_bswap16(val);
 #else
     return (val >> 8) | (val << 8);
@@ -27,7 +29,9 @@ static u16 swap16(const u16 val) {
 }
 
 static u32 swap32(const u32 val) {
-#ifdef __GNUC__
+#if defined(_MSC_VER)
+    return _byteswap_ulong(val);
+#elif defined(__GNUC__)
     return __builtin_bswap32(val);
 #else
     return ((val >> 24) & 0xFF) | ((val << 8) & 0xFF0000) | ((val >> 8) & 0xFF00) | ((val << 24) & 0xFF000000);
@@ -35,7 +39,9 @@ static u32 swap32(const u32 val) {
 }
 
 static u64 swap64(u64 val) {
-#ifdef __GNUC__
+#if defined(_MSC_VER)
+    return _byteswap_uint64(val);
+#elif defined(__GNUC__)
     return __builtin_bswap64(val);
 #else
     val = ((val << 8) & 0xFF00FF00FF00FF00ULL) | ((val >> 8) & 0x00FF00FF00FF00FFULL);

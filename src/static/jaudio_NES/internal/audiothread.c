@@ -53,7 +53,7 @@ extern int DspSyncCountCheck(void) {
 
 static void DspSync(void) {
     if (audioproc_mq_init) {
-        OSSendMessage(&audioproc_mq, AUDIOPROC_MESSAGE_DSP_SYNC, OS_MESSAGE_NOBLOCK);
+        OSSendMessage(&audioproc_mq, (OSMessage)AUDIOPROC_MESSAGE_DSP_SYNC, OS_MESSAGE_NOBLOCK);
     } else {
         DSPReleaseHalt();
     }
@@ -75,7 +75,7 @@ static void AudioSync(void) {
 
 extern void NeosSync(void) {
     if (audioproc_mq_init) {
-        OSSendMessage(&audioproc_mq, AUDIOPROC_MESSAGE_NEOS_SYNC, OS_MESSAGE_BLOCK);
+        OSSendMessage(&audioproc_mq, (OSMessage)AUDIOPROC_MESSAGE_NEOS_SYNC, OS_MESSAGE_BLOCK);
     }
 }
 

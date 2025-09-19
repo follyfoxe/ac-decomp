@@ -20,14 +20,14 @@ u32 __OSCoreClock = 0;
 s32 __gUnknown800030C0[2] = {};
 u8 __gUnknown800030E3 = 0;
 
-volatile u16 __VIRegs[59] = {};
-volatile u32 __PIRegs[12] = {};
-volatile u16 __MEMRegs[64] = {};
-volatile u16 __DSPRegs[30] = {}; // length estimate by use in the code
-volatile u32 __DIRegs[10] = {}; // length estimate by use in the code
-volatile u32 __SIRegs[0x100] = {};
-volatile u32 __EXIRegs[0x40] = {};
-volatile u32 __AIRegs[8] = {};
+extern volatile u16 __VIRegs[59] = {};
+extern volatile u32 __PIRegs[12] = {};
+extern volatile u16 __MEMRegs[64] = {};
+extern volatile u16 __DSPRegs[30] = {}; // length estimate by use in the code
+extern volatile u32 __DIRegs[10] = {}; // length estimate by use in the code
+extern volatile u32 __SIRegs[0x100] = {};
+extern volatile u32 __EXIRegs[0x40] = {};
+extern volatile u32 __AIRegs[8] = {};
 
 void EnableMetroTRKInterrupts(void);
 
@@ -257,8 +257,8 @@ void OSInit()
 		*((u8*)DEBUGFLAG_ADDR)     = (u8)*BI2DebugFlag;
 		//*((u8*)OS_DEBUG_ADDRESS_2) = (u8)__PADSpec;
 	} else if (BootInfo->arenaHi) {
-		BI2DebugFlagHolder = (u32*)*((u8*)DEBUGFLAG_ADDR);
-		BI2DebugFlag       = (u32*)&BI2DebugFlagHolder;
+		//BI2DebugFlagHolder = (u32*)*((u8*)DEBUGFLAG_ADDR);
+		//BI2DebugFlag       = (u32*)&BI2DebugFlagHolder;
 		//__PADSpec          = (u32) * ((u8*)OS_DEBUG_ADDRESS_2);
 	}
 

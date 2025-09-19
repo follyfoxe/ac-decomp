@@ -454,10 +454,10 @@ void adjustOSArena() {
   if (arenahi > (void*)0x81800000) {
     if (!APPNMI_EXTENDEDMEMORY_GET()) {
       OSReport("搭載メモリが 24MB を超えていますが、24MB に限定します。" VT_RST "\n"); /* The installed memory exceeds 24MB, but will be limited to 24MB. */
-      arenahi = (void*)0x817ffa80;
+      //arenahi = (void*)0x817ffa80;
     } else if (arenahi > (void*)0x82000000) {
       OSReport("搭載メモリが 32MB を超えていますが、32MB に限定します。" VT_RST "\n"); /* The installed memory exceeds 32MB, but will be limited to 32MB. */
-      arenahi = (void*)0x81e00000;
+      //arenahi = (void*)0x81e00000;
     } else {
       OSReport("搭載メモリが 32MB を超えています。" VT_RST "\n"); /* The installed memory exceeds 32MB. */
     }
@@ -637,7 +637,7 @@ int main(int argc, const char** argv) {
   sound_initial();
   //initial_menu_init();
   dvderr_init();
-    initial_menu_init();
+    //initial_menu_init();
   sound_initial2();
 
   if ((OSGetConsoleType() & OS_CONSOLE_DEVELOPMENT) == 0) {

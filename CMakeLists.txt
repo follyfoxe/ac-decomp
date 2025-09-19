@@ -17,13 +17,16 @@ set(INCLUDE
 )
 set(DEFINES VERSION=0 DEBUG=0 NDEBUG _LANGUAGE_C F3DEX_GBI_2 _ALLOW_KEYWORD_MACROS TARGET_PC)
 
-set(OPTIONS -w -fno-short-enums -fpermissive)
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    set(OPTIONS ${OPTIONS} -Wno-register -Wno-narrowing -Wno-incompatible-function-pointer-types -Wno-return-mismatch)
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    set(OPTIONS -w -fno-short-enums -fpermissive)
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    set(OPTIONS -w -fno-short-enums -fpermissive -Wno-register -Wno-narrowing -Wno-incompatible-function-pointer-types -Wno-return-mismatch)
 endif ()
 
 # Must compile for 32 bit
-# -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
+
 # -DDAWN_USE_WINDOWS_UI=OFF -DDAWN_ENABLE_D3D11=OFF -DDAWN_ENABLE_D3D12=OFF -DDAWN_ENABLE_VULKAN=ON
 add_subdirectory(pc/aurora)
 include(cmake/ac_libs.cmake)
@@ -38,10 +41,10 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${INCLUDE})
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${DEFINES})
 target_compile_options(${PROJECT_NAME} PRIVATE ${OPTIONS})
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${AC_LIBS})
-else ()
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_link_libraries(${PROJECT_NAME} PRIVATE "$<LINK_GROUP:RESCAN,${AC_LIBS}>")
+else ()
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${AC_LIBS})
 endif ()
 
 target_link_libraries(${PROJECT_NAME} PRIVATE aurora::core aurora::gx aurora::mtx aurora::pad aurora::si aurora::vi)

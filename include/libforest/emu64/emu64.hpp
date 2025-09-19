@@ -136,7 +136,8 @@ typedef va_list __tag_va_List;
 }
 
 float fastcast_float(register unsigned char* s) {
-    register float f;
+    return *s;
+    /*register float f;
 
 #ifdef __MWERKS__ // clang-format off
     asm {
@@ -144,11 +145,12 @@ float fastcast_float(register unsigned char* s) {
     }
 #endif // clang-format on
 
-    return f;
+    return f;*/
 }
 
 float fastcast_float(register unsigned short* s) {
-    register float f;
+    return *s;
+    /*register float f;
 
 #ifdef __MWERKS__ // clang-format off
     asm {
@@ -156,11 +158,12 @@ float fastcast_float(register unsigned short* s) {
     }
 #endif // clang-format on
 
-    return f;
+    return f;*/
 }
 
 float fastcast_float(register signed char* s) {
-    register float f;
+    return *s;
+    /*register float f;
 
 #ifdef __MWERKS__ // clang-format off
     asm {
@@ -168,11 +171,12 @@ float fastcast_float(register signed char* s) {
     }
 #endif // clang-format on
 
-    return f;
+    return f;*/
 }
 
 float fastcast_float(register short* s) {
-    register float f;
+    return *s;
+    /*register float f;
 
 #ifdef __MWERKS__ // clang-format off
     asm {
@@ -180,7 +184,7 @@ float fastcast_float(register short* s) {
     }
 #endif // clang-format on
 
-    return f;
+    return f;*/
 }
 
 #define number(n) ARRAY_COUNT(n)

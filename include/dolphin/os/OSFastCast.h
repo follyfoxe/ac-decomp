@@ -44,7 +44,7 @@ static inline void OSInitFastCast() {
 }
 
 // Float to int.
-static inline s16 __OSf32tos16(register f32 inF) {
+/*static inline s16 __OSf32tos16(register f32 inF) {
     register s16 out;
     u32 tmp;
     register u32* tmpPtr = &tmp;
@@ -56,13 +56,13 @@ static inline s16 __OSf32tos16(register f32 inF) {
 #endif // clang-format on
 
     return out;
-}
+}*/
 
 static inline void OSf32tos16(f32* f, s16* out) {
-    *out = __OSf32tos16(*f);
+    *out = (s16)*f;//__OSf32tos16(*f);
 }
 
-static inline u8 __OSf32tou8(register f32 inF) {
+/*static inline u8 __OSf32tou8(register f32 inF) {
     register u8 out;
     u32 tmp;
     register u32* tmpPtr = &tmp;
@@ -74,13 +74,13 @@ static inline u8 __OSf32tou8(register f32 inF) {
 #endif // clang-format on
 
     return out;
-}
+}*/
 
 static inline void OSf32tou8(f32* f, u8* out) {
-    *out = __OSf32tou8(*f);
+    *out = (u8)*f;//__OSf32tou8(*f);
 }
 
-static inline s8 __OSf32tos8(register f32 inF) {
+/*static inline s8 __OSf32tos8(register f32 inF) {
     register s8 out;
     u32 tmp;
     register u32* tmpPtr = &tmp;
@@ -93,13 +93,13 @@ static inline s8 __OSf32tos8(register f32 inF) {
 #endif // clang-format on
 
     return out;
-}
+}*/
 
 static inline void OSf32tos8(f32* f, s8* out) {
-    *out = __OSf32tos8(*f);
+    *out = (s8)*f;//__OSf32tos8(*f);
 }
 
-static inline float __OSs16tof32(register s16* s) {
+/*static inline float __OSs16tof32(register s16* s) {
     register float f;
 
 #ifdef __MWERKS__ // clang-format off
@@ -109,10 +109,10 @@ static inline float __OSs16tof32(register s16* s) {
 #endif // clang-format on
 
     return f;
-}
+}*/
 
 static inline void OSs16tof32(register s16* s, volatile register f32* f) {
-    *f = __OSs16tof32(s);
+    *f = (f32)*s;//__OSs16tof32(s);
 }
 
 //////////////////////////////////

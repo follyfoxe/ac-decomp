@@ -59,8 +59,8 @@ bool JKRHeap::initArena(char** outUserRamStart, u32* outUserRamSize, int numHeap
         return false;
     }
     void* arenaStart = OSInitAlloc(arenaLo, arenaHi, numHeaps);
-    arenaHi = (u8*)OSRoundDown32B(arenaHi);
-    arenaLo = (u8*)OSRoundUp32B(arenaStart);
+    //arenaHi = (u8*)OSRoundDown32B(arenaHi);
+    //arenaLo = (u8*)OSRoundUp32B(arenaStart);
     u8* start = (u8*)OSPhysicalToCached(0);
     mCodeStart = (u8*)start;
     mCodeEnd = (u8*)arenaLo;

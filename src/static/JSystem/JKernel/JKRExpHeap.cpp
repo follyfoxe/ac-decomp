@@ -18,8 +18,8 @@ JKRExpHeap* JKRExpHeap::createRoot(int maxHeaps, bool errorFlag) {
         void* memory;
         u32 memorySize;
         initArena((char**)&memory, &memorySize, maxHeaps);
-        u8* start = (u8*)memory + ALIGN_NEXT(sizeof(JKRExpHeap), 0x10);
-        u32 alignedSize = memorySize - ALIGN_NEXT(sizeof(JKRExpHeap), 0x10);
+        u8* start = (u8*)memory; // + ALIGN_NEXT(sizeof(JKRExpHeap), 0x10);
+        u32 alignedSize = memorySize; // - ALIGN_NEXT(sizeof(JKRExpHeap), 0x10);
         heap = new (memory) JKRExpHeap(start, alignedSize, nullptr, errorFlag);
         sRootHeap = heap;
     }

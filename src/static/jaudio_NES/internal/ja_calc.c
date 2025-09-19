@@ -1,6 +1,7 @@
 #include "jaudio_NES/ja_calc.h"
 
 #include "PowerPC_EABI_Support/msl/MSL_C/PPC_EABI/cmath_gcn.h"
+#include <cmath>
 // #include "std/Math.h"
 // #include "dolphin/math.h"
 // #include "stl/math.h"
